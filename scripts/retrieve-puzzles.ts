@@ -63,7 +63,7 @@ const levelWeight: Record<string, number> = {
   'codegolf-expert': 33,
 };
 
-async function main(): Promise<void> {
+async function retrievePuzzles(): Promise<Puzzle[]> {
   const { data: miniPuzzles } = await axios.post<MiniPuzzle[]>(
     'https://www.codingame.com/services/Puzzle/findAllMinimalProgress',
     [null],
@@ -71,7 +71,7 @@ async function main(): Promise<void> {
 
   const { data: puzzles } = await axios.post<Puzzle[]>(
     'https://www.codingame.com/services/Puzzle/findProgressByIds',
-    [miniPuzzles.map((miniPuzzle) => miniPuzzle.id), null, 1],
+    [miniPuzzles.map((miniPuzzle) => miniPuzzle.id), null, 2],
   );
 
   puzzles.sort((p1, p2) => {
@@ -81,6 +81,10 @@ async function main(): Promise<void> {
     return w1 === w2 ? p1.id - p2.id : w1 - w2;
   });
 
+  return puzzles;
+}
+
+function updateReadme(puzzles: Puzzle[]): void {
   const startTag = '<!-- TABLE:START -->\n';
   const endTag = '\n<!-- TABLE:END -->';
 
@@ -114,6 +118,12 @@ async function main(): Promise<void> {
   );
 
   writeFileSync(readmePath, newReadmeString);
+}
+
+async function main(): Promise<void> {
+  const puzzles = await retrievePuzzles();
+
+  updateReadme(puzzles);
 }
 
 // eslint-disable-next-line promise/catch-or-return
