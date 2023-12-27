@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 import axios from 'axios';
@@ -93,12 +93,14 @@ function updateReadme(puzzles: Puzzle[]): void {
     ['---', '---', '---', '---'],
   ];
 
+  const directories = readdirSync(join(__dirname, '..', 'src'));
+
   table.push(
     ...puzzles.map((puzzle) => [
       puzzle.id.toString(),
       puzzle.title.replace(/\|/g, ''),
       puzzle.level,
-      '',
+      directories.includes(puzzle.prettyId) ? ':heavy_check_mark:' : ':x:',
     ]),
   );
 
