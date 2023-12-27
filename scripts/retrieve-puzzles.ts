@@ -116,6 +116,6 @@ async function main(): Promise<void> {
   writeFileSync(readmePath, newReadmeString);
 }
 
-main()
-  .then(() => console.log('Finished retrieving puzzles'))
-  .catch((error) => console.error(error));
+// eslint-disable-next-line promise/catch-or-return
+main().then(() => console.log('Finished retrieving puzzles'));
+// .catch((error) => console.error(error));

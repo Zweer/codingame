@@ -7,4 +7,5 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 ## Puzzles
 
 <!-- TABLE:START -->
+
 <!-- TABLE:END -->
