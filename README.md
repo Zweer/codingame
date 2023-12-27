@@ -7,5 +7,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 ## Puzzles
 
 <!-- TABLE:START -->
-
+|ID|Puzzle Name|Difficulty|Solved|
+|---|---|---|---|
 <!-- TABLE:END -->
