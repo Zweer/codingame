@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "retro-typewriter-art"
+        "retro-typewriter-art",
+        "ascii-art-the-drunken-bishop-algorithm"
     ]
 }
