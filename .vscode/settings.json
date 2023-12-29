@@ -1,9 +1,9 @@
 {
     "conventionalCommits.scopes": [
-        "retro-typewriter-art",
         "ascii-art-the-drunken-bishop-algorithm",
         "death-first-search-episode-1",
+        "death-first-search-episode-2",
         "don't-panic-episode-1",
-        "death-first-search-episode-2"
+        "retro-typewriter-art"
     ]
 }
