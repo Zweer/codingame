@@ -211,7 +211,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 |4894|Build A Bookcase🔨|easy|:x:|
 |5389|Tabloid Couple-Names 💕|easy|:x:|
 |5455|Rocks, Papers, Scissors-es|easy|:x:|
-|5488|ASCII Art The Drunken Bishop Algorithm|easy|:x:|
+|5488|ASCII Art The Drunken Bishop Algorithm|easy|:heavy_check_mark:|
 |5521|Duo combinations|easy|:x:|
 |5554|Wordle colorizer|easy|:x:|
 |5620|Tile a Floor|easy|:x:|
@@ -247,7 +247,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 |7369|deus Hex machina|easy|:x:|
 |7468|Panel count|easy|:x:|
 |7501|Number Partition|easy|:x:|
-|1|Death First Search - Episode 1|medium|:x:|
+|1|Death First Search - Episode 1|medium|:heavy_check_mark:|
 |11|The Fall - Episode 1|medium|:x:|
 |12|Mars Lander - Episode 2|medium|:x:|
 |13|Stock Exchange Losses|medium|:x:|
@@ -260,7 +260,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 |20|The Gift|medium|:x:|
 |21|Mayan Calculation|medium|:x:|
 |41|Shadows of the Knight - Episode 1|medium|:x:|
-|47|Don't Panic - Episode 1|medium|:x:|
+|47|Don't Panic - Episode 1|medium|:heavy_check_mark:|
 |50|War|medium|:x:|
 |54|There is no Spoon - Episode 1|medium|:x:|
 |76|Game of life|medium|:x:|
@@ -545,7 +545,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 |7171|Coastline|medium|:x:|
 |7402|Mosaic|medium|:x:|
 |7534|Bin packing|medium|:x:|
-|22|Death First Search - Episode 2|hard|:x:|
+|22|Death First Search - Episode 2|hard|:heavy_check_mark:|
 |23|The Bridge|hard|:x:|
 |24|The Labyrinth|hard|:x:|
 |25|Power of Thor - Episode 2|hard|:x:|
