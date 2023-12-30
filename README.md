@@ -193,7 +193,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 2551. 2nd degree polynomial - simple analysis [:link:](https://www.codingame.com/training/easy/2nd-degree-polynomial---simple-analysis)
 - [ ] 2617. Kiss the girls [:link:](https://www.codingame.com/training/easy/kiss-the-girls)
 - [ ] 2716. Artificial Emotional Intelligence [:link:](https://www.codingame.com/training/easy/artificial-emotional-intelligence)
-- [x] 2782. [Retro Typewriter Art](retro-typewriter-art) [:link:](https://www.codingame.com/training/easy/retro-typewriter-art)
+- [x] 2782. [Retro Typewriter Art](src/retro-typewriter-art) [:link:](https://www.codingame.com/training/easy/retro-typewriter-art)
 - [ ] 2815. Probability for Dummies [:link:](https://www.codingame.com/training/easy/probability-for-dummies)
 - [ ] 2848. Crop-Circles [:link:](https://www.codingame.com/training/easy/crop-circles)
 - [ ] 3013. Insert to String [:link:](https://www.codingame.com/training/easy/insert-to-string)
@@ -227,7 +227,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 4894. |Build A Bookcase|🔨 [:link:](https://www.codingame.com/training/easy/build-a-bookcase)
 - [ ] 5389. Tabloid Couple-Names 💕 [:link:](https://www.codingame.com/training/easy/tabloid-couple-names)
 - [ ] 5455. Rocks, Papers, Scissors-es [:link:](https://www.codingame.com/training/easy/rocks-papers-scissors-es)
-- [x] 5488. [ASCII Art The Drunken Bishop Algorithm](ascii-art-the-drunken-bishop-algorithm) [:link:](https://www.codingame.com/training/easy/ascii-art-the-drunken-bishop-algorithm)
+- [x] 5488. [ASCII Art The Drunken Bishop Algorithm](src/ascii-art-the-drunken-bishop-algorithm) [:link:](https://www.codingame.com/training/easy/ascii-art-the-drunken-bishop-algorithm)
 - [ ] 5521. Duo combinations [:link:](https://www.codingame.com/training/easy/duo-combinations)
 - [ ] 5554. Wordle colorizer [:link:](https://www.codingame.com/training/easy/wordle-colorizer)
 - [ ] 5620. Tile a Floor [:link:](https://www.codingame.com/training/easy/tile-a-floor)
@@ -273,7 +273,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 </summary>
 
-- [x] 1. [Death First Search - Episode 1](death-first-search-episode-1) [:link:](https://www.codingame.com/training/medium/death-first-search-episode-1)
+- [x] 1. [Death First Search - Episode 1](src/death-first-search-episode-1) [:link:](https://www.codingame.com/training/medium/death-first-search-episode-1)
 - [ ] 11. The Fall - Episode 1 [:link:](https://www.codingame.com/training/medium/the-fall-episode-1)
 - [ ] 12. Mars Lander - Episode 2 [:link:](https://www.codingame.com/training/medium/mars-lander-episode-2)
 - [ ] 13. Stock Exchange Losses [:link:](https://www.codingame.com/training/medium/stock-exchange-losses)
@@ -286,7 +286,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 20. The Gift [:link:](https://www.codingame.com/training/medium/the-gift)
 - [ ] 21. Mayan Calculation [:link:](https://www.codingame.com/training/medium/mayan-calculation)
 - [ ] 41. Shadows of the Knight - Episode 1 [:link:](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1)
-- [x] 47. [Don't Panic - Episode 1](don't-panic-episode-1) [:link:](https://www.codingame.com/training/medium/don%27t-panic-episode-1)
+- [x] 47. [Don't Panic - Episode 1](src/don't-panic-episode-1) [:link:](https://www.codingame.com/training/medium/don%27t-panic-episode-1)
 - [ ] 50. War [:link:](https://www.codingame.com/training/medium/winamax-battle)
 - [ ] 54. There is no Spoon - Episode 1 [:link:](https://www.codingame.com/training/medium/there-is-no-spoon-episode-1)
 - [ ] 76. Game of life [:link:](https://www.codingame.com/training/medium/game-of-life)
@@ -581,7 +581,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 </summary>
 
-- [x] 22. [Death First Search - Episode 2](death-first-search-episode-2) [:link:](https://www.codingame.com/training/hard/death-first-search-episode-2)
+- [x] 22. [Death First Search - Episode 2](src/death-first-search-episode-2) [:link:](https://www.codingame.com/training/hard/death-first-search-episode-2)
 - [ ] 23. The Bridge [:link:](https://www.codingame.com/training/hard/the-bridge-episode-2)
 - [ ] 24. The Labyrinth [:link:](https://www.codingame.com/training/hard/the-labyrinth)
 - [ ] 25. Power of Thor - Episode 2 [:link:](https://www.codingame.com/training/hard/power-of-thor-episode-2)
