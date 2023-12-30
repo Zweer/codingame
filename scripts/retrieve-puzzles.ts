@@ -63,23 +63,17 @@ const levelWeight: Record<string, number> = {
   'codegolf-expert': 33,
 };
 
+const codingameHostname = 'https://www.codingame.com';
 async function retrievePuzzles(): Promise<Puzzle[]> {
   const { data: miniPuzzles } = await axios.post<MiniPuzzle[]>(
-    'https://www.codingame.com/services/Puzzle/findAllMinimalProgress',
+    `${codingameHostname}/services/Puzzle/findAllMinimalProgress`,
     [null],
   );
 
   const { data: puzzles } = await axios.post<Puzzle[]>(
-    'https://www.codingame.com/services/Puzzle/findProgressByIds',
+    `${codingameHostname}/services/Puzzle/findProgressByIds`,
     [miniPuzzles.map((miniPuzzle) => miniPuzzle.id), null, 2],
   );
-
-  puzzles.sort((p1, p2) => {
-    const w1 = levelWeight[p1.level];
-    const w2 = levelWeight[p2.level];
-
-    return w1 === w2 ? p1.id - p2.id : w1 - w2;
-  });
 
   return puzzles;
 }
@@ -95,14 +89,46 @@ function updateReadme(puzzles: Puzzle[]): void {
 
   const directories = readdirSync(join(__dirname, '..', 'src'));
 
-  table.push(
-    ...puzzles.map((puzzle) => [
-      puzzle.id.toString(),
-      puzzle.title.replace(/\|/g, ''),
-      puzzle.level,
-      directories.includes(puzzle.prettyId) ? ':heavy_check_mark:' : ':x:',
-    ]),
-  );
+  const weightedPuzzle: Record<string, Puzzle[]> = {};
+  puzzles.forEach((puzzle) => {
+    if (!weightedPuzzle[puzzle.level]) {
+      weightedPuzzle[puzzle.level] = [];
+    }
+
+    weightedPuzzle[puzzle.level].push(puzzle);
+  });
+
+  const newReadmePartialString = Object.entries(weightedPuzzle)
+    .sort(([level1], [level2]) => levelWeight[level1] - levelWeight[level2])
+    .map(([level, puzzles]) => {
+      puzzles.sort((p1, p2) => p1.id - p2.id);
+
+      const puzzleString: string[] = [
+        '<details>',
+        '',
+        '<summary>',
+        '',
+        `### ${level}`,
+        '',
+        '</summary>',
+        '',
+        ...puzzles.map((puzzle) =>
+          [
+            `- [${directories.includes(puzzle.prettyId) ? 'x' : ' '}]`,
+            `${puzzle.id}.`,
+            directories.includes(puzzle.prettyId)
+              ? `[${puzzle.title}](${puzzle.prettyId})`
+              : puzzle.title,
+            `[:link:](${codingameHostname}${puzzle.detailsPageUrl})`,
+          ].join(' '),
+        ),
+        '',
+        '</details>',
+      ];
+
+      return puzzleString.join('\n');
+    })
+    .join('\n');
 
   const readmePath = join(__dirname, '..', 'README.md');
   const readmeString = readFileSync(readmePath, 'utf8');
@@ -114,10 +140,7 @@ function updateReadme(puzzles: Puzzle[]): void {
     );
   }
 
-  const newReadmeString = readmeString.replace(
-    tableMatch[1],
-    table.map((row) => `|${row.join('|')}|`).join('\n'),
-  );
+  const newReadmeString = readmeString.replace(tableMatch[1], newReadmePartialString);
 
   writeFileSync(readmePath, newReadmeString);
 }
