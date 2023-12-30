@@ -117,7 +117,7 @@ function updateReadme(puzzles: Puzzle[]): void {
             `- [${directories.includes(puzzle.prettyId) ? 'x' : ' '}]`,
             `${puzzle.id}.`,
             directories.includes(puzzle.prettyId)
-              ? `[${puzzle.title}](${puzzle.prettyId})`
+              ? `[${puzzle.title}](src/${puzzle.prettyId})`
               : puzzle.title,
             `[:link:](${codingameHostname}${puzzle.detailsPageUrl})`,
           ].join(' '),
