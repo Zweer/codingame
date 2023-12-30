@@ -7,875 +7,983 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 ## Puzzles
 
 <!-- TABLE:START -->
-|ID|Puzzle Name|Difficulty|Solved|
-|---|---|---|---|
-|43|Onboarding|tutorial|:x:|
-|4|Power of Thor - Episode 1|easy|:x:|
-|5|Temperatures|easy|:x:|
-|6|ASCII Art|easy|:x:|
-|7|Unary|easy|:x:|
-|8|MIME Type|easy|:x:|
-|9|Defibrillators|easy|:x:|
-|10|Horse-racing Duals|easy|:x:|
-|40|Mars Lander - Episode 1|easy|:x:|
-|108|Brackets, extreme edition.|easy|:x:|
-|121|The Descent|easy|:x:|
-|133|May the Triforce be with you!|easy|:x:|
-|154|XML MDF-2016|easy|:x:|
-|171|Jack Silver: The Casino|easy|:x:|
-|182|Rugby score|easy|:x:|
-|188|How time flies|easy|:x:|
-|203|Nature of quadrilaterals|easy|:x:|
-|210|Balanced ternary computer: encode|easy|:x:|
-|229|Bulk Email Generator|easy|:x:|
-|234|Next car license plate  ?|easy|:x:|
-|235|Horse-racing Hyperduals|easy|:x:|
-|238|Self-driving car testing|easy|:x:|
-|243|Folding Paper|easy|:x:|
-|319|Monday Tuesday Happy Days|easy|:x:|
-|341|What's so complex about Mandelbrot?|easy|:x:|
-|343|The River I.|easy|:x:|
-|345|The River II.|easy|:x:|
-|351|Text formatting|easy|:x:|
-|355|The Travelling Salesman Problem|easy|:x:|
-|358|Organic Compounds 🔬|easy|:x:|
-|360|Simple Awalé|easy|:x:|
-|373|Morellet’s random lines|easy|:x:|
-|393|Disordered First Contact|easy|:x:|
-|395|ISBN Check digit|easy|:x:|
-|396|Bank Robbers|easy|:x:|
-|403|1×1×1 Rubik’s cube movements|easy|:x:|
-|408|orDer oF succeSsion|easy|:x:|
-|419|Ghost Legs|easy|:x:|
-|428|Add'em Up|easy|:x:|
-|429|Pirate's treasure|easy|:x:|
-|433|Encryption/Decryption of Enigma Machine|easy|:x:|
-|437|Rooks Movements|easy|:x:|
-|441|Rectangular block spinner|easy|:x:|
-|442|Darts|easy|:x:|
-|443|Dead men's shot|easy|:x:|
-|451|Credit Card Verifier (Luhn’s algorithm)|easy|:x:|
-|454|Hunger Games|easy|:x:|
-|455|The Dart 101|easy|:x:|
-|459|Brick in the Wall|easy|:x:|
-|465|Lumen|easy|:x:|
-|469|Blowing Fuse|easy|:x:|
-|501|Stall tilt|easy|:x:|
-|505|1D Spreadsheet|easy|:x:|
-|508|Hooch Clash|easy|:x:|
-|515|Count as I count|easy|:x:|
-|516|Are The Clumps Normal|easy|:x:|
-|517|Smooth!|easy|:x:|
-|519|A child's play|easy|:x:|
-|520|Detective Pikaptcha EP1|easy|:x:|
-|521|Detective Pikaptcha EP2|easy|:x:|
-|525|Happy Numbers|easy|:x:|
-|528|Dolbear's Law|easy|:x:|
-|535|Hello, World!|easy|:x:|
-|542|Rectangle Partition|easy|:x:|
-|546|Unit Fractions|easy|:x:|
-|552|Graffiti on the fence|easy|:x:|
-|558|Create the longest sequence of 1s|easy|:x:|
-|562|1D Bush Fire|easy|:x:|
-|576|Rock Paper Scissors Lizard Spock|easy|:x:|
-|581|TicTacToe|easy|:x:|
-|586|Van Eck's sequence|easy|:x:|
-|587|Sudoku Validator|easy|:x:|
-|611|Auto pickup|easy|:x:|
-|612|A mountain of a mole hill|easy|:x:|
-|615|Benford's law|easy|:x:|
-|623|Murder in the village!|easy|:x:|
-|627|Robot Show|easy|:x:|
-|630|Dungeons and Maps|easy|:x:|
-|639|The Electrician Apprentice|easy|:x:|
-|643|Is that a possible word?|easy|:x:|
-|644|7-segment scanner|easy|:x:|
-|647|Extended Hamming Codes|easy|:x:|
-|648|Flip The Sign|easy|:x:|
-|652|Reverse FizzBuzz|easy|:x:|
-|653|Prefix code|easy|:x:|
-|655|Logically reasonable inequalities|easy|:x:|
-|656|Equivalent Resistance, Circuit Building|easy|:x:|
-|659|Unique Prefixes|easy|:x:|
-|661|Tree Paths|easy|:x:|
-|668|Nicholas Breakspeare and Hugh of Evesham|easy|:x:|
-|673|Decode the message|easy|:x:|
-|678|Number derivation|easy|:x:|
-|688|Low Resolution: What's The Shape?|easy|:x:|
-|690|Mountain Map|easy|:x:|
-|691|Next growing number|easy|:x:|
-|697|Hidden Messages In Images|easy|:x:|
-|706|Retaining Water|easy|:x:|
-|709|Gold Packing|easy|:x:|
-|710|IPv6 Shortener|easy|:x:|
-|711|Nature of triangles|easy|:x:|
-|719|Is the King In Check? (Part 1)|easy|:x:|
-|723|Feature Extraction|easy|:x:|
-|724|Asteroids|easy|:x:|
-|725|1000000000D WORLD|easy|:x:|
-|727|Mountain Map Convergence|easy|:x:|
-|728|Container Terminal|easy|:x:|
-|732|Parse SQL Queries|easy|:x:|
-|734|Master of Mayhem|easy|:x:|
-|737|Offset Arrays|easy|:x:|
-|739|Reverse Minesweeper|easy|:x:|
-|742|The Michelangelo Code|easy|:x:|
-|750|Sum of Spiral's Diagonals|easy|:x:|
-|756|The Mystic Rectangle|easy|:x:|
-|760|In Stereo|easy|:x:|
-|761|Zhiwei Sun Squares|easy|:x:|
-|762|Binary image|easy|:x:|
-|765|1. NGR - Basic Radar|easy|:x:|
-|766|Shadow Casting|easy|:x:|
-|767|Cosmic Love|easy|:x:|
-|768|Substitution Encoding|easy|:x:|
-|769|Object Insertion|easy|:x:|
-|774|Personal Best|easy|:x:|
-|780|Fax machine|easy|:x:|
-|783|Someone's Acting Sus....|easy|:x:|
-|784|Detective Geek|easy|:x:|
-|786|Sweet spot|easy|:x:|
-|787|Treasure hunt|easy|:x:|
-|789|Caesar is the chief|easy|:x:|
-|792|Die Handedness|easy|:x:|
-|795|Simple AI duels|easy|:x:|
-|797|Where's Wally|easy|:x:|
-|801|Catching Up|easy|:x:|
-|802|Walk on a Die|easy|:x:|
-|803|Simple auto-scaling|easy|:x:|
-|806|A Bunny and Carrots|easy|:x:|
-|812|Magic String|easy|:x:|
-|819|FireControl|easy|:x:|
-|820|Largest Number|easy|:x:|
-|823|By train or by car ?|easy|:x:|
-|824|Markov Text Generation|easy|:x:|
-|829|Frame the picture|easy|:x:|
-|830|Faro shuffle|easy|:x:|
-|832|Buzzle|easy|:x:|
-|835|Genetics and Computers|easy|:x:|
-|868|PARK PILOT|easy|:x:|
-|934|Random Walk|easy|:x:|
-|967|Tricky  Number Verifier|easy|:x:|
-|1000|Body weight is a girl's secret|easy|:x:|
-|1066|Minesweeper level generator|easy|:x:|
-|1462|Rotating arrows|easy|:x:|
-|1495|10 pin Bowling Scores|easy|:x:|
-|1528|Distributing Candy|easy|:x:|
-|1792|No More Pythons, Please!|easy|:x:|
-|1825|Simple Load Balancing|easy|:x:|
-|1990|Logic gates|easy|:x:|
-|2023|Calculator|easy|:x:|
-|2089|Snail Run|easy|:x:|
-|2122|Survey Prediction|easy|:x:|
-|2155|Cubic Bézier curves|easy|:x:|
-|2221|Metric Units|easy|:x:|
-|2287|Moves in maze|easy|:x:|
-|2386|The broken editor|easy|:x:|
-|2452|🤖 Robot Reach|easy|:x:|
-|2518|Ted's compiler|easy|:x:|
-|2519|Annihilation|easy|:x:|
-|2551|2nd degree polynomial - simple analysis|easy|:x:|
-|2617|Kiss the girls|easy|:x:|
-|2716|Artificial Emotional Intelligence|easy|:x:|
-|2782|Retro Typewriter Art|easy|:heavy_check_mark:|
-|2815|Probability for Dummies|easy|:x:|
-|2848|Crop-Circles|easy|:x:|
-|3013|Insert to String|easy|:x:|
-|3046|Ulam Spiral|easy|:x:|
-|3310|WW2 Mortar Warfare|easy|:x:|
-|3343|Blackjack solver|easy|:x:|
-|3376|Should Bakers be Frugal?|easy|:x:|
-|3475|Merlin's Magic Square|easy|:x:|
-|3508|Longest coast|easy|:x:|
-|3541|Snake Sort 2D|easy|:x:|
-|3574|Blending Colors|easy|:x:|
-|3575|abcdefghijklmnopqrstuvwxyz|easy|:x:|
-|3640|Match DNA Sequence|easy|:x:|
-|3673|Max Area|easy|:x:|
-|3707|Character replacement problem|easy|:x:|
-|3739|The weight of words|easy|:x:|
-|3805|Video comments|easy|:x:|
-|3937|Card Counting when easily distracted|easy|:x:|
-|3970|Messed up mosaics|easy|:x:|
-|4003|Minimal palindrome distance|easy|:x:|
-|4036|Embedded Chessboards|easy|:x:|
-|4069|An adventure in the fantasy world|easy|:x:|
-|4102|Saving Snoopy|easy|:x:|
-|4135|Another Road Construction Site - 1|easy|:x:|
-|4168|The logo beyond C++ and C#|easy|:x:|
-|4234|Table of Contents|easy|:x:|
-|4498|Create 'Turn Here' Signs|easy|:x:|
-|4531|Shoot Enemy Aircraft|easy|:x:|
-|4597|Make an Atari Font|easy|:x:|
-|4861|Euclid's Algorithm|easy|:x:|
-|4894|Build A Bookcase🔨|easy|:x:|
-|5389|Tabloid Couple-Names 💕|easy|:x:|
-|5455|Rocks, Papers, Scissors-es|easy|:x:|
-|5488|ASCII Art The Drunken Bishop Algorithm|easy|:heavy_check_mark:|
-|5521|Duo combinations|easy|:x:|
-|5554|Wordle colorizer|easy|:x:|
-|5620|Tile a Floor|easy|:x:|
-|5653|Word Search for Programmers|easy|:x:|
-|5686|Mandelbrot Set Approximation|easy|:x:|
-|5786|Number formatting|easy|:x:|
-|5818|Stunning numbers|easy|:x:|
-|5884|Library dependencies|easy|:x:|
-|5917|The alien business of cows|easy|:x:|
-|5983|Remove insert statements|easy|:x:|
-|6016|Tile a Floor Differently|easy|:x:|
-|6115|The helpdesk|easy|:x:|
-|6148|Couple's Picture-Frame|easy|:x:|
-|6181|The leaking bathtub|easy|:x:|
-|6214|Fibonacci's Rabbit|easy|:x:|
-|6247|Digital Scoreboard|easy|:x:|
-|6280|Vectors in variables dimensions|easy|:x:|
-|6445|NATO-alphabet's odd uncles|easy|:x:|
-|6478|Furlongs per Fortnight|easy|:x:|
-|6544|Euclid's algorithm with complex numbers|easy|:x:|
-|6610|Crazy List|easy|:x:|
-|6709|Mirrors|easy|:x:|
-|6775|Count your coins|easy|:x:|
-|6841|What 🌼 is 🌷 your 🌸  garden 💐 worth?|easy|:x:|
-|6874|You are the Father: Maury Povich Style|easy|:x:|
-|6907|Ukulele/Guitar converter|easy|:x:|
-|6940|Score a Bridge deal|easy|:x:|
-|6973|Video Assistant Referee|easy|:x:|
-|7006|Popularity of each activity|easy|:x:|
-|7105|Queen control|easy|:x:|
-|7270|Square Spiral for Alien Contact 👽|easy|:x:|
-|7303|Interstellar|easy|:x:|
-|7369|deus Hex machina|easy|:x:|
-|7468|Panel count|easy|:x:|
-|7501|Number Partition|easy|:x:|
-|1|Death First Search - Episode 1|medium|:heavy_check_mark:|
-|11|The Fall - Episode 1|medium|:x:|
-|12|Mars Lander - Episode 2|medium|:x:|
-|13|Stock Exchange Losses|medium|:x:|
-|14|Network Cabling|medium|:x:|
-|15|Conway Sequence|medium|:x:|
-|16|Telephone Numbers|medium|:x:|
-|17|Dwarfs standing on the shoulders of giants|medium|:x:|
-|18|Blunder - Episode 1|medium|:x:|
-|19|Scrabble|medium|:x:|
-|20|The Gift|medium|:x:|
-|21|Mayan Calculation|medium|:x:|
-|41|Shadows of the Knight - Episode 1|medium|:x:|
-|47|Don't Panic - Episode 1|medium|:heavy_check_mark:|
-|50|War|medium|:x:|
-|54|There is no Spoon - Episode 1|medium|:x:|
-|76|Game of life|medium|:x:|
-|77|Vote counting|medium|:x:|
-|78|Gravity|medium|:x:|
-|86|Dominoes Path|medium|:x:|
-|87|Bust speeding vehicles|medium|:x:|
-|95|Ascii Graph|medium|:x:|
-|97|Reverse Polish Notation|medium|:x:|
-|103|Minimal number of swaps|medium|:x:|
-|104|Rubik®|medium|:x:|
-|106|CGS minifier|medium|:x:|
-|111|The Fastest|medium|:x:|
-|112|DDCG Mapper|medium|:x:|
-|116|Maze|medium|:x:|
-|120|The Ultimate Test|medium|:x:|
-|123|These Romans are crazy!|medium|:x:|
-|128|Divine!|medium|:x:|
-|131|2.5D maze|medium|:x:|
-|132|Othello|medium|:x:|
-|139|Minesweeper|medium|:x:|
-|140|Bulls and Cows|medium|:x:|
-|142|Text alignment|medium|:x:|
-|147|Snake encoding|medium|:x:|
-|150|ASCII ART : Glass Stacking|medium|:x:|
-|157|Sum of divisors|medium|:x:|
-|158|The Urinal Problem|medium|:x:|
-|159|Ancestors & Descendants|medium|:x:|
-|161|CGFunge interpreter|medium|:x:|
-|162|Anagrams|medium|:x:|
-|169|The experience for creating puzzles|medium|:x:|
-|170|Elementary cellular automaton|medium|:x:|
-|172|Simple fraction to mixed number|medium|:x:|
-|173|Queneau Numbers|medium|:x:|
-|174|Quaternion Multiplication|medium|:x:|
-|187|Army ants|medium|:x:|
-|190|Carmichael numbers|medium|:x:|
-|193|OneWay City|medium|:x:|
-|198|Langton's ant|medium|:x:|
-|199|Divide the factorial|medium|:x:|
-|202|Reversed Look-and-say|medium|:x:|
-|207|Near-Palindromes|medium|:x:|
-|211|Texas Holdem|medium|:x:|
-|220|Brackets, Enhanced Edition|medium|:x:|
-|223|2×2×2 Rubik’s cube movements|medium|:x:|
-|227|Factorial vs Exponential|medium|:x:|
-|228|Advanced Tree|medium|:x:|
-|230|Gravity Tumbler|medium|:x:|
-|233|Number of letters in a number - Binary|medium|:x:|
-|239|Horse-hyperracing Hyperduals|medium|:x:|
-|244|Micro Assembly|medium|:x:|
-|245|Cards castle|medium|:x:|
-|246|Magic stones|medium|:x:|
-|299|Sandpile addition|medium|:x:|
-|322|Hidden word|medium|:x:|
-|326|Bruce Lee|medium|:x:|
-|331|Numeral system|medium|:x:|
-|332|1010(1)|medium|:x:|
-|336|A-star exercise|medium|:x:|
-|337|Minimax exercise|medium|:x:|
-|339|Monthly System|medium|:x:|
-|344|Porcupine Fever|medium|:x:|
-|349|Magic Square|medium|:x:|
-|350|Count of Primes in a number grid|medium|:x:|
-|352|Gravity Centrifuge|medium|:x:|
-|354|Find the replacement|medium|:x:|
-|361|2048 scores|medium|:x:|
-|363|Plight Of The Fellowship Of The Ring|medium|:x:|
-|364|Bingo!|medium|:x:|
-|366|Gravity Centrifuge Tuning|medium|:x:|
-|367|The Grand Festival - I|medium|:x:|
-|370|Box of Cigars|medium|:x:|
-|372|Polydivisible number|medium|:x:|
-|374|The Grand Festival - II|medium|:x:|
-|375|Format string validation|medium|:x:|
-|377|Flood fill Example|medium|:x:|
-|384|Paper labyrinth|medium|:x:|
-|386|Brackets, Ultimate Edition|medium|:x:|
-|387|De-FizzBuzzer|medium|:x:|
-|388|Bag of Balls|medium|:x:|
-|394|Simplified Monopoly™ Turns Prediction|medium|:x:|
-|400|Bulgarian solitaire|medium|:x:|
-|401|Trits (Balanced Ternary Computing)|medium|:x:|
-|402|Depot organization|medium|:x:|
-|406|The Optimal Urinal Problem|medium|:x:|
-|413|Brackets, Extended Edition|medium|:x:|
-|415|Counting Squares on Pegs|medium|:x:|
-|421|Kaprekar's routine|medium|:x:|
-|422|Maximum sub-sequence|medium|:x:|
-|423|Remainder Fantasy|medium|:x:|
-|424|Locked in gear|medium|:x:|
-|425|Short accounts make long friends|medium|:x:|
-|426|Dice probability calculator|medium|:x:|
-|427|Number of paths between 2 points|medium|:x:|
-|434|Enigma - 3 rotors without plugboard|medium|:x:|
-|435|Guessing n Cheating|medium|:x:|
-|436|HTML table cell split|medium|:x:|
-|438|Straddling Checkerboard Cryptography|medium|:x:|
-|440|Digit sum successor|medium|:x:|
-|444|2-player game on a calculator|medium|:x:|
-|445|Guessing digits|medium|:x:|
-|446|Equalizing arrays|medium|:x:|
-|448|IP mask calculating|medium|:x:|
-|452|Dynamic sorting|medium|:x:|
-|456|Green Valleys|medium|:x:|
-|457|Goro Want Chocolate|medium|:x:|
-|462|Domino Puzzle|medium|:x:|
-|466|EUROPEAN RUGBY CHAMPIONS CUP RANKING|medium|:x:|
-|470|Find the winning strategy|medium|:x:|
-|472|Go competition|medium|:x:|
-|475|Barcode scanner|medium|:x:|
-|478|Fishing With A Stick|medium|:x:|
-|479|Elliptic curve cryptography|medium|:x:|
-|480|Criminal|medium|:x:|
-|482|Rearrange string to two numbers|medium|:x:|
-|484|Seam Carving|medium|:x:|
-|485|Robbery optimisation|medium|:x:|
-|487|Palindromic Decomposition|medium|:x:|
-|488|Length of Syracuse Conjecture Sequence|medium|:x:|
-|490|Shikaku Solver|medium|:x:|
-|492|Regular polygons|medium|:x:|
-|499|Road Trip|medium|:x:|
-|502|Jumping Frogs|medium|:x:|
-|503|Forest Fire|medium|:x:|
-|510|Sudoku Solver|medium|:x:|
-|511|Knights Jam|medium|:x:|
-|512|Plague, Jr|medium|:x:|
-|518|Smooth Factory|medium|:x:|
-|522|Detective Pikaptcha EP3|medium|:x:|
-|526|Battleship|medium|:x:|
-|529|Surakarta|medium|:x:|
-|531|Identifying data structure|medium|:x:|
-|532|A story to go in circles|medium|:x:|
-|533|Fun with Set theory|medium|:x:|
-|537|Dice galaxy|medium|:x:|
-|538|A Coin Guessing Game|medium|:x:|
-|539|Let's Go To The Cinema!|medium|:x:|
-|543|Windmill problem|medium|:x:|
-|544|Photo Booth Transformation|medium|:x:|
-|545|Light Bulbs|medium|:x:|
-|548|Fair Numbering|medium|:x:|
-|551|Rational Number Tree|medium|:x:|
-|561|Chained Matrix Products|medium|:x:|
-|565|Bit count to limit|medium|:x:|
-|566|Hacking at RobberCity|medium|:x:|
-|567|Halting sequences|medium|:x:|
-|569|Binary Search Tree Traversal|medium|:x:|
-|570|3×N Tiling|medium|:x:|
-|578|Propositions in Frege’s ideography|medium|:x:|
-|582|Rock-Paper-Scissors War|medium|:x:|
-|584|Playfair Cipher|medium|:x:|
-|585|Blood Types|medium|:x:|
-|591|Futoshiki Solver|medium|:x:|
-|602|Crossword|medium|:x:|
-|614|The lost child.Episode-1|medium|:x:|
-|616|Duck Hunt|medium|:x:|
-|618|Source Code Analyser|medium|:x:|
-|619|Huffman Code|medium|:x:|
-|620|What the Brainfuck !|medium|:x:|
-|621|The Polish Dictionary|medium|:x:|
-|625|Battle Tower|medium|:x:|
-|629|Target Firing|medium|:x:|
-|633|Smile! Frieze! Cheese!|medium|:x:|
-|638|Escaping the cat|medium|:x:|
-|641|English length units conversion|medium|:x:|
-|645|Particle Detection with Cloud Chamber|medium|:x:|
-|646|Virus spreading and clustering|medium|:x:|
-|649|Find the liars|medium|:x:|
-|662|Minesweeper|medium|:x:|
-|670|The lost files|medium|:x:|
-|672|Assignments are boring|medium|:x:|
-|677|Rod cutting problem|medium|:x:|
-|692|Place the Parenthesis|medium|:x:|
-|693|Inversion count|medium|:x:|
-|696|Paving with bricks|medium|:x:|
-|703|Ways to make change|medium|:x:|
-|705|Remaining Card|medium|:x:|
-|707|🏐 🏖 Beach Volleyball 🏐 🏖|medium|:x:|
-|712|if then else|medium|:x:|
-|714|5D Chests|medium|:x:|
-|718|Byte pair encoding|medium|:x:|
-|721|Christmas Tree|medium|:x:|
-|722|Cooperative Mate with Rook|medium|:x:|
-|731|Fractal Image Recognition|medium|:x:|
-|735|Bijective Numeration|medium|:x:|
-|740|Kids Blocks|medium|:x:|
-|741|Valid brackets in code|medium|:x:|
-|743|Longest Road|medium|:x:|
-|746|ASCII cube|medium|:x:|
-|751|Custom Game of Life|medium|:x:|
-|753|Is the King In Check? (Part 2)|medium|:x:|
-|754|Connect the Hyper-Dots|medium|:x:|
-|758|Can you save the forest - Episode 1|medium|:x:|
-|759|Ring the bells|medium|:x:|
-|770|Railway Station Clock|medium|:x:|
-|772|Folding a Note|medium|:x:|
-|773|Train passenger|medium|:x:|
-|777|Simple Blur|medium|:x:|
-|781|Primitive Pythagorean Triples|medium|:x:|
-|785|Binary Sequence|medium|:x:|
-|788|Wine from Kalbodia - Episode 1|medium|:x:|
-|794|Cooking passion|medium|:x:|
-|799|Dungeon 3D|medium|:x:|
-|804|Solid Integer|medium|:x:|
-|805|Lost astronaut|medium|:x:|
-|807|Drug Interactions|medium|:x:|
-|808|Code Breaker Puzzle|medium|:x:|
-|811|We're going in circles!|medium|:x:|
-|813|Binary Tree Visual|medium|:x:|
-|814|Sticky Keyboard|medium|:x:|
-|816|Various Number Spirals|medium|:x:|
-|817|Thermal Flying - Episode 1|medium|:x:|
-|818|River Crossing|medium|:x:|
-|822|The parking|medium|:x:|
-|826|3D printer|medium|:x:|
-|828|24 Game|medium|:x:|
-|831|MCxxxx microcontroller simulation|medium|:x:|
-|833|Condition Overshadowing|medium|:x:|
-|834|Self Checkout Machine|medium|:x:|
-|1099|Entry code|medium|:x:|
-|1198|Rocket engines|medium|:x:|
-|1231|Continued Fractions|medium|:x:|
-|1264|How many roads lead to Rome?|medium|:x:|
-|1297|L-triominoes|medium|:x:|
-|1363|The Stonemason|medium|:x:|
-|1429|Largest Binary Rectangle|medium|:x:|
-|1627|Holey Times|medium|:x:|
-|1660|Jumping  Frog|medium|:x:|
-|1759|Join the Dots|medium|:x:|
-|1858|All Operations are Equal!|medium|:x:|
-|1891|Consecutive Balanced Substrings|medium|:x:|
-|1924|Derivative time !!! - part1|medium|:x:|
-|2056|Scary Ride at the Haunted Mansion|medium|:x:|
-|2188|Bouncing Barry|medium|:x:|
-|2254|Hexagonal Maze|medium|:x:|
-|2353|circular automation, the period of chaos|medium|:x:|
-|2419|Random Time Travel|medium|:x:|
-|2485|the voucher|medium|:x:|
-|2584|Tennis score|medium|:x:|
-|2881|Complicated interpreter|medium|:x:|
-|2914|Lunar Lockout|medium|:x:|
-|2947|Level of nested parentheses|medium|:x:|
-|2980|RUSH HOUR|medium|:x:|
-|3112|Constrained Latin Squares|medium|:x:|
-|3145|Frog Exchange|medium|:x:|
-|3244|Mitosis Mayhem|medium|:x:|
-|3409|Maze /w teleporters and jumps|medium|:x:|
-|3772|Find the missing plus signs in addition|medium|:x:|
-|3871|Sky Maze Adventures 1|medium|:x:|
-|3904|Suguru Solver|medium|:x:|
-|4333|Killer Sudoku Solver|medium|:x:|
-|4366|Cylinders|medium|:x:|
-|4399|Goldbach’s Conjecture|medium|:x:|
-|4432|Maze for the Champions|medium|:x:|
-|4465|Longest Increasing Subsequence|medium|:x:|
-|4696|Eratosthenes' Wallpaper|medium|:x:|
-|4828|ASCII Art with Logo Language|medium|:x:|
-|4960|Roman Sorting|medium|:x:|
-|5059|ASCII Art with Logo Language, Part 2|medium|:x:|
-|5092|Tiny Forest|medium|:x:|
-|5125|Fun with CGX Expressions|medium|:x:|
-|5158|Hotel|medium|:x:|
-|5191|Team Building|medium|:x:|
-|5290|Chain Reaction|medium|:x:|
-|5323|Identify a simple shape|medium|:x:|
-|5356|Recurring decimal to fraction|medium|:x:|
-|5422|Fix the spaces|medium|:x:|
-|5719|Fibonomials|medium|:x:|
-|5752|SPORE City Planner|medium|:x:|
-|5785|Firewall placement|medium|:x:|
-|5851|How many triangles and rectangles?|medium|:x:|
-|5950|Frequency-Based Decryption|medium|:x:|
-|6082|One for his Nobs|medium|:x:|
-|6313|BobTheScience and the Food Stack|medium|:x:|
-|6412|16x16 Sudoku|medium|:x:|
-|6577|Chebyshev Orbiting|medium|:x:|
-|6676|String balls|medium|:x:|
-|6742|Count as I count #2|medium|:x:|
-|6808|Hunger|medium|:x:|
-|7072|Markov ants|medium|:x:|
-|7138|Risk odds calculator|medium|:x:|
-|7171|Coastline|medium|:x:|
-|7402|Mosaic|medium|:x:|
-|7534|Bin packing|medium|:x:|
-|22|Death First Search - Episode 2|hard|:heavy_check_mark:|
-|23|The Bridge|hard|:x:|
-|24|The Labyrinth|hard|:x:|
-|25|Power of Thor - Episode 2|hard|:x:|
-|26|Super Computer|hard|:x:|
-|27|Roller Coaster|hard|:x:|
-|28|CGX Formatter|hard|:x:|
-|29|TAN Network|hard|:x:|
-|30|Genome Sequencing|hard|:x:|
-|31|Surface|hard|:x:|
-|32|Blunder - Episode 2|hard|:x:|
-|33|Blunder - Episode 3|hard|:x:|
-|35|The Fall - Episode 2|hard|:x:|
-|44|Vox Codei - Episode 1|hard|:x:|
-|48|Don't Panic - Episode 2|hard|:x:|
-|55|There is no Spoon - Episode 2|hard|:x:|
-|79|Staircases|hard|:x:|
-|84|Cryptarithm|hard|:x:|
-|85|Mystery sums|hard|:x:|
-|89|Alternative vote|hard|:x:|
-|96|Mini sudoku solver|hard|:x:|
-|100|Test before Validate!|hard|:x:|
-|109|Castle Siege|hard|:x:|
-|113|TXT2HTML|hard|:x:|
-|119|Boggle|hard|:x:|
-|122|Connect four|hard|:x:|
-|125|Spreadsheet Labels|hard|:x:|
-|127|Candies|hard|:x:|
-|130|Electrical grid|hard|:x:|
-|134|Binary Permutations|hard|:x:|
-|135|Tetris|hard|:x:|
-|136|Erdős Number|hard|:x:|
-|138|Disks intersection|hard|:x:|
-|141|Simplify Selection Ranges|hard|:x:|
-|143|The Holy Grail|hard|:x:|
-|145|Universe Conquest|hard|:x:|
-|146|7-segment display|hard|:x:|
-|153|Chess cavalry|hard|:x:|
-|167|Simple safecracking|hard|:x:|
-|176|Vortex|hard|:x:|
-|179|Fractal Carpet|hard|:x:|
-|180|Chess moves on FEN position|hard|:x:|
-|181|Einstein's riddle solver|hard|:x:|
-|183|The greatest number|hard|:x:|
-|184|KGood|hard|:x:|
-|185|Egyptian multiplication|hard|:x:|
-|192|Elevator|hard|:x:|
-|195|Drawing Polygons|hard|:x:|
-|196|Hill Notation and Hill Order|hard|:x:|
-|197|The Highest Building|hard|:x:|
-|200|The Beautiful sequence|hard|:x:|
-|217|Google Interview - The Two Egg Problem|hard|:x:|
-|219|Hangman|hard|:x:|
-|222|The Burglar's Dilemna|hard|:x:|
-|224|Pascal Trapezoid|hard|:x:|
-|225|Zergling rush|hard|:x:|
-|231|Misère Nim|hard|:x:|
-|232|Inertia ride|hard|:x:|
-|236|Laser and mirrors|hard|:x:|
-|240|Winamax Sponsored Contest|hard|:x:|
-|241|Kolakoski Sequence|hard|:x:|
-|248|To Sky's Edge|hard|:x:|
-|249|Execution Circle|hard|:x:|
-|250|The max surface box|hard|:x:|
-|251|Timer for Clash of Code|hard|:x:|
-|252|X egg problem|hard|:x:|
-|254|Hit the road|hard|:x:|
-|255|Wall Street|hard|:x:|
-|293|Rocket mice|hard|:x:|
-|294|Hanoi tower|hard|:x:|
-|307|n Queens|hard|:x:|
-|308|Turing machine|hard|:x:|
-|309|Binary neural network - Part 1|hard|:x:|
-|312|Levenshtein distance|hard|:x:|
-|313|Cheat Solving|hard|:x:|
-|314|Highest truncated pyramid|hard|:x:|
-|315|The hungry duck - part 1|hard|:x:|
-|318|The hungry duck - part 2|hard|:x:|
-|320|Code your own Automaton2000, step 1|hard|:x:|
-|325|Longest Palindrome|hard|:x:|
-|327|Parsing context-free grammar|hard|:x:|
-|328|Hitori solver|hard|:x:|
-|330|Order of Oopserations!|hard|:x:|
-|340|Apple tree|hard|:x:|
-|342|Simple CPU Emulation 1|hard|:x:|
-|346|Paper-folding curve|hard|:x:|
-|347|Max Rect|hard|:x:|
-|356|Monte Carlo Tree Search exercise|hard|:x:|
-|365|Magic count of numbers|hard|:x:|
-|369|Musical Intervals|hard|:x:|
-|371|Expand the polynomial|hard|:x:|
-|378|Dominoes solver|hard|:x:|
-|398|Symbolic system of equations|hard|:x:|
-|399|Horn-SAT solver|hard|:x:|
-|404|The Empire Enigma|hard|:x:|
-|405|Factorials of primes decomposition|hard|:x:|
-|407|The Total is Right - Weird edition|hard|:x:|
-|412|Breakout|hard|:x:|
-|417|Dumbbells solver|hard|:x:|
-|418|Sum of odd|hard|:x:|
-|431|Harmless Rooks|hard|:x:|
-|432|Neighbor-Sum Grids|hard|:x:|
-|453|The Balanced Centrifuge Problem|hard|:x:|
-|458|Her Majesty's well shared secret|hard|:x:|
-|463|Basic Decision Tree - 1|hard|:x:|
-|476|11-puzzle|hard|:x:|
-|477|Closest Number|hard|:x:|
-|486|Discrete Log Problem|hard|:x:|
-|506|Nonogram inversor|hard|:x:|
-|507|Basic Decision Tree - 2|hard|:x:|
-|523|Detective Pikaptcha EP4|hard|:x:|
-|547|Cloudy Weather|hard|:x:|
-|559|Mars Colonization|hard|:x:|
-|590|A Game of Go|hard|:x:|
-|609|Map Colorations|hard|:x:|
-|622|Bailey–Borwein–Plouffe Pi|hard|:x:|
-|624|Chess board analyzer|hard|:x:|
-|632|Breaking Apart|hard|:x:|
-|640|Jump Point Search - Preprocessing|hard|:x:|
-|642|Encounter surface|hard|:x:|
-|651|Thomas and the Freight Cars|hard|:x:|
-|657|Sokoban|hard|:x:|
-|660|Doubly solved Rubik's cube|hard|:x:|
-|674|Flower beds|hard|:x:|
-|685|Jump Point Search - Runtime|hard|:x:|
-|687|Obsolete Programming|hard|:x:|
-|694|Nuggets numbers|hard|:x:|
-|695|🃏 FreeCell 🃏|hard|:x:|
-|698|Kakuro Solver|hard|:x:|
-|702|Blockout|hard|:x:|
-|713|A Man with a Plan|hard|:x:|
-|716|Binary Extension|hard|:x:|
-|717|Divisibility of Fibonacci numbers sum|hard|:x:|
-|720|Let's make a cheap ASCII 3D engine!|hard|:x:|
-|733|Pedestrian Traffic|hard|:x:|
-|749|SHA-256 Hash|hard|:x:|
-|755|Adversarial Mate with Rook|hard|:x:|
-|757|Legendary Archer Octavius|hard|:x:|
-|763|Maximising integers|hard|:x:|
-|779|Can you save the forest - Episode 2|hard|:x:|
-|791|The Hidden Fortress|hard|:x:|
-|800|Balanced Levers|hard|:x:|
-|809|Snooker Ball Collision|hard|:x:|
-|810|DAWG|hard|:x:|
-|821|Wave Function Collapse (sans Shannon)|hard|:x:|
-|869|CG's Next Top Model|hard|:x:|
-|901|Three little piggies|hard|:x:|
-|1033|Sliding Maze Puzzle|hard|:x:|
-|1330|Gerrymandering|hard|:x:|
-|2320|Derivative time !!! - part2|hard|:x:|
-|2683|N Pearls Necklace|hard|:x:|
-|2749|Takuzu Solver|hard|:x:|
-|3442|Conditional probabilities|hard|:x:|
-|3607|Hexagonal Maze - part2|hard|:x:|
-|4267|Breaking Bifid|hard|:x:|
-|4927|Picture Puzzle|hard|:x:|
-|4993|ASCII Art QR code|hard|:x:|
-|5026|Killer Sudoku Extreme Challenge|hard|:x:|
-|6049|Grid climbing|hard|:x:|
-|6643|24: The Long Game|hard|:x:|
-|7039|Mind Cracker|hard|:x:|
-|7204|Advertisements|hard|:x:|
-|7435|String Balls II|hard|:x:|
-|7567|Solve for X|hard|:x:|
-|36|The Fall - Episode 3|expert|:x:|
-|37|The Resistance|expert|:x:|
-|38|Music Scores|expert|:x:|
-|39|Mars Lander - Episode 3|expert|:x:|
-|42|Shadows of the Knight - Episode 2|expert|:x:|
-|46|Vox Codei - Episode 2|expert|:x:|
-|49|Nintendo Sponsored Contest|expert|:x:|
-|126|Squares order|expert|:x:|
-|129|Haunted Manor|expert|:x:|
-|137|Recurring Decimals|expert|:x:|
-|149|The barnyard|expert|:x:|
-|151|Fill the square!|expert|:x:|
-|152|The Lucky Number|expert|:x:|
-|160|Flood the World|expert|:x:|
-|175|The Crime Scene|expert|:x:|
-|177|The water jug riddle from Die Hard 3|expert|:x:|
-|178|Heart of the City|expert|:x:|
-|186|Sliding puzzle|expert|:x:|
-|189|Prime Transformations|expert|:x:|
-|191|Spy the Spies|expert|:x:|
-|194|Unflood The World|expert|:x:|
-|201|CodinDice|expert|:x:|
-|226|Chemical Equation Balancing|expert|:x:|
-|237|Hourglass|expert|:x:|
-|242|Ticket to Ride: Europe|expert|:x:|
-|253|Xorandor|expert|:x:|
-|310|Binary neural network - Part 2|expert|:x:|
-|311|Skylines|expert|:x:|
-|321|Cubax Folding|expert|:x:|
-|323|The two piles difference|expert|:x:|
-|348|Unfolding paper|expert|:x:|
-|357|Dungeon Designer|expert|:x:|
-|368|Minimax Simple Example|expert|:x:|
-|381|Completed Mahjong Hands|expert|:x:|
-|385|High-rise buildings|expert|:x:|
-|411|CG Chat interpreter - Part 1|expert|:x:|
-|414|Cross the lines|expert|:x:|
-|527|Breach|expert|:x:|
-|555|Space Maze|expert|:x:|
-|650|When pigs fly|expert|:x:|
-|663|Tiling by Squares|expert|:x:|
-|700|Nurikabe|expert|:x:|
-|747|Prime Fractals in Pascal's Triangle|expert|:x:|
-|775|Mathematics for big ears|expert|:x:|
-|3211|Running Up That Hill|expert|:x:|
-|6511|25x25 Sudoku|expert|:x:|
-|56|Mars Lander|optim|:x:|
-|60|Code of the Rings|optim|:x:|
-|70|Code vs Zombies|optim|:x:|
-|71|CodinGame Sponsored Contest|optim|:x:|
-|439|A*Craft|optim|:x:|
-|461|Bender - Episode 4|optim|:x:|
-|524|CGFunge Prime|optim|:x:|
-|563|Number Shifting|optim|:x:|
-|575|Bulls and Cows 2|optim|:x:|
-|593|Search Race|optim|:x:|
-|626|SameGame|optim|:x:|
-|658|2048|optim|:x:|
-|827|Travelling Salesman|optim|:x:|
-|1132|Block the spreading fire !|optim|:x:|
-|5224|Wordle|optim|:x:|
-|63|Tron Battle|multi|:x:|
-|64|Game of Drones|multi|:x:|
-|65|Platinum Rift - Episode 2|multi|:x:|
-|66|Platinum Rift - Episode 1|multi|:x:|
-|67|Great escape|multi|:x:|
-|68|Poker Chip Race|multi|:x:|
-|69|Back to the Code|multi|:x:|
-|148|Mad Pod Racing|multi|:x:|
-|156|Smash The Code|multi|:x:|
-|168|CodeBusters|multi|:x:|
-|221|Hypersonic|multi|:x:|
-|247|Fantastic Bits|multi|:x:|
-|298|Ghost in the Cell|multi|:x:|
-|324|Coders of the Caribbean|multi|:x:|
-|329|Wondev Woman|multi|:x:|
-|359|Mean Max|multi|:x:|
-|376|Code4Life|multi|:x:|
-|380|Ultimate Tic-Tac-Toe|multi|:x:|
-|382|Botters of the Galaxy|multi|:x:|
-|383|Code Royale|multi|:x:|
-|410|Code of Kutulu|multi|:x:|
-|420|Legends of Code & Magic|multi|:x:|
-|450|Xmas Rush|multi|:x:|
-|460|Vindinium|multi|:x:|
-|468|Langton s Ant|multi|:x:|
-|471|Checkers|multi|:x:|
-|473|Yavalath|multi|:x:|
-|474|Code a la Mode|multi|:x:|
-|481|Cultist Wars|multi|:x:|
-|483|Bit Runner 2048|multi|:x:|
-|491|Bandas|multi|:x:|
-|500|A Code of Ice And Fire|multi|:x:|
-|530|Oware Abapa|multi|:x:|
-|549|Breakthrough|multi|:x:|
-|550|Paper soccer|multi|:x:|
-|553|Onitama|multi|:x:|
-|560|Tower Dereference|multi|:x:|
-|564|Twixt-PP|multi|:x:|
-|572|Coders of the Realm - 1v1|multi|:x:|
-|573|Coders of the Realm|multi|:x:|
-|577|Crystal Rush|multi|:x:|
-|580|Tulips and Daisies|multi|:x:|
-|583|Ocean of Code|multi|:x:|
-|592|Spring Challenge 2020|multi|:x:|
-|610|Yinsh|multi|:x:|
-|613|Othello|multi|:x:|
-|617|Atari Go|multi|:x:|
-|628|Dots and Boxes|multi|:x:|
-|631|Atari Go 9x9|multi|:x:|
-|654|Penguins|multi|:x:|
-|667|Blocking|multi|:x:|
-|684|Fall Challenge 2020|multi|:x:|
-|699|Chess|multi|:x:|
-|701|TryAngle Catch|multi|:x:|
-|704|Fireworks|multi|:x:|
-|708|Connect 4|multi|:x:|
-|715|Clobber|multi|:x:|
-|726|Night Of War|multi|:x:|
-|730|Spring Challenge 2021|multi|:x:|
-|738|Amazons|multi|:x:|
-|744|Dice Duel|multi|:x:|
-|748|Volcanoes|multi|:x:|
-|776|Abalone|multi|:x:|
-|782|Space Shooter|multi|:x:|
-|790|Clash of Bots|multi|:x:|
-|793|Counting TicTacToe|multi|:x:|
-|796|Lines Of Action|multi|:x:|
-|798|nine men's morris|multi|:x:|
-|815|Code Keeper - The Hero|multi|:x:|
-|1594|Start-up!|multi|:x:|
-|1726|Spider Attack|multi|:x:|
-|1957|Legends of Code & Magic: Constructed|multi|:x:|
-|2650|Green Circle|multi|:x:|
-|3178|Isola|multi|:x:|
-|3277|6 nimmt! / 6 qui prend! / Take 5!|multi|:x:|
-|3838|Git Patchwork|multi|:x:|
-|4201|Impasse|multi|:x:|
-|4301|Keep Off The Grass|multi|:x:|
-|6381|Spring Challenge 2023 - Ants|multi|:x:|
-|7237|Mad Knights|multi|:x:|
-|7336|Poker|multi|:x:|
-|57|Don't Panic|codegolf-easy|:x:|
-|58|Power of Thor|codegolf-easy|:x:|
-|73|Temperatures|codegolf-easy|:x:|
-|464|Unary - Code Golf|codegolf-easy|:x:|
-|5588|ASCII Art - Code Golf|codegolf-easy|:x:|
-|5594|The Descent - Code Golf|codegolf-easy|:x:|
-|5601|Shadows of the Knight - Episode 1 - Code Golf|codegolf-medium|:x:|
-|5603|Blunder - Episode 1 - Code Golf|codegolf-medium|:x:|
-|5604|Dwarfs standing on the shoulders of giants - Code Golf|codegolf-medium|:x:|
-|5605|Network Cabling - Code Golf|codegolf-medium|:x:|
-|5607|Telephone Numbers - Code Golf|codegolf-medium|:x:|
-|5609|Mayan Calculation - Code Golf|codegolf-medium|:x:|
-|5591|Vox Codei - Episode 1 - Code Golf|codegolf-hard|:x:|
-|5592|Blunder - Episode 3 - Code Golf|codegolf-hard|:x:|
-|5596|Genome Sequencing - Code Golf|codegolf-hard|:x:|
-|5597|The Labyrinth - Code Golf|codegolf-hard|:x:|
-|5598|Roller Coaster - Code Golf|codegolf-hard|:x:|
-|5599|Surface - Code Golf|codegolf-hard|:x:|
-|5602|The Bridge - Code Golf|codegolf-hard|:x:|
-|5606|Super Computer - Code Golf|codegolf-hard|:x:|
-|5608|The Fall - Episode 2 - Code Golf|codegolf-hard|:x:|
-|5587|Shadows of the Knight - Episode 2 - Code Golf|codegolf-expert|:x:|
-|5589|The Fall - Episode 3 - Code Golf|codegolf-expert|:x:|
-|5590|Vox Codei - Episode 2 - Code Golf|codegolf-expert|:x:|
-|5593|Mars Lander - Episode 3 - Code Golf|codegolf-expert|:x:|
-|5595|The Resistance - Code Golf|codegolf-expert|:x:|
-|5600|Music Scores - Code Golf|codegolf-expert|:x:|
+<details>
+
+<summary>
+
+### tutorial
+
+</summary>
+
+- [ ] 43. Onboarding [:link:](https://www.codingame.com/training/easy/onboarding)
+
+</details>
+<details>
+
+<summary>
+
+### easy
+
+</summary>
+
+- [ ] 4. Power of Thor - Episode 1 [:link:](https://www.codingame.com/training/easy/power-of-thor-episode-1)
+- [ ] 5. Temperatures [:link:](https://www.codingame.com/training/easy/temperatures)
+- [ ] 6. ASCII Art [:link:](https://www.codingame.com/training/easy/ascii-art)
+- [ ] 7. Unary [:link:](https://www.codingame.com/training/easy/unary)
+- [ ] 8. MIME Type [:link:](https://www.codingame.com/training/easy/mime-type)
+- [ ] 9. Defibrillators [:link:](https://www.codingame.com/training/easy/defibrillators)
+- [ ] 10. Horse-racing Duals [:link:](https://www.codingame.com/training/easy/horse-racing-duals)
+- [ ] 40. Mars Lander - Episode 1 [:link:](https://www.codingame.com/training/easy/mars-lander-episode-1)
+- [ ] 108. Brackets, extreme edition. [:link:](https://www.codingame.com/training/easy/brackets-extreme-edition)
+- [ ] 121. The Descent [:link:](https://www.codingame.com/training/easy/the-descent)
+- [ ] 133. May the Triforce be with you! [:link:](https://www.codingame.com/training/easy/may-the-triforce-be-with-you)
+- [ ] 154. XML MDF-2016 [:link:](https://www.codingame.com/training/easy/xml-mdf-2016)
+- [ ] 171. Jack Silver: The Casino [:link:](https://www.codingame.com/training/easy/jack-silver-the-casino)
+- [ ] 182. Rugby score [:link:](https://www.codingame.com/training/easy/rugby-score)
+- [ ] 188. How time flies [:link:](https://www.codingame.com/training/easy/how-time-flies)
+- [ ] 203. Nature of quadrilaterals [:link:](https://www.codingame.com/training/easy/nature-of-quadrilaterals)
+- [ ] 210. Balanced ternary computer: encode [:link:](https://www.codingame.com/training/easy/balanced-ternary-computer-encode)
+- [ ] 229. Bulk Email Generator [:link:](https://www.codingame.com/training/easy/bulk-email-generator)
+- [ ] 234. Next car license plate  ? [:link:](https://www.codingame.com/training/easy/next-car-license-plate)
+- [ ] 235. Horse-racing Hyperduals [:link:](https://www.codingame.com/training/easy/horse-racing-hyperduals)
+- [ ] 238. Self-driving car testing [:link:](https://www.codingame.com/training/easy/self-driving-car-testing)
+- [ ] 243. Folding Paper [:link:](https://www.codingame.com/training/easy/folding-paper)
+- [ ] 319. Monday Tuesday Happy Days [:link:](https://www.codingame.com/training/easy/monday-tuesday-happy-days)
+- [ ] 341. What's so complex about Mandelbrot? [:link:](https://www.codingame.com/training/easy/whats-so-complex-about-mandelbrot)
+- [ ] 343. The River I. [:link:](https://www.codingame.com/training/easy/the-river-i-)
+- [ ] 345. The River II. [:link:](https://www.codingame.com/training/easy/the-river-ii-)
+- [ ] 351. Text formatting [:link:](https://www.codingame.com/training/easy/text-formatting)
+- [ ] 355. The Travelling Salesman Problem [:link:](https://www.codingame.com/training/easy/the-travelling-salesman-problem)
+- [ ] 358. Organic Compounds 🔬 [:link:](https://www.codingame.com/training/easy/organic-compounds)
+- [ ] 360. Simple Awalé [:link:](https://www.codingame.com/training/easy/simple-awale)
+- [ ] 373. Morellet’s random lines [:link:](https://www.codingame.com/training/easy/morellets-random-lines)
+- [ ] 393. Disordered First Contact [:link:](https://www.codingame.com/training/easy/disordered-first-contact)
+- [ ] 395. ISBN Check digit [:link:](https://www.codingame.com/training/easy/isbn-check-digit)
+- [ ] 396. Bank Robbers [:link:](https://www.codingame.com/training/easy/bank-robbers)
+- [ ] 403. 1×1×1 Rubik’s cube movements [:link:](https://www.codingame.com/training/easy/111-rubiks-cube-movements)
+- [ ] 408. orDer oF succeSsion [:link:](https://www.codingame.com/training/easy/order-of-succession)
+- [ ] 419. Ghost Legs [:link:](https://www.codingame.com/training/easy/ghost-legs)
+- [ ] 428. Add'em Up [:link:](https://www.codingame.com/training/easy/addem-up)
+- [ ] 429. Pirate's treasure [:link:](https://www.codingame.com/training/easy/pirates-treasure)
+- [ ] 433. Encryption/Decryption of Enigma Machine [:link:](https://www.codingame.com/training/easy/encryptiondecryption-of-enigma-machine)
+- [ ] 437. Rooks Movements [:link:](https://www.codingame.com/training/easy/rooks-movements)
+- [ ] 441. Rectangular block spinner [:link:](https://www.codingame.com/training/easy/rectangular-block-spinner)
+- [ ] 442. Darts [:link:](https://www.codingame.com/training/easy/darts)
+- [ ] 443. Dead men's shot [:link:](https://www.codingame.com/training/easy/dead-mens-shot)
+- [ ] 451. Credit Card Verifier (Luhn’s algorithm) [:link:](https://www.codingame.com/training/easy/credit-card-verifier-luhns-algorithm)
+- [ ] 454. Hunger Games [:link:](https://www.codingame.com/training/easy/hunger-games)
+- [ ] 455. The Dart 101 [:link:](https://www.codingame.com/training/easy/the-dart-101)
+- [ ] 459. Brick in the Wall [:link:](https://www.codingame.com/training/easy/brick-in-the-wall)
+- [ ] 465. Lumen [:link:](https://www.codingame.com/training/easy/lumen)
+- [ ] 469. Blowing Fuse [:link:](https://www.codingame.com/training/easy/blowing-fuse)
+- [ ] 501. Stall tilt [:link:](https://www.codingame.com/training/easy/stall-tilt)
+- [ ] 505. 1D Spreadsheet [:link:](https://www.codingame.com/training/easy/1d-spreadsheet)
+- [ ] 508. Hooch Clash [:link:](https://www.codingame.com/training/easy/hooch-clash)
+- [ ] 515. Count as I count [:link:](https://www.codingame.com/training/easy/count-as-i-count)
+- [ ] 516. Are The Clumps Normal [:link:](https://www.codingame.com/training/easy/are-the-clumps-normal)
+- [ ] 517. Smooth! [:link:](https://www.codingame.com/training/easy/smooth)
+- [ ] 519. A child's play [:link:](https://www.codingame.com/training/easy/a-childs-play)
+- [ ] 520. Detective Pikaptcha EP1 [:link:](https://www.codingame.com/training/easy/detective-pikaptcha-ep1)
+- [ ] 521. Detective Pikaptcha EP2 [:link:](https://www.codingame.com/training/easy/detective-pikaptcha-ep2)
+- [ ] 525. Happy Numbers [:link:](https://www.codingame.com/training/easy/happy-numbers)
+- [ ] 528. Dolbear's Law [:link:](https://www.codingame.com/training/easy/dolbears-law)
+- [ ] 535. Hello, World! [:link:](https://www.codingame.com/training/easy/hello-world)
+- [ ] 542. Rectangle Partition [:link:](https://www.codingame.com/training/easy/rectangle-partition)
+- [ ] 546. Unit Fractions [:link:](https://www.codingame.com/training/easy/unit-fractions)
+- [ ] 552. Graffiti on the fence [:link:](https://www.codingame.com/training/easy/graffiti-on-the-fence)
+- [ ] 558. Create the longest sequence of 1s [:link:](https://www.codingame.com/training/easy/create-the-longest-sequence-of-1s)
+- [ ] 562. 1D Bush Fire [:link:](https://www.codingame.com/training/easy/1d-bush-fire)
+- [ ] 576. Rock Paper Scissors Lizard Spock [:link:](https://www.codingame.com/training/easy/rock-paper-scissors-lizard-spock)
+- [ ] 581. TicTacToe [:link:](https://www.codingame.com/training/easy/tictactoe)
+- [ ] 586. Van Eck's sequence [:link:](https://www.codingame.com/training/easy/van-ecks-sequence)
+- [ ] 587. Sudoku Validator [:link:](https://www.codingame.com/training/easy/sudoku-validator)
+- [ ] 611. Auto pickup [:link:](https://www.codingame.com/training/easy/auto-pickup)
+- [ ] 612. A mountain of a mole hill [:link:](https://www.codingame.com/training/easy/a-mountain-of-a-mole-hill)
+- [ ] 615. Benford's law [:link:](https://www.codingame.com/training/easy/benfords-law)
+- [ ] 623. Murder in the village! [:link:](https://www.codingame.com/training/easy/murder-in-the-village)
+- [ ] 627. Robot Show [:link:](https://www.codingame.com/training/easy/robot-show)
+- [ ] 630. Dungeons and Maps [:link:](https://www.codingame.com/training/easy/dungeons-and-maps)
+- [ ] 639. The Electrician Apprentice [:link:](https://www.codingame.com/training/easy/the-electrician-apprentice)
+- [ ] 643. Is that a possible word? [:link:](https://www.codingame.com/training/easy/is-that-a-possible-word)
+- [ ] 644. 7-segment scanner [:link:](https://www.codingame.com/training/easy/7-segment-scanner)
+- [ ] 647. Extended Hamming Codes [:link:](https://www.codingame.com/training/easy/extended-hamming-codes)
+- [ ] 648. Flip The Sign [:link:](https://www.codingame.com/training/easy/flip-the-sign)
+- [ ] 652. Reverse FizzBuzz [:link:](https://www.codingame.com/training/easy/reverse-fizzbuzz)
+- [ ] 653. Prefix code [:link:](https://www.codingame.com/training/easy/prefix-code)
+- [ ] 655. Logically reasonable inequalities [:link:](https://www.codingame.com/training/easy/logically-reasonable-inequalities)
+- [ ] 656. Equivalent Resistance, Circuit Building [:link:](https://www.codingame.com/training/easy/equivalent-resistance-circuit-building)
+- [ ] 659. Unique Prefixes [:link:](https://www.codingame.com/training/easy/unique-prefixes)
+- [ ] 661. Tree Paths [:link:](https://www.codingame.com/training/easy/tree-paths)
+- [ ] 668. Nicholas Breakspeare and Hugh of Evesham [:link:](https://www.codingame.com/training/easy/nicholas-breakspeare-and-hugh-of-evesham)
+- [ ] 673. Decode the message [:link:](https://www.codingame.com/training/easy/decode-the-message)
+- [ ] 678. Number derivation [:link:](https://www.codingame.com/training/easy/number-derivation)
+- [ ] 688. Low Resolution: What's The Shape? [:link:](https://www.codingame.com/training/easy/low-resolution-whats-the-shape)
+- [ ] 690. Mountain Map [:link:](https://www.codingame.com/training/easy/mountain-map)
+- [ ] 691. Next growing number [:link:](https://www.codingame.com/training/easy/next-growing-number)
+- [ ] 697. Hidden Messages In Images [:link:](https://www.codingame.com/training/easy/hidden-messages-in-images)
+- [ ] 706. Retaining Water [:link:](https://www.codingame.com/training/easy/retaining-water)
+- [ ] 709. Gold Packing [:link:](https://www.codingame.com/training/easy/gold-packing)
+- [ ] 710. IPv6 Shortener [:link:](https://www.codingame.com/training/easy/ipv6-shortener)
+- [ ] 711. Nature of triangles [:link:](https://www.codingame.com/training/easy/nature-of-triangles)
+- [ ] 719. Is the King In Check? (Part 1) [:link:](https://www.codingame.com/training/easy/is-the-king-in-check-part-1)
+- [ ] 723. Feature Extraction [:link:](https://www.codingame.com/training/easy/feature-extraction)
+- [ ] 724. Asteroids [:link:](https://www.codingame.com/training/easy/asteroids)
+- [ ] 725. 1000000000D WORLD [:link:](https://www.codingame.com/training/easy/1000000000d-world)
+- [ ] 727. Mountain Map Convergence [:link:](https://www.codingame.com/training/easy/mountain-map-convergence)
+- [ ] 728. Container Terminal [:link:](https://www.codingame.com/training/easy/container-terminal)
+- [ ] 732. Parse SQL Queries [:link:](https://www.codingame.com/training/easy/parse-sql-queries)
+- [ ] 734. Master of Mayhem [:link:](https://www.codingame.com/training/easy/master-of-mayhem)
+- [ ] 737. Offset Arrays [:link:](https://www.codingame.com/training/easy/offset-arrays)
+- [ ] 739. Reverse Minesweeper [:link:](https://www.codingame.com/training/easy/reverse-minesweeper)
+- [ ] 742. The Michelangelo Code [:link:](https://www.codingame.com/training/easy/the-michelangelo-code)
+- [ ] 750. Sum of Spiral's Diagonals [:link:](https://www.codingame.com/training/easy/sum-of-spirals-diagonals)
+- [ ] 756. The Mystic Rectangle [:link:](https://www.codingame.com/training/easy/the-mystic-rectangle)
+- [ ] 760. In Stereo [:link:](https://www.codingame.com/training/easy/in-stereo)
+- [ ] 761. Zhiwei Sun Squares [:link:](https://www.codingame.com/training/easy/zhiwei-sun-squares)
+- [ ] 762. Binary image [:link:](https://www.codingame.com/training/easy/binary-image)
+- [ ] 765. 1. NGR - Basic Radar [:link:](https://www.codingame.com/training/easy/1--ngr---basic-radar)
+- [ ] 766. Shadow Casting [:link:](https://www.codingame.com/training/easy/shadow-casting)
+- [ ] 767. Cosmic Love [:link:](https://www.codingame.com/training/easy/cosmic-love)
+- [ ] 768. Substitution Encoding [:link:](https://www.codingame.com/training/easy/substitution-encoding)
+- [ ] 769. Object Insertion [:link:](https://www.codingame.com/training/easy/object-insertion)
+- [ ] 774. Personal Best [:link:](https://www.codingame.com/training/easy/personal-best)
+- [ ] 780. Fax machine [:link:](https://www.codingame.com/training/easy/fax-machine)
+- [ ] 783. Someone's Acting Sus.... [:link:](https://www.codingame.com/training/easy/someones-acting-sus----)
+- [ ] 784. Detective Geek [:link:](https://www.codingame.com/training/easy/detective-geek)
+- [ ] 786. Sweet spot [:link:](https://www.codingame.com/training/easy/sweet-spot)
+- [ ] 787. Treasure hunt [:link:](https://www.codingame.com/training/easy/treasure-hunt)
+- [ ] 789. Caesar is the chief [:link:](https://www.codingame.com/training/easy/caesar-is-the-chief)
+- [ ] 792. Die Handedness [:link:](https://www.codingame.com/training/easy/die-handedness)
+- [ ] 795. Simple AI duels [:link:](https://www.codingame.com/training/easy/simple-ai-duels)
+- [ ] 797. Where's Wally [:link:](https://www.codingame.com/training/easy/wheres-wally)
+- [ ] 801. Catching Up [:link:](https://www.codingame.com/training/easy/catching-up)
+- [ ] 802. Walk on a Die [:link:](https://www.codingame.com/training/easy/walk-on-a-die)
+- [ ] 803. Simple auto-scaling [:link:](https://www.codingame.com/training/easy/simple-auto-scaling)
+- [ ] 806. A Bunny and Carrots [:link:](https://www.codingame.com/training/easy/a-bunny-and-carrots)
+- [ ] 812. Magic String [:link:](https://www.codingame.com/training/easy/magic-string)
+- [ ] 819. FireControl [:link:](https://www.codingame.com/training/easy/firecontrol)
+- [ ] 820. Largest Number [:link:](https://www.codingame.com/training/easy/largest-number)
+- [ ] 823. By train or by car ? [:link:](https://www.codingame.com/training/easy/by-train-or-by-car)
+- [ ] 824. Markov Text Generation [:link:](https://www.codingame.com/training/easy/markov-text-generation)
+- [ ] 829. Frame the picture [:link:](https://www.codingame.com/training/easy/frame-the-picture)
+- [ ] 830. Faro shuffle [:link:](https://www.codingame.com/training/easy/faro-shuffle)
+- [ ] 832. Buzzle [:link:](https://www.codingame.com/training/easy/buzzle)
+- [ ] 835. Genetics and Computers [:link:](https://www.codingame.com/training/easy/genetics-and-computers)
+- [ ] 868. PARK PILOT [:link:](https://www.codingame.com/training/easy/park-pilot)
+- [ ] 934. Random Walk [:link:](https://www.codingame.com/training/easy/random-walk)
+- [ ] 967. Tricky  Number Verifier [:link:](https://www.codingame.com/training/easy/tricky-number-verifier)
+- [ ] 1000. Body weight is a girl's secret [:link:](https://www.codingame.com/training/easy/body-weight-is-a-girls-secret)
+- [ ] 1066. Minesweeper level generator [:link:](https://www.codingame.com/training/easy/minesweeper-level-generator)
+- [ ] 1462. Rotating arrows [:link:](https://www.codingame.com/training/easy/rotating-arrows)
+- [ ] 1495. 10 pin Bowling Scores [:link:](https://www.codingame.com/training/easy/10-pin-bowling-scores)
+- [ ] 1528. Distributing Candy [:link:](https://www.codingame.com/training/easy/distributing-candy)
+- [ ] 1792. No More Pythons, Please! [:link:](https://www.codingame.com/training/easy/no-more-pythons-please)
+- [ ] 1825. Simple Load Balancing [:link:](https://www.codingame.com/training/easy/simple-load-balancing)
+- [ ] 1990. Logic gates [:link:](https://www.codingame.com/training/easy/logic-gates)
+- [ ] 2023. Calculator [:link:](https://www.codingame.com/training/easy/calculator)
+- [ ] 2089. Snail Run [:link:](https://www.codingame.com/training/easy/snail-run)
+- [ ] 2122. Survey Prediction [:link:](https://www.codingame.com/training/easy/survey-prediction)
+- [ ] 2155. Cubic Bézier curves [:link:](https://www.codingame.com/training/easy/cubic-bezier-curves)
+- [ ] 2221. Metric Units [:link:](https://www.codingame.com/training/easy/metric-units)
+- [ ] 2287. Moves in maze [:link:](https://www.codingame.com/training/easy/moves-in-maze)
+- [ ] 2386. The broken editor [:link:](https://www.codingame.com/training/easy/the-broken-editor)
+- [ ] 2452. 🤖 Robot Reach [:link:](https://www.codingame.com/training/easy/robot-reach)
+- [ ] 2518. Ted's compiler [:link:](https://www.codingame.com/training/easy/teds-compiler)
+- [ ] 2519. Annihilation [:link:](https://www.codingame.com/training/easy/annihilation)
+- [ ] 2551. 2nd degree polynomial - simple analysis [:link:](https://www.codingame.com/training/easy/2nd-degree-polynomial---simple-analysis)
+- [ ] 2617. Kiss the girls [:link:](https://www.codingame.com/training/easy/kiss-the-girls)
+- [ ] 2716. Artificial Emotional Intelligence [:link:](https://www.codingame.com/training/easy/artificial-emotional-intelligence)
+- [x] 2782. [Retro Typewriter Art](retro-typewriter-art) [:link:](https://www.codingame.com/training/easy/retro-typewriter-art)
+- [ ] 2815. Probability for Dummies [:link:](https://www.codingame.com/training/easy/probability-for-dummies)
+- [ ] 2848. Crop-Circles [:link:](https://www.codingame.com/training/easy/crop-circles)
+- [ ] 3013. Insert to String [:link:](https://www.codingame.com/training/easy/insert-to-string)
+- [ ] 3046. Ulam Spiral [:link:](https://www.codingame.com/training/easy/ulam-spiral)
+- [ ] 3310. WW2 Mortar Warfare [:link:](https://www.codingame.com/training/easy/ww2-mortar-warfare)
+- [ ] 3343. Blackjack solver [:link:](https://www.codingame.com/training/easy/blackjack-solver)
+- [ ] 3376. Should Bakers be Frugal? [:link:](https://www.codingame.com/training/easy/should-bakers-be-frugal)
+- [ ] 3475. Merlin's Magic Square [:link:](https://www.codingame.com/training/easy/merlins-magic-square)
+- [ ] 3508. Longest coast [:link:](https://www.codingame.com/training/easy/longest-coast)
+- [ ] 3541. Snake Sort 2D [:link:](https://www.codingame.com/training/easy/snake-sort-2d)
+- [ ] 3574. Blending Colors [:link:](https://www.codingame.com/training/easy/blending-colors)
+- [ ] 3575. abcdefghijklmnopqrstuvwxyz [:link:](https://www.codingame.com/training/easy/abcdefghijklmnopqrstuvwxyz)
+- [ ] 3640. Match DNA Sequence [:link:](https://www.codingame.com/training/easy/match-dna-sequence)
+- [ ] 3673. Max Area [:link:](https://www.codingame.com/training/easy/max-area)
+- [ ] 3707. Character replacement problem [:link:](https://www.codingame.com/training/easy/character-replacement-problem)
+- [ ] 3739. The weight of words [:link:](https://www.codingame.com/training/easy/the-weight-of-words)
+- [ ] 3805. Video comments [:link:](https://www.codingame.com/training/easy/video-comments)
+- [ ] 3937. Card Counting when easily distracted [:link:](https://www.codingame.com/training/easy/card-counting-when-easily-distracted)
+- [ ] 3970. Messed up mosaics [:link:](https://www.codingame.com/training/easy/messed-up-mosaics)
+- [ ] 4003. Minimal palindrome distance [:link:](https://www.codingame.com/training/easy/minimal-palindrome-distance)
+- [ ] 4036. Embedded Chessboards [:link:](https://www.codingame.com/training/easy/embedded-chessboards)
+- [ ] 4069. An adventure in the fantasy world [:link:](https://www.codingame.com/training/easy/an-adventure-in-the-fantasy-world)
+- [ ] 4102. Saving Snoopy [:link:](https://www.codingame.com/training/easy/saving-snoopy)
+- [ ] 4135. Another Road Construction Site - 1 [:link:](https://www.codingame.com/training/easy/another-road-construction-site---1)
+- [ ] 4168. The logo beyond C++ and C# [:link:](https://www.codingame.com/training/easy/the-logo-beyond-c-and-c)
+- [ ] 4234. Table of Contents [:link:](https://www.codingame.com/training/easy/table-of-contents)
+- [ ] 4498. Create 'Turn Here' Signs [:link:](https://www.codingame.com/training/easy/create-turn-here-signs)
+- [ ] 4531. Shoot Enemy Aircraft [:link:](https://www.codingame.com/training/easy/shoot-enemy-aircraft)
+- [ ] 4597. Make an Atari Font [:link:](https://www.codingame.com/training/easy/make-an-atari-font)
+- [ ] 4861. Euclid's Algorithm [:link:](https://www.codingame.com/training/easy/euclids-algorithm)
+- [ ] 4894. |Build A Bookcase|🔨 [:link:](https://www.codingame.com/training/easy/build-a-bookcase)
+- [ ] 5389. Tabloid Couple-Names 💕 [:link:](https://www.codingame.com/training/easy/tabloid-couple-names)
+- [ ] 5455. Rocks, Papers, Scissors-es [:link:](https://www.codingame.com/training/easy/rocks-papers-scissors-es)
+- [x] 5488. [ASCII Art The Drunken Bishop Algorithm](ascii-art-the-drunken-bishop-algorithm) [:link:](https://www.codingame.com/training/easy/ascii-art-the-drunken-bishop-algorithm)
+- [ ] 5521. Duo combinations [:link:](https://www.codingame.com/training/easy/duo-combinations)
+- [ ] 5554. Wordle colorizer [:link:](https://www.codingame.com/training/easy/wordle-colorizer)
+- [ ] 5620. Tile a Floor [:link:](https://www.codingame.com/training/easy/tile-a-floor)
+- [ ] 5653. Word Search for Programmers [:link:](https://www.codingame.com/training/easy/word-search-for-programmers)
+- [ ] 5686. Mandelbrot Set Approximation [:link:](https://www.codingame.com/training/easy/mandelbrot-set-approximation)
+- [ ] 5786. Number formatting [:link:](https://www.codingame.com/training/easy/number-formatting)
+- [ ] 5818. Stunning numbers [:link:](https://www.codingame.com/training/easy/stunning-numbers)
+- [ ] 5884. Library dependencies [:link:](https://www.codingame.com/training/easy/library-dependencies)
+- [ ] 5917. The alien business of cows [:link:](https://www.codingame.com/training/easy/the-alien-business-of-cows)
+- [ ] 5983. Remove insert statements [:link:](https://www.codingame.com/training/easy/remove-insert-statements)
+- [ ] 6016. Tile a Floor Differently [:link:](https://www.codingame.com/training/easy/tile-a-floor-differently)
+- [ ] 6115. The helpdesk [:link:](https://www.codingame.com/training/easy/the-helpdesk)
+- [ ] 6148. Couple's Picture-Frame [:link:](https://www.codingame.com/training/easy/couples-picture-frame)
+- [ ] 6181. The leaking bathtub [:link:](https://www.codingame.com/training/easy/the-leaking-bathtub)
+- [ ] 6214. Fibonacci's Rabbit [:link:](https://www.codingame.com/training/easy/fibonaccis-rabbit)
+- [ ] 6247. Digital Scoreboard [:link:](https://www.codingame.com/training/easy/digital-scoreboard)
+- [ ] 6280. Vectors in variables dimensions [:link:](https://www.codingame.com/training/easy/vectors-in-variables-dimensions)
+- [ ] 6445. NATO-alphabet's odd uncles [:link:](https://www.codingame.com/training/easy/nato-alphabets-odd-uncles)
+- [ ] 6478. Furlongs per Fortnight [:link:](https://www.codingame.com/training/easy/furlongs-per-fortnight)
+- [ ] 6544. Euclid's algorithm with complex numbers [:link:](https://www.codingame.com/training/easy/euclids-algorithm-with-complex-numbers)
+- [ ] 6610. Crazy List [:link:](https://www.codingame.com/training/easy/crazy-list)
+- [ ] 6709. Mirrors [:link:](https://www.codingame.com/training/easy/mirrors)
+- [ ] 6775. Count your coins [:link:](https://www.codingame.com/training/easy/count-your-coins)
+- [ ] 6841. What 🌼 is 🌷 your 🌸  garden 💐 worth? [:link:](https://www.codingame.com/training/easy/what-is-your-garden-worth)
+- [ ] 6874. You are the Father: Maury Povich Style [:link:](https://www.codingame.com/training/easy/you-are-the-father-maury-povich-style)
+- [ ] 6907. Ukulele/Guitar converter [:link:](https://www.codingame.com/training/easy/ukuleleguitar-converter)
+- [ ] 6940. Score a Bridge deal [:link:](https://www.codingame.com/training/easy/score-a-bridge-deal)
+- [ ] 6973. Video Assistant Referee [:link:](https://www.codingame.com/training/easy/video-assistant-referee)
+- [ ] 7006. Popularity of each activity [:link:](https://www.codingame.com/training/easy/popularity-of-each-activity)
+- [ ] 7105. Queen control [:link:](https://www.codingame.com/training/easy/queen-control)
+- [ ] 7270. Square Spiral for Alien Contact 👽 [:link:](https://www.codingame.com/training/easy/square-spiral-for-alien-contact)
+- [ ] 7303. Interstellar [:link:](https://www.codingame.com/training/easy/interstellar)
+- [ ] 7369. deus Hex machina [:link:](https://www.codingame.com/training/easy/deus-hex-machina)
+- [ ] 7468. Panel count [:link:](https://www.codingame.com/training/easy/panel-count)
+- [ ] 7501. Number Partition [:link:](https://www.codingame.com/training/easy/number-partition)
+
+</details>
+<details>
+
+<summary>
+
+### medium
+
+</summary>
+
+- [x] 1. [Death First Search - Episode 1](death-first-search-episode-1) [:link:](https://www.codingame.com/training/medium/death-first-search-episode-1)
+- [ ] 11. The Fall - Episode 1 [:link:](https://www.codingame.com/training/medium/the-fall-episode-1)
+- [ ] 12. Mars Lander - Episode 2 [:link:](https://www.codingame.com/training/medium/mars-lander-episode-2)
+- [ ] 13. Stock Exchange Losses [:link:](https://www.codingame.com/training/medium/stock-exchange-losses)
+- [ ] 14. Network Cabling [:link:](https://www.codingame.com/training/medium/network-cabling)
+- [ ] 15. Conway Sequence [:link:](https://www.codingame.com/training/medium/conway-sequence)
+- [ ] 16. Telephone Numbers [:link:](https://www.codingame.com/training/medium/telephone-numbers)
+- [ ] 17. Dwarfs standing on the shoulders of giants [:link:](https://www.codingame.com/training/medium/dwarfs-standing-on-the-shoulders-of-giants)
+- [ ] 18. Blunder - Episode 1 [:link:](https://www.codingame.com/training/medium/blunder-episode-1)
+- [ ] 19. Scrabble [:link:](https://www.codingame.com/training/medium/scrabble)
+- [ ] 20. The Gift [:link:](https://www.codingame.com/training/medium/the-gift)
+- [ ] 21. Mayan Calculation [:link:](https://www.codingame.com/training/medium/mayan-calculation)
+- [ ] 41. Shadows of the Knight - Episode 1 [:link:](https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1)
+- [x] 47. [Don't Panic - Episode 1](don't-panic-episode-1) [:link:](https://www.codingame.com/training/medium/don%27t-panic-episode-1)
+- [ ] 50. War [:link:](https://www.codingame.com/training/medium/winamax-battle)
+- [ ] 54. There is no Spoon - Episode 1 [:link:](https://www.codingame.com/training/medium/there-is-no-spoon-episode-1)
+- [ ] 76. Game of life [:link:](https://www.codingame.com/training/medium/game-of-life)
+- [ ] 77. Vote counting [:link:](https://www.codingame.com/training/medium/vote-counting)
+- [ ] 78. Gravity [:link:](https://www.codingame.com/training/medium/gravity)
+- [ ] 86. Dominoes Path [:link:](https://www.codingame.com/training/medium/dominoes-path)
+- [ ] 87. Bust speeding vehicles [:link:](https://www.codingame.com/training/medium/bust-speeding-vehicles)
+- [ ] 95. Ascii Graph [:link:](https://www.codingame.com/training/medium/ascii-graph)
+- [ ] 97. Reverse Polish Notation [:link:](https://www.codingame.com/training/medium/reverse-polish-notation)
+- [ ] 103. Minimal number of swaps [:link:](https://www.codingame.com/training/medium/minimal-number-of-swaps)
+- [ ] 104. Rubik® [:link:](https://www.codingame.com/training/medium/rubik%C2%AE)
+- [ ] 106. CGS minifier [:link:](https://www.codingame.com/training/medium/cgs-minifier)
+- [ ] 111. The Fastest [:link:](https://www.codingame.com/training/medium/the-fastest)
+- [ ] 112. DDCG Mapper [:link:](https://www.codingame.com/training/medium/ddcg-mapper)
+- [ ] 116. Maze [:link:](https://www.codingame.com/training/medium/maze)
+- [ ] 120. The Ultimate Test [:link:](https://www.codingame.com/training/medium/the-ultimate-test)
+- [ ] 123. These Romans are crazy! [:link:](https://www.codingame.com/training/medium/these-romans-are-crazy%21)
+- [ ] 128. Divine! [:link:](https://www.codingame.com/training/medium/divine)
+- [ ] 131. 2.5D maze [:link:](https://www.codingame.com/training/medium/2-5d-maze)
+- [ ] 132. Othello [:link:](https://www.codingame.com/training/medium/othello)
+- [ ] 139. Minesweeper [:link:](https://www.codingame.com/training/medium/minesweeper)
+- [ ] 140. Bulls and Cows [:link:](https://www.codingame.com/training/medium/bulls-and-cows)
+- [ ] 142. Text alignment [:link:](https://www.codingame.com/training/medium/text-alignment)
+- [ ] 147. Snake encoding [:link:](https://www.codingame.com/training/medium/snake-encoding)
+- [ ] 150. ASCII ART : Glass Stacking [:link:](https://www.codingame.com/training/medium/ascii-art-glass-stacking)
+- [ ] 157. Sum of divisors [:link:](https://www.codingame.com/training/medium/sum-of-divisors)
+- [ ] 158. The Urinal Problem [:link:](https://www.codingame.com/training/medium/the-urinal-problem)
+- [ ] 159. Ancestors & Descendants [:link:](https://www.codingame.com/training/medium/ancestors-descendants)
+- [ ] 161. CGFunge interpreter [:link:](https://www.codingame.com/training/medium/cgfunge-interpreter)
+- [ ] 162. Anagrams [:link:](https://www.codingame.com/training/medium/anagrams)
+- [ ] 169. The experience for creating puzzles [:link:](https://www.codingame.com/training/medium/the-experience-for-creating-puzzles)
+- [ ] 170. Elementary cellular automaton [:link:](https://www.codingame.com/training/medium/elementary-cellular-automaton)
+- [ ] 172. Simple fraction to mixed number [:link:](https://www.codingame.com/training/medium/simple-fraction-to-mixed-number)
+- [ ] 173. Queneau Numbers [:link:](https://www.codingame.com/training/medium/queneau-numbers)
+- [ ] 174. Quaternion Multiplication [:link:](https://www.codingame.com/training/medium/quaternion-multiplication)
+- [ ] 187. Army ants [:link:](https://www.codingame.com/training/medium/army-ants)
+- [ ] 190. Carmichael numbers [:link:](https://www.codingame.com/training/medium/carmichael-numbers)
+- [ ] 193. OneWay City [:link:](https://www.codingame.com/training/medium/oneway-city)
+- [ ] 198. Langton's ant [:link:](https://www.codingame.com/training/medium/langtons-ant)
+- [ ] 199. Divide the factorial [:link:](https://www.codingame.com/training/medium/divide-the-factorial)
+- [ ] 202. Reversed Look-and-say [:link:](https://www.codingame.com/training/medium/reversed-look-and-say)
+- [ ] 207. Near-Palindromes [:link:](https://www.codingame.com/training/medium/near-palindromes)
+- [ ] 211. Texas Holdem [:link:](https://www.codingame.com/training/medium/texas-holdem)
+- [ ] 220. Brackets, Enhanced Edition [:link:](https://www.codingame.com/training/medium/brackets-enhanced-edition)
+- [ ] 223. 2×2×2 Rubik’s cube movements [:link:](https://www.codingame.com/training/medium/222-rubiks-cube-movements)
+- [ ] 227. Factorial vs Exponential [:link:](https://www.codingame.com/training/medium/factorial-vs-exponential)
+- [ ] 228. Advanced Tree [:link:](https://www.codingame.com/training/medium/advanced-tree)
+- [ ] 230. Gravity Tumbler [:link:](https://www.codingame.com/training/medium/gravity-tumbler)
+- [ ] 233. Number of letters in a number - Binary [:link:](https://www.codingame.com/training/medium/number-of-letters-in-a-number---binary)
+- [ ] 239. Horse-hyperracing Hyperduals [:link:](https://www.codingame.com/training/medium/horse-hyperracing-hyperduals)
+- [ ] 244. Micro Assembly [:link:](https://www.codingame.com/training/medium/micro-assembly)
+- [ ] 245. Cards castle [:link:](https://www.codingame.com/training/medium/cards-castle)
+- [ ] 246. Magic stones [:link:](https://www.codingame.com/training/medium/magic-stones)
+- [ ] 299. Sandpile addition [:link:](https://www.codingame.com/training/medium/sandpile-addition)
+- [ ] 322. Hidden word [:link:](https://www.codingame.com/training/medium/hidden-word)
+- [ ] 326. Bruce Lee [:link:](https://www.codingame.com/training/medium/bruce-lee)
+- [ ] 331. Numeral system [:link:](https://www.codingame.com/training/medium/numeral-system)
+- [ ] 332. 1010(1) [:link:](https://www.codingame.com/training/medium/10101)
+- [ ] 336. A-star exercise [:link:](https://www.codingame.com/training/medium/a-star-exercise)
+- [ ] 337. Minimax exercise [:link:](https://www.codingame.com/training/medium/minimax-exercise)
+- [ ] 339. Monthly System [:link:](https://www.codingame.com/training/medium/monthly-system)
+- [ ] 344. Porcupine Fever [:link:](https://www.codingame.com/training/medium/porcupine-fever)
+- [ ] 349. Magic Square [:link:](https://www.codingame.com/training/medium/magic-square)
+- [ ] 350. Count of Primes in a number grid [:link:](https://www.codingame.com/training/medium/count-of-primes-in-a-number-grid)
+- [ ] 352. Gravity Centrifuge [:link:](https://www.codingame.com/training/medium/gravity-centrifuge)
+- [ ] 354. Find the replacement [:link:](https://www.codingame.com/training/medium/find-the-replacement)
+- [ ] 361. 2048 scores [:link:](https://www.codingame.com/training/medium/2048-scores)
+- [ ] 363. Plight Of The Fellowship Of The Ring [:link:](https://www.codingame.com/training/medium/plight-of-the-fellowship-of-the-ring)
+- [ ] 364. Bingo! [:link:](https://www.codingame.com/training/medium/bingo)
+- [ ] 366. Gravity Centrifuge Tuning [:link:](https://www.codingame.com/training/medium/gravity-centrifuge-tuning)
+- [ ] 367. The Grand Festival - I [:link:](https://www.codingame.com/training/medium/the-grand-festival---i)
+- [ ] 370. Box of Cigars [:link:](https://www.codingame.com/training/medium/box-of-cigars)
+- [ ] 372. Polydivisible number [:link:](https://www.codingame.com/training/medium/polydivisible-number)
+- [ ] 374. The Grand Festival - II [:link:](https://www.codingame.com/training/medium/the-grand-festival---ii)
+- [ ] 375. Format string validation [:link:](https://www.codingame.com/training/medium/format-string-validation)
+- [ ] 377. Flood fill Example [:link:](https://www.codingame.com/training/medium/flood-fill-example)
+- [ ] 384. Paper labyrinth [:link:](https://www.codingame.com/training/medium/paper-labyrinth)
+- [ ] 386. Brackets, Ultimate Edition [:link:](https://www.codingame.com/training/medium/brackets-ultimate-edition)
+- [ ] 387. De-FizzBuzzer [:link:](https://www.codingame.com/training/medium/de-fizzbuzzer)
+- [ ] 388. Bag of Balls [:link:](https://www.codingame.com/training/medium/bag-of-balls)
+- [ ] 394. Simplified Monopoly™ Turns Prediction [:link:](https://www.codingame.com/training/medium/simplified-monopoly-turns-prediction)
+- [ ] 400. Bulgarian solitaire [:link:](https://www.codingame.com/training/medium/bulgarian-solitaire)
+- [ ] 401. Trits (Balanced Ternary Computing) [:link:](https://www.codingame.com/training/medium/trits-balanced-ternary-computing)
+- [ ] 402. Depot organization [:link:](https://www.codingame.com/training/medium/depot-organization)
+- [ ] 406. The Optimal Urinal Problem [:link:](https://www.codingame.com/training/medium/the-optimal-urinal-problem)
+- [ ] 413. Brackets, Extended Edition [:link:](https://www.codingame.com/training/medium/brackets-extended-edition)
+- [ ] 415. Counting Squares on Pegs [:link:](https://www.codingame.com/training/medium/counting-squares-on-pegs)
+- [ ] 421. Kaprekar's routine [:link:](https://www.codingame.com/training/medium/kaprekars-routine)
+- [ ] 422. Maximum sub-sequence [:link:](https://www.codingame.com/training/medium/maximum-sub-sequence)
+- [ ] 423. Remainder Fantasy [:link:](https://www.codingame.com/training/medium/remainder-fantasy)
+- [ ] 424. Locked in gear [:link:](https://www.codingame.com/training/medium/locked-in-gear)
+- [ ] 425. Short accounts make long friends [:link:](https://www.codingame.com/training/medium/short-accounts-make-long-friends)
+- [ ] 426. Dice probability calculator [:link:](https://www.codingame.com/training/medium/dice-probability-calculator)
+- [ ] 427. Number of paths between 2 points [:link:](https://www.codingame.com/training/medium/number-of-paths-between-2-points)
+- [ ] 434. Enigma - 3 rotors without plugboard [:link:](https://www.codingame.com/training/medium/enigma---3-rotors-without-plugboard)
+- [ ] 435. Guessing n Cheating [:link:](https://www.codingame.com/training/medium/guessing-n-cheating)
+- [ ] 436. HTML table cell split [:link:](https://www.codingame.com/training/medium/html-table-cell-split)
+- [ ] 438. Straddling Checkerboard Cryptography [:link:](https://www.codingame.com/training/medium/straddling-checkerboard-cryptography)
+- [ ] 440. Digit sum successor [:link:](https://www.codingame.com/training/medium/digit-sum-successor)
+- [ ] 444. 2-player game on a calculator [:link:](https://www.codingame.com/training/medium/2-player-game-on-a-calculator)
+- [ ] 445. Guessing digits [:link:](https://www.codingame.com/training/medium/guessing-digits)
+- [ ] 446. Equalizing arrays [:link:](https://www.codingame.com/training/medium/equalizing-arrays)
+- [ ] 448. IP mask calculating [:link:](https://www.codingame.com/training/medium/ip-mask-calculating)
+- [ ] 452. Dynamic sorting [:link:](https://www.codingame.com/training/medium/dynamic-sorting)
+- [ ] 456. Green Valleys [:link:](https://www.codingame.com/training/medium/green-valleys)
+- [ ] 457. Goro Want Chocolate [:link:](https://www.codingame.com/training/medium/goro-want-chocolate)
+- [ ] 462. Domino Puzzle [:link:](https://www.codingame.com/training/medium/domino-puzzle)
+- [ ] 466. EUROPEAN RUGBY CHAMPIONS CUP RANKING [:link:](https://www.codingame.com/training/medium/european-rugby-champions-cup-ranking)
+- [ ] 470. Find the winning strategy [:link:](https://www.codingame.com/training/medium/find-the-winning-strategy)
+- [ ] 472. Go competition [:link:](https://www.codingame.com/training/medium/go-competition)
+- [ ] 475. Barcode scanner [:link:](https://www.codingame.com/training/medium/barcode-scanner)
+- [ ] 478. Fishing With A Stick [:link:](https://www.codingame.com/training/medium/fishing-with-a-stick)
+- [ ] 479. Elliptic curve cryptography [:link:](https://www.codingame.com/training/medium/elliptic-curve-cryptography)
+- [ ] 480. Criminal [:link:](https://www.codingame.com/training/medium/criminal)
+- [ ] 482. Rearrange string to two numbers [:link:](https://www.codingame.com/training/medium/rearrange-string-to-two-numbers)
+- [ ] 484. Seam Carving [:link:](https://www.codingame.com/training/medium/seam-carving)
+- [ ] 485. Robbery optimisation [:link:](https://www.codingame.com/training/medium/robbery-optimisation)
+- [ ] 487. Palindromic Decomposition [:link:](https://www.codingame.com/training/medium/palindromic-decomposition)
+- [ ] 488. Length of Syracuse Conjecture Sequence [:link:](https://www.codingame.com/training/medium/length-of-syracuse-conjecture-sequence)
+- [ ] 490. Shikaku Solver [:link:](https://www.codingame.com/training/medium/shikaku-solver)
+- [ ] 492. Regular polygons [:link:](https://www.codingame.com/training/medium/regular-polygons)
+- [ ] 499. Road Trip [:link:](https://www.codingame.com/training/medium/road-trip)
+- [ ] 502. Jumping Frogs [:link:](https://www.codingame.com/training/medium/jumping-frogs)
+- [ ] 503. Forest Fire [:link:](https://www.codingame.com/training/medium/forest-fire)
+- [ ] 510. Sudoku Solver [:link:](https://www.codingame.com/training/medium/sudoku-solver)
+- [ ] 511. Knights Jam [:link:](https://www.codingame.com/training/medium/knights-jam)
+- [ ] 512. Plague, Jr [:link:](https://www.codingame.com/training/medium/plague-jr)
+- [ ] 518. Smooth Factory [:link:](https://www.codingame.com/training/medium/smooth-factory)
+- [ ] 522. Detective Pikaptcha EP3 [:link:](https://www.codingame.com/training/medium/detective-pikaptcha-ep3)
+- [ ] 526. Battleship [:link:](https://www.codingame.com/training/medium/battleship)
+- [ ] 529. Surakarta [:link:](https://www.codingame.com/training/medium/surakarta)
+- [ ] 531. Identifying data structure [:link:](https://www.codingame.com/training/medium/identifying-data-structure)
+- [ ] 532. A story to go in circles [:link:](https://www.codingame.com/training/medium/a-story-to-go-in-circles)
+- [ ] 533. Fun with Set theory [:link:](https://www.codingame.com/training/medium/fun-with-set-theory)
+- [ ] 537. Dice galaxy [:link:](https://www.codingame.com/training/medium/dice-galaxy)
+- [ ] 538. A Coin Guessing Game [:link:](https://www.codingame.com/training/medium/a-coin-guessing-game)
+- [ ] 539. Let's Go To The Cinema! [:link:](https://www.codingame.com/training/medium/lets-go-to-the-cinema)
+- [ ] 543. Windmill problem [:link:](https://www.codingame.com/training/medium/windmill-problem)
+- [ ] 544. Photo Booth Transformation [:link:](https://www.codingame.com/training/medium/photo-booth-transformation)
+- [ ] 545. Light Bulbs [:link:](https://www.codingame.com/training/medium/light-bulbs)
+- [ ] 548. Fair Numbering [:link:](https://www.codingame.com/training/medium/fair-numbering)
+- [ ] 551. Rational Number Tree [:link:](https://www.codingame.com/training/medium/rational-number-tree)
+- [ ] 561. Chained Matrix Products [:link:](https://www.codingame.com/training/medium/chained-matrix-products)
+- [ ] 565. Bit count to limit [:link:](https://www.codingame.com/training/medium/bit-count-to-limit)
+- [ ] 566. Hacking at RobberCity [:link:](https://www.codingame.com/training/medium/hacking-at-robbercity)
+- [ ] 567. Halting sequences [:link:](https://www.codingame.com/training/medium/halting-sequences)
+- [ ] 569. Binary Search Tree Traversal [:link:](https://www.codingame.com/training/medium/binary-search-tree-traversal)
+- [ ] 570. 3×N Tiling [:link:](https://www.codingame.com/training/medium/3n-tiling)
+- [ ] 578. Propositions in Frege’s ideography [:link:](https://www.codingame.com/training/medium/propositions-in-freges-ideography)
+- [ ] 582. Rock-Paper-Scissors War [:link:](https://www.codingame.com/training/medium/rock-paper-scissors-war)
+- [ ] 584. Playfair Cipher [:link:](https://www.codingame.com/training/medium/playfair-cipher)
+- [ ] 585. Blood Types [:link:](https://www.codingame.com/training/medium/blood-types)
+- [ ] 591. Futoshiki Solver [:link:](https://www.codingame.com/training/medium/futoshiki-solver)
+- [ ] 602. Crossword [:link:](https://www.codingame.com/training/medium/crossword)
+- [ ] 614. The lost child.Episode-1 [:link:](https://www.codingame.com/training/medium/the-lost-child-episode-1)
+- [ ] 616. Duck Hunt [:link:](https://www.codingame.com/training/medium/duck-hunt)
+- [ ] 618. Source Code Analyser [:link:](https://www.codingame.com/training/medium/source-code-analyser)
+- [ ] 619. Huffman Code [:link:](https://www.codingame.com/training/medium/huffman-code)
+- [ ] 620. What the Brainfuck ! [:link:](https://www.codingame.com/training/medium/what-the-brainfuck)
+- [ ] 621. The Polish Dictionary [:link:](https://www.codingame.com/training/medium/the-polish-dictionary)
+- [ ] 625. Battle Tower [:link:](https://www.codingame.com/training/medium/battle-tower)
+- [ ] 629. Target Firing [:link:](https://www.codingame.com/training/medium/target-firing)
+- [ ] 633. Smile! Frieze! Cheese! [:link:](https://www.codingame.com/training/medium/smile-frieze-cheese)
+- [ ] 638. Escaping the cat [:link:](https://www.codingame.com/training/medium/escaping-the-cat)
+- [ ] 641. English length units conversion [:link:](https://www.codingame.com/training/medium/english-length-units-conversion)
+- [ ] 645. Particle Detection with Cloud Chamber [:link:](https://www.codingame.com/training/medium/particle-detection-with-cloud-chamber)
+- [ ] 646. Virus spreading and clustering [:link:](https://www.codingame.com/training/medium/virus-spreading-and-clustering)
+- [ ] 649. Find the liars [:link:](https://www.codingame.com/training/medium/find-the-liars)
+- [ ] 662. Minesweeper [:link:](https://www.codingame.com/training/medium/minesweeper-1)
+- [ ] 670. The lost files [:link:](https://www.codingame.com/training/medium/the-lost-files)
+- [ ] 672. Assignments are boring [:link:](https://www.codingame.com/training/medium/assignments-are-boring)
+- [ ] 677. Rod cutting problem [:link:](https://www.codingame.com/training/medium/rod-cutting-problem)
+- [ ] 692. Place the Parenthesis [:link:](https://www.codingame.com/training/medium/place-the-parenthesis)
+- [ ] 693. Inversion count [:link:](https://www.codingame.com/training/medium/inversion-count)
+- [ ] 696. Paving with bricks [:link:](https://www.codingame.com/training/medium/paving-with-bricks)
+- [ ] 703. Ways to make change [:link:](https://www.codingame.com/training/medium/ways-to-make-change)
+- [ ] 705. Remaining Card [:link:](https://www.codingame.com/training/medium/remaining-card)
+- [ ] 707. 🏐 🏖 Beach Volleyball 🏐 🏖 [:link:](https://www.codingame.com/training/medium/beach-volleyball)
+- [ ] 712. if then else [:link:](https://www.codingame.com/training/medium/if-then-else)
+- [ ] 714. 5D Chests [:link:](https://www.codingame.com/training/medium/5d-chests)
+- [ ] 718. Byte pair encoding [:link:](https://www.codingame.com/training/medium/byte-pair-encoding)
+- [ ] 721. Christmas Tree [:link:](https://www.codingame.com/training/medium/christmas-tree)
+- [ ] 722. Cooperative Mate with Rook [:link:](https://www.codingame.com/training/medium/cooperative-mate-with-rook)
+- [ ] 731. Fractal Image Recognition [:link:](https://www.codingame.com/training/medium/fractal-image-recognition)
+- [ ] 735. Bijective Numeration [:link:](https://www.codingame.com/training/medium/bijective-numeration)
+- [ ] 740. Kids Blocks [:link:](https://www.codingame.com/training/medium/kids-blocks)
+- [ ] 741. Valid brackets in code [:link:](https://www.codingame.com/training/medium/valid-brackets-in-code)
+- [ ] 743. Longest Road [:link:](https://www.codingame.com/training/medium/longest-road)
+- [ ] 746. ASCII cube [:link:](https://www.codingame.com/training/medium/ascii-cube)
+- [ ] 751. Custom Game of Life [:link:](https://www.codingame.com/training/medium/custom-game-of-life)
+- [ ] 753. Is the King In Check? (Part 2) [:link:](https://www.codingame.com/training/medium/is-the-king-in-check-part-2)
+- [ ] 754. Connect the Hyper-Dots [:link:](https://www.codingame.com/training/medium/connect-the-hyper-dots)
+- [ ] 758. Can you save the forest - Episode 1 [:link:](https://www.codingame.com/training/medium/can-you-save-the-forest---episode-1)
+- [ ] 759. Ring the bells [:link:](https://www.codingame.com/training/medium/ring-the-bells)
+- [ ] 770. Railway Station Clock [:link:](https://www.codingame.com/training/medium/railway-station-clock)
+- [ ] 772. Folding a Note [:link:](https://www.codingame.com/training/medium/folding-a-note)
+- [ ] 773. Train passenger [:link:](https://www.codingame.com/training/medium/train-passenger)
+- [ ] 777. Simple Blur [:link:](https://www.codingame.com/training/medium/simple-blur)
+- [ ] 781. Primitive Pythagorean Triples [:link:](https://www.codingame.com/training/medium/primitive-pythagorean-triples)
+- [ ] 785. Binary Sequence [:link:](https://www.codingame.com/training/medium/binary-sequence)
+- [ ] 788. Wine from Kalbodia - Episode 1 [:link:](https://www.codingame.com/training/medium/wine-from-kalbodia---episode-1)
+- [ ] 794. Cooking passion [:link:](https://www.codingame.com/training/medium/cooking-passion)
+- [ ] 799. Dungeon 3D [:link:](https://www.codingame.com/training/medium/dungeon-3d)
+- [ ] 804. Solid Integer [:link:](https://www.codingame.com/training/medium/solid-integer)
+- [ ] 805. Lost astronaut [:link:](https://www.codingame.com/training/medium/lost-astronaut)
+- [ ] 807. Drug Interactions [:link:](https://www.codingame.com/training/medium/drug-interactions)
+- [ ] 808. Code Breaker Puzzle [:link:](https://www.codingame.com/training/medium/code-breaker-puzzle)
+- [ ] 811. We're going in circles! [:link:](https://www.codingame.com/training/medium/were-going-in-circles)
+- [ ] 813. Binary Tree Visual [:link:](https://www.codingame.com/training/medium/binary-tree-visual)
+- [ ] 814. Sticky Keyboard [:link:](https://www.codingame.com/training/medium/sticky-keyboard)
+- [ ] 816. Various Number Spirals [:link:](https://www.codingame.com/training/medium/various-number-spirals)
+- [ ] 817. Thermal Flying - Episode 1 [:link:](https://www.codingame.com/training/medium/thermal-flying---episode-1)
+- [ ] 818. River Crossing [:link:](https://www.codingame.com/training/medium/river-crossing)
+- [ ] 822. The parking [:link:](https://www.codingame.com/training/medium/the-parking)
+- [ ] 826. 3D printer [:link:](https://www.codingame.com/training/medium/3d-printer)
+- [ ] 828. 24 Game [:link:](https://www.codingame.com/training/medium/24-game)
+- [ ] 831. MCxxxx microcontroller simulation [:link:](https://www.codingame.com/training/medium/mcxxxx-microcontroller-simulation)
+- [ ] 833. Condition Overshadowing [:link:](https://www.codingame.com/training/medium/condition-overshadowing)
+- [ ] 834. Self Checkout Machine [:link:](https://www.codingame.com/training/medium/self-checkout-machine)
+- [ ] 1099. Entry code [:link:](https://www.codingame.com/training/medium/entry-code)
+- [ ] 1198. Rocket engines [:link:](https://www.codingame.com/training/medium/rocket-engines)
+- [ ] 1231. Continued Fractions [:link:](https://www.codingame.com/training/medium/continued-fractions)
+- [ ] 1264. How many roads lead to Rome? [:link:](https://www.codingame.com/training/medium/how-many-roads-lead-to-rome)
+- [ ] 1297. L-triominoes [:link:](https://www.codingame.com/training/medium/l-triominoes)
+- [ ] 1363. The Stonemason [:link:](https://www.codingame.com/training/medium/the-stonemason)
+- [ ] 1429. Largest Binary Rectangle [:link:](https://www.codingame.com/training/medium/largest-binary-rectangle)
+- [ ] 1627. Holey Times [:link:](https://www.codingame.com/training/medium/holey-times)
+- [ ] 1660. Jumping  Frog [:link:](https://www.codingame.com/training/medium/jumping-frog)
+- [ ] 1759. Join the Dots [:link:](https://www.codingame.com/training/medium/join-the-dots)
+- [ ] 1858. All Operations are Equal! [:link:](https://www.codingame.com/training/medium/all-operations-are-equal)
+- [ ] 1891. Consecutive Balanced Substrings [:link:](https://www.codingame.com/training/medium/consecutive-balanced-substrings)
+- [ ] 1924. Derivative time !!! - part1 [:link:](https://www.codingame.com/training/medium/derivative-time---part1)
+- [ ] 2056. Scary Ride at the Haunted Mansion [:link:](https://www.codingame.com/training/medium/scary-ride-at-the-haunted-mansion)
+- [ ] 2188. Bouncing Barry [:link:](https://www.codingame.com/training/medium/bouncing-barry)
+- [ ] 2254. Hexagonal Maze [:link:](https://www.codingame.com/training/medium/hexagonal-maze)
+- [ ] 2353. circular automation, the period of chaos [:link:](https://www.codingame.com/training/medium/circular-automation-the-period-of-chaos)
+- [ ] 2419. Random Time Travel [:link:](https://www.codingame.com/training/medium/random-time-travel)
+- [ ] 2485. the voucher [:link:](https://www.codingame.com/training/medium/the-voucher)
+- [ ] 2584. Tennis score [:link:](https://www.codingame.com/training/medium/tennis-score)
+- [ ] 2881. Complicated interpreter [:link:](https://www.codingame.com/training/medium/complicated-interpreter)
+- [ ] 2914. Lunar Lockout [:link:](https://www.codingame.com/training/medium/lunar-lockout)
+- [ ] 2947. Level of nested parentheses [:link:](https://www.codingame.com/training/medium/level-of-nested-parentheses)
+- [ ] 2980. RUSH HOUR [:link:](https://www.codingame.com/training/medium/rush-hour)
+- [ ] 3112. Constrained Latin Squares [:link:](https://www.codingame.com/training/medium/constrained-latin-squares)
+- [ ] 3145. Frog Exchange [:link:](https://www.codingame.com/training/medium/frog-exchange)
+- [ ] 3244. Mitosis Mayhem [:link:](https://www.codingame.com/training/medium/mitosis-mayhem)
+- [ ] 3409. Maze /w teleporters and jumps [:link:](https://www.codingame.com/training/medium/maze-w-teleporters-and-jumps)
+- [ ] 3772. Find the missing plus signs in addition [:link:](https://www.codingame.com/training/medium/find-the-missing-plus-signs-in-addition)
+- [ ] 3871. Sky Maze Adventures 1 [:link:](https://www.codingame.com/training/medium/sky-maze-adventures-1)
+- [ ] 3904. Suguru Solver [:link:](https://www.codingame.com/training/medium/suguru-solver)
+- [ ] 4333. Killer Sudoku Solver [:link:](https://www.codingame.com/training/medium/killer-sudoku-solver)
+- [ ] 4366. Cylinders [:link:](https://www.codingame.com/training/medium/cylinders)
+- [ ] 4399. Goldbach’s Conjecture [:link:](https://www.codingame.com/training/medium/goldbachs-conjecture)
+- [ ] 4432. Maze for the Champions [:link:](https://www.codingame.com/training/medium/maze-for-the-champions)
+- [ ] 4465. Longest Increasing Subsequence [:link:](https://www.codingame.com/training/medium/longest-increasing-subsequence)
+- [ ] 4696. Eratosthenes' Wallpaper [:link:](https://www.codingame.com/training/medium/eratosthenes-wallpaper)
+- [ ] 4828. ASCII Art with Logo Language [:link:](https://www.codingame.com/training/medium/ascii-art-with-logo-language)
+- [ ] 4960. Roman Sorting [:link:](https://www.codingame.com/training/medium/roman-sorting)
+- [ ] 5059. ASCII Art with Logo Language, Part 2 [:link:](https://www.codingame.com/training/medium/ascii-art-with-logo-language-part-2)
+- [ ] 5092. Tiny Forest [:link:](https://www.codingame.com/training/medium/tiny-forest)
+- [ ] 5125. Fun with CGX Expressions [:link:](https://www.codingame.com/training/medium/fun-with-cgx-expressions)
+- [ ] 5158. Hotel [:link:](https://www.codingame.com/training/medium/hotel)
+- [ ] 5191. Team Building [:link:](https://www.codingame.com/training/medium/team-building)
+- [ ] 5290. Chain Reaction [:link:](https://www.codingame.com/training/medium/chain-reaction)
+- [ ] 5323. Identify a simple shape [:link:](https://www.codingame.com/training/medium/identify-a-simple-shape)
+- [ ] 5356. Recurring decimal to fraction [:link:](https://www.codingame.com/training/medium/recurring-decimal-to-fraction)
+- [ ] 5422. Fix the spaces [:link:](https://www.codingame.com/training/medium/fix-the-spaces)
+- [ ] 5719. Fibonomials [:link:](https://www.codingame.com/training/medium/fibonomials)
+- [ ] 5752. SPORE City Planner [:link:](https://www.codingame.com/training/medium/spore-city-planner)
+- [ ] 5785. Firewall placement [:link:](https://www.codingame.com/training/medium/firewall-placement)
+- [ ] 5851. How many triangles and rectangles? [:link:](https://www.codingame.com/training/medium/how-many-triangles-and-rectangles)
+- [ ] 5950. Frequency-Based Decryption [:link:](https://www.codingame.com/training/medium/frequency-based-decryption)
+- [ ] 6082. One for his Nobs [:link:](https://www.codingame.com/training/medium/one-for-his-nobs)
+- [ ] 6313. BobTheScience and the Food Stack [:link:](https://www.codingame.com/training/medium/bobthescience-and-the-food-stack)
+- [ ] 6412. 16x16 Sudoku [:link:](https://www.codingame.com/training/medium/16x16-sudoku)
+- [ ] 6577. Chebyshev Orbiting [:link:](https://www.codingame.com/training/medium/chebyshev-orbiting)
+- [ ] 6676. String balls [:link:](https://www.codingame.com/training/medium/string-balls)
+- [ ] 6742. Count as I count #2 [:link:](https://www.codingame.com/training/medium/count-as-i-count-2)
+- [ ] 6808. Hunger [:link:](https://www.codingame.com/training/medium/hunger)
+- [ ] 7072. Markov ants [:link:](https://www.codingame.com/training/medium/markov-ants)
+- [ ] 7138. Risk odds calculator [:link:](https://www.codingame.com/training/medium/risk-odds-calculator)
+- [ ] 7171. Coastline [:link:](https://www.codingame.com/training/medium/coastline)
+- [ ] 7402. Mosaic [:link:](https://www.codingame.com/training/medium/mosaic)
+- [ ] 7534. Bin packing [:link:](https://www.codingame.com/training/medium/bin-packing)
+
+</details>
+<details>
+
+<summary>
+
+### hard
+
+</summary>
+
+- [x] 22. [Death First Search - Episode 2](death-first-search-episode-2) [:link:](https://www.codingame.com/training/hard/death-first-search-episode-2)
+- [ ] 23. The Bridge [:link:](https://www.codingame.com/training/hard/the-bridge-episode-2)
+- [ ] 24. The Labyrinth [:link:](https://www.codingame.com/training/hard/the-labyrinth)
+- [ ] 25. Power of Thor - Episode 2 [:link:](https://www.codingame.com/training/hard/power-of-thor-episode-2)
+- [ ] 26. Super Computer [:link:](https://www.codingame.com/training/hard/super-computer)
+- [ ] 27. Roller Coaster [:link:](https://www.codingame.com/training/hard/roller-coaster)
+- [ ] 28. CGX Formatter [:link:](https://www.codingame.com/training/hard/cgx-formatter)
+- [ ] 29. TAN Network [:link:](https://www.codingame.com/training/hard/tan-network)
+- [ ] 30. Genome Sequencing [:link:](https://www.codingame.com/training/hard/genome-sequencing)
+- [ ] 31. Surface [:link:](https://www.codingame.com/training/hard/surface)
+- [ ] 32. Blunder - Episode 2 [:link:](https://www.codingame.com/training/hard/blunder-episode-2)
+- [ ] 33. Blunder - Episode 3 [:link:](https://www.codingame.com/training/hard/blunder-episode-3)
+- [ ] 35. The Fall - Episode 2 [:link:](https://www.codingame.com/training/hard/the-fall-episode-2)
+- [ ] 44. Vox Codei - Episode 1 [:link:](https://www.codingame.com/training/hard/vox-codei-episode-1)
+- [ ] 48. Don't Panic - Episode 2 [:link:](https://www.codingame.com/training/hard/don%27t-panic-episode-2)
+- [ ] 55. There is no Spoon - Episode 2 [:link:](https://www.codingame.com/training/hard/there-is-no-spoon-episode-2)
+- [ ] 79. Staircases [:link:](https://www.codingame.com/training/hard/staircases)
+- [ ] 84. Cryptarithm [:link:](https://www.codingame.com/training/hard/cryptarithm)
+- [ ] 85. Mystery sums [:link:](https://www.codingame.com/training/hard/mystery-sums)
+- [ ] 89. Alternative vote [:link:](https://www.codingame.com/training/hard/alternative-vote)
+- [ ] 96. Mini sudoku solver [:link:](https://www.codingame.com/training/hard/mini-sudoku-solver)
+- [ ] 100. Test before Validate! [:link:](https://www.codingame.com/training/hard/test-before-validate%21)
+- [ ] 109. Castle Siege [:link:](https://www.codingame.com/training/hard/castle-siege)
+- [ ] 113. TXT2HTML [:link:](https://www.codingame.com/training/hard/txt2html)
+- [ ] 119. Boggle [:link:](https://www.codingame.com/training/hard/boggle)
+- [ ] 122. Connect four [:link:](https://www.codingame.com/training/hard/connect-four)
+- [ ] 125. Spreadsheet Labels [:link:](https://www.codingame.com/training/hard/spreadsheet-labels)
+- [ ] 127. Candies [:link:](https://www.codingame.com/training/hard/candies)
+- [ ] 130. Electrical grid [:link:](https://www.codingame.com/training/hard/electrical-grid)
+- [ ] 134. Binary Permutations [:link:](https://www.codingame.com/training/hard/binary-permutations)
+- [ ] 135. Tetris [:link:](https://www.codingame.com/training/hard/tetris)
+- [ ] 136. Erdős Number [:link:](https://www.codingame.com/training/hard/erdos-number)
+- [ ] 138. Disks intersection [:link:](https://www.codingame.com/training/hard/disks-intersection)
+- [ ] 141. Simplify Selection Ranges [:link:](https://www.codingame.com/training/hard/simplify-selection-ranges)
+- [ ] 143. The Holy Grail [:link:](https://www.codingame.com/training/hard/the-holy-grail)
+- [ ] 145. Universe Conquest [:link:](https://www.codingame.com/training/hard/universe-conquest)
+- [ ] 146. 7-segment display [:link:](https://www.codingame.com/training/hard/7-segment-display)
+- [ ] 153. Chess cavalry [:link:](https://www.codingame.com/training/hard/chess-cavalry)
+- [ ] 167. Simple safecracking [:link:](https://www.codingame.com/training/hard/simple-safecracking)
+- [ ] 176. Vortex [:link:](https://www.codingame.com/training/hard/vortex)
+- [ ] 179. Fractal Carpet [:link:](https://www.codingame.com/training/hard/fractal-carpet)
+- [ ] 180. Chess moves on FEN position [:link:](https://www.codingame.com/training/hard/chess-moves-on-fen-position)
+- [ ] 181. Einstein's riddle solver [:link:](https://www.codingame.com/training/hard/einsteins-riddle-solver)
+- [ ] 183. The greatest number [:link:](https://www.codingame.com/training/hard/the-greatest-number)
+- [ ] 184. KGood [:link:](https://www.codingame.com/training/hard/kgood)
+- [ ] 185. Egyptian multiplication [:link:](https://www.codingame.com/training/hard/egyptian-multiplication)
+- [ ] 192. Elevator [:link:](https://www.codingame.com/training/hard/elevator)
+- [ ] 195. Drawing Polygons [:link:](https://www.codingame.com/training/hard/drawing-polygons)
+- [ ] 196. Hill Notation and Hill Order [:link:](https://www.codingame.com/training/hard/hill-notation-and-hill-order)
+- [ ] 197. The Highest Building [:link:](https://www.codingame.com/training/hard/the-highest-building)
+- [ ] 200. The Beautiful sequence [:link:](https://www.codingame.com/training/hard/the-beautiful-sequence)
+- [ ] 217. Google Interview - The Two Egg Problem [:link:](https://www.codingame.com/training/hard/google-interview---the-two-egg-problem)
+- [ ] 219. Hangman [:link:](https://www.codingame.com/training/hard/hangman)
+- [ ] 222. The Burglar's Dilemna [:link:](https://www.codingame.com/training/hard/the-burglars-dilemna)
+- [ ] 224. Pascal Trapezoid [:link:](https://www.codingame.com/training/hard/pascal-trapezoid)
+- [ ] 225. Zergling rush [:link:](https://www.codingame.com/training/hard/zergling-rush)
+- [ ] 231. Misère Nim [:link:](https://www.codingame.com/training/hard/misere-nim)
+- [ ] 232. Inertia ride [:link:](https://www.codingame.com/training/hard/inertia-ride)
+- [ ] 236. Laser and mirrors [:link:](https://www.codingame.com/training/hard/laser-and-mirrors)
+- [ ] 240. Winamax Sponsored Contest [:link:](https://www.codingame.com/training/hard/winamax-sponsored-contest)
+- [ ] 241. Kolakoski Sequence [:link:](https://www.codingame.com/training/hard/kolakoski-sequence)
+- [ ] 248. To Sky's Edge [:link:](https://www.codingame.com/training/hard/to-skys-edge)
+- [ ] 249. Execution Circle [:link:](https://www.codingame.com/training/hard/execution-circle)
+- [ ] 250. The max surface box [:link:](https://www.codingame.com/training/hard/the-max-surface-box)
+- [ ] 251. Timer for Clash of Code [:link:](https://www.codingame.com/training/hard/timer-for-clash-of-code)
+- [ ] 252. X egg problem [:link:](https://www.codingame.com/training/hard/x-egg-problem)
+- [ ] 254. Hit the road [:link:](https://www.codingame.com/training/hard/hit-the-road)
+- [ ] 255. Wall Street [:link:](https://www.codingame.com/training/hard/wall-street)
+- [ ] 293. Rocket mice [:link:](https://www.codingame.com/training/hard/rocket-mice)
+- [ ] 294. Hanoi tower [:link:](https://www.codingame.com/training/hard/hanoi-tower)
+- [ ] 307. n Queens [:link:](https://www.codingame.com/training/hard/n-queens)
+- [ ] 308. Turing machine [:link:](https://www.codingame.com/training/hard/turing-machine)
+- [ ] 309. Binary neural network - Part 1 [:link:](https://www.codingame.com/training/hard/binary-neural-network---part-1)
+- [ ] 312. Levenshtein distance [:link:](https://www.codingame.com/training/hard/levenshtein-distance)
+- [ ] 313. Cheat Solving [:link:](https://www.codingame.com/training/hard/cheat-solving)
+- [ ] 314. Highest truncated pyramid [:link:](https://www.codingame.com/training/hard/highest-truncated-pyramid)
+- [ ] 315. The hungry duck - part 1 [:link:](https://www.codingame.com/training/hard/the-hungry-duck---part-1)
+- [ ] 318. The hungry duck - part 2 [:link:](https://www.codingame.com/training/hard/the-hungry-duck---part-2)
+- [ ] 320. Code your own Automaton2000, step 1 [:link:](https://www.codingame.com/training/hard/code-your-own-automaton2000-step-1)
+- [ ] 325. Longest Palindrome [:link:](https://www.codingame.com/training/hard/longest-palindrome)
+- [ ] 327. Parsing context-free grammar [:link:](https://www.codingame.com/training/hard/parsing-context-free-grammar)
+- [ ] 328. Hitori solver [:link:](https://www.codingame.com/training/hard/hitori-solver)
+- [ ] 330. Order of Oopserations! [:link:](https://www.codingame.com/training/hard/order-of-oopserations)
+- [ ] 340. Apple tree [:link:](https://www.codingame.com/training/hard/apple-tree)
+- [ ] 342. Simple CPU Emulation 1 [:link:](https://www.codingame.com/training/hard/simple-cpu-emulation-1)
+- [ ] 346. Paper-folding curve [:link:](https://www.codingame.com/training/hard/paper-folding-curve)
+- [ ] 347. Max Rect [:link:](https://www.codingame.com/training/hard/max-rect)
+- [ ] 356. Monte Carlo Tree Search exercise [:link:](https://www.codingame.com/training/hard/monte-carlo-tree-search-exercise)
+- [ ] 365. Magic count of numbers [:link:](https://www.codingame.com/training/hard/magic-count-of-numbers)
+- [ ] 369. Musical Intervals [:link:](https://www.codingame.com/training/hard/musical-intervals)
+- [ ] 371. Expand the polynomial [:link:](https://www.codingame.com/training/hard/expand-the-polynomial)
+- [ ] 378. Dominoes solver [:link:](https://www.codingame.com/training/hard/dominoes-solver)
+- [ ] 398. Symbolic system of equations [:link:](https://www.codingame.com/training/hard/symbolic-system-of-equations)
+- [ ] 399. Horn-SAT solver [:link:](https://www.codingame.com/training/hard/horn-sat-solver)
+- [ ] 404. The Empire Enigma [:link:](https://www.codingame.com/training/hard/the-empire-enigma)
+- [ ] 405. Factorials of primes decomposition [:link:](https://www.codingame.com/training/hard/factorials-of-primes-decomposition)
+- [ ] 407. The Total is Right - Weird edition [:link:](https://www.codingame.com/training/hard/the-total-is-right---weird-edition)
+- [ ] 412. Breakout [:link:](https://www.codingame.com/training/hard/breakout)
+- [ ] 417. Dumbbells solver [:link:](https://www.codingame.com/training/hard/dumbbells-solver)
+- [ ] 418. Sum of odd [:link:](https://www.codingame.com/training/hard/sum-of-odd)
+- [ ] 431. Harmless Rooks [:link:](https://www.codingame.com/training/hard/harmless-rooks)
+- [ ] 432. Neighbor-Sum Grids [:link:](https://www.codingame.com/training/hard/neighbor-sum-grids)
+- [ ] 453. The Balanced Centrifuge Problem [:link:](https://www.codingame.com/training/hard/the-balanced-centrifuge-problem)
+- [ ] 458. Her Majesty's well shared secret [:link:](https://www.codingame.com/training/hard/her-majestys-well-shared-secret)
+- [ ] 463. Basic Decision Tree - 1 [:link:](https://www.codingame.com/training/hard/basic-decision-tree---1)
+- [ ] 476. 11-puzzle [:link:](https://www.codingame.com/training/hard/11-puzzle)
+- [ ] 477. Closest Number [:link:](https://www.codingame.com/training/hard/closest-number)
+- [ ] 486. Discrete Log Problem [:link:](https://www.codingame.com/training/hard/discrete-log-problem)
+- [ ] 506. Nonogram inversor [:link:](https://www.codingame.com/training/hard/nonogram-inversor)
+- [ ] 507. Basic Decision Tree - 2 [:link:](https://www.codingame.com/training/hard/basic-decision-tree---2)
+- [ ] 523. Detective Pikaptcha EP4 [:link:](https://www.codingame.com/training/hard/detective-pikaptcha-ep4)
+- [ ] 547. Cloudy Weather [:link:](https://www.codingame.com/training/hard/cloudy-weather)
+- [ ] 559. Mars Colonization [:link:](https://www.codingame.com/training/hard/mars-colonization)
+- [ ] 590. A Game of Go [:link:](https://www.codingame.com/training/hard/a-game-of-go)
+- [ ] 609. Map Colorations [:link:](https://www.codingame.com/training/hard/map-colorations)
+- [ ] 622. Bailey–Borwein–Plouffe Pi [:link:](https://www.codingame.com/training/hard/baileyborweinplouffe-pi)
+- [ ] 624. Chess board analyzer [:link:](https://www.codingame.com/training/hard/chess-board-analyzer)
+- [ ] 632. Breaking Apart [:link:](https://www.codingame.com/training/hard/breaking-apart)
+- [ ] 640. Jump Point Search - Preprocessing [:link:](https://www.codingame.com/training/hard/jump-point-search---preprocessing)
+- [ ] 642. Encounter surface [:link:](https://www.codingame.com/training/hard/encounter-surface)
+- [ ] 651. Thomas and the Freight Cars [:link:](https://www.codingame.com/training/hard/thomas-and-the-freight-cars)
+- [ ] 657. Sokoban [:link:](https://www.codingame.com/training/hard/sokoban)
+- [ ] 660. Doubly solved Rubik's cube [:link:](https://www.codingame.com/training/hard/doubly-solved-rubiks-cube)
+- [ ] 674. Flower beds [:link:](https://www.codingame.com/training/hard/flower-beds)
+- [ ] 685. Jump Point Search - Runtime [:link:](https://www.codingame.com/training/hard/jump-point-search---runtime)
+- [ ] 687. Obsolete Programming [:link:](https://www.codingame.com/training/hard/obsolete-programming)
+- [ ] 694. Nuggets numbers [:link:](https://www.codingame.com/training/hard/nuggets-numbers)
+- [ ] 695. 🃏 FreeCell 🃏 [:link:](https://www.codingame.com/training/hard/freecell)
+- [ ] 698. Kakuro Solver [:link:](https://www.codingame.com/training/hard/kakuro-solver)
+- [ ] 702. Blockout [:link:](https://www.codingame.com/training/hard/blockout)
+- [ ] 713. A Man with a Plan [:link:](https://www.codingame.com/training/hard/a-man-with-a-plan)
+- [ ] 716. Binary Extension [:link:](https://www.codingame.com/training/hard/binary-extension)
+- [ ] 717. Divisibility of Fibonacci numbers sum [:link:](https://www.codingame.com/training/hard/divisibility-of-fibonacci-numbers-sum)
+- [ ] 720. Let's make a cheap ASCII 3D engine! [:link:](https://www.codingame.com/training/hard/lets-make-a-cheap-ascii-3d-engine)
+- [ ] 733. Pedestrian Traffic [:link:](https://www.codingame.com/training/hard/pedestrian-traffic)
+- [ ] 749. SHA-256 Hash [:link:](https://www.codingame.com/training/hard/sha-256-hash)
+- [ ] 755. Adversarial Mate with Rook [:link:](https://www.codingame.com/training/hard/adversarial-mate-with-rook)
+- [ ] 757. Legendary Archer Octavius [:link:](https://www.codingame.com/training/hard/legendary-archer-octavius)
+- [ ] 763. Maximising integers [:link:](https://www.codingame.com/training/hard/maximising-integers)
+- [ ] 779. Can you save the forest - Episode 2 [:link:](https://www.codingame.com/training/hard/can-you-save-the-forest---episode-2)
+- [ ] 791. The Hidden Fortress [:link:](https://www.codingame.com/training/hard/the-hidden-fortress)
+- [ ] 800. Balanced Levers [:link:](https://www.codingame.com/training/hard/balanced-levers)
+- [ ] 809. Snooker Ball Collision [:link:](https://www.codingame.com/training/hard/snooker-ball-collision)
+- [ ] 810. DAWG [:link:](https://www.codingame.com/training/hard/dawg)
+- [ ] 821. Wave Function Collapse (sans Shannon) [:link:](https://www.codingame.com/training/hard/wave-function-collapse-sans-shannon)
+- [ ] 869. CG's Next Top Model [:link:](https://www.codingame.com/training/hard/cgs-next-top-model)
+- [ ] 901. Three little piggies [:link:](https://www.codingame.com/training/hard/three-little-piggies)
+- [ ] 1033. Sliding Maze Puzzle [:link:](https://www.codingame.com/training/hard/sliding-maze-puzzle)
+- [ ] 1330. Gerrymandering [:link:](https://www.codingame.com/training/hard/gerrymandering)
+- [ ] 2320. Derivative time !!! - part2 [:link:](https://www.codingame.com/training/hard/derivative-time---part2)
+- [ ] 2683. N Pearls Necklace [:link:](https://www.codingame.com/training/hard/n-pearls-necklace)
+- [ ] 2749. Takuzu Solver [:link:](https://www.codingame.com/training/hard/takuzu-solver)
+- [ ] 3442. Conditional probabilities [:link:](https://www.codingame.com/training/hard/conditional-probabilities)
+- [ ] 3607. Hexagonal Maze - part2 [:link:](https://www.codingame.com/training/hard/hexagonal-maze---part2)
+- [ ] 4267. Breaking Bifid [:link:](https://www.codingame.com/training/hard/breaking-bifid)
+- [ ] 4927. Picture Puzzle [:link:](https://www.codingame.com/training/hard/picture-puzzle)
+- [ ] 4993. ASCII Art QR code [:link:](https://www.codingame.com/training/hard/ascii-art-qr-code)
+- [ ] 5026. Killer Sudoku Extreme Challenge [:link:](https://www.codingame.com/training/hard/killer-sudoku-extreme-challenge)
+- [ ] 6049. Grid climbing [:link:](https://www.codingame.com/training/hard/grid-climbing)
+- [ ] 6643. 24: The Long Game [:link:](https://www.codingame.com/training/hard/24-the-long-game)
+- [ ] 7039. Mind Cracker [:link:](https://www.codingame.com/training/hard/mind-cracker)
+- [ ] 7204. Advertisements [:link:](https://www.codingame.com/training/hard/advertisements)
+- [ ] 7435. String Balls II [:link:](https://www.codingame.com/training/hard/string-balls-ii)
+- [ ] 7567. Solve for X [:link:](https://www.codingame.com/training/hard/solve-for-x)
+
+</details>
+<details>
+
+<summary>
+
+### expert
+
+</summary>
+
+- [ ] 36. The Fall - Episode 3 [:link:](https://www.codingame.com/training/expert/the-fall-episode-3)
+- [ ] 37. The Resistance [:link:](https://www.codingame.com/training/expert/the-resistance)
+- [ ] 38. Music Scores [:link:](https://www.codingame.com/training/expert/music-scores)
+- [ ] 39. Mars Lander - Episode 3 [:link:](https://www.codingame.com/training/expert/mars-lander-episode-3)
+- [ ] 42. Shadows of the Knight - Episode 2 [:link:](https://www.codingame.com/training/expert/shadows-of-the-knight-episode-2)
+- [ ] 46. Vox Codei - Episode 2 [:link:](https://www.codingame.com/training/expert/vox-codei-episode-2)
+- [ ] 49. Nintendo Sponsored Contest [:link:](https://www.codingame.com/training/expert/nintendo-sponsored-contest)
+- [ ] 126. Squares order [:link:](https://www.codingame.com/training/expert/squares-order)
+- [ ] 129. Haunted Manor [:link:](https://www.codingame.com/training/expert/haunted-manor)
+- [ ] 137. Recurring Decimals [:link:](https://www.codingame.com/training/expert/recurring-decimals)
+- [ ] 149. The barnyard [:link:](https://www.codingame.com/training/expert/the-barnyard)
+- [ ] 151. Fill the square! [:link:](https://www.codingame.com/training/expert/fill-the-square)
+- [ ] 152. The Lucky Number [:link:](https://www.codingame.com/training/expert/the-lucky-number)
+- [ ] 160. Flood the World [:link:](https://www.codingame.com/training/expert/flood-the-world)
+- [ ] 175. The Crime Scene [:link:](https://www.codingame.com/training/expert/the-crime-scene)
+- [ ] 177. The water jug riddle from Die Hard 3 [:link:](https://www.codingame.com/training/expert/the-water-jug-riddle-from-die-hard-3)
+- [ ] 178. Heart of the City [:link:](https://www.codingame.com/training/expert/heart-of-the-city)
+- [ ] 186. Sliding puzzle [:link:](https://www.codingame.com/training/expert/sliding-puzzle)
+- [ ] 189. Prime Transformations [:link:](https://www.codingame.com/training/expert/prime-transformations)
+- [ ] 191. Spy the Spies [:link:](https://www.codingame.com/training/expert/spy-the-spies)
+- [ ] 194. Unflood The World [:link:](https://www.codingame.com/training/expert/unflood-the-world)
+- [ ] 201. CodinDice [:link:](https://www.codingame.com/training/expert/codindice)
+- [ ] 226. Chemical Equation Balancing [:link:](https://www.codingame.com/training/expert/chemical-equation-balancing)
+- [ ] 237. Hourglass [:link:](https://www.codingame.com/training/expert/hourglass)
+- [ ] 242. Ticket to Ride: Europe [:link:](https://www.codingame.com/training/expert/ticket-to-ride-europe)
+- [ ] 253. Xorandor [:link:](https://www.codingame.com/training/expert/xorandor)
+- [ ] 310. Binary neural network - Part 2 [:link:](https://www.codingame.com/training/expert/binary-neural-network---part-2)
+- [ ] 311. Skylines [:link:](https://www.codingame.com/training/expert/skylines)
+- [ ] 321. Cubax Folding [:link:](https://www.codingame.com/training/expert/cubax-folding)
+- [ ] 323. The two piles difference [:link:](https://www.codingame.com/training/expert/the-two-piles-difference)
+- [ ] 348. Unfolding paper [:link:](https://www.codingame.com/training/expert/unfolding-paper)
+- [ ] 357. Dungeon Designer [:link:](https://www.codingame.com/training/expert/dungeon-designer)
+- [ ] 368. Minimax Simple Example [:link:](https://www.codingame.com/training/expert/minimax-simple-example)
+- [ ] 381. Completed Mahjong Hands [:link:](https://www.codingame.com/training/expert/completed-mahjong-hands)
+- [ ] 385. High-rise buildings [:link:](https://www.codingame.com/training/expert/high-rise-buildings)
+- [ ] 411. CG Chat interpreter - Part 1 [:link:](https://www.codingame.com/training/expert/cg-chat-interpreter---part-1)
+- [ ] 414. Cross the lines [:link:](https://www.codingame.com/training/expert/cross-the-lines)
+- [ ] 527. Breach [:link:](https://www.codingame.com/training/expert/breach)
+- [ ] 555. Space Maze [:link:](https://www.codingame.com/training/expert/space-maze)
+- [ ] 650. When pigs fly [:link:](https://www.codingame.com/training/expert/when-pigs-fly)
+- [ ] 663. Tiling by Squares [:link:](https://www.codingame.com/training/expert/tiling-by-squares)
+- [ ] 700. Nurikabe [:link:](https://www.codingame.com/training/expert/nurikabe)
+- [ ] 747. Prime Fractals in Pascal's Triangle [:link:](https://www.codingame.com/training/expert/prime-fractals-in-pascals-triangle)
+- [ ] 775. Mathematics for big ears [:link:](https://www.codingame.com/training/expert/mathematics-for-big-ears)
+- [ ] 3211. Running Up That Hill [:link:](https://www.codingame.com/training/expert/running-up-that-hill)
+- [ ] 6511. 25x25 Sudoku [:link:](https://www.codingame.com/training/expert/25x25-sudoku)
+
+</details>
+<details>
+
+<summary>
+
+### optim
+
+</summary>
+
+- [ ] 56. Mars Lander [:link:](https://www.codingame.com/multiplayer/optimization/mars-lander)
+- [ ] 60. Code of the Rings [:link:](https://www.codingame.com/multiplayer/optimization/code-of-the-rings)
+- [ ] 70. Code vs Zombies [:link:](https://www.codingame.com/multiplayer/optimization/code-vs-zombies)
+- [ ] 71. CodinGame Sponsored Contest [:link:](https://www.codingame.com/multiplayer/optimization/codingame-sponsored-contest)
+- [ ] 439. A*Craft [:link:](https://www.codingame.com/multiplayer/optimization/a-star-craft)
+- [ ] 461. Bender - Episode 4 [:link:](https://www.codingame.com/multiplayer/optimization/bender---episode-4)
+- [ ] 524. CGFunge Prime [:link:](https://www.codingame.com/multiplayer/optimization/cgfunge-prime)
+- [ ] 563. Number Shifting [:link:](https://www.codingame.com/multiplayer/optimization/number-shifting)
+- [ ] 575. Bulls and Cows 2 [:link:](https://www.codingame.com/multiplayer/optimization/bulls-and-cows-2)
+- [ ] 593. Search Race [:link:](https://www.codingame.com/multiplayer/optimization/search-race)
+- [ ] 626. SameGame [:link:](https://www.codingame.com/multiplayer/optimization/samegame)
+- [ ] 658. 2048 [:link:](https://www.codingame.com/multiplayer/optimization/2048)
+- [ ] 827. Travelling Salesman [:link:](https://www.codingame.com/multiplayer/optimization/travelling-salesman)
+- [ ] 1132. Block the spreading fire ! [:link:](https://www.codingame.com/multiplayer/optimization/block-the-spreading-fire)
+- [ ] 5224. Wordle [:link:](https://www.codingame.com/multiplayer/optimization/wordle)
+
+</details>
+<details>
+
+<summary>
+
+### multi
+
+</summary>
+
+- [ ] 63. Tron Battle [:link:](https://www.codingame.com/multiplayer/bot-programming/tron-battle)
+- [ ] 64. Game of Drones [:link:](https://www.codingame.com/multiplayer/bot-programming/game-of-drones)
+- [ ] 65. Platinum Rift - Episode 2 [:link:](https://www.codingame.com/multiplayer/bot-programming/platinum-rift-episode-2)
+- [ ] 66. Platinum Rift - Episode 1 [:link:](https://www.codingame.com/multiplayer/bot-programming/platinum-rift-episode-1)
+- [ ] 67. Great escape [:link:](https://www.codingame.com/multiplayer/bot-programming/great-escape)
+- [ ] 68. Poker Chip Race [:link:](https://www.codingame.com/multiplayer/bot-programming/poker-chip-race)
+- [ ] 69. Back to the Code [:link:](https://www.codingame.com/multiplayer/bot-programming/back-to-the-code)
+- [ ] 148. Mad Pod Racing [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-pod-racing)
+- [ ] 156. Smash The Code [:link:](https://www.codingame.com/multiplayer/bot-programming/smash-the-code)
+- [ ] 168. CodeBusters [:link:](https://www.codingame.com/multiplayer/bot-programming/codebusters)
+- [ ] 221. Hypersonic [:link:](https://www.codingame.com/multiplayer/bot-programming/hypersonic)
+- [ ] 247. Fantastic Bits [:link:](https://www.codingame.com/multiplayer/bot-programming/fantastic-bits)
+- [ ] 298. Ghost in the Cell [:link:](https://www.codingame.com/multiplayer/bot-programming/ghost-in-the-cell)
+- [ ] 324. Coders of the Caribbean [:link:](https://www.codingame.com/multiplayer/bot-programming/coders-of-the-caribbean)
+- [ ] 329. Wondev Woman [:link:](https://www.codingame.com/multiplayer/bot-programming/wondev-woman)
+- [ ] 359. Mean Max [:link:](https://www.codingame.com/multiplayer/bot-programming/mean-max)
+- [ ] 376. Code4Life [:link:](https://www.codingame.com/multiplayer/bot-programming/code4life)
+- [ ] 380. Ultimate Tic-Tac-Toe [:link:](https://www.codingame.com/multiplayer/bot-programming/tic-tac-toe)
+- [ ] 382. Botters of the Galaxy [:link:](https://www.codingame.com/multiplayer/bot-programming/botters-of-the-galaxy)
+- [ ] 383. Code Royale [:link:](https://www.codingame.com/multiplayer/bot-programming/code-royale)
+- [ ] 410. Code of Kutulu [:link:](https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu)
+- [ ] 420. Legends of Code & Magic [:link:](https://www.codingame.com/multiplayer/bot-programming/legends-of-code-magic)
+- [ ] 450. Xmas Rush [:link:](https://www.codingame.com/multiplayer/bot-programming/xmas-rush)
+- [ ] 460. Vindinium [:link:](https://www.codingame.com/multiplayer/bot-programming/vindinium)
+- [ ] 468. Langton s Ant [:link:](https://www.codingame.com/multiplayer/bot-programming/langton-s-ant)
+- [ ] 471. Checkers [:link:](https://www.codingame.com/multiplayer/bot-programming/checkers)
+- [ ] 473. Yavalath [:link:](https://www.codingame.com/multiplayer/bot-programming/yavalath)
+- [ ] 474. Code a la Mode [:link:](https://www.codingame.com/multiplayer/bot-programming/code-a-la-mode)
+- [ ] 481. Cultist Wars [:link:](https://www.codingame.com/multiplayer/bot-programming/cultist-wars)
+- [ ] 483. Bit Runner 2048 [:link:](https://www.codingame.com/multiplayer/bot-programming/bit-runner-2048)
+- [ ] 491. Bandas [:link:](https://www.codingame.com/multiplayer/bot-programming/bandas)
+- [ ] 500. A Code of Ice And Fire [:link:](https://www.codingame.com/multiplayer/bot-programming/a-code-of-ice-and-fire)
+- [ ] 530. Oware Abapa [:link:](https://www.codingame.com/multiplayer/bot-programming/oware-abapa)
+- [ ] 549. Breakthrough [:link:](https://www.codingame.com/multiplayer/bot-programming/breakthrough)
+- [ ] 550. Paper soccer [:link:](https://www.codingame.com/multiplayer/bot-programming/paper-soccer)
+- [ ] 553. Onitama [:link:](https://www.codingame.com/multiplayer/bot-programming/onitama)
+- [ ] 560. Tower Dereference [:link:](https://www.codingame.com/multiplayer/bot-programming/tower-dereference)
+- [ ] 564. Twixt-PP [:link:](https://www.codingame.com/multiplayer/bot-programming/twixt-pp)
+- [ ] 572. Coders of the Realm - 1v1 [:link:](https://www.codingame.com/multiplayer/bot-programming/coders-of-the-realm---1v1)
+- [ ] 573. Coders of the Realm [:link:](https://www.codingame.com/multiplayer/bot-programming/coders-of-the-realm)
+- [ ] 577. Crystal Rush [:link:](https://www.codingame.com/multiplayer/bot-programming/crystal-rush)
+- [ ] 580. Tulips and Daisies [:link:](https://www.codingame.com/multiplayer/bot-programming/tulips-and-daisies)
+- [ ] 583. Ocean of Code [:link:](https://www.codingame.com/multiplayer/bot-programming/ocean-of-code)
+- [ ] 592. Spring Challenge 2020 [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2020)
+- [ ] 610. Yinsh [:link:](https://www.codingame.com/multiplayer/bot-programming/yinsh)
+- [ ] 613. Othello [:link:](https://www.codingame.com/multiplayer/bot-programming/othello-1)
+- [ ] 617. Atari Go [:link:](https://www.codingame.com/multiplayer/bot-programming/atari-go)
+- [ ] 628. Dots and Boxes [:link:](https://www.codingame.com/multiplayer/bot-programming/dots-and-boxes)
+- [ ] 631. Atari Go 9x9 [:link:](https://www.codingame.com/multiplayer/bot-programming/atari-go-9x9)
+- [ ] 654. Penguins [:link:](https://www.codingame.com/multiplayer/bot-programming/penguins)
+- [ ] 667. Blocking [:link:](https://www.codingame.com/multiplayer/bot-programming/blocking)
+- [ ] 684. Fall Challenge 2020 [:link:](https://www.codingame.com/multiplayer/bot-programming/fall-challenge-2020)
+- [ ] 699. Chess [:link:](https://www.codingame.com/multiplayer/bot-programming/chess)
+- [ ] 701. TryAngle Catch [:link:](https://www.codingame.com/multiplayer/bot-programming/tryangle-catch)
+- [ ] 704. Fireworks [:link:](https://www.codingame.com/multiplayer/bot-programming/fireworks)
+- [ ] 708. Connect 4 [:link:](https://www.codingame.com/multiplayer/bot-programming/connect-4)
+- [ ] 715. Clobber [:link:](https://www.codingame.com/multiplayer/bot-programming/clobber)
+- [ ] 726. Night Of War [:link:](https://www.codingame.com/multiplayer/bot-programming/night-of-war)
+- [ ] 730. Spring Challenge 2021 [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2021)
+- [ ] 738. Amazons [:link:](https://www.codingame.com/multiplayer/bot-programming/amazons)
+- [ ] 744. Dice Duel [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-duel)
+- [ ] 748. Volcanoes [:link:](https://www.codingame.com/multiplayer/bot-programming/volcanoes)
+- [ ] 776. Abalone [:link:](https://www.codingame.com/multiplayer/bot-programming/abalone)
+- [ ] 782. Space Shooter [:link:](https://www.codingame.com/multiplayer/bot-programming/space-shooter)
+- [ ] 790. Clash of Bots [:link:](https://www.codingame.com/multiplayer/bot-programming/clash-of-bots)
+- [ ] 793. Counting TicTacToe [:link:](https://www.codingame.com/multiplayer/bot-programming/counting-tictactoe)
+- [ ] 796. Lines Of Action [:link:](https://www.codingame.com/multiplayer/bot-programming/lines-of-action)
+- [ ] 798. nine men's morris [:link:](https://www.codingame.com/multiplayer/bot-programming/nine-mens-morris)
+- [ ] 815. Code Keeper - The Hero [:link:](https://www.codingame.com/multiplayer/bot-programming/code-keeper---the-hero)
+- [ ] 1594. Start-up! [:link:](https://www.codingame.com/multiplayer/bot-programming/start-up)
+- [ ] 1726. Spider Attack [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2022)
+- [ ] 1957. Legends of Code & Magic: Constructed [:link:](https://www.codingame.com/multiplayer/bot-programming/legends-of-code-magic-constructed)
+- [ ] 2650. Green Circle [:link:](https://www.codingame.com/multiplayer/bot-programming/green-circle)
+- [ ] 3178. Isola [:link:](https://www.codingame.com/multiplayer/bot-programming/isola)
+- [ ] 3277. 6 nimmt! / 6 qui prend! / Take 5! [:link:](https://www.codingame.com/multiplayer/bot-programming/6-nimmt-6-qui-prend-take-5)
+- [ ] 3838. Git Patchwork [:link:](https://www.codingame.com/multiplayer/bot-programming/git-patchwork)
+- [ ] 4201. Impasse [:link:](https://www.codingame.com/multiplayer/bot-programming/impasse)
+- [ ] 4301. Keep Off The Grass [:link:](https://www.codingame.com/multiplayer/bot-programming/keep-off-the-grass-fall-challenge-2022)
+- [ ] 6381. Spring Challenge 2023 - Ants [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2023-ants)
+- [ ] 7237. Mad Knights [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-knights)
+- [ ] 7336. Poker [:link:](https://www.codingame.com/multiplayer/bot-programming/poker)
+
+</details>
+<details>
+
+<summary>
+
+### codegolf-easy
+
+</summary>
+
+- [ ] 57. Don't Panic [:link:](https://www.codingame.com/codegolf/easy/don%27t-panic)
+- [ ] 58. Power of Thor [:link:](https://www.codingame.com/codegolf/easy/power-of-thor)
+- [ ] 73. Temperatures [:link:](https://www.codingame.com/codegolf/easy/temperature-code-golf)
+- [ ] 464. Unary - Code Golf [:link:](https://www.codingame.com/codegolf/easy/chuck-norris-codesize)
+- [ ] 5588. ASCII Art - Code Golf [:link:](https://www.codingame.com/codegolf/easy/ascii-art-codesize)
+- [ ] 5594. The Descent - Code Golf [:link:](https://www.codingame.com/codegolf/easy/the-descent-codesize)
+
+</details>
+<details>
+
+<summary>
+
+### codegolf-medium
+
+</summary>
+
+- [ ] 5601. Shadows of the Knight - Episode 1 - Code Golf [:link:](https://www.codingame.com/codegolf/medium/shadows-of-the-knight-episode-1-codesize)
+- [ ] 5603. Blunder - Episode 1 - Code Golf [:link:](https://www.codingame.com/codegolf/medium/blunder-episode-1-codesize)
+- [ ] 5604. Dwarfs standing on the shoulders of giants - Code Golf [:link:](https://www.codingame.com/codegolf/medium/dwarfs-standing-on-the-shoulders-of-giants-codesize)
+- [ ] 5605. Network Cabling - Code Golf [:link:](https://www.codingame.com/codegolf/medium/network-cabling-codesize)
+- [ ] 5607. Telephone Numbers - Code Golf [:link:](https://www.codingame.com/codegolf/medium/telephone-numbers-codesize)
+- [ ] 5609. Mayan Calculation - Code Golf [:link:](https://www.codingame.com/codegolf/medium/mayan-calculation-codesize)
+
+</details>
+<details>
+
+<summary>
+
+### codegolf-hard
+
+</summary>
+
+- [ ] 5591. Vox Codei - Episode 1 - Code Golf [:link:](https://www.codingame.com/codegolf/hard/vox-codei-episode-1-codesize)
+- [ ] 5592. Blunder - Episode 3 - Code Golf [:link:](https://www.codingame.com/codegolf/hard/blunder-episode-3-codesize)
+- [ ] 5596. Genome Sequencing - Code Golf [:link:](https://www.codingame.com/codegolf/hard/genome-sequencing-codesize)
+- [ ] 5597. The Labyrinth - Code Golf [:link:](https://www.codingame.com/codegolf/hard/the-labyrinth-codesize)
+- [ ] 5598. Roller Coaster - Code Golf [:link:](https://www.codingame.com/codegolf/hard/roller-coaster-codesize)
+- [ ] 5599. Surface - Code Golf [:link:](https://www.codingame.com/codegolf/hard/surface-codesize)
+- [ ] 5602. The Bridge - Code Golf [:link:](https://www.codingame.com/codegolf/hard/the-bridge-episode-2-codesize)
+- [ ] 5606. Super Computer - Code Golf [:link:](https://www.codingame.com/codegolf/hard/super-computer-codesize)
+- [ ] 5608. The Fall - Episode 2 - Code Golf [:link:](https://www.codingame.com/codegolf/hard/the-fall-episode-2-codesize)
+
+</details>
+<details>
+
+<summary>
+
+### codegolf-expert
+
+</summary>
+
+- [ ] 5587. Shadows of the Knight - Episode 2 - Code Golf [:link:](https://www.codingame.com/codegolf/expert/shadows-of-the-knight-episode-2-codesize)
+- [ ] 5589. The Fall - Episode 3 - Code Golf [:link:](https://www.codingame.com/codegolf/expert/the-fall-episode-3-codesize)
+- [ ] 5590. Vox Codei - Episode 2 - Code Golf [:link:](https://www.codingame.com/codegolf/expert/vox-codei-episode-2-codesize)
+- [ ] 5593. Mars Lander - Episode 3 - Code Golf [:link:](https://www.codingame.com/codegolf/expert/mars-lander-episode-3-codesize)
+- [ ] 5595. The Resistance - Code Golf [:link:](https://www.codingame.com/codegolf/expert/the-resistance-codesize)
+- [ ] 5600. Music Scores - Code Golf [:link:](https://www.codingame.com/codegolf/expert/music-scores-codesize)
+
+</details>
 <!-- TABLE:END -->
