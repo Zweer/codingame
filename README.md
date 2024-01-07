@@ -263,6 +263,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7369. deus Hex machina [:link:](https://www.codingame.com/training/easy/deus-hex-machina)
 - [ ] 7468. Panel count [:link:](https://www.codingame.com/training/easy/panel-count)
 - [ ] 7501. Number Partition [:link:](https://www.codingame.com/training/easy/number-partition)
+- [ ] 7600. Triangle Toggle [:link:](https://www.codingame.com/training/easy/triangle-toggle)
 
 </details>
 <details>
