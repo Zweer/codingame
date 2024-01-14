@@ -264,6 +264,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7468. Panel count [:link:](https://www.codingame.com/training/easy/panel-count)
 - [ ] 7501. Number Partition [:link:](https://www.codingame.com/training/easy/number-partition)
 - [ ] 7600. Triangle Toggle [:link:](https://www.codingame.com/training/easy/triangle-toggle)
+- [ ] 7633. anagram to break the code ! [:link:](https://www.codingame.com/training/easy/anagram-to-break-the-code)
+- [ ] 7732. Odd-Quad-Out [:link:](https://www.codingame.com/training/easy/odd-quad-out)
 
 </details>
 <details>
@@ -572,6 +574,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7171. Coastline [:link:](https://www.codingame.com/training/medium/coastline)
 - [ ] 7402. Mosaic [:link:](https://www.codingame.com/training/medium/mosaic)
 - [ ] 7534. Bin packing [:link:](https://www.codingame.com/training/medium/bin-packing)
+- [ ] 7699. Boggle with Friends [:link:](https://www.codingame.com/training/medium/boggle-with-friends)
 
 </details>
 <details>
@@ -918,6 +921,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 6381. Spring Challenge 2023 - Ants [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2023-ants)
 - [ ] 7237. Mad Knights [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-knights)
 - [ ] 7336. Poker [:link:](https://www.codingame.com/multiplayer/bot-programming/poker)
+- [ ] 7666. Seabed Security - Fall Challenge 2023 [:link:](https://www.codingame.com/multiplayer/bot-programming/seabed-security)
 
 </details>
 <details>
