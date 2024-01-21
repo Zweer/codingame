@@ -266,6 +266,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7600. Triangle Toggle [:link:](https://www.codingame.com/training/easy/triangle-toggle)
 - [ ] 7633. anagram to break the code ! [:link:](https://www.codingame.com/training/easy/anagram-to-break-the-code)
 - [ ] 7732. Odd-Quad-Out [:link:](https://www.codingame.com/training/easy/odd-quad-out)
+- [ ] 7798. The Other Side [:link:](https://www.codingame.com/training/easy/the-other-side)
 
 </details>
 <details>
@@ -575,6 +576,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7402. Mosaic [:link:](https://www.codingame.com/training/medium/mosaic)
 - [ ] 7534. Bin packing [:link:](https://www.codingame.com/training/medium/bin-packing)
 - [ ] 7699. Boggle with Friends [:link:](https://www.codingame.com/training/medium/boggle-with-friends)
+- [ ] 7831. Boarding passes ready! [:link:](https://www.codingame.com/training/medium/boarding-passes-ready)
 
 </details>
 <details>
@@ -830,6 +832,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 827. Travelling Salesman [:link:](https://www.codingame.com/multiplayer/optimization/travelling-salesman)
 - [ ] 1132. Block the spreading fire ! [:link:](https://www.codingame.com/multiplayer/optimization/block-the-spreading-fire)
 - [ ] 5224. Wordle [:link:](https://www.codingame.com/multiplayer/optimization/wordle)
+- [ ] 7765. Snake [:link:](https://www.codingame.com/multiplayer/optimization/snake)
 
 </details>
 <details>
