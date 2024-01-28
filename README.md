@@ -751,6 +751,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7204. Advertisements [:link:](https://www.codingame.com/training/hard/advertisements)
 - [ ] 7435. String Balls II [:link:](https://www.codingame.com/training/hard/string-balls-ii)
 - [ ] 7567. Solve for X [:link:](https://www.codingame.com/training/hard/solve-for-x)
+- [ ] 7864. MAGICAL FROG [:link:](https://www.codingame.com/training/hard/magical-frog)
 
 </details>
 <details>
