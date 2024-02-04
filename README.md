@@ -577,6 +577,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7534. Bin packing [:link:](https://www.codingame.com/training/medium/bin-packing)
 - [ ] 7699. Boggle with Friends [:link:](https://www.codingame.com/training/medium/boggle-with-friends)
 - [ ] 7831. Boarding passes ready! [:link:](https://www.codingame.com/training/medium/boarding-passes-ready)
+- [ ] 7930. Decimal numbers to floating numbers [:link:](https://www.codingame.com/training/medium/decimal-numbers-to-floating-numbers)
 
 </details>
 <details>
@@ -752,6 +753,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7435. String Balls II [:link:](https://www.codingame.com/training/hard/string-balls-ii)
 - [ ] 7567. Solve for X [:link:](https://www.codingame.com/training/hard/solve-for-x)
 - [ ] 7864. MAGICAL FROG [:link:](https://www.codingame.com/training/hard/magical-frog)
+- [ ] 7897. Counter Attack [:link:](https://www.codingame.com/training/hard/counter-attack)
 
 </details>
 <details>
