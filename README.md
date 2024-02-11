@@ -267,6 +267,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7633. anagram to break the code ! [:link:](https://www.codingame.com/training/easy/anagram-to-break-the-code)
 - [ ] 7732. Odd-Quad-Out [:link:](https://www.codingame.com/training/easy/odd-quad-out)
 - [ ] 7798. The Other Side [:link:](https://www.codingame.com/training/easy/the-other-side)
+- [ ] 7963. Cheap Choices [:link:](https://www.codingame.com/training/easy/cheap-choices)
+- [ ] 7996. GDQ - Binary Coded Decimal Clock [:link:](https://www.codingame.com/training/easy/gdq---binary-coded-decimal-clock)
 
 </details>
 <details>
