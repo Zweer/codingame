@@ -270,6 +270,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7963. Cheap Choices [:link:](https://www.codingame.com/training/easy/cheap-choices)
 - [ ] 7996. GDQ - Binary Coded Decimal Clock [:link:](https://www.codingame.com/training/easy/gdq---binary-coded-decimal-clock)
 - [ ] 8062. Periodic table spelling [:link:](https://www.codingame.com/training/easy/periodic-table-spelling)
+- [ ] 8095. How high up does the beer go? [:link:](https://www.codingame.com/training/easy/how-high-up-does-the-beer-go)
 
 </details>
 <details>
