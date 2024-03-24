@@ -271,6 +271,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7996. GDQ - Binary Coded Decimal Clock [:link:](https://www.codingame.com/training/easy/gdq---binary-coded-decimal-clock)
 - [ ] 8062. Periodic table spelling [:link:](https://www.codingame.com/training/easy/periodic-table-spelling)
 - [ ] 8095. How high up does the beer go? [:link:](https://www.codingame.com/training/easy/how-high-up-does-the-beer-go)
+- [ ] 8161. Battle of Heroes [:link:](https://www.codingame.com/training/easy/battle-of-heroes)
+- [ ] 8227. Scrabble score [:link:](https://www.codingame.com/training/easy/scrabble-score)
 
 </details>
 <details>
@@ -582,6 +584,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7699. Boggle with Friends [:link:](https://www.codingame.com/training/medium/boggle-with-friends)
 - [ ] 7831. Boarding passes ready! [:link:](https://www.codingame.com/training/medium/boarding-passes-ready)
 - [ ] 7930. Decimal numbers to floating numbers [:link:](https://www.codingame.com/training/medium/decimal-numbers-to-floating-numbers)
+- [ ] 8128. Rummikub 1 [:link:](https://www.codingame.com/training/medium/rummikub-1)
 
 </details>
 <details>
