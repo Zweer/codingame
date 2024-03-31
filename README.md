@@ -273,6 +273,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8095. How high up does the beer go? [:link:](https://www.codingame.com/training/easy/how-high-up-does-the-beer-go)
 - [ ] 8161. Battle of Heroes [:link:](https://www.codingame.com/training/easy/battle-of-heroes)
 - [ ] 8227. Scrabble score [:link:](https://www.codingame.com/training/easy/scrabble-score)
+- [ ] 8260. Six Degrees of Kevin Bacon [:link:](https://www.codingame.com/training/easy/six-degrees-of-kevin-bacon)
 
 </details>
 <details>
