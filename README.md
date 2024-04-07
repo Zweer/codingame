@@ -274,6 +274,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8161. Battle of Heroes [:link:](https://www.codingame.com/training/easy/battle-of-heroes)
 - [ ] 8227. Scrabble score [:link:](https://www.codingame.com/training/easy/scrabble-score)
 - [ ] 8260. Six Degrees of Kevin Bacon [:link:](https://www.codingame.com/training/easy/six-degrees-of-kevin-bacon)
+- [ ] 8293. Kangaroo words [:link:](https://www.codingame.com/training/easy/kangaroo-words)
 
 </details>
 <details>
@@ -936,6 +937,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7237. Mad Knights [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-knights)
 - [ ] 7336. Poker [:link:](https://www.codingame.com/multiplayer/bot-programming/poker)
 - [ ] 7666. Seabed Security - Fall Challenge 2023 [:link:](https://www.codingame.com/multiplayer/bot-programming/seabed-security)
+- [ ] 8326. Minishogi [:link:](https://www.codingame.com/multiplayer/bot-programming/minishogi)
+- [ ] 8359. Dice Shogi [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-shogi)
 
 </details>
 <details>
