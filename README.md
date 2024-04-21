@@ -763,6 +763,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7567. Solve for X [:link:](https://www.codingame.com/training/hard/solve-for-x)
 - [ ] 7864. MAGICAL FROG [:link:](https://www.codingame.com/training/hard/magical-frog)
 - [ ] 7897. Counter Attack [:link:](https://www.codingame.com/training/hard/counter-attack)
+- [ ] 8392. The flight of birds [:link:](https://www.codingame.com/training/hard/the-flight-of-birds)
 
 </details>
 <details>
