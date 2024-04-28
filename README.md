@@ -275,6 +275,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8227. Scrabble score [:link:](https://www.codingame.com/training/easy/scrabble-score)
 - [ ] 8260. Six Degrees of Kevin Bacon [:link:](https://www.codingame.com/training/easy/six-degrees-of-kevin-bacon)
 - [ ] 8293. Kangaroo words [:link:](https://www.codingame.com/training/easy/kangaroo-words)
+- [ ] 8458. Zeckendorf representation, part I [:link:](https://www.codingame.com/training/easy/zeckendorf-representation-part-i)
+- [ ] 8491. Agent X, Mission 1 — The Caesar Cipher [:link:](https://www.codingame.com/training/easy/agent-x-mission-1-the-caesar-cipher)
 
 </details>
 <details>
@@ -587,6 +589,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7831. Boarding passes ready! [:link:](https://www.codingame.com/training/medium/boarding-passes-ready)
 - [ ] 7930. Decimal numbers to floating numbers [:link:](https://www.codingame.com/training/medium/decimal-numbers-to-floating-numbers)
 - [ ] 8128. Rummikub 1 [:link:](https://www.codingame.com/training/medium/rummikub-1)
+- [ ] 8425. Number of triangles enclosing X [:link:](https://www.codingame.com/training/medium/number-of-triangles-enclosing-x)
 
 </details>
 <details>
