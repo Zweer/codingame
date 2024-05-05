@@ -277,6 +277,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8293. Kangaroo words [:link:](https://www.codingame.com/training/easy/kangaroo-words)
 - [ ] 8458. Zeckendorf representation, part I [:link:](https://www.codingame.com/training/easy/zeckendorf-representation-part-i)
 - [ ] 8491. Agent X, Mission 1 — The Caesar Cipher [:link:](https://www.codingame.com/training/easy/agent-x-mission-1-the-caesar-cipher)
+- [ ] 8557. Street Fighter : Level I [:link:](https://www.codingame.com/training/easy/street-fighter-level-i)
 
 </details>
 <details>
@@ -767,6 +768,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7864. MAGICAL FROG [:link:](https://www.codingame.com/training/hard/magical-frog)
 - [ ] 7897. Counter Attack [:link:](https://www.codingame.com/training/hard/counter-attack)
 - [ ] 8392. The flight of birds [:link:](https://www.codingame.com/training/hard/the-flight-of-birds)
+- [ ] 8524. 8086 Assembler, part I [:link:](https://www.codingame.com/training/hard/8086-assembler-part-i)
 
 </details>
 <details>
