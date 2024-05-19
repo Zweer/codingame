@@ -278,6 +278,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8458. Zeckendorf representation, part I [:link:](https://www.codingame.com/training/easy/zeckendorf-representation-part-i)
 - [ ] 8491. Agent X, Mission 1 — The Caesar Cipher [:link:](https://www.codingame.com/training/easy/agent-x-mission-1-the-caesar-cipher)
 - [ ] 8557. Street Fighter : Level I [:link:](https://www.codingame.com/training/easy/street-fighter-level-i)
+- [ ] 8590. Codongame [:link:](https://www.codingame.com/training/easy/codongame)
 
 </details>
 <details>
