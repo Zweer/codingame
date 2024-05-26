@@ -770,6 +770,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7897. Counter Attack [:link:](https://www.codingame.com/training/hard/counter-attack)
 - [ ] 8392. The flight of birds [:link:](https://www.codingame.com/training/hard/the-flight-of-birds)
 - [ ] 8524. 8086 Assembler, part I [:link:](https://www.codingame.com/training/hard/8086-assembler-part-i)
+- [ ] 8623. Tetris Floor [:link:](https://www.codingame.com/training/hard/tetris-floor)
 
 </details>
 <details>
