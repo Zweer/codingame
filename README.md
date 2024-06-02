@@ -279,6 +279,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8491. Agent X, Mission 1 — The Caesar Cipher [:link:](https://www.codingame.com/training/easy/agent-x-mission-1-the-caesar-cipher)
 - [ ] 8557. Street Fighter : Level I [:link:](https://www.codingame.com/training/easy/street-fighter-level-i)
 - [ ] 8590. Codongame [:link:](https://www.codingame.com/training/easy/codongame)
+- [ ] 8689. Where am I going? [:link:](https://www.codingame.com/training/easy/where-am-i-going)
 
 </details>
 <details>
@@ -592,6 +593,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7930. Decimal numbers to floating numbers [:link:](https://www.codingame.com/training/medium/decimal-numbers-to-floating-numbers)
 - [ ] 8128. Rummikub 1 [:link:](https://www.codingame.com/training/medium/rummikub-1)
 - [ ] 8425. Number of triangles enclosing X [:link:](https://www.codingame.com/training/medium/number-of-triangles-enclosing-x)
+- [ ] 8656. LexiScramble Quest [:link:](https://www.codingame.com/training/medium/lexiscramble-quest)
 
 </details>
 <details>
