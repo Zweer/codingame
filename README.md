@@ -280,6 +280,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8557. Street Fighter : Level I [:link:](https://www.codingame.com/training/easy/street-fighter-level-i)
 - [ ] 8590. Codongame [:link:](https://www.codingame.com/training/easy/codongame)
 - [ ] 8689. Where am I going? [:link:](https://www.codingame.com/training/easy/where-am-i-going)
+- [ ] 8755. Escape the madness [:link:](https://www.codingame.com/training/easy/escape-the-madness)
 
 </details>
 <details>
@@ -594,6 +595,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8128. Rummikub 1 [:link:](https://www.codingame.com/training/medium/rummikub-1)
 - [ ] 8425. Number of triangles enclosing X [:link:](https://www.codingame.com/training/medium/number-of-triangles-enclosing-x)
 - [ ] 8656. LexiScramble Quest [:link:](https://www.codingame.com/training/medium/lexiscramble-quest)
+- [ ] 8722. Needle in a haystack [:link:](https://www.codingame.com/training/medium/needle-in-a-haystack)
+- [ ] 8788. The Cash Register [:link:](https://www.codingame.com/training/medium/the-cash-register)
 
 </details>
 <details>
