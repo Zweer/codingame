@@ -776,6 +776,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8392. The flight of birds [:link:](https://www.codingame.com/training/hard/the-flight-of-birds)
 - [ ] 8524. 8086 Assembler, part I [:link:](https://www.codingame.com/training/hard/8086-assembler-part-i)
 - [ ] 8623. Tetris Floor [:link:](https://www.codingame.com/training/hard/tetris-floor)
+- [ ] 8821. Strobogrammatic Numbers [:link:](https://www.codingame.com/training/hard/strobogrammatic-numbers)
+- [ ] 8854. Simple Pascal (PL/0) Compiler [:link:](https://www.codingame.com/training/hard/simple-pascal-pl0-compiler)
 
 </details>
 <details>
