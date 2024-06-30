@@ -954,6 +954,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 7666. Seabed Security - Fall Challenge 2023 [:link:](https://www.codingame.com/multiplayer/bot-programming/seabed-security)
 - [ ] 8326. Minishogi [:link:](https://www.codingame.com/multiplayer/bot-programming/minishogi)
 - [ ] 8359. Dice Shogi [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-shogi)
+- [ ] 8887. Olymbits - Summer Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/summer-challenge-2024-olymbits)
 
 </details>
 <details>
