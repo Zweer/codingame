@@ -281,6 +281,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8590. Codongame [:link:](https://www.codingame.com/training/easy/codongame)
 - [ ] 8689. Where am I going? [:link:](https://www.codingame.com/training/easy/where-am-i-going)
 - [ ] 8755. Escape the madness [:link:](https://www.codingame.com/training/easy/escape-the-madness)
+- [ ] 8920. ASCII Worms [:link:](https://www.codingame.com/training/easy/ascii-worms)
 
 </details>
 <details>
