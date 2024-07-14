@@ -282,6 +282,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8689. Where am I going? [:link:](https://www.codingame.com/training/easy/where-am-i-going)
 - [ ] 8755. Escape the madness [:link:](https://www.codingame.com/training/easy/escape-the-madness)
 - [ ] 8920. ASCII Worms [:link:](https://www.codingame.com/training/easy/ascii-worms)
+- [ ] 8986. Histogram [:link:](https://www.codingame.com/training/easy/histogram)
 
 </details>
 <details>
@@ -598,6 +599,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8656. LexiScramble Quest [:link:](https://www.codingame.com/training/medium/lexiscramble-quest)
 - [ ] 8722. Needle in a haystack [:link:](https://www.codingame.com/training/medium/needle-in-a-haystack)
 - [ ] 8788. The Cash Register [:link:](https://www.codingame.com/training/medium/the-cash-register)
+- [ ] 8953. ASCII Snakes [:link:](https://www.codingame.com/training/medium/ascii-snakes)
 
 </details>
 <details>
