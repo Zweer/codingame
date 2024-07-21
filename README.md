@@ -317,7 +317,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 95. Ascii Graph [:link:](https://www.codingame.com/training/medium/ascii-graph)
 - [ ] 97. Reverse Polish Notation [:link:](https://www.codingame.com/training/medium/reverse-polish-notation)
 - [ ] 103. Minimal number of swaps [:link:](https://www.codingame.com/training/medium/minimal-number-of-swaps)
-- [ ] 104. Rubik® [:link:](https://www.codingame.com/training/medium/rubik%C2%AE)
+- [ ] 104. Rubik® [:link:](https://www.codingame.com/training/medium/rubik)
 - [ ] 106. CGS minifier [:link:](https://www.codingame.com/training/medium/cgs-minifier)
 - [ ] 111. The Fastest [:link:](https://www.codingame.com/training/medium/the-fastest)
 - [ ] 112. DDCG Mapper [:link:](https://www.codingame.com/training/medium/ddcg-mapper)
@@ -863,6 +863,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 1132. Block the spreading fire ! [:link:](https://www.codingame.com/multiplayer/optimization/block-the-spreading-fire)
 - [ ] 5224. Wordle [:link:](https://www.codingame.com/multiplayer/optimization/wordle)
 - [ ] 7765. Snake [:link:](https://www.codingame.com/multiplayer/optimization/snake)
+- [ ] 9019. Vehicle Routing Problem [:link:](https://www.codingame.com/multiplayer/optimization/vehicle-routing-problem)
 
 </details>
 <details>
