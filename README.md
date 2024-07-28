@@ -283,6 +283,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8755. Escape the madness [:link:](https://www.codingame.com/training/easy/escape-the-madness)
 - [ ] 8920. ASCII Worms [:link:](https://www.codingame.com/training/easy/ascii-worms)
 - [ ] 8986. Histogram [:link:](https://www.codingame.com/training/easy/histogram)
+- [ ] 9052. A bit of accounting - Lettering [:link:](https://www.codingame.com/training/easy/a-bit-of-accounting---lettering)
+- [ ] 9085. Swatch Internet Time [:link:](https://www.codingame.com/training/easy/swatch-internet-time)
 
 </details>
 <details>
