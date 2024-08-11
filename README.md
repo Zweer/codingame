@@ -329,6 +329,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 128. Divine! [:link:](https://www.codingame.com/training/medium/divine)
 - [ ] 131. 2.5D maze [:link:](https://www.codingame.com/training/medium/2-5d-maze)
 - [ ] 132. Othello [:link:](https://www.codingame.com/training/medium/othello)
+- [ ] 138. Disks intersection [:link:](https://www.codingame.com/training/medium/disks-intersection)
 - [ ] 139. Minesweeper [:link:](https://www.codingame.com/training/medium/minesweeper)
 - [ ] 140. Bulls and Cows [:link:](https://www.codingame.com/training/medium/bulls-and-cows)
 - [ ] 142. Text alignment [:link:](https://www.codingame.com/training/medium/text-alignment)
@@ -602,6 +603,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8722. Needle in a haystack [:link:](https://www.codingame.com/training/medium/needle-in-a-haystack)
 - [ ] 8788. The Cash Register [:link:](https://www.codingame.com/training/medium/the-cash-register)
 - [ ] 8953. ASCII Snakes [:link:](https://www.codingame.com/training/medium/ascii-snakes)
+- [ ] 9118. Magic Coloring [:link:](https://www.codingame.com/training/medium/magic-coloring)
 
 </details>
 <details>
@@ -644,7 +646,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 134. Binary Permutations [:link:](https://www.codingame.com/training/hard/binary-permutations)
 - [ ] 135. Tetris [:link:](https://www.codingame.com/training/hard/tetris)
 - [ ] 136. Erdős Number [:link:](https://www.codingame.com/training/hard/erdos-number)
-- [ ] 138. Disks intersection [:link:](https://www.codingame.com/training/hard/disks-intersection)
 - [ ] 141. Simplify Selection Ranges [:link:](https://www.codingame.com/training/hard/simplify-selection-ranges)
 - [ ] 143. The Holy Grail [:link:](https://www.codingame.com/training/hard/the-holy-grail)
 - [ ] 145. Universe Conquest [:link:](https://www.codingame.com/training/hard/universe-conquest)
