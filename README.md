@@ -285,6 +285,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8986. Histogram [:link:](https://www.codingame.com/training/easy/histogram)
 - [ ] 9052. A bit of accounting - Lettering [:link:](https://www.codingame.com/training/easy/a-bit-of-accounting---lettering)
 - [ ] 9085. Swatch Internet Time [:link:](https://www.codingame.com/training/easy/swatch-internet-time)
+- [ ] 9151. Fix the networks [:link:](https://www.codingame.com/training/easy/fix-the-networks)
 
 </details>
 <details>
@@ -604,6 +605,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8788. The Cash Register [:link:](https://www.codingame.com/training/medium/the-cash-register)
 - [ ] 8953. ASCII Snakes [:link:](https://www.codingame.com/training/medium/ascii-snakes)
 - [ ] 9118. Magic Coloring [:link:](https://www.codingame.com/training/medium/magic-coloring)
+- [ ] 9184. Agent X, Mission 2—Mysterious Cryptogram [:link:](https://www.codingame.com/training/medium/agent-x-mission-2mysterious-cryptogram)
 
 </details>
 <details>
