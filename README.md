@@ -556,7 +556,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 2980. RUSH HOUR [:link:](https://www.codingame.com/training/medium/rush-hour)
 - [ ] 3112. Constrained Latin Squares [:link:](https://www.codingame.com/training/medium/constrained-latin-squares)
 - [ ] 3145. Frog Exchange [:link:](https://www.codingame.com/training/medium/frog-exchange)
-- [ ] 3244. Mitosis Mayhem [:link:](https://www.codingame.com/training/medium/mitosis-mayhem)
 - [ ] 3409. Maze /w teleporters and jumps [:link:](https://www.codingame.com/training/medium/maze-w-teleporters-and-jumps)
 - [ ] 3772. Find the missing plus signs in addition [:link:](https://www.codingame.com/training/medium/find-the-missing-plus-signs-in-addition)
 - [ ] 3871. Sky Maze Adventures 1 [:link:](https://www.codingame.com/training/medium/sky-maze-adventures-1)
