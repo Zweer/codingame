@@ -605,6 +605,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8953. ASCII Snakes [:link:](https://www.codingame.com/training/medium/ascii-snakes)
 - [ ] 9118. Magic Coloring [:link:](https://www.codingame.com/training/medium/magic-coloring)
 - [ ] 9184. Agent X, Mission 2—Mysterious Cryptogram [:link:](https://www.codingame.com/training/medium/agent-x-mission-2mysterious-cryptogram)
+- [ ] 9217. Partition Numbers [:link:](https://www.codingame.com/training/medium/partition-numbers)
 
 </details>
 <details>
