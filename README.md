@@ -286,6 +286,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9052. A bit of accounting - Lettering [:link:](https://www.codingame.com/training/easy/a-bit-of-accounting---lettering)
 - [ ] 9085. Swatch Internet Time [:link:](https://www.codingame.com/training/easy/swatch-internet-time)
 - [ ] 9151. Fix the networks [:link:](https://www.codingame.com/training/easy/fix-the-networks)
+- [ ] 9283. The Prime Twins - Part one [:link:](https://www.codingame.com/training/easy/the-prime-twins---part-one)
+- [ ] 9316. Number of Digits [:link:](https://www.codingame.com/training/easy/number-of-digits)
 
 </details>
 <details>
@@ -606,6 +608,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9118. Magic Coloring [:link:](https://www.codingame.com/training/medium/magic-coloring)
 - [ ] 9184. Agent X, Mission 2—Mysterious Cryptogram [:link:](https://www.codingame.com/training/medium/agent-x-mission-2mysterious-cryptogram)
 - [ ] 9217. Partition Numbers [:link:](https://www.codingame.com/training/medium/partition-numbers)
+- [ ] 9250. Finish the Eight Queens [:link:](https://www.codingame.com/training/medium/finish-the-eight-queens)
 
 </details>
 <details>
