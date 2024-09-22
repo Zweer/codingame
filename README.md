@@ -609,6 +609,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9184. Agent X, Mission 2—Mysterious Cryptogram [:link:](https://www.codingame.com/training/medium/agent-x-mission-2mysterious-cryptogram)
 - [ ] 9217. Partition Numbers [:link:](https://www.codingame.com/training/medium/partition-numbers)
 - [ ] 9250. Finish the Eight Queens [:link:](https://www.codingame.com/training/medium/finish-the-eight-queens)
+- [ ] 9349. Russian Dolls [:link:](https://www.codingame.com/training/medium/russian-dolls)
 
 </details>
 <details>
@@ -789,6 +790,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8623. Tetris Floor [:link:](https://www.codingame.com/training/hard/tetris-floor)
 - [ ] 8821. Strobogrammatic Numbers [:link:](https://www.codingame.com/training/hard/strobogrammatic-numbers)
 - [ ] 8854. Simple Pascal (PL/0) Compiler [:link:](https://www.codingame.com/training/hard/simple-pascal-pl0-compiler)
+- [ ] 9382. Rummikub 2 [:link:](https://www.codingame.com/training/hard/rummikub-2)
 
 </details>
 <details>
