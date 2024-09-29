@@ -288,6 +288,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9151. Fix the networks [:link:](https://www.codingame.com/training/easy/fix-the-networks)
 - [ ] 9283. The Prime Twins - Part one [:link:](https://www.codingame.com/training/easy/the-prime-twins---part-one)
 - [ ] 9316. Number of Digits [:link:](https://www.codingame.com/training/easy/number-of-digits)
+- [ ] 9415. Azimut [:link:](https://www.codingame.com/training/easy/azimut)
 
 </details>
 <details>
