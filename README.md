@@ -289,6 +289,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9283. The Prime Twins - Part one [:link:](https://www.codingame.com/training/easy/the-prime-twins---part-one)
 - [ ] 9316. Number of Digits [:link:](https://www.codingame.com/training/easy/number-of-digits)
 - [ ] 9415. Azimut [:link:](https://www.codingame.com/training/easy/azimut)
+- [ ] 9582. TBR out of control !!! [:link:](https://www.codingame.com/training/easy/tbr-out-of-control)
 
 </details>
 <details>
@@ -611,6 +612,11 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9217. Partition Numbers [:link:](https://www.codingame.com/training/medium/partition-numbers)
 - [ ] 9250. Finish the Eight Queens [:link:](https://www.codingame.com/training/medium/finish-the-eight-queens)
 - [ ] 9349. Russian Dolls [:link:](https://www.codingame.com/training/medium/russian-dolls)
+- [ ] 9448. Word Chain Game [:link:](https://www.codingame.com/training/medium/word-chain-game)
+- [ ] 9514. Wordle Solution RegEx [:link:](https://www.codingame.com/training/medium/wordle-solution-regex)
+- [ ] 9547. The G Note [:link:](https://www.codingame.com/training/medium/the-g-note)
+- [ ] 9580. Slim SAT [:link:](https://www.codingame.com/training/medium/slim-sat)
+- [ ] 9581. Game of Life Simulation [:link:](https://www.codingame.com/training/medium/game-of-life-simulation)
 
 </details>
 <details>
@@ -792,6 +798,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8821. Strobogrammatic Numbers [:link:](https://www.codingame.com/training/hard/strobogrammatic-numbers)
 - [ ] 8854. Simple Pascal (PL/0) Compiler [:link:](https://www.codingame.com/training/hard/simple-pascal-pl0-compiler)
 - [ ] 9382. Rummikub 2 [:link:](https://www.codingame.com/training/hard/rummikub-2)
+- [ ] 9481. M.A.R.I. and the crazy factory [:link:](https://www.codingame.com/training/hard/m-a-r-i--and-the-crazy-factory)
 
 </details>
 <details>
