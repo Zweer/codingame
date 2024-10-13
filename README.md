@@ -617,6 +617,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9547. The G Note [:link:](https://www.codingame.com/training/medium/the-g-note)
 - [ ] 9580. Slim SAT [:link:](https://www.codingame.com/training/medium/slim-sat)
 - [ ] 9581. Game of Life Simulation [:link:](https://www.codingame.com/training/medium/game-of-life-simulation)
+- [ ] 9646. BMP Compression [:link:](https://www.codingame.com/training/medium/bmp-compression)
+- [ ] 9679. The Prime Twins - Part Two [:link:](https://www.codingame.com/training/medium/the-prime-twins---part-two)
 
 </details>
 <details>
@@ -882,6 +884,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 5224. Wordle [:link:](https://www.codingame.com/multiplayer/optimization/wordle)
 - [ ] 7765. Snake [:link:](https://www.codingame.com/multiplayer/optimization/snake)
 - [ ] 9019. Vehicle Routing Problem [:link:](https://www.codingame.com/multiplayer/optimization/vehicle-routing-problem)
+- [ ] 9613. Fall Challenge 2024 - Selenia City [:link:](https://www.codingame.com/multiplayer/optimization/selenia-city)
 
 </details>
 <details>
