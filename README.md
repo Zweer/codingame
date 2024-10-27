@@ -290,6 +290,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9316. Number of Digits [:link:](https://www.codingame.com/training/easy/number-of-digits)
 - [ ] 9415. Azimut [:link:](https://www.codingame.com/training/easy/azimut)
 - [ ] 9582. TBR out of control !!! [:link:](https://www.codingame.com/training/easy/tbr-out-of-control)
+- [ ] 9844. Island Escape [:link:](https://www.codingame.com/training/easy/island-escape)
 
 </details>
 <details>
@@ -619,6 +620,9 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9581. Game of Life Simulation [:link:](https://www.codingame.com/training/medium/game-of-life-simulation)
 - [ ] 9646. BMP Compression [:link:](https://www.codingame.com/training/medium/bmp-compression)
 - [ ] 9679. The Prime Twins - Part Two [:link:](https://www.codingame.com/training/medium/the-prime-twins---part-two)
+- [ ] 9712. Tree Recognition [:link:](https://www.codingame.com/training/medium/tree-recognition)
+- [ ] 9778. Optical Link Failure Localization [:link:](https://www.codingame.com/training/medium/optical-link-failure-localization)
+- [ ] 9811. Pixel Polygons [:link:](https://www.codingame.com/training/medium/pixel-polygons)
 
 </details>
 <details>
@@ -801,6 +805,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8854. Simple Pascal (PL/0) Compiler [:link:](https://www.codingame.com/training/hard/simple-pascal-pl0-compiler)
 - [ ] 9382. Rummikub 2 [:link:](https://www.codingame.com/training/hard/rummikub-2)
 - [ ] 9481. M.A.R.I. and the crazy factory [:link:](https://www.codingame.com/training/hard/m-a-r-i--and-the-crazy-factory)
+- [ ] 9745. Secret Message Decoding [:link:](https://www.codingame.com/training/hard/secret-message-decoding)
 
 </details>
 <details>
