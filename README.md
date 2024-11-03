@@ -623,6 +623,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9712. Tree Recognition [:link:](https://www.codingame.com/training/medium/tree-recognition)
 - [ ] 9778. Optical Link Failure Localization [:link:](https://www.codingame.com/training/medium/optical-link-failure-localization)
 - [ ] 9811. Pixel Polygons [:link:](https://www.codingame.com/training/medium/pixel-polygons)
+- [ ] 9877. Optimized coloring [:link:](https://www.codingame.com/training/medium/optimized-coloring)
+- [ ] 9910. Mask-Matching [:link:](https://www.codingame.com/training/medium/mask-matching)
 
 </details>
 <details>
