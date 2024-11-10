@@ -291,6 +291,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9415. Azimut [:link:](https://www.codingame.com/training/easy/azimut)
 - [ ] 9582. TBR out of control !!! [:link:](https://www.codingame.com/training/easy/tbr-out-of-control)
 - [ ] 9844. Island Escape [:link:](https://www.codingame.com/training/easy/island-escape)
+- [ ] 9943. Sparse MatMul [:link:](https://www.codingame.com/training/easy/sparse-matmul)
+- [ ] 9976. Playing Card Odds [:link:](https://www.codingame.com/training/easy/playing-card-odds)
 
 </details>
 <details>
