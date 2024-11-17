@@ -293,6 +293,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9844. Island Escape [:link:](https://www.codingame.com/training/easy/island-escape)
 - [ ] 9943. Sparse MatMul [:link:](https://www.codingame.com/training/easy/sparse-matmul)
 - [ ] 9976. Playing Card Odds [:link:](https://www.codingame.com/training/easy/playing-card-odds)
+- [ ] 10009. Bouncing Simulator [:link:](https://www.codingame.com/training/easy/bouncing-simulator)
 
 </details>
 <details>
