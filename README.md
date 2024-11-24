@@ -133,6 +133,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 728. Container Terminal [:link:](https://www.codingame.com/training/easy/container-terminal)
 - [ ] 732. Parse SQL Queries [:link:](https://www.codingame.com/training/easy/parse-sql-queries)
 - [ ] 734. Master of Mayhem [:link:](https://www.codingame.com/training/easy/master-of-mayhem)
+- [ ] 735. Bijective Numeration [:link:](https://www.codingame.com/training/easy/bijective-numeration)
 - [ ] 737. Offset Arrays [:link:](https://www.codingame.com/training/easy/offset-arrays)
 - [ ] 739. Reverse Minesweeper [:link:](https://www.codingame.com/training/easy/reverse-minesweeper)
 - [ ] 742. The Michelangelo Code [:link:](https://www.codingame.com/training/easy/the-michelangelo-code)
@@ -294,6 +295,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9943. Sparse MatMul [:link:](https://www.codingame.com/training/easy/sparse-matmul)
 - [ ] 9976. Playing Card Odds [:link:](https://www.codingame.com/training/easy/playing-card-odds)
 - [ ] 10009. Bouncing Simulator [:link:](https://www.codingame.com/training/easy/bouncing-simulator)
+- [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
+- [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
 
 </details>
 <details>
@@ -503,7 +506,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 721. Christmas Tree [:link:](https://www.codingame.com/training/medium/christmas-tree)
 - [ ] 722. Cooperative Mate with Rook [:link:](https://www.codingame.com/training/medium/cooperative-mate-with-rook)
 - [ ] 731. Fractal Image Recognition [:link:](https://www.codingame.com/training/medium/fractal-image-recognition)
-- [ ] 735. Bijective Numeration [:link:](https://www.codingame.com/training/medium/bijective-numeration)
 - [ ] 740. Kids Blocks [:link:](https://www.codingame.com/training/medium/kids-blocks)
 - [ ] 741. Valid brackets in code [:link:](https://www.codingame.com/training/medium/valid-brackets-in-code)
 - [ ] 743. Longest Road [:link:](https://www.codingame.com/training/medium/longest-road)
@@ -628,6 +630,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9811. Pixel Polygons [:link:](https://www.codingame.com/training/medium/pixel-polygons)
 - [ ] 9877. Optimized coloring [:link:](https://www.codingame.com/training/medium/optimized-coloring)
 - [ ] 9910. Mask-Matching [:link:](https://www.codingame.com/training/medium/mask-matching)
+- [ ] 10075. Literary Alfabet Soupe [:link:](https://www.codingame.com/training/medium/literary-alfabet-soupe)
 
 </details>
 <details>
