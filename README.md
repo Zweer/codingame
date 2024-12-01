@@ -297,6 +297,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10009. Bouncing Simulator [:link:](https://www.codingame.com/training/easy/bouncing-simulator)
 - [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
 - [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
+- [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/easy/pachinko-jackpot)
 
 </details>
 <details>
