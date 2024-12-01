@@ -1,6 +1,4 @@
-function readline(): string {
-  return 'foo';
-}
+declare function readline(): string; // Assuming a readline function is available
 
 interface Node {
   isGateway: boolean;
