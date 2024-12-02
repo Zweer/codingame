@@ -936,7 +936,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 468. Langton s Ant [:link:](https://www.codingame.com/multiplayer/bot-programming/langton-s-ant)
 - [ ] 471. Checkers [:link:](https://www.codingame.com/multiplayer/bot-programming/checkers)
 - [ ] 473. Yavalath [:link:](https://www.codingame.com/multiplayer/bot-programming/yavalath)
-- [ ] 474. Code a la Mode [:link:](https://www.codingame.com/multiplayer/bot-programming/code-a-la-mode)
+- [x] 474. [Code a la Mode](src/code-a-la-mode) [:link:](https://www.codingame.com/multiplayer/bot-programming/code-a-la-mode)
 - [ ] 481. Cultist Wars [:link:](https://www.codingame.com/multiplayer/bot-programming/cultist-wars)
 - [ ] 483. Bit Runner 2048 [:link:](https://www.codingame.com/multiplayer/bot-programming/bit-runner-2048)
 - [ ] 491. Bandas [:link:](https://www.codingame.com/multiplayer/bot-programming/bandas)
