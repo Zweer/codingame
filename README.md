@@ -925,7 +925,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 324. Coders of the Caribbean [:link:](https://www.codingame.com/multiplayer/bot-programming/coders-of-the-caribbean)
 - [ ] 329. Wondev Woman [:link:](https://www.codingame.com/multiplayer/bot-programming/wondev-woman)
 - [ ] 359. Mean Max [:link:](https://www.codingame.com/multiplayer/bot-programming/mean-max)
-- [ ] 376. Code4Life [:link:](https://www.codingame.com/multiplayer/bot-programming/code4life)
+- [x] 376. [Code4Life](src/code4life) [:link:](https://www.codingame.com/multiplayer/bot-programming/code4life)
 - [ ] 380. Ultimate Tic-Tac-Toe [:link:](https://www.codingame.com/multiplayer/bot-programming/tic-tac-toe)
 - [ ] 382. Botters of the Galaxy [:link:](https://www.codingame.com/multiplayer/bot-programming/botters-of-the-galaxy)
 - [ ] 383. Code Royale [:link:](https://www.codingame.com/multiplayer/bot-programming/code-royale)
