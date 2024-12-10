@@ -632,6 +632,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9877. Optimized coloring [:link:](https://www.codingame.com/training/medium/optimized-coloring)
 - [ ] 9910. Mask-Matching [:link:](https://www.codingame.com/training/medium/mask-matching)
 - [ ] 10075. Literary Alfabet Soupe [:link:](https://www.codingame.com/training/medium/literary-alfabet-soupe)
+- [ ] 10207. Non-Triple Numbers [:link:](https://www.codingame.com/training/medium/non-triple-numbers)
 
 </details>
 <details>
@@ -815,6 +816,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9382. Rummikub 2 [:link:](https://www.codingame.com/training/hard/rummikub-2)
 - [ ] 9481. M.A.R.I. and the crazy factory [:link:](https://www.codingame.com/training/hard/m-a-r-i--and-the-crazy-factory)
 - [ ] 9745. Secret Message Decoding [:link:](https://www.codingame.com/training/hard/secret-message-decoding)
+- [ ] 10240. Fold and cut [:link:](https://www.codingame.com/training/hard/fold-and-cut)
 
 </details>
 <details>
@@ -881,8 +883,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 </summary>
 
-- [ ] 56. Mars Lander [:link:](https://www.codingame.com/multiplayer/optimization/mars-lander)
-- [ ] 60. Code of the Rings [:link:](https://www.codingame.com/multiplayer/optimization/code-of-the-rings)
+- [x] 56. [Mars Lander](src/mars-lander) [:link:](https://www.codingame.com/multiplayer/optimization/mars-lander)
+- [x] 60. [Code of the Rings](src/code-of-the-rings) [:link:](https://www.codingame.com/multiplayer/optimization/code-of-the-rings)
 - [ ] 70. Code vs Zombies [:link:](https://www.codingame.com/multiplayer/optimization/code-vs-zombies)
 - [ ] 71. CodinGame Sponsored Contest [:link:](https://www.codingame.com/multiplayer/optimization/codingame-sponsored-contest)
 - [ ] 439. A*Craft [:link:](https://www.codingame.com/multiplayer/optimization/a-star-craft)
@@ -990,10 +992,11 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 6381. Spring Challenge 2023 - Ants [:link:](https://www.codingame.com/multiplayer/bot-programming/spring-challenge-2023-ants)
 - [ ] 7237. Mad Knights [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-knights)
 - [ ] 7336. Poker [:link:](https://www.codingame.com/multiplayer/bot-programming/poker)
-- [ ] 7666. Seabed Security - Fall Challenge 2023 [:link:](https://www.codingame.com/multiplayer/bot-programming/seabed-security)
+- [x] 7666. [Seabed Security - Fall Challenge 2023](src/seabed-security) [:link:](https://www.codingame.com/multiplayer/bot-programming/seabed-security)
 - [ ] 8326. Minishogi [:link:](https://www.codingame.com/multiplayer/bot-programming/minishogi)
 - [ ] 8359. Dice Shogi [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-shogi)
 - [ ] 8887. Olymbits - Summer Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/summer-challenge-2024-olymbits)
+- [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/multi-puzzle-3lvf4lah1n)
 
 </details>
 <details>
@@ -1004,7 +1007,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 </summary>
 
-- [ ] 57. Don't Panic [:link:](https://www.codingame.com/codegolf/easy/don%27t-panic)
+- [x] 57. [Don't Panic](src/don't-panic) [:link:](https://www.codingame.com/codegolf/easy/don%27t-panic)
 - [ ] 58. Power of Thor [:link:](https://www.codingame.com/codegolf/easy/power-of-thor)
 - [ ] 73. Temperatures [:link:](https://www.codingame.com/codegolf/easy/temperature-code-golf)
 - [ ] 464. Unary - Code Golf [:link:](https://www.codingame.com/codegolf/easy/chuck-norris-codesize)
