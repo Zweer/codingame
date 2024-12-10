@@ -828,7 +828,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 </summary>
 
 - [ ] 36. The Fall - Episode 3 [:link:](https://www.codingame.com/training/expert/the-fall-episode-3)
-- [ ] 37. The Resistance [:link:](https://www.codingame.com/training/expert/the-resistance)
+- [x] 37. [The Resistance](src/the-resistance) [:link:](https://www.codingame.com/training/expert/the-resistance)
 - [ ] 38. Music Scores [:link:](https://www.codingame.com/training/expert/music-scores)
 - [ ] 39. Mars Lander - Episode 3 [:link:](https://www.codingame.com/training/expert/mars-lander-episode-3)
 - [ ] 42. Shadows of the Knight - Episode 2 [:link:](https://www.codingame.com/training/expert/shadows-of-the-knight-episode-2)
