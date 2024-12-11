@@ -873,6 +873,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 775. Mathematics for big ears [:link:](https://www.codingame.com/training/expert/mathematics-for-big-ears)
 - [ ] 3211. Running Up That Hill [:link:](https://www.codingame.com/training/expert/running-up-that-hill)
 - [ ] 6511. 25x25 Sudoku [:link:](https://www.codingame.com/training/expert/25x25-sudoku)
+- [ ] 10306. A Million Digits of Pi [:link:](https://www.codingame.com/training/expert/a-million-digits-of-pi)
 
 </details>
 <details>
@@ -916,7 +917,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 65. Platinum Rift - Episode 2 [:link:](https://www.codingame.com/multiplayer/bot-programming/platinum-rift-episode-2)
 - [ ] 66. Platinum Rift - Episode 1 [:link:](https://www.codingame.com/multiplayer/bot-programming/platinum-rift-episode-1)
 - [ ] 67. Great escape [:link:](https://www.codingame.com/multiplayer/bot-programming/great-escape)
-- [ ] 68. Poker Chip Race [:link:](https://www.codingame.com/multiplayer/bot-programming/poker-chip-race)
+- [x] 68. [Poker Chip Race](src/poker-chip-race) [:link:](https://www.codingame.com/multiplayer/bot-programming/poker-chip-race)
 - [ ] 69. Back to the Code [:link:](https://www.codingame.com/multiplayer/bot-programming/back-to-the-code)
 - [ ] 148. Mad Pod Racing [:link:](https://www.codingame.com/multiplayer/bot-programming/mad-pod-racing)
 - [ ] 156. Smash The Code [:link:](https://www.codingame.com/multiplayer/bot-programming/smash-the-code)
@@ -997,6 +998,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8359. Dice Shogi [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-shogi)
 - [ ] 8887. Olymbits - Summer Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/summer-challenge-2024-olymbits)
 - [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/multi-puzzle-3lvf4lah1n)
+- [ ] 10273. Gargoyles versus Santas [:link:](https://www.codingame.com/multiplayer/bot-programming/gargoyles-versus-santas)
 
 </details>
 <details>
