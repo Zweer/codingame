@@ -997,7 +997,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8326. Minishogi [:link:](https://www.codingame.com/multiplayer/bot-programming/minishogi)
 - [ ] 8359. Dice Shogi [:link:](https://www.codingame.com/multiplayer/bot-programming/dice-shogi)
 - [ ] 8887. Olymbits - Summer Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/summer-challenge-2024-olymbits)
-- [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/multi-puzzle-3lvf4lah1n)
+- [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/hex)
 - [ ] 10273. Gargoyles versus Santas [:link:](https://www.codingame.com/multiplayer/bot-programming/gargoyles-versus-santas)
 
 </details>
