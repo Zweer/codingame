@@ -87,7 +87,9 @@ function updateReadme(puzzles: Puzzle[]): void {
     ['---', '---', '---', '---'],
   ];
 
-  const directories = readdirSync(join(__dirname, '..', 'src'));
+  const directories = readdirSync(join(__dirname, '..', 'src'))
+    .map((directory) => readdirSync(join(__dirname, '..', 'src', directory)))
+    .flat();
 
   const weightedPuzzle: Record<string, Puzzle[]> = {};
   puzzles.forEach((puzzle) => {
