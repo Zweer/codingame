@@ -298,6 +298,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
 - [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
 - [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/easy/pachinko-jackpot)
+- [ ] 10339. Fussy Fuzzy Matching [:link:](https://www.codingame.com/training/easy/fussy-fuzzy-matching)
 
 </details>
 <details>
@@ -739,6 +740,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 404. The Empire Enigma [:link:](https://www.codingame.com/training/hard/the-empire-enigma)
 - [ ] 405. Factorials of primes decomposition [:link:](https://www.codingame.com/training/hard/factorials-of-primes-decomposition)
 - [ ] 407. The Total is Right - Weird edition [:link:](https://www.codingame.com/training/hard/the-total-is-right---weird-edition)
+- [ ] 411. CG Chat Interpreter [:link:](https://www.codingame.com/training/hard/cg-chat-interpreter)
 - [ ] 412. Breakout [:link:](https://www.codingame.com/training/hard/breakout)
 - [ ] 417. Dumbbells solver [:link:](https://www.codingame.com/training/hard/dumbbells-solver)
 - [ ] 418. Sum of odd [:link:](https://www.codingame.com/training/hard/sum-of-odd)
@@ -862,7 +864,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 368. Minimax Simple Example [:link:](https://www.codingame.com/training/expert/minimax-simple-example)
 - [ ] 381. Completed Mahjong Hands [:link:](https://www.codingame.com/training/expert/completed-mahjong-hands)
 - [ ] 385. High-rise buildings [:link:](https://www.codingame.com/training/expert/high-rise-buildings)
-- [ ] 411. CG Chat interpreter - Part 1 [:link:](https://www.codingame.com/training/expert/cg-chat-interpreter---part-1)
 - [ ] 414. Cross the lines [:link:](https://www.codingame.com/training/expert/cross-the-lines)
 - [ ] 527. Breach [:link:](https://www.codingame.com/training/expert/breach)
 - [ ] 555. Space Maze [:link:](https://www.codingame.com/training/expert/space-maze)
