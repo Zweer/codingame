@@ -889,7 +889,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [x] 60. [Code of the Rings](src/code-of-the-rings) [:link:](https://www.codingame.com/multiplayer/optimization/code-of-the-rings)
 - [ ] 70. Code vs Zombies [:link:](https://www.codingame.com/multiplayer/optimization/code-vs-zombies)
 - [ ] 71. CodinGame Sponsored Contest [:link:](https://www.codingame.com/multiplayer/optimization/codingame-sponsored-contest)
-- [ ] 439. A*Craft [:link:](https://www.codingame.com/multiplayer/optimization/a-star-craft)
+- [x] 439. [A*Craft](src/a-star-craft) [:link:](https://www.codingame.com/multiplayer/optimization/a-star-craft)
 - [ ] 461. Bender - Episode 4 [:link:](https://www.codingame.com/multiplayer/optimization/bender---episode-4)
 - [ ] 524. CGFunge Prime [:link:](https://www.codingame.com/multiplayer/optimization/cgfunge-prime)
 - [ ] 563. Number Shifting [:link:](https://www.codingame.com/multiplayer/optimization/number-shifting)
