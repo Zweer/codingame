@@ -81,6 +81,10 @@ class Game {
       prevLandingX = landX;
       prevLandingY = landY;
     }
+
+    console.error('landingStart:', this.landingStart);
+    console.error('landingEnd:', this.landingEnd);
+    console.error('landingHeight:', this.landingHeight);
   }
 
   initTurn() {
@@ -93,11 +97,22 @@ class Game {
     } else {
       this.directionMultiplier = 1;
     }
+
+    console.error('getDistance:', this.getDistance());
+    console.error('horizontalAcceleration:', this.shuttle.horizontalAcceleration);
+    console.error('verticalAcceleration:', this.shuttle.verticalAcceleration);
+  }
+
+  turn2() {
+    this.goToSafeZone();
+    this.landing();
+
+    console.log(`${this.shuttle}`);
   }
 
   turn() {
-    this.goToSafeZone();
-    this.landing();
+    this.shuttle.rotation = this.getRotation();
+    this.shuttle.power = this.getPower();
 
     console.log(`${this.shuttle}`);
   }
@@ -156,6 +171,75 @@ class Game {
     } else {
       this.shuttle.power = 3;
     }
+  }
+
+  protected getDistance(): number {
+    if (this.shuttle.x < this.landingStart) {
+      return this.shuttle.x - this.landingStart;
+    } else if (this.shuttle.x <= this.landingEnd) {
+      return 0;
+    } else {
+      return this.shuttle.x - this.landingEnd;
+    }
+  }
+
+  protected shouldKeepAltitude(): boolean {
+    return this.shuttle.y - this.landingHeight < 600 && Math.abs(this.getDistance()) > 1200;
+  }
+
+  protected getRotation(): number {
+    if (this.shouldKeepAltitude() && this.shuttle.horizontalSpeed !== 0) {
+      console.error('shouldKeepAltitude');
+      return 0;
+    }
+
+    let angleSpeedCompensation = 0;
+    let angleDistanceCompensation = Math.round(this.getDistance() * (3 / 185));
+    angleDistanceCompensation += Math.round(angleDistanceCompensation / 0.67);
+
+    if (Math.abs(this.shuttle.horizontalSpeed) > 7 && this.shuttle.y > this.landingHeight + 100) {
+      angleSpeedCompensation += Math.round(this.shuttle.horizontalSpeed * (9 / 24.7));
+      angleSpeedCompensation += Math.floor(angleSpeedCompensation / 0.7);
+    }
+
+    console.error('angleSpeedCompensation:', angleSpeedCompensation);
+    console.error('angleDistanceCompensation:', angleDistanceCompensation);
+
+    return Math.round(
+      Math.max(
+        -Game.MAX_ANGLE,
+        Math.min(Game.MAX_ANGLE, angleDistanceCompensation + angleSpeedCompensation),
+      ),
+    );
+  }
+
+  protected getPower(): number {
+    if (this.shouldKeepAltitude() && this.shuttle.verticalSpeed < -1) {
+      console.error('shouldKeepAltitude');
+      return 4;
+    }
+
+    if (
+      this.getDistance() === 0 &&
+      this.shuttle.rotation === 0 &&
+      this.shuttle.y - this.landingHeight < 123 &&
+      this.shuttle.verticalSpeed > -30
+    ) {
+      console.error('power off');
+      return 0;
+    }
+
+    const horizontalSpeedCompensation =
+      (this.shuttle.rotation < 0 && this.shuttle.horizontalSpeed < 0) ||
+      (this.shuttle.rotation > 0 && this.shuttle.horizontalSpeed > 0)
+        ? Math.abs(Math.round(this.shuttle.horizontalSpeed / 15))
+        : 0;
+    const verticalSpeedCompensation = -1 * Math.round(this.shuttle.verticalSpeed / 6.6);
+
+    console.error('horizontalSpeedCompensation:', horizontalSpeedCompensation);
+    console.error('verticalSpeedCompensation:', verticalSpeedCompensation);
+
+    return Math.min(horizontalSpeedCompensation + verticalSpeedCompensation, Game.MAX_POWER);
   }
 }
 
