@@ -298,6 +298,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
 - [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
 - [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/easy/pachinko-jackpot)
+- [ ] 10339. Fussy Fuzzy Matching [:link:](https://www.codingame.com/training/easy/fussy-fuzzy-matching)
 
 </details>
 <details>
