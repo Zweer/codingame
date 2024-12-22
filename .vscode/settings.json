@@ -12,6 +12,10 @@
         "code-of-the-rings",
         "don't-panic",
         "the-resistance",
-        "poker-chip-race"
-    ]
+        "poker-chip-race",
+        "a-star-craft"
+    ],
+    "files.associations": {
+        "sstream": "cpp"
+    }
 }
