@@ -140,7 +140,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 750. Sum of Spiral's Diagonals [:link:](https://www.codingame.com/training/easy/sum-of-spirals-diagonals)
 - [ ] 756. The Mystic Rectangle [:link:](https://www.codingame.com/training/easy/the-mystic-rectangle)
 - [ ] 760. In Stereo [:link:](https://www.codingame.com/training/easy/in-stereo)
-- [ ] 761. Zhiwei Sun Squares [:link:](https://www.codingame.com/training/easy/zhiwei-sun-squares)
 - [ ] 762. Binary image [:link:](https://www.codingame.com/training/easy/binary-image)
 - [ ] 765. 1. NGR - Basic Radar [:link:](https://www.codingame.com/training/easy/1--ngr---basic-radar)
 - [ ] 766. Shadow Casting [:link:](https://www.codingame.com/training/easy/shadow-casting)
@@ -297,7 +296,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10009. Bouncing Simulator [:link:](https://www.codingame.com/training/easy/bouncing-simulator)
 - [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
 - [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
-- [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/easy/pachinko-jackpot)
 - [ ] 10339. Fussy Fuzzy Matching [:link:](https://www.codingame.com/training/easy/fussy-fuzzy-matching)
 - [ ] 10372. nD-Vector sorting [:link:](https://www.codingame.com/training/easy/nd-vector-sorting)
 
@@ -518,6 +516,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 754. Connect the Hyper-Dots [:link:](https://www.codingame.com/training/medium/connect-the-hyper-dots)
 - [ ] 758. Can you save the forest - Episode 1 [:link:](https://www.codingame.com/training/medium/can-you-save-the-forest---episode-1)
 - [ ] 759. Ring the bells [:link:](https://www.codingame.com/training/medium/ring-the-bells)
+- [ ] 761. Zhiwei Sun Squares [:link:](https://www.codingame.com/training/medium/zhiwei-sun-squares)
 - [ ] 770. Railway Station Clock [:link:](https://www.codingame.com/training/medium/railway-station-clock)
 - [ ] 772. Folding a Note [:link:](https://www.codingame.com/training/medium/folding-a-note)
 - [ ] 773. Train passenger [:link:](https://www.codingame.com/training/medium/train-passenger)
@@ -634,6 +633,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9877. Optimized coloring [:link:](https://www.codingame.com/training/medium/optimized-coloring)
 - [ ] 9910. Mask-Matching [:link:](https://www.codingame.com/training/medium/mask-matching)
 - [ ] 10075. Literary Alfabet Soupe [:link:](https://www.codingame.com/training/medium/literary-alfabet-soupe)
+- [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/medium/pachinko-jackpot)
 - [ ] 10207. Non-Triple Numbers [:link:](https://www.codingame.com/training/medium/non-triple-numbers)
 
 </details>
