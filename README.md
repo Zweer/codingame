@@ -820,6 +820,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9481. M.A.R.I. and the crazy factory [:link:](https://www.codingame.com/training/hard/m-a-r-i--and-the-crazy-factory)
 - [ ] 9745. Secret Message Decoding [:link:](https://www.codingame.com/training/hard/secret-message-decoding)
 - [ ] 10240. Fold and cut [:link:](https://www.codingame.com/training/hard/fold-and-cut)
+- [ ] 10471. Who Dunnit? [:link:](https://www.codingame.com/training/hard/who-dunnit)
 
 </details>
 <details>
@@ -1001,6 +1002,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 8887. Olymbits - Summer Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/summer-challenge-2024-olymbits)
 - [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/hex)
 - [ ] 10273. Gargoyles versus Santas [:link:](https://www.codingame.com/multiplayer/bot-programming/gargoyles-versus-santas)
+- [ ] 10405. Cellularena - Winter Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/winter-challenge-2024)
 
 </details>
 <details>
