@@ -131,7 +131,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 725. 1000000000D WORLD [:link:](https://www.codingame.com/training/easy/1000000000d-world)
 - [ ] 727. Mountain Map Convergence [:link:](https://www.codingame.com/training/easy/mountain-map-convergence)
 - [ ] 728. Container Terminal [:link:](https://www.codingame.com/training/easy/container-terminal)
-- [ ] 732. Parse SQL Queries [:link:](https://www.codingame.com/training/easy/parse-sql-queries)
 - [ ] 734. Master of Mayhem [:link:](https://www.codingame.com/training/easy/master-of-mayhem)
 - [ ] 735. Bijective Numeration [:link:](https://www.codingame.com/training/easy/bijective-numeration)
 - [ ] 737. Offset Arrays [:link:](https://www.codingame.com/training/easy/offset-arrays)
@@ -507,6 +506,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 721. Christmas Tree [:link:](https://www.codingame.com/training/medium/christmas-tree)
 - [ ] 722. Cooperative Mate with Rook [:link:](https://www.codingame.com/training/medium/cooperative-mate-with-rook)
 - [ ] 731. Fractal Image Recognition [:link:](https://www.codingame.com/training/medium/fractal-image-recognition)
+- [ ] 732. Parse SQL Queries [:link:](https://www.codingame.com/training/medium/parse-sql-queries)
 - [ ] 740. Kids Blocks [:link:](https://www.codingame.com/training/medium/kids-blocks)
 - [ ] 741. Valid brackets in code [:link:](https://www.codingame.com/training/medium/valid-brackets-in-code)
 - [ ] 743. Longest Road [:link:](https://www.codingame.com/training/medium/longest-road)
@@ -635,6 +635,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10075. Literary Alfabet Soupe [:link:](https://www.codingame.com/training/medium/literary-alfabet-soupe)
 - [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/medium/pachinko-jackpot)
 - [ ] 10207. Non-Triple Numbers [:link:](https://www.codingame.com/training/medium/non-triple-numbers)
+- [ ] 10537. Logic Gates Detective [:link:](https://www.codingame.com/training/medium/logic-gates-detective)
 
 </details>
 <details>
@@ -821,6 +822,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9745. Secret Message Decoding [:link:](https://www.codingame.com/training/hard/secret-message-decoding)
 - [ ] 10240. Fold and cut [:link:](https://www.codingame.com/training/hard/fold-and-cut)
 - [ ] 10471. Who Dunnit? [:link:](https://www.codingame.com/training/hard/who-dunnit)
+- [ ] 10504. Simon's Oracle [:link:](https://www.codingame.com/training/hard/simons-oracle)
 
 </details>
 <details>
