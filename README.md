@@ -636,6 +636,9 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10141. Pachinko Jackpot [:link:](https://www.codingame.com/training/medium/pachinko-jackpot)
 - [ ] 10207. Non-Triple Numbers [:link:](https://www.codingame.com/training/medium/non-triple-numbers)
 - [ ] 10537. Logic Gates Detective [:link:](https://www.codingame.com/training/medium/logic-gates-detective)
+- [ ] 10570. Reconstruct a Tree [:link:](https://www.codingame.com/training/medium/reconstruct-a-tree)
+- [ ] 10603. Catalytic Microparticles [:link:](https://www.codingame.com/training/medium/catalytic-microparticles)
+- [ ] 10636. The Sovereign's Game [:link:](https://www.codingame.com/training/medium/the-sovereigns-game)
 
 </details>
 <details>
