@@ -640,6 +640,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10570. Reconstruct a Tree [:link:](https://www.codingame.com/training/medium/reconstruct-a-tree)
 - [ ] 10603. Catalytic Microparticles [:link:](https://www.codingame.com/training/medium/catalytic-microparticles)
 - [ ] 10636. The Sovereign's Game [:link:](https://www.codingame.com/training/medium/the-sovereigns-game)
+- [ ] 10702. Mrs. Knuth - Part I [:link:](https://www.codingame.com/training/medium/mrs--knuth---part-i)
+- [ ] 10735. Excavating Palindromes [:link:](https://www.codingame.com/training/medium/excavating-palindromes)
 
 </details>
 <details>
