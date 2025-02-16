@@ -298,6 +298,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10339. Fussy Fuzzy Matching [:link:](https://www.codingame.com/training/easy/fussy-fuzzy-matching)
 - [ ] 10372. nD-Vector sorting [:link:](https://www.codingame.com/training/easy/nd-vector-sorting)
 - [ ] 10669. Darts Checkout Routes [:link:](https://www.codingame.com/training/easy/darts-checkout-routes)
+- [ ] 10768. Shikaku Skill Builder [:link:](https://www.codingame.com/training/easy/shikaku-skill-builder)
+- [ ] 10834. Save my Drone! [:link:](https://www.codingame.com/training/easy/save-my-drone)
 
 </details>
 <details>
@@ -642,6 +644,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10636. The Sovereign's Game [:link:](https://www.codingame.com/training/medium/the-sovereigns-game)
 - [ ] 10702. Mrs. Knuth - Part I [:link:](https://www.codingame.com/training/medium/mrs--knuth---part-i)
 - [ ] 10735. Excavating Palindromes [:link:](https://www.codingame.com/training/medium/excavating-palindromes)
+- [ ] 10801. Mrs. Knuth - Part II [:link:](https://www.codingame.com/training/medium/mrs--knuth---part-ii)
+- [ ] 10867. 1D Snake Arrange [:link:](https://www.codingame.com/training/medium/1d-snake-arrange)
 
 </details>
 <details>
