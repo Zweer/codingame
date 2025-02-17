@@ -13,7 +13,8 @@
         "don't-panic",
         "the-resistance",
         "poker-chip-race",
-        "a-star-craft"
+        "a-star-craft",
+        "fractal-carpet"
     ],
     "files.associations": {
         "sstream": "cpp"
