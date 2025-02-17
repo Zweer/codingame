@@ -1085,3 +1085,14 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 </details>
 <!-- TABLE:END -->
+
+## Ispiration from
+
+- https://github.com/hardzsi/CodinGame
+- https://github.com/texus/codingame
+- https://github.com/Coni63/CG_repo
+- https://github.com/hardcoded/CodinGame
+- https://github.com/rigwild/code-challenges
+- https://github.com/MericLuc/CodinGame
+- https://github.com/MasterZydra/CodinGame
+- https://github.com/vadim-job-hg/Codingame
