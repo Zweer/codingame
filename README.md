@@ -695,7 +695,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 153. Chess cavalry [:link:](https://www.codingame.com/training/hard/chess-cavalry)
 - [ ] 167. Simple safecracking [:link:](https://www.codingame.com/training/hard/simple-safecracking)
 - [ ] 176. Vortex [:link:](https://www.codingame.com/training/hard/vortex)
-- [ ] 179. Fractal Carpet [:link:](https://www.codingame.com/training/hard/fractal-carpet)
+- [x] 179. [Fractal Carpet](src/fractal-carpet) [:link:](https://www.codingame.com/training/hard/fractal-carpet)
 - [ ] 180. Chess moves on FEN position [:link:](https://www.codingame.com/training/hard/chess-moves-on-fen-position)
 - [ ] 181. Einstein's riddle solver [:link:](https://www.codingame.com/training/hard/einsteins-riddle-solver)
 - [ ] 183. The greatest number [:link:](https://www.codingame.com/training/hard/the-greatest-number)
