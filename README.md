@@ -48,6 +48,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 235. Horse-racing Hyperduals [:link:](https://www.codingame.com/training/easy/horse-racing-hyperduals)
 - [ ] 238. Self-driving car testing [:link:](https://www.codingame.com/training/easy/self-driving-car-testing)
 - [ ] 243. Folding Paper [:link:](https://www.codingame.com/training/easy/folding-paper)
+- [ ] 251. Timer for Clash of Code [:link:](https://www.codingame.com/training/easy/timer-for-clash-of-code)
+- [ ] 314. Highest truncated pyramid [:link:](https://www.codingame.com/training/easy/highest-truncated-pyramid)
 - [ ] 319. Monday Tuesday Happy Days [:link:](https://www.codingame.com/training/easy/monday-tuesday-happy-days)
 - [ ] 341. What's so complex about Mandelbrot? [:link:](https://www.codingame.com/training/easy/whats-so-complex-about-mandelbrot)
 - [ ] 343. The River I. [:link:](https://www.codingame.com/training/easy/the-river-i-)
@@ -646,6 +648,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10735. Excavating Palindromes [:link:](https://www.codingame.com/training/medium/excavating-palindromes)
 - [ ] 10801. Mrs. Knuth - Part II [:link:](https://www.codingame.com/training/medium/mrs--knuth---part-ii)
 - [ ] 10867. 1D Snake Arrange [:link:](https://www.codingame.com/training/medium/1d-snake-arrange)
+- [ ] 10900. Networking [:link:](https://www.codingame.com/training/medium/networking)
 
 </details>
 <details>
@@ -719,7 +722,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 248. To Sky's Edge [:link:](https://www.codingame.com/training/hard/to-skys-edge)
 - [ ] 249. Execution Circle [:link:](https://www.codingame.com/training/hard/execution-circle)
 - [ ] 250. The max surface box [:link:](https://www.codingame.com/training/hard/the-max-surface-box)
-- [ ] 251. Timer for Clash of Code [:link:](https://www.codingame.com/training/hard/timer-for-clash-of-code)
 - [ ] 252. X egg problem [:link:](https://www.codingame.com/training/hard/x-egg-problem)
 - [ ] 254. Hit the road [:link:](https://www.codingame.com/training/hard/hit-the-road)
 - [ ] 255. Wall Street [:link:](https://www.codingame.com/training/hard/wall-street)
@@ -730,10 +732,10 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 309. Binary neural network - Part 1 [:link:](https://www.codingame.com/training/hard/binary-neural-network---part-1)
 - [ ] 312. Levenshtein distance [:link:](https://www.codingame.com/training/hard/levenshtein-distance)
 - [ ] 313. Cheat Solving [:link:](https://www.codingame.com/training/hard/cheat-solving)
-- [ ] 314. Highest truncated pyramid [:link:](https://www.codingame.com/training/hard/highest-truncated-pyramid)
 - [ ] 315. The hungry duck - part 1 [:link:](https://www.codingame.com/training/hard/the-hungry-duck---part-1)
 - [ ] 318. The hungry duck - part 2 [:link:](https://www.codingame.com/training/hard/the-hungry-duck---part-2)
 - [ ] 320. Code your own Automaton2000, step 1 [:link:](https://www.codingame.com/training/hard/code-your-own-automaton2000-step-1)
+- [ ] 321. Cubax Folding [:link:](https://www.codingame.com/training/hard/cubax-folding)
 - [ ] 325. Longest Palindrome [:link:](https://www.codingame.com/training/hard/longest-palindrome)
 - [ ] 327. Parsing context-free grammar [:link:](https://www.codingame.com/training/hard/parsing-context-free-grammar)
 - [ ] 328. Hitori solver [:link:](https://www.codingame.com/training/hard/hitori-solver)
@@ -833,6 +835,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10240. Fold and cut [:link:](https://www.codingame.com/training/hard/fold-and-cut)
 - [ ] 10471. Who Dunnit? [:link:](https://www.codingame.com/training/hard/who-dunnit)
 - [ ] 10504. Simon's Oracle [:link:](https://www.codingame.com/training/hard/simons-oracle)
+- [ ] 10933. Mrs. Knuth - Part III [:link:](https://www.codingame.com/training/hard/mrs--knuth---part-iii)
 
 </details>
 <details>
@@ -871,7 +874,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 253. Xorandor [:link:](https://www.codingame.com/training/expert/xorandor)
 - [ ] 310. Binary neural network - Part 2 [:link:](https://www.codingame.com/training/expert/binary-neural-network---part-2)
 - [ ] 311. Skylines [:link:](https://www.codingame.com/training/expert/skylines)
-- [ ] 321. Cubax Folding [:link:](https://www.codingame.com/training/expert/cubax-folding)
 - [ ] 323. The two piles difference [:link:](https://www.codingame.com/training/expert/the-two-piles-difference)
 - [ ] 348. Unfolding paper [:link:](https://www.codingame.com/training/expert/unfolding-paper)
 - [ ] 357. Dungeon Designer [:link:](https://www.codingame.com/training/expert/dungeon-designer)
