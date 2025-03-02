@@ -49,7 +49,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 238. Self-driving car testing [:link:](https://www.codingame.com/training/easy/self-driving-car-testing)
 - [ ] 243. Folding Paper [:link:](https://www.codingame.com/training/easy/folding-paper)
 - [ ] 251. Timer for Clash of Code [:link:](https://www.codingame.com/training/easy/timer-for-clash-of-code)
-- [ ] 314. Highest truncated pyramid [:link:](https://www.codingame.com/training/easy/highest-truncated-pyramid)
 - [ ] 319. Monday Tuesday Happy Days [:link:](https://www.codingame.com/training/easy/monday-tuesday-happy-days)
 - [ ] 341. What's so complex about Mandelbrot? [:link:](https://www.codingame.com/training/easy/whats-so-complex-about-mandelbrot)
 - [ ] 343. The River I. [:link:](https://www.codingame.com/training/easy/the-river-i-)
@@ -381,6 +380,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 245. Cards castle [:link:](https://www.codingame.com/training/medium/cards-castle)
 - [ ] 246. Magic stones [:link:](https://www.codingame.com/training/medium/magic-stones)
 - [ ] 299. Sandpile addition [:link:](https://www.codingame.com/training/medium/sandpile-addition)
+- [ ] 314. Highest truncated pyramid [:link:](https://www.codingame.com/training/medium/highest-truncated-pyramid)
 - [ ] 322. Hidden word [:link:](https://www.codingame.com/training/medium/hidden-word)
 - [ ] 326. Bruce Lee [:link:](https://www.codingame.com/training/medium/bruce-lee)
 - [ ] 331. Numeral system [:link:](https://www.codingame.com/training/medium/numeral-system)
@@ -649,6 +649,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10801. Mrs. Knuth - Part II [:link:](https://www.codingame.com/training/medium/mrs--knuth---part-ii)
 - [ ] 10867. 1D Snake Arrange [:link:](https://www.codingame.com/training/medium/1d-snake-arrange)
 - [ ] 10900. Networking [:link:](https://www.codingame.com/training/medium/networking)
+- [ ] 10966. Equation Search [:link:](https://www.codingame.com/training/medium/equation-search)
 
 </details>
 <details>
