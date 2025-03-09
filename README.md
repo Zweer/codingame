@@ -301,6 +301,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10669. Darts Checkout Routes [:link:](https://www.codingame.com/training/easy/darts-checkout-routes)
 - [ ] 10768. Shikaku Skill Builder [:link:](https://www.codingame.com/training/easy/shikaku-skill-builder)
 - [ ] 10834. Save my Drone! [:link:](https://www.codingame.com/training/easy/save-my-drone)
+- [ ] 10999. Sign (programming) language [:link:](https://www.codingame.com/training/easy/sign-programming-language)
 
 </details>
 <details>
@@ -650,6 +651,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10867. 1D Snake Arrange [:link:](https://www.codingame.com/training/medium/1d-snake-arrange)
 - [ ] 10900. Networking [:link:](https://www.codingame.com/training/medium/networking)
 - [ ] 10966. Equation Search [:link:](https://www.codingame.com/training/medium/equation-search)
+- [ ] 11032. Polyominoes [:link:](https://www.codingame.com/training/medium/polyominoes)
 
 </details>
 <details>
