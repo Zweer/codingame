@@ -652,6 +652,9 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10900. Networking [:link:](https://www.codingame.com/training/medium/networking)
 - [ ] 10966. Equation Search [:link:](https://www.codingame.com/training/medium/equation-search)
 - [ ] 11032. Polyominoes [:link:](https://www.codingame.com/training/medium/polyominoes)
+- [ ] 11065. Function notation [:link:](https://www.codingame.com/training/medium/function-notation)
+- [ ] 11131. Shape Outline [:link:](https://www.codingame.com/training/medium/shape-outline)
+- [ ] 11164. Tetrasticks [:link:](https://www.codingame.com/training/medium/tetrasticks)
 
 </details>
 <details>
@@ -1020,6 +1023,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10174. Hex [:link:](https://www.codingame.com/multiplayer/bot-programming/hex)
 - [ ] 10273. Gargoyles versus Santas [:link:](https://www.codingame.com/multiplayer/bot-programming/gargoyles-versus-santas)
 - [ ] 10405. Cellularena - Winter Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/winter-challenge-2024)
+- [ ] 11098. Domain Expansion [:link:](https://www.codingame.com/multiplayer/bot-programming/domain-expansion)
 
 </details>
 <details>
