@@ -655,6 +655,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11065. Function notation [:link:](https://www.codingame.com/training/medium/function-notation)
 - [ ] 11131. Shape Outline [:link:](https://www.codingame.com/training/medium/shape-outline)
 - [ ] 11164. Tetrasticks [:link:](https://www.codingame.com/training/medium/tetrasticks)
+- [ ] 11197. Inside Area [:link:](https://www.codingame.com/training/medium/inside-area)
 
 </details>
 <details>
@@ -693,6 +694,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 122. Connect four [:link:](https://www.codingame.com/training/hard/connect-four)
 - [ ] 125. Spreadsheet Labels [:link:](https://www.codingame.com/training/hard/spreadsheet-labels)
 - [ ] 127. Candies [:link:](https://www.codingame.com/training/hard/candies)
+- [ ] 129. Haunted Manor [:link:](https://www.codingame.com/training/hard/haunted-manor)
 - [ ] 130. Electrical grid [:link:](https://www.codingame.com/training/hard/electrical-grid)
 - [ ] 134. Binary Permutations [:link:](https://www.codingame.com/training/hard/binary-permutations)
 - [ ] 135. Tetris [:link:](https://www.codingame.com/training/hard/tetris)
@@ -860,7 +862,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 46. Vox Codei - Episode 2 [:link:](https://www.codingame.com/training/expert/vox-codei-episode-2)
 - [ ] 49. Nintendo Sponsored Contest [:link:](https://www.codingame.com/training/expert/nintendo-sponsored-contest)
 - [ ] 126. Squares order [:link:](https://www.codingame.com/training/expert/squares-order)
-- [ ] 129. Haunted Manor [:link:](https://www.codingame.com/training/expert/haunted-manor)
 - [ ] 137. Recurring Decimals [:link:](https://www.codingame.com/training/expert/recurring-decimals)
 - [ ] 149. The barnyard [:link:](https://www.codingame.com/training/expert/the-barnyard)
 - [ ] 151. Fill the square! [:link:](https://www.codingame.com/training/expert/fill-the-square)
