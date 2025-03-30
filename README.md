@@ -656,6 +656,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11131. Shape Outline [:link:](https://www.codingame.com/training/medium/shape-outline)
 - [ ] 11164. Tetrasticks [:link:](https://www.codingame.com/training/medium/tetrasticks)
 - [ ] 11197. Inside Area [:link:](https://www.codingame.com/training/medium/inside-area)
+- [ ] 11230. Ye_  An_th_r W_rd Se_rch [:link:](https://www.codingame.com/training/medium/ye_-an_th_r-w_rd-se_rch)
 
 </details>
 <details>
