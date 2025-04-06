@@ -302,6 +302,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10768. Shikaku Skill Builder [:link:](https://www.codingame.com/training/easy/shikaku-skill-builder)
 - [ ] 10834. Save my Drone! [:link:](https://www.codingame.com/training/easy/save-my-drone)
 - [ ] 10999. Sign (programming) language [:link:](https://www.codingame.com/training/easy/sign-programming-language)
+- [ ] 11263. Squash Pi [:link:](https://www.codingame.com/training/easy/squash-pi)
 
 </details>
 <details>
