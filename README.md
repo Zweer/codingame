@@ -40,6 +40,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 154. XML MDF-2016 [:link:](https://www.codingame.com/training/easy/xml-mdf-2016)
 - [ ] 171. Jack Silver: The Casino [:link:](https://www.codingame.com/training/easy/jack-silver-the-casino)
 - [ ] 182. Rugby score [:link:](https://www.codingame.com/training/easy/rugby-score)
+- [ ] 185. Egyptian multiplication [:link:](https://www.codingame.com/training/easy/egyptian-multiplication)
 - [ ] 188. How time flies [:link:](https://www.codingame.com/training/easy/how-time-flies)
 - [ ] 203. Nature of quadrilaterals [:link:](https://www.codingame.com/training/easy/nature-of-quadrilaterals)
 - [ ] 210. Balanced ternary computer: encode [:link:](https://www.codingame.com/training/easy/balanced-ternary-computer-encode)
@@ -303,6 +304,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10834. Save my Drone! [:link:](https://www.codingame.com/training/easy/save-my-drone)
 - [ ] 10999. Sign (programming) language [:link:](https://www.codingame.com/training/easy/sign-programming-language)
 - [ ] 11263. Squash Pi [:link:](https://www.codingame.com/training/easy/squash-pi)
+- [ ] 11296. Crack the Trio Code [:link:](https://www.codingame.com/training/easy/crack-the-trio-code)
 
 </details>
 <details>
@@ -658,6 +660,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11164. Tetrasticks [:link:](https://www.codingame.com/training/medium/tetrasticks)
 - [ ] 11197. Inside Area [:link:](https://www.codingame.com/training/medium/inside-area)
 - [ ] 11230. Ye_  An_th_r W_rd Se_rch [:link:](https://www.codingame.com/training/medium/ye_-an_th_r-w_rd-se_rch)
+- [ ] 11297. Cows in a Maze [:link:](https://www.codingame.com/training/medium/cows-in-a-maze)
 
 </details>
 <details>
@@ -713,7 +716,6 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 181. Einstein's riddle solver [:link:](https://www.codingame.com/training/hard/einsteins-riddle-solver)
 - [ ] 183. The greatest number [:link:](https://www.codingame.com/training/hard/the-greatest-number)
 - [ ] 184. KGood [:link:](https://www.codingame.com/training/hard/kgood)
-- [ ] 185. Egyptian multiplication [:link:](https://www.codingame.com/training/hard/egyptian-multiplication)
 - [ ] 192. Elevator [:link:](https://www.codingame.com/training/hard/elevator)
 - [ ] 195. Drawing Polygons [:link:](https://www.codingame.com/training/hard/drawing-polygons)
 - [ ] 196. Hill Notation and Hill Order [:link:](https://www.codingame.com/training/hard/hill-notation-and-hill-order)
