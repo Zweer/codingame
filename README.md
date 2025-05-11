@@ -851,6 +851,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10471. Who Dunnit? [:link:](https://www.codingame.com/training/hard/who-dunnit)
 - [ ] 10504. Simon's Oracle [:link:](https://www.codingame.com/training/hard/simons-oracle)
 - [ ] 10933. Mrs. Knuth - Part III [:link:](https://www.codingame.com/training/hard/mrs--knuth---part-iii)
+- [ ] 11428. Shape Recognition [:link:](https://www.codingame.com/training/hard/shape-recognition)
 
 </details>
 <details>
