@@ -307,6 +307,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11296. Crack the Trio Code [:link:](https://www.codingame.com/training/easy/crack-the-trio-code)
 - [ ] 11362. Production Pipeline [:link:](https://www.codingame.com/training/easy/production-pipeline)
 - [ ] 11395. Touching Balls [:link:](https://www.codingame.com/training/easy/touching-balls)
+- [ ] 11461. Compiler CG86 (Easy Version) [:link:](https://www.codingame.com/training/easy/compiler-cg86-easy-version)
 
 </details>
 <details>
