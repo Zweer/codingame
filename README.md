@@ -308,6 +308,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11362. Production Pipeline [:link:](https://www.codingame.com/training/easy/production-pipeline)
 - [ ] 11395. Touching Balls [:link:](https://www.codingame.com/training/easy/touching-balls)
 - [ ] 11461. Compiler CG86 (Easy Version) [:link:](https://www.codingame.com/training/easy/compiler-cg86-easy-version)
+- [ ] 11494. Rocky Pohp's Concert Date [:link:](https://www.codingame.com/training/easy/rocky-pohps-concert-date)
+- [ ] 11527. Who is leading ? [:link:](https://www.codingame.com/training/easy/who-is-leading)
 
 </details>
 <details>
