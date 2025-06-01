@@ -310,6 +310,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11461. Compiler CG86 (Easy Version) [:link:](https://www.codingame.com/training/easy/compiler-cg86-easy-version)
 - [ ] 11494. Rocky Pohp's Concert Date [:link:](https://www.codingame.com/training/easy/rocky-pohps-concert-date)
 - [ ] 11527. Who is leading ? [:link:](https://www.codingame.com/training/easy/who-is-leading)
+- [ ] 11593. Chinese Numbers [:link:](https://www.codingame.com/training/easy/chinese-numbers)
 
 </details>
 <details>
@@ -1036,6 +1037,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10273. Gargoyles versus Santas [:link:](https://www.codingame.com/multiplayer/bot-programming/gargoyles-versus-santas)
 - [ ] 10405. Cellularena - Winter Challenge 2024 [:link:](https://www.codingame.com/multiplayer/bot-programming/winter-challenge-2024)
 - [ ] 11098. Domain Expansion [:link:](https://www.codingame.com/multiplayer/bot-programming/domain-expansion)
+- [ ] 11560. Game of Life or Death [:link:](https://www.codingame.com/multiplayer/bot-programming/game-of-life-or-death)
 
 </details>
 <details>
