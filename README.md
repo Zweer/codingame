@@ -311,6 +311,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11494. Rocky Pohp's Concert Date [:link:](https://www.codingame.com/training/easy/rocky-pohps-concert-date)
 - [ ] 11527. Who is leading ? [:link:](https://www.codingame.com/training/easy/who-is-leading)
 - [ ] 11593. Chinese Numbers [:link:](https://www.codingame.com/training/easy/chinese-numbers)
+- [ ] 11626. key-value store [:link:](https://www.codingame.com/training/easy/key-value-store)
 
 </details>
 <details>
@@ -668,6 +669,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11230. Ye_  An_th_r W_rd Se_rch [:link:](https://www.codingame.com/training/medium/ye_-an_th_r-w_rd-se_rch)
 - [ ] 11297. Cows in a Maze [:link:](https://www.codingame.com/training/medium/cows-in-a-maze)
 - [ ] 11329. Frog Date [:link:](https://www.codingame.com/training/medium/frog-date)
+- [ ] 11659. Beautiful base : The most beautiful [:link:](https://www.codingame.com/training/medium/beautiful-base-the-most-beautiful)
 
 </details>
 <details>
