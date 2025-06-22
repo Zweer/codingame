@@ -670,6 +670,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11297. Cows in a Maze [:link:](https://www.codingame.com/training/medium/cows-in-a-maze)
 - [ ] 11329. Frog Date [:link:](https://www.codingame.com/training/medium/frog-date)
 - [ ] 11659. Beautiful base : The most beautiful [:link:](https://www.codingame.com/training/medium/beautiful-base-the-most-beautiful)
+- [ ] 11725. Mondrian painting strokes [:link:](https://www.codingame.com/training/medium/mondrian-painting-strokes)
+- [ ] 11758. The Lord of the Annuli [:link:](https://www.codingame.com/training/medium/the-lord-of-the-annuli)
 
 </details>
 <details>
