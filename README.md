@@ -312,6 +312,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11527. Who is leading ? [:link:](https://www.codingame.com/training/easy/who-is-leading)
 - [ ] 11593. Chinese Numbers [:link:](https://www.codingame.com/training/easy/chinese-numbers)
 - [ ] 11626. key-value store [:link:](https://www.codingame.com/training/easy/key-value-store)
+- [ ] 11824. Button Mash [:link:](https://www.codingame.com/training/easy/button-mash)
 
 </details>
 <details>
@@ -860,6 +861,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 10504. Simon's Oracle [:link:](https://www.codingame.com/training/hard/simons-oracle)
 - [ ] 10933. Mrs. Knuth - Part III [:link:](https://www.codingame.com/training/hard/mrs--knuth---part-iii)
 - [ ] 11428. Shape Recognition [:link:](https://www.codingame.com/training/hard/shape-recognition)
+- [ ] 11791. 3D Duck Hunt [:link:](https://www.codingame.com/training/hard/3d-duck-hunt)
 
 </details>
 <details>
