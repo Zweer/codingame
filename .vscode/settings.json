@@ -14,7 +14,8 @@
         "the-resistance",
         "poker-chip-race",
         "a-star-craft",
-        "fractal-carpet"
+        "fractal-carpet",
+        "the-bridge-episode-2"
     ],
     "files.associations": {
         "sstream": "cpp"
