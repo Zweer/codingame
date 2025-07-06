@@ -673,6 +673,8 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11659. Beautiful base : The most beautiful [:link:](https://www.codingame.com/training/medium/beautiful-base-the-most-beautiful)
 - [ ] 11725. Mondrian painting strokes [:link:](https://www.codingame.com/training/medium/mondrian-painting-strokes)
 - [ ] 11758. The Lord of the Annuli [:link:](https://www.codingame.com/training/medium/the-lord-of-the-annuli)
+- [ ] 11857. Find the Shortest Path Home [:link:](https://www.codingame.com/training/medium/find-the-shortest-path-home)
+- [ ] 11890. Road to Mount Boom [:link:](https://www.codingame.com/training/medium/road-to-mount-boom)
 
 </details>
 <details>
