@@ -686,7 +686,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 </summary>
 
 - [x] 22. [Death First Search - Episode 2](src/death-first-search-episode-2) [:link:](https://www.codingame.com/training/hard/death-first-search-episode-2)
-- [ ] 23. The Bridge [:link:](https://www.codingame.com/training/hard/the-bridge-episode-2)
+- [x] 23. [The Bridge](src/the-bridge-episode-2) [:link:](https://www.codingame.com/training/hard/the-bridge-episode-2)
 - [ ] 24. The Labyrinth [:link:](https://www.codingame.com/training/hard/the-labyrinth)
 - [ ] 25. Power of Thor - Episode 2 [:link:](https://www.codingame.com/training/hard/power-of-thor-episode-2)
 - [ ] 26. Super Computer [:link:](https://www.codingame.com/training/hard/super-computer)
