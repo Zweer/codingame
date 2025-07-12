@@ -2,8 +2,6 @@ declare function readline(): string; // Assuming a readline function is availabl
 
 type Action = 'SPEED' | 'JUMP' | 'WAIT' | 'UP' | 'DOWN' | 'SLOW';
 
-const road: string[] = [];
-
 class Team {
   static BONUS: Record<Action, number> = {
     SPEED: 0.6,
@@ -205,7 +203,7 @@ class Game {
 
     if (this.roadLen === 86) {
       const countZeros = (str: string) => (str.match(/0/g) || []).length;
-      if (countZeros(road[0]) === 5 || countZeros(road[3]) === 5) {
+      if (countZeros(this.road[0]) === 5 || countZeros(this.road[3]) === 5) {
         this.final = ['WAIT', 'WAIT', 'JUMP', 'SPEED', 'JUMP', 'SPEED'];
       }
     }
@@ -256,6 +254,7 @@ class Game {
   }
 
   turn() {
+    console.error(this.final);
     const nextAction = this.final.shift();
     if (nextAction) {
       console.log(nextAction);
