@@ -313,6 +313,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 11593. Chinese Numbers [:link:](https://www.codingame.com/training/easy/chinese-numbers)
 - [ ] 11626. key-value store [:link:](https://www.codingame.com/training/easy/key-value-store)
 - [ ] 11824. Button Mash [:link:](https://www.codingame.com/training/easy/button-mash)
+- [ ] 11923. City Lights Part 1 [:link:](https://www.codingame.com/training/easy/city-lights-part-1)
 
 </details>
 <details>
