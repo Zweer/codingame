@@ -295,7 +295,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 9943. Sparse MatMul [:link:](https://www.codingame.com/training/easy/sparse-matmul)
 - [ ] 9976. Playing Card Odds [:link:](https://www.codingame.com/training/easy/playing-card-odds)
 - [ ] 10009. Bouncing Simulator [:link:](https://www.codingame.com/training/easy/bouncing-simulator)
-- [ ] 10042. Sand Fall [:link:](https://www.codingame.com/training/easy/sand-fall)
+- [x] 10042. [Sand Fall](src/sand-fall) [:link:](https://www.codingame.com/training/easy/sand-fall)
 - [ ] 10108. Item Maker [:link:](https://www.codingame.com/training/easy/item-maker)
 - [ ] 10339. Fussy Fuzzy Matching [:link:](https://www.codingame.com/training/easy/fussy-fuzzy-matching)
 - [ ] 10372. nD-Vector sorting [:link:](https://www.codingame.com/training/easy/nd-vector-sorting)
