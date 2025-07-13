@@ -1,8 +1,9 @@
-name: Auto Update Puzzles
+name: Auto Mark Completed
 
 on:
-  schedule:
-    - cron: '0 0 * * SUN'
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
         with:
           node-version: lts/*
       - run: npm ci
-      - run: npm run script:retrieve
+      - run: npm run script:readme
       - run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
