@@ -90,7 +90,7 @@ class Game {
   foeScore = 0;
 
   constructor() {
-    const fishCount = parseInt(readline(), 10);
+    const fishCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < fishCount; i++) {
       const [fishId, color, type] = readline().split(' ').map(Number);
       this.fishDetails[fishId] = { color, type };
@@ -106,22 +106,22 @@ class Game {
     this.visibleFish = [];
     this.myRadarBlips = new Map<number, RadarBlip[]>();
 
-    this.myScore = parseInt(readline(), 10);
-    this.foeScore = parseInt(readline(), 10);
+    this.myScore = Number.parseInt(readline(), 10);
+    this.foeScore = Number.parseInt(readline(), 10);
 
-    const myScanCount = parseInt(readline(), 10);
+    const myScanCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < myScanCount; i++) {
-      const fishId = parseInt(readline(), 10);
+      const fishId = Number.parseInt(readline(), 10);
       this.myScans.push(fishId);
     }
 
-    const foeScanCount = parseInt(readline(), 10);
+    const foeScanCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < foeScanCount; i++) {
-      const fishId = parseInt(readline(), 10);
+      const fishId = Number.parseInt(readline(), 10);
       this.foeScans.push(fishId);
     }
 
-    const myDroneCount = parseInt(readline(), 10);
+    const myDroneCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < myDroneCount; i++) {
       const [droneId, droneX, droneY, dead, battery] = readline().split(' ').map(Number);
       const pos = { x: droneX, y: droneY };
@@ -131,7 +131,7 @@ class Game {
       this.myRadarBlips.set(droneId, []);
     }
 
-    const foeDroneCount = parseInt(readline(), 10);
+    const foeDroneCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < foeDroneCount; i++) {
       const [droneId, droneX, droneY, dead, battery] = readline().split(' ').map(Number);
       const pos = { x: droneX, y: droneY };
@@ -140,25 +140,25 @@ class Game {
       this.foeDrones.push(drone);
     }
 
-    const droneScanCount = parseInt(readline(), 10);
+    const droneScanCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < droneScanCount; i++) {
       const [droneId, fishId] = readline().split(' ').map(Number);
       this.droneById.get(droneId)!.scans.push(fishId);
     }
 
-    const visibleFishCount = parseInt(readline(), 10);
+    const visibleFishCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < visibleFishCount; i++) {
       const [fishId, fishX, fishY, fishVx, fishVy] = readline().split(' ').map(Number);
       const pos = { x: fishX, y: fishY };
       const speed = { x: fishVx, y: fishVy };
-      this.visibleFish.push({ fishId, pos, speed, detail: this.fishDetails[fishId]! });
+      this.visibleFish.push({ fishId, pos, speed, detail: this.fishDetails[fishId] });
     }
 
-    const myRadarBlipCount = parseInt(readline(), 10);
+    const myRadarBlipCount = Number.parseInt(readline(), 10);
     for (let i = 0; i < myRadarBlipCount; i++) {
       const [_droneId, _fishId, dir] = readline().split(' ');
-      const droneId = parseInt(_droneId, 10);
-      const fishId = parseInt(_fishId, 10);
+      const droneId = Number.parseInt(_droneId, 10);
+      const fishId = Number.parseInt(_fishId, 10);
       this.myRadarBlips.get(droneId)!.push({ fishId, dir });
     }
   }

@@ -105,16 +105,16 @@ A 1
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
- **/
+ */
 
 var inputs: string[] = readline().split(' ');
-const W: number = parseInt(inputs[0]);
-const H: number = parseInt(inputs[1]);
-const N: number = parseInt(readline());
+const W: number = Number.parseInt(inputs[0]);
+const H: number = Number.parseInt(inputs[1]);
+const N: number = Number.parseInt(readline());
 for (let i = 0; i < N; i++) {
-    var inputs: string[] = readline().split(' ');
-    const S: string = inputs[0];
-    const P: number = parseInt(inputs[1]);
+  var inputs: string[] = readline().split(' ');
+  const S: string = inputs[0];
+  const P: number = Number.parseInt(inputs[1]);
 }
 
 // Write an answer using console.log()

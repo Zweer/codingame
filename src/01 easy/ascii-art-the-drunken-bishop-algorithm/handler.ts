@@ -9,25 +9,25 @@ export function handler(fingerprint: string): string[] {
   const exas = fingerprint.split(':');
   // console.error(exas);
 
-  const exa2bins = exas.map((exa) => parseInt(exa, 16).toString(2).padStart(8, '0').split(''));
+  const exa2bins = exas.map(exa => Number.parseInt(exa, 16).toString(2).padStart(8, '0').split(''));
   // console.error(exa2bins);
 
   const bins = exa2bins
-    .map((bin) =>
-      Array(Math.ceil(bin.length / chunkSize))
+    .map(bin =>
+      Array.from({ length: Math.ceil(bin.length / chunkSize) })
         .fill(1)
         .map((_, index) => index * chunkSize)
-        .map((begin) => bin.slice(begin, begin + chunkSize))
+        .map(begin => bin.slice(begin, begin + chunkSize))
         .reverse(),
     )
     .flat()
-    .map((bin) => bin.join(''));
+    .map(bin => bin.join(''));
 
   // console.error(bins);
 
   const maxX = 17;
   const maxY = 9;
-  const board: number[][] = [...Array(maxX)].map((_) => Array(maxY).fill(0));
+  const board: number[][] = [...Array.from({ length: maxX })].map(_ => Array.from({ length: maxY }).fill(0));
 
   const bishopStartX = 8;
   const bishopStartY = 4;
@@ -67,7 +67,7 @@ export function handler(fingerprint: string): string[] {
 
   // console.error(board);
 
-  const tranpose = board[0].map((_, colIndex) => board.map((row) => row[colIndex]));
+  const tranpose = board[0].map((_, colIndex) => board.map(row => row[colIndex]));
 
   // console.error(tranpose);
 

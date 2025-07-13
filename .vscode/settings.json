@@ -1,23 +1,23 @@
 {
-    "conventionalCommits.scopes": [
-        "ascii-art-the-drunken-bishop-algorithm",
-        "death-first-search-episode-1",
-        "death-first-search-episode-2",
-        "don't-panic-episode-1",
-        "retro-typewriter-art",
-        "code-a-la-mode",
-        "code4life",
-        "mars-lander",
-        "seabed-security",
-        "code-of-the-rings",
-        "don't-panic",
-        "the-resistance",
-        "poker-chip-race",
-        "a-star-craft",
-        "fractal-carpet",
-        "the-bridge-episode-2"
-    ],
-    "files.associations": {
-        "sstream": "cpp"
-    }
+  "conventionalCommits.scopes": [
+    "ascii-art-the-drunken-bishop-algorithm",
+    "death-first-search-episode-1",
+    "death-first-search-episode-2",
+    "don't-panic-episode-1",
+    "retro-typewriter-art",
+    "code-a-la-mode",
+    "code4life",
+    "mars-lander",
+    "seabed-security",
+    "code-of-the-rings",
+    "don't-panic",
+    "the-resistance",
+    "poker-chip-race",
+    "a-star-craft",
+    "fractal-carpet",
+    "the-bridge-episode-2"
+  ],
+  "files.associations": {
+    "sstream": "cpp"
+  }
 }

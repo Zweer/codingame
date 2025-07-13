@@ -1,31 +1,31 @@
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
- **/
+ */
 
-var N = parseInt(readline());
-var horses = []
+const N = Number.parseInt(readline());
+const horses = [];
 for (var i = 0; i < N; i++) {
-    var pi = parseInt(readline());
-    horses.push(pi);
+  const pi = Number.parseInt(readline());
+  horses.push(pi);
 }
 
 printErr(horses);
-horses.sort(function (a, b) {
-    return a - b;
+horses.sort((a, b) => {
+  return a - b;
 });
 
 printErr(N);
 printErr(horses);
 
-var diff = 0;
-var min = Infinity;
+let diff = 0;
+let min = Infinity;
 for (i = 0; i < N - 1; ++i) {
-    diff = Math.abs(horses[i] - horses[i + 1]);
+  diff = Math.abs(horses[i] - horses[i + 1]);
 
-    if (diff < min) {
-        min = diff;
-    }
+  if (diff < min) {
+    min = diff;
+  }
 }
 
 // Write an action using print()

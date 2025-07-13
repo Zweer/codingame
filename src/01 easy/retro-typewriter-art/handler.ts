@@ -1,8 +1,7 @@
-/* eslint-disable no-param-reassign */
 const abbreviations: Record<string, string> = {
   sp: ' ',
   bS: '\\',
-  sQ: "'",
+  sQ: '\'',
   nl: '\n',
 };
 
@@ -20,7 +19,7 @@ export function handler(input: string): string {
       chunk = chunk.slice(0, -1);
     }
 
-    const count = parseInt(chunk, 10) || 1;
+    const count = Number.parseInt(chunk, 10) || 1;
     const ret = ''.padStart(count, what);
 
     return ret;

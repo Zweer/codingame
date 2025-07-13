@@ -1,7 +1,7 @@
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
- **/
+ */
 
 declare function readline(): string; // Assuming a readline function is available
 
@@ -16,7 +16,7 @@ class Game2 {
   protected y2: number;
 
   constructor() {
-    this.level = parseInt(readline(), 10);
+    this.level = Number.parseInt(readline(), 10);
     console.error('level:', this.level);
 
     [this.x1, this.y1, this.x2, this.y2] = readline().split(' ').map(Number);
@@ -95,7 +95,7 @@ class Game2 {
   }
 
   protected print(patch: Carpet, debug = false): void {
-    console[debug ? 'error' : 'log'](patch.map((row) => row.join('')).join('\n'));
+    console[debug ? 'error' : 'log'](patch.map(row => row.join('')).join('\n'));
   }
 }
 
@@ -107,7 +107,7 @@ class Game {
   protected y2: number;
 
   constructor() {
-    this.level = parseInt(readline(), 10);
+    this.level = Number.parseInt(readline(), 10);
     console.error('level:', this.level);
 
     [this.x1, this.y1, this.x2, this.y2] = readline().split(' ').map(Number);

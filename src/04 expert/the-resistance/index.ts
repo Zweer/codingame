@@ -1,4 +1,3 @@
-/* eslint-disable id-length */
 declare function readline(): string; // Assuming a readline function is available
 
 class Game {
@@ -48,7 +47,7 @@ class Game {
     this.sequence = readline();
     console.error('Sequence:', this.sequence);
 
-    const wordsCount = parseInt(readline(), 10);
+    const wordsCount = Number.parseInt(readline(), 10);
     console.error('Words:');
     for (let i = 0; i < wordsCount; i++) {
       const word = readline();

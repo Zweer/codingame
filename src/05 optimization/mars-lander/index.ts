@@ -1,7 +1,7 @@
 /**
  * Save the Planet.
  * Use less Fossil Fuel.
- **/
+ */
 
 declare function readline(): string; // Assuming a readline function is available
 
@@ -62,7 +62,7 @@ class Game {
   highestDot = 0;
 
   constructor() {
-    const pointsCount = parseInt(readline(), 10);
+    const pointsCount = Number.parseInt(readline(), 10);
     let prevLandingX = 0;
     let prevLandingY = 0;
     for (let i = 0; i < pointsCount; i++) {
@@ -145,9 +145,9 @@ class Game {
 
   protected checkHorizontal() {
     if (
-      Math.abs(this.shuttle.horizontalSpeed) > Game.MAX_HSPEED_LANDING ||
-      (this.shuttle.horizontalSpeed > 0 && this.landingEnd - this.shuttle.x < 500) ||
-      (this.shuttle.horizontalSpeed < 0 && this.landingStart - this.shuttle.x < -500)
+      Math.abs(this.shuttle.horizontalSpeed) > Game.MAX_HSPEED_LANDING
+      || (this.shuttle.horizontalSpeed > 0 && this.landingEnd - this.shuttle.x < 500)
+      || (this.shuttle.horizontalSpeed < 0 && this.landingStart - this.shuttle.x < -500)
     ) {
       this.shuttle.rotation = this.shuttle.horizontalSpeed * 3;
       if (this.shuttle.rotation > Game.DANGER_LANDING_ANGLE) {
@@ -162,10 +162,10 @@ class Game {
 
   protected landing() {
     if (
-      (this.shuttle.verticalSpeed < -(Game.MAX_VSPEED_LANDING - 5) ||
-        this.shuttle.rotation !== 0 ||
-        this.directionMultiplier !== 0) &&
-      this.shuttle.y < 2800
+      (this.shuttle.verticalSpeed < -(Game.MAX_VSPEED_LANDING - 5)
+        || this.shuttle.rotation !== 0
+        || this.directionMultiplier !== 0)
+      && this.shuttle.y < 2800
     ) {
       this.shuttle.power = 4;
     } else {
@@ -220,18 +220,18 @@ class Game {
     }
 
     if (
-      this.getDistance() === 0 &&
-      this.shuttle.rotation === 0 &&
-      this.shuttle.y - this.landingHeight < 123 &&
-      this.shuttle.verticalSpeed > -30
+      this.getDistance() === 0
+      && this.shuttle.rotation === 0
+      && this.shuttle.y - this.landingHeight < 123
+      && this.shuttle.verticalSpeed > -30
     ) {
       console.error('power off');
       return 0;
     }
 
-    const horizontalSpeedCompensation =
-      (this.shuttle.rotation < 0 && this.shuttle.horizontalSpeed < 0) ||
-      (this.shuttle.rotation > 0 && this.shuttle.horizontalSpeed > 0)
+    const horizontalSpeedCompensation
+      = (this.shuttle.rotation < 0 && this.shuttle.horizontalSpeed < 0)
+        || (this.shuttle.rotation > 0 && this.shuttle.horizontalSpeed > 0)
         ? Math.abs(Math.round(this.shuttle.horizontalSpeed / 15))
         : 0;
     const verticalSpeedCompensation = -1 * Math.round(this.shuttle.verticalSpeed / 6.6);

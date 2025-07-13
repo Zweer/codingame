@@ -203,14 +203,14 @@ class Blob extends Point {
         const timeToCollision = this.timeToCollision(blob);
 
         if (
-          distance < minDistance &&
-          this.radius > 1.1 * blob.radius &&
-          distance < 5 * this.radius
+          distance < minDistance
+          && this.radius > 1.1 * blob.radius
+          && distance < 5 * this.radius
         ) {
           if (
-            blob.radius > 25 ||
-            (dot <= 0 && this.radius < 30) ||
-            distance < 1.3 * (this.radius + blob.radius)
+            blob.radius > 25
+            || (dot <= 0 && this.radius < 30)
+            || distance < 1.3 * (this.radius + blob.radius)
           ) {
             if (timeToCollision <= minTimeToCollision) {
               minDistance = distance;

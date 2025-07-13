@@ -11,14 +11,14 @@ class Game {
     console.error('width:', this.width);
     console.error('height:', this.height);
 
-    this.count = parseInt(readline(), 10);
+    this.count = Number.parseInt(readline(), 10);
     console.error('count:', this.count);
 
-    this.grid = Array.from({ length: this.height }, () => Array(this.width).fill(' '));
+    this.grid = Array.from({ length: this.height }, () => new Array(this.width).fill(' '));
 
     for (let i = 0; i < this.count; i += 1) {
       const [grain, xStr] = readline().split(' ');
-      let x = parseInt(xStr, 10);
+      let x = Number.parseInt(xStr, 10);
       let y = -1;
 
       while (true) {

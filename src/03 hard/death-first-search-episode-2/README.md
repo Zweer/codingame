@@ -190,5 +190,4 @@ Response time per turn ≤ 150ms</div>
 </div>
 </div>
 
-
 </div>

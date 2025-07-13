@@ -12,12 +12,12 @@ class Game {
   constructor() {
     const [nodeCount, linkCount, exitCount] = readline()
       .split(' ')
-      .map((input) => parseInt(input, 10));
+      .map(input => Number.parseInt(input, 10));
     console.error('nodeCount:', nodeCount);
     console.error('linkCount:', linkCount);
     console.error('exitCount:', exitCount);
 
-    this.graph = [...Array(nodeCount)].map((_) => ({
+    this.graph = [...new Array(nodeCount)].map(_ => ({
       isGateway: false,
       links: new Set(),
       links2gateway: new Set(),
@@ -26,14 +26,14 @@ class Game {
     for (let i = 0; i < linkCount; i += 1) {
       const [nodeId1, nodeId2] = readline()
         .split(' ')
-        .map((input) => parseInt(input, 10));
+        .map(input => Number.parseInt(input, 10));
       this.graph[nodeId1].links.add(nodeId2);
       this.graph[nodeId2].links.add(nodeId1);
       console.error('link:', `${nodeId1} - ${nodeId2}`);
     }
 
     for (let i = 0; i < exitCount; i += 1) {
-      const nodeId = parseInt(readline(), 10);
+      const nodeId = Number.parseInt(readline(), 10);
       this.graph[nodeId].isGateway = true;
       this.graph[nodeId].links.forEach((linkId) => {
         this.graph[linkId].links2gateway.add(nodeId);
@@ -43,7 +43,7 @@ class Game {
   }
 
   turn() {
-    const nodeId = parseInt(readline(), 10);
+    const nodeId = Number.parseInt(readline(), 10);
     console.error('agent:', nodeId);
 
     const [nodeId1, nodeId2] = this.bfs(nodeId);
@@ -58,7 +58,7 @@ class Game {
 
   bfs(startNodeId: number): [number, number] {
     const queue = [startNodeId];
-    const visited = [...Array(this.graph.length)].map((_) => false);
+    const visited = [...Array.from({ length: this.graph.length })].map(_ => false);
 
     let selectedNode = -1;
 
@@ -80,9 +80,9 @@ class Game {
             break;
           }
         }
-        queue.push(...[...currentNode.links].filter((linkId) => !visited[linkId]));
+        queue.push(...[...currentNode.links].filter(linkId => !visited[linkId]));
       } else if (selectedNode === -1) {
-        queue.push(...[...currentNode.links].filter((linkId) => !visited[linkId]));
+        queue.push(...[...currentNode.links].filter(linkId => !visited[linkId]));
       }
     }
 

@@ -25,7 +25,7 @@ class TableItemAAAA extends Point {
 
   static getItem(item: ItemPart): TableItem | undefined {
     return TableItem.table.find(
-      (tableItem) => tableItem.item.includes(item) && tableItem.item.length === 1,
+      tableItem => tableItem.item.includes(item) && tableItem.item.length === 1,
     );
   }
 
@@ -46,8 +46,8 @@ class TableItemAAAA extends Point {
 
     for (const tableItem of TableItem.table) {
       if (
-        tableItem.item.includes(ItemPart.Dish) &&
-        TableItem.dishIsCompatible(tableItem.item, item, except)
+        tableItem.item.includes(ItemPart.Dish)
+        && TableItem.dishIsCompatible(tableItem.item, item, except)
       ) {
         if (tableItem.item.length > nbItems) {
           nbItems = tableItem.item.length;
@@ -82,14 +82,14 @@ class Game {
 
   turnsRemaining = Infinity;
   ovenContent: ItemPart[] = [];
-  ovenTimer = NaN;
+  ovenTimer = Number.NaN;
   processCompatibleDish: TableItem;
 
   constructor() {
-    const numAllCustomers = parseInt(readline(), 10);
+    const numAllCustomers = Number.parseInt(readline(), 10);
     for (let i = 0; i < numAllCustomers; i++) {
       const [customerItem, customerAwardStr] = readline().split(' ');
-      const customerAward = parseInt(customerAwardStr, 10);
+      const customerAward = Number.parseInt(customerAwardStr, 10);
       this.customers.push(new Customer(customerItem, customerAward));
     }
 
@@ -106,39 +106,39 @@ class Game {
   }
 
   initTurn() {
-    this.turnsRemaining = parseInt(readline(), 10);
+    this.turnsRemaining = Number.parseInt(readline(), 10);
 
     const [playerXstr, playerYstr, playerItem] = readline().split(' ');
-    const playerX = parseInt(playerXstr, 10);
-    const playerY = parseInt(playerYstr, 10);
+    const playerX = Number.parseInt(playerXstr, 10);
+    const playerY = Number.parseInt(playerYstr, 10);
     this.myChef.update(playerX, playerY, playerItem);
     this.myChef.showItems();
 
     const [partnerXstr, partnerYstr, partnerItem] = readline().split(' ');
-    const partnerX = parseInt(partnerXstr, 10);
-    const partnerY = parseInt(partnerYstr, 10);
+    const partnerX = Number.parseInt(partnerXstr, 10);
+    const partnerY = Number.parseInt(partnerYstr, 10);
     this.partnerChef.update(partnerX, partnerY, partnerItem);
     this.partnerChef.showItems();
 
-    const numTablesWithItems = parseInt(readline(), 10);
+    const numTablesWithItems = Number.parseInt(readline(), 10);
     this.kitchen.items = [];
     for (let i = 0; i < numTablesWithItems; i++) {
       const [tableXstr, tableYstr, item] = readline().split(' ');
-      const tableX = parseInt(tableXstr, 10);
-      const tableY = parseInt(tableYstr, 10);
+      const tableX = Number.parseInt(tableXstr, 10);
+      const tableY = Number.parseInt(tableYstr, 10);
       const tableItem = new Item(tableX, tableY, i, item);
       this.kitchen.items.push(tableItem);
     }
 
     const [ovenContentsStr, ovenTimerStr] = readline().split(' ');
-    this.ovenTimer = parseInt(ovenTimerStr, 10);
+    this.ovenTimer = Number.parseInt(ovenTimerStr, 10);
     this.ovenContent = ovenContentsStr.split('-') as ItemPart[];
 
-    const numCustomers = parseInt(readline(), 10);
+    const numCustomers = Number.parseInt(readline(), 10);
     this.waiting = [];
     for (let i = 0; i < numCustomers; i++) {
       const [customerItem, customerAwardStr] = readline().split(' ');
-      const customerAward = parseInt(customerAwardStr, 10);
+      const customerAward = Number.parseInt(customerAwardStr, 10);
       const newCustomer = new Customer(customerItem, customerAward);
       this.waiting.push(newCustomer);
     }
@@ -211,23 +211,23 @@ class Game {
 
       if (!this.myChef.actionState) {
         if (
-          !this.myChef.item.includes(ItemPart.Dish) &&
-          compatibleDish &&
-          this.myChef.item.length < compatibleDish.item.length
+          !this.myChef.item.includes(ItemPart.Dish)
+          && compatibleDish
+          && this.myChef.item.length < compatibleDish.item.length
         ) {
           console.error('Found comp dish! :)');
           nextAction = this.useCoords(compatibleDish);
         } else if (
-          !this.myChef.item.includes(ItemPart.None) &&
-          !TableItem.dishIsCompatible(this.myChef.item, this.myChef.targetCommand) &&
-          canDrop
+          !this.myChef.item.includes(ItemPart.None)
+          && !TableItem.dishIsCompatible(this.myChef.item, this.myChef.targetCommand)
+          && canDrop
         ) {
           console.error('Action : Not compatible! Dropping dish...');
           nextAction = canDrop;
         } else if (
-          this.myChef.item.includes(ItemPart.Dish) &&
-          compatibleDish &&
-          compatibleDish.item.length > this.myChef.item.length
+          this.myChef.item.includes(ItemPart.Dish)
+          && compatibleDish
+          && compatibleDish.item.length > this.myChef.item.length
         ) {
           console.error('Part Compatible dish');
           if (canDrop) {
@@ -278,10 +278,10 @@ class Game {
           );
 
           if (
-            this.myChef.item.includes(ItemPart.Dish) &&
-            !this.myChef.item.includes(ItemPart.Tart) &&
-            canDrop &&
-            !this.myChef.waitingBake
+            this.myChef.item.includes(ItemPart.Dish)
+            && !this.myChef.item.includes(ItemPart.Tart)
+            && canDrop
+            && !this.myChef.waitingBake
           ) {
             nextAction = canDrop!;
           } else if (this.myChef.item.includes(ItemPart.Dough)) {
@@ -289,17 +289,17 @@ class Game {
           } else if (this.myChef.item.includes(ItemPart.ChoppedDough)) {
             nextAction = this.use(TileType.Blueberries);
           } else if (
-            (this.myChef.item.includes(ItemPart.RawTart) ||
-              this.ovenContent.includes(ItemPart.RawTart) ||
-              this.ovenContent.includes(ItemPart.Tart)) &&
-            !this.myChef.item.includes(ItemPart.Tart)
+            (this.myChef.item.includes(ItemPart.RawTart)
+              || this.ovenContent.includes(ItemPart.RawTart)
+              || this.ovenContent.includes(ItemPart.Tart))
+            && !this.myChef.item.includes(ItemPart.Tart)
           ) {
             if (this.myChef.item.includes(ItemPart.RawTart)) {
               if (
-                this.ovenContent.includes(ItemPart.Tart) ||
-                (this.ovenContent.includes(ItemPart.RawTart) &&
-                  this.ovenTimer < 3 &&
-                  !this.partnerChef.isAround(TileType.Oven))
+                this.ovenContent.includes(ItemPart.Tart)
+                || (this.ovenContent.includes(ItemPart.RawTart)
+                  && this.ovenTimer < 3
+                  && !this.partnerChef.isAround(TileType.Oven))
               ) {
                 nextAction = canDrop!;
               } else {
@@ -352,24 +352,24 @@ class Game {
           );
 
           if (
-            this.myChef.item.includes(ItemPart.Dish) &&
-            !this.myChef.item.includes(ItemPart.Croissant) &&
-            canDrop &&
-            !this.myChef.waitingBake
+            this.myChef.item.includes(ItemPart.Dish)
+            && !this.myChef.item.includes(ItemPart.Croissant)
+            && canDrop
+            && !this.myChef.waitingBake
           ) {
             nextAction = canDrop!;
           } else if (
-            (this.myChef.item.includes(ItemPart.Dough) ||
-              this.ovenContent.includes(ItemPart.Dough) ||
-              this.ovenContent.includes(ItemPart.Croissant)) &&
-            !this.myChef.item.includes(ItemPart.Croissant)
+            (this.myChef.item.includes(ItemPart.Dough)
+              || this.ovenContent.includes(ItemPart.Dough)
+              || this.ovenContent.includes(ItemPart.Croissant))
+            && !this.myChef.item.includes(ItemPart.Croissant)
           ) {
             if (this.myChef.item.includes(ItemPart.Dough)) {
               if (
-                this.ovenContent.includes(ItemPart.Croissant) ||
-                (this.ovenContent.includes(ItemPart.Dough) &&
-                  this.ovenTimer < 3 &&
-                  !this.partnerChef.isAround(TileType.Oven))
+                this.ovenContent.includes(ItemPart.Croissant)
+                || (this.ovenContent.includes(ItemPart.Dough)
+                  && this.ovenTimer < 3
+                  && !this.partnerChef.isAround(TileType.Oven))
               ) {
                 nextAction = canDrop!;
               } else {
@@ -417,16 +417,16 @@ class Game {
           );
 
           if (
-            this.myChef.item.includes(ItemPart.Dish) &&
-            !this.myChef.item.includes(ItemPart.ChoppedStrawberries) &&
-            canDrop
+            this.myChef.item.includes(ItemPart.Dish)
+            && !this.myChef.item.includes(ItemPart.ChoppedStrawberries)
+            && canDrop
           ) {
             nextAction = canDrop!;
           } else if (this.myChef.item.includes(ItemPart.Strawberries)) {
             nextAction = this.use(TileType.ChoppingBoard);
           } else if (
-            this.myChef.item.includes(ItemPart.ChoppedStrawberries) &&
-            !this.myChef.item.includes(ItemPart.Dish)
+            this.myChef.item.includes(ItemPart.ChoppedStrawberries)
+            && !this.myChef.item.includes(ItemPart.Dish)
           ) {
             if (this.processCompatibleDish) {
               nextAction = this.useCoords(this.processCompatibleDish);
@@ -529,10 +529,10 @@ class Game {
   bakeIt(ingr: ItemPart, result: ItemPart): string {
     this.myChef.waitingBake = true;
     if (
-      (this.ovenContent.includes(ingr) ||
-        (this.ovenContent.includes(result) && this.ovenTimer >= 4)) &&
-      this.myChef.item.includes(ItemPart.None) &&
-      !this.partnerChef.isAround(TileType.Oven)
+      (this.ovenContent.includes(ingr)
+        || (this.ovenContent.includes(result) && this.ovenTimer >= 4))
+      && this.myChef.item.includes(ItemPart.None)
+      && !this.partnerChef.isAround(TileType.Oven)
     ) {
       if (this.processCompatibleDish) {
         return this.useCoords(this.processCompatibleDish);

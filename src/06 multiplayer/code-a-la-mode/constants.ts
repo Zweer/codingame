@@ -14,12 +14,12 @@ export const lyrics = [
 
 export const insults = [
   'My gran could do better',
-  "And she's dead!",
+  'And she\'s dead!',
   '♪ ☺',
   'What are you?',
   'An idiot sandwich?',
   '♪ ☺',
-  "I wish you'd jump",
+  'I wish you\'d jump',
   'in the oven',
   'That would make my life',
   'A lot easier!',

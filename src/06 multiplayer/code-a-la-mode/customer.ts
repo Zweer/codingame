@@ -93,11 +93,11 @@ export class Customer {
     }
 
     if (
-      !this.item.includes(ItemPart.Tart) &&
-      !this.item.includes(ItemPart.Croissant) &&
-      !this.item.includes(ItemPart.ChoppedStrawberries) &&
-      !this.item.includes(ItemPart.IceCream) &&
-      !this.item.includes(ItemPart.Blueberries)
+      !this.item.includes(ItemPart.Tart)
+      && !this.item.includes(ItemPart.Croissant)
+      && !this.item.includes(ItemPart.ChoppedStrawberries)
+      && !this.item.includes(ItemPart.IceCream)
+      && !this.item.includes(ItemPart.Blueberries)
     ) {
       throw new Error('Customer with unknown item');
     }
@@ -106,7 +106,7 @@ export class Customer {
   }
 
   get relativeAward(): number {
-    return parseFloat((this.award / this.weight).toFixed(2));
+    return Number.parseFloat((this.award / this.weight).toFixed(2));
   }
 
   toString(): string {

@@ -186,8 +186,8 @@ class Game {
   }
 
   constructor() {
-    this.numBikes = parseInt(readline(), 10);
-    this.minBikes = parseInt(readline(), 10);
+    this.numBikes = Number.parseInt(readline(), 10);
+    this.minBikes = Number.parseInt(readline(), 10);
 
     this.actions = Object.keys(Team.BONUS) as Action[];
 
@@ -199,7 +199,7 @@ class Game {
     console.error('Num Bikes:', this.numBikes);
     console.error('Min Bikes:', this.minBikes);
     console.error('Road:');
-    this.road.forEach((lane) => console.error(lane));
+    this.road.forEach(lane => console.error(lane));
 
     if (this.roadLen === 86) {
       const countZeros = (str: string) => (str.match(/0/g) || []).length;
@@ -216,7 +216,7 @@ class Game {
       return;
     }
 
-    team.speed = parseInt(readline(), 10);
+    team.speed = Number.parseInt(readline(), 10);
     for (let i = 0; i < this.numBikes; i++) {
       const [x, y, isActive] = readline().split(' ').map(Number);
       team.lines[y] = isActive;
@@ -229,12 +229,13 @@ class Game {
     const queue: Team[] = [team.clone()];
 
     while (
-      queue.length > 0 &&
-      queue[0].x < team.pathLength - 30 &&
-      queue[0].remainingBike >= team.minimum
+      queue.length > 0
+      && queue[0].x < team.pathLength - 30
+      && queue[0].remainingBike >= team.minimum
     ) {
       const t = queue.shift()!;
-      if (!t) continue;
+      if (!t)
+        continue;
 
       for (const action of this.actions) {
         const t2 = t.clone();

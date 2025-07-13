@@ -1,6 +1,6 @@
 import { handler } from './handler';
 
-describe('ASCII Art: the drunken bishop algorithm', () => {
+describe('aSCII Art: the drunken bishop algorithm', () => {
   it.each([
     [
       'fc:94:b0:c1:e5:b0:98:7c:58:43:99:76:97:ee:9f:b7',
@@ -82,7 +82,7 @@ describe('ASCII Art: the drunken bishop algorithm', () => {
         '+-----------------+',
       ],
     ],
-  ])('Receiving %s should output the correct result', (fingerprint, expected) => {
+  ])('receiving %s should output the correct result', (fingerprint, expected) => {
     expect.assertions(1);
 
     expect(handler(fingerprint)).toStrictEqual(expected);

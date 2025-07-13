@@ -69,7 +69,7 @@ class Item {
   }
 
   is(...parts: ItemPart[]): boolean {
-    return this.parts.every((part) => parts.includes(part));
+    return this.parts.every(part => parts.includes(part));
   }
 
   isEmpty(): boolean {
@@ -154,13 +154,13 @@ class Customer {
 
     if (this.tables) {
       if (this.item.has(ItemPart.Tart)) {
-        weight += this.tables.some((table) => table.item?.has(ItemPart.Tart)) ? 2 : 8;
+        weight += this.tables.some(table => table.item?.has(ItemPart.Tart)) ? 2 : 8;
       }
       if (this.item.has(ItemPart.Croissant)) {
-        weight += this.tables.some((table) => table.item?.has(ItemPart.Croissant)) ? 2 : 6;
+        weight += this.tables.some(table => table.item?.has(ItemPart.Croissant)) ? 2 : 6;
       }
       if (this.item.has(ItemPart.ChoppedStrawberries)) {
-        weight += this.tables.some((table) => table.item?.has(ItemPart.ChoppedStrawberries))
+        weight += this.tables.some(table => table.item?.has(ItemPart.ChoppedStrawberries))
           ? 2
           : 3;
       }
@@ -204,10 +204,10 @@ class Game {
   turnsRemaining = Infinity;
 
   constructor() {
-    const numAllCustomers = parseInt(readline(), 10);
+    const numAllCustomers = Number.parseInt(readline(), 10);
     for (let i = 0; i < numAllCustomers; i++) {
       const [customerItem, customerAwardStr] = readline().split(' ');
-      const customerAward = parseInt(customerAwardStr, 10);
+      const customerAward = Number.parseInt(customerAwardStr, 10);
       this.customers.push(new Customer(i, customerItem, customerAward));
     }
 
@@ -232,19 +232,19 @@ class Game {
   }
 
   initTurn() {
-    this.turnsRemaining = parseInt(readline(), 10);
+    this.turnsRemaining = Number.parseInt(readline(), 10);
 
     const [playerXstr, playerYstr, playerItem] = readline().split(' ');
-    const playerX = parseInt(playerXstr, 10);
-    const playerY = parseInt(playerYstr, 10);
+    const playerX = Number.parseInt(playerXstr, 10);
+    const playerY = Number.parseInt(playerYstr, 10);
     this.player.update(playerX, playerY, playerItem);
     if (Game.DEBUG_CHEF) {
       console.error(`${this.player}`);
     }
 
     const [partnerXstr, partnerYstr, partnerItem] = readline().split(' ');
-    const partnerX = parseInt(partnerXstr, 10);
-    const partnerY = parseInt(partnerYstr, 10);
+    const partnerX = Number.parseInt(partnerXstr, 10);
+    const partnerY = Number.parseInt(partnerYstr, 10);
     this.partner.update(partnerX, partnerY, partnerItem);
     if (Game.DEBUG_CHEF) {
       console.error(`${this.partner}`);
@@ -256,13 +256,13 @@ class Game {
       .filter(({ equip }) => equip !== Equipment.Empty)
       .map(({ equip, x, y }) => new Table(x, y, equip as Equipment));
 
-    const numTablesWithItems = parseInt(readline(), 10);
+    const numTablesWithItems = Number.parseInt(readline(), 10);
     for (let i = 0; i < numTablesWithItems; i++) {
       const [tableXstr, tableYstr, item] = readline().split(' ');
-      const tableX = parseInt(tableXstr, 10);
-      const tableY = parseInt(tableYstr, 10);
+      const tableX = Number.parseInt(tableXstr, 10);
+      const tableY = Number.parseInt(tableYstr, 10);
       this.tables
-        .find((table) => table.position.x === tableX && table.position.y === tableY)!
+        .find(table => table.position.x === tableX && table.position.y === tableY)!
         .update(item);
     }
     if (Game.DEBUG_TABLE) {
@@ -276,18 +276,18 @@ class Game {
     }
 
     const [ovenContentsStr, ovenTimerStr] = readline().split(' ');
-    this.ovenTimer = parseInt(ovenTimerStr, 10);
+    this.ovenTimer = Number.parseInt(ovenTimerStr, 10);
     this.ovenContent = new Item(ovenContentsStr);
     if (Game.DEBUG_OVEN) {
       console.error(`Oven (${this.ovenTimer}):`);
       console.error(`  ${this.ovenContent}`);
     }
 
-    const numCustomers = parseInt(readline(), 10);
+    const numCustomers = Number.parseInt(readline(), 10);
     this.queue = [];
     for (let i = 0; i < numCustomers; i++) {
       const [customerItem, customerAwardStr] = readline().split(' ');
-      const customerAward = parseInt(customerAwardStr, 10);
+      const customerAward = Number.parseInt(customerAwardStr, 10);
       const newCustomer = new Customer(i, customerItem, customerAward, this.tables);
       this.queue.push(newCustomer);
     }
@@ -300,7 +300,6 @@ class Game {
     }
   }
 
-  // eslint-disable-next-line consistent-return
   turn(): void {
     this.crates = {
       [ItemPart.Blueberries]: this.findEquipment(Equipment.Blueberries),
@@ -310,7 +309,7 @@ class Game {
     };
 
     // 0. If the oven has something ready, go get it!
-    if ([ItemPart.Croissant, ItemPart.Tart].some((part) => this.ovenContent.is(part))) {
+    if ([ItemPart.Croissant, ItemPart.Tart].some(part => this.ovenContent.is(part))) {
       if (this.player.item.isEmpty()) {
         return this.findEquipment(Equipment.Oven).use();
       }
@@ -336,11 +335,11 @@ class Game {
       console.error('We are carrying a plate');
 
       // if it has anything we don't need, dishwasher it
-      if (this.player.item.parts.some((part) => !best.item.has(part))) {
+      if (this.player.item.parts.some(part => !best.item.has(part))) {
         return this.findEquipment(Equipment.Dish).use();
       }
 
-      const missingParts = best.item.parts.filter((part) => !this.player.item.has(part));
+      const missingParts = best.item.parts.filter(part => !this.player.item.has(part));
       if (missingParts.length === 0) {
         return this.findEquipment(Equipment.Window).use();
       }
@@ -353,7 +352,7 @@ class Game {
         console.error(`Using crate: ${crate}`);
         return crate.use();
       } else {
-        const table = this.tables.find((table) => table.item?.is(missingPart));
+        const table = this.tables.find(table => table.item?.is(missingPart));
         return table ? table.use() : this.findEmptyTable().use();
       }
     }
@@ -384,23 +383,23 @@ class Game {
       }
 
       return (
-        this.tables.find((table) => table.item?.is(ItemPart.Dish)) ??
-        this.findEquipment(Equipment.Dish)
+        this.tables.find(table => table.item?.is(ItemPart.Dish))
+        ?? this.findEquipment(Equipment.Dish)
       ).use();
     }
   }
 
   findEquipment(equipment: Equipment): Table {
-    return this.tables.find((table) => table.equipment === equipment)!;
+    return this.tables.find(table => table.equipment === equipment)!;
   }
 
   findEmptyTable(): Table {
     const emptyTables = this.tables
-      .filter((table) => table.equipment === Equipment.Empty && !table.item)
+      .filter(table => table.equipment === Equipment.Empty && !table.item)
       .sort(
         (tableA, tableB) =>
-          this.player.position.getManhattanDistance(tableA.position) -
-          this.player.position.getManhattanDistance(tableB.position),
+          this.player.position.getManhattanDistance(tableA.position)
+          - this.player.position.getManhattanDistance(tableB.position),
       );
 
     if (Game.DEBUG_TABLE) {
@@ -415,10 +414,10 @@ class Game {
 
   isReady(part: ItemPart): boolean {
     return (
-      Object.keys(this.crates).includes(part) ||
-      this.tables.some((table) => table.item?.is(part)) ||
-      (part === ItemPart.Croissant &&
-        [ItemPart.Croissant, ItemPart.Dough].some((ovenPart) => this.ovenContent.is(ovenPart)))
+      Object.keys(this.crates).includes(part)
+      || this.tables.some(table => table.item?.is(part))
+      || (part === ItemPart.Croissant
+        && [ItemPart.Croissant, ItemPart.Dough].some(ovenPart => this.ovenContent.is(ovenPart)))
     );
   }
 

@@ -1,5 +1,5 @@
+import type { ItemPart, TileType } from './types';
 import { Point } from './point';
-import { ItemPart, TileType } from './types';
 
 export class Chef extends Point {
   item: ItemPart[];
@@ -34,7 +34,7 @@ export class Chef extends Point {
       return false;
     }
 
-    return this.targetCommand.every((ingr) => this.item.includes(ingr));
+    return this.targetCommand.every(ingr => this.item.includes(ingr));
   }
 
   isAround(target: TileType, direction?: TileType, shouldBeEmpty?: boolean): Point | null {
@@ -76,6 +76,6 @@ export class Chef extends Point {
       return false;
     }
 
-    return parts.every((part) => this.targetCommand!.includes(part));
+    return parts.every(part => this.targetCommand!.includes(part));
   }
 }

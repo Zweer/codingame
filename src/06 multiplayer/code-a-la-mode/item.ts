@@ -1,5 +1,5 @@
+import type { ItemPart } from './types';
 import { Point } from './point';
-import { ItemPart } from './types';
 
 export class Item extends Point {
   parts: ItemPart[];

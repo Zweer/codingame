@@ -26,7 +26,7 @@ class Game {
   constructor() {
     const [height, width, rounds, exitY, exitX, clones, additionalElevators, elevators] = readline()
       .split(' ')
-      .map((input) => parseInt(input, 10));
+      .map(input => Number.parseInt(input, 10));
     this.width = width;
     this.height = height;
     this.exit = { x: exitX, y: exitY };
@@ -41,7 +41,7 @@ class Game {
     for (let i = 0; i < elevators; i += 1) {
       const [elevatorY, elevatorX] = readline()
         .split(' ')
-        .map((input) => parseInt(input, 10));
+        .map(input => Number.parseInt(input, 10));
       const elevator = { x: elevatorX, y: elevatorY };
       this.elevators.push(elevator);
       console.error('elevator:', elevator);
@@ -50,8 +50,8 @@ class Game {
 
   turn() {
     const [inputY, inputX, direction] = readline().split(' ');
-    const x = parseInt(inputX, 10);
-    const y = parseInt(inputY, 10);
+    const x = Number.parseInt(inputX, 10);
+    const y = Number.parseInt(inputY, 10);
 
     console.error('current leading position:', { x, y });
 
@@ -61,10 +61,10 @@ class Game {
       let cursorDirection = Direction.Right;
 
       while (cursor.x !== this.exit.x || cursor.y !== this.exit.y) {
-        const destination =
-          cursor.y === this.exit.y
+        const destination
+          = cursor.y === this.exit.y
             ? this.exit
-            : (this.elevators.find((elevator) => elevator.y === cursor.y) as Point);
+            : (this.elevators.find(elevator => elevator.y === cursor.y) as Point);
 
         if (cursor.x === destination.x) {
           cursor.y++;
@@ -85,7 +85,7 @@ class Game {
       console.error('breakpoints:', this.breakPoints);
     }
 
-    if (this.breakPoints.some((breakpoint) => breakpoint.x === x && breakpoint.y === y)) {
+    if (this.breakPoints.some(breakpoint => breakpoint.x === x && breakpoint.y === y)) {
       this.breakPoints.shift();
       console.log(Command.Block);
     } else {

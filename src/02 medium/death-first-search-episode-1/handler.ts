@@ -12,7 +12,7 @@ class Graph {
   nodes: Node[];
 
   constructor(nodeCount: number) {
-    this.nodes = [...Array(nodeCount)].map((_, index) => new Node(index));
+    this.nodes = [...new Array(nodeCount)].map((_, index) => new Node(index));
   }
 
   addLink(nodeId1: number, nodeId2: number): void {
@@ -47,7 +47,7 @@ class Game {
   constructor() {
     const [nodeCount, linkCount, exitCount] = readline()
       .split(' ')
-      .map((input) => parseInt(input, 10));
+      .map(input => Number.parseInt(input, 10));
     console.error('nodeCount:', nodeCount);
     console.error('linkCount:', linkCount);
     console.error('exitCount:', exitCount);
@@ -56,13 +56,13 @@ class Game {
     for (let i = 0; i < linkCount; i += 1) {
       const [nodeId1, nodeId2] = readline()
         .split(' ')
-        .map((input) => parseInt(input, 10));
+        .map(input => Number.parseInt(input, 10));
       this.graph.addLink(nodeId1, nodeId2);
       console.error('link:', `${nodeId1} <-> ${nodeId2}`);
     }
 
     for (let i = 0; i < exitCount; i += 1) {
-      const nodeId = parseInt(readline(), 10);
+      const nodeId = Number.parseInt(readline(), 10);
       this.graph.addGateway(nodeId);
       console.error('exit:', `--> ${nodeId}`);
     }
@@ -71,12 +71,12 @@ class Game {
   turn() {
     console.error('turn');
 
-    const nodeId = parseInt(readline(), 10);
+    const nodeId = Number.parseInt(readline(), 10);
     console.error('agent:', nodeId);
 
     this.graph.moveAgent(nodeId);
     const path = this.bfs(nodeId);
-    console.error('path:', path.map((node) => node.id).join(' -> '));
+    console.error('path:', path.map(node => node.id).join(' -> '));
 
     this.graph.removeLink(path[0].id, path[1].id);
     console.log(`${path[0].id} ${path[1].id}`);
@@ -97,7 +97,7 @@ class Game {
 
       const neighbors = Object.values(node.neighbors);
       if (!visited.has(node) && neighbors.length > 0) {
-        queue.push(...neighbors.map((neighbor) => [neighbor, path] as [Node, Node[]]));
+        queue.push(...neighbors.map(neighbor => [neighbor, path] as [Node, Node[]]));
       }
 
       visited.add(node);

@@ -1,6 +1,6 @@
-import { Item } from './item';
+import type { Item } from './item';
+import type { TileType } from './types';
 import { Point } from './point';
-import { TileType } from './types';
 
 export class Kitchen {
   readonly map: TileType[][] = [];
