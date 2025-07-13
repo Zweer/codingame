@@ -28,15 +28,12 @@ Please provide the full code, do not use placeholders.`;
     puzzle: Puzzle,
     statement: string,
   ): Promise<{ solutionCode: string; reasoning: string } | { error: string }> {
-    const contents = Gemini.PUZZLE_SOLVE_PROMPT.replace('{TITLE}', puzzle.title).replace(
-      '{STATEMENT}',
-      statement,
-    );
+    const contents = Gemini.PUZZLE_SOLVE_PROMPT
+      .replace('{TITLE}', puzzle.title)
+      .replace('{STATEMENT}', statement);
 
-    console.log('Generating solution with Gemini...');
     const result = await this.genAI.models.generateContent({ contents, model: this.model });
     const response = result.text!;
-    console.log('Solution generated.');
 
     const codeBlockRegex = /```typescript\n([\s\S]*?)\n```/;
     const codeMatch = codeBlockRegex.exec(response);

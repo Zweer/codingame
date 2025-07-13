@@ -4,11 +4,22 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import process from 'node:process';
 
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
 import { puzzlesFilepath } from './constants';
 import { CodinGame } from './libs/codingame';
 import { Gemini } from './libs/gemini';
 
 const codingame = new CodinGame();
+
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
+
+function perc(num: number): string {
+  return `${Math.round(num * 100)}%`;
+}
 
 async function main(): Promise<void> {
   console.log('Starting to solve puzzles...');
@@ -22,10 +33,8 @@ async function main(): Promise<void> {
     .map((levelDir) => {
       const levelPath = join(srcPath, levelDir);
       try {
-        // readdirSync will throw an error if levelPath is a file.
         return readdirSync(levelPath);
       } catch (error) {
-        // Silently ignore files, log other errors
         if (error instanceof Error && 'code' in error && error.code !== 'ENOTDIR') {
           console.error(`Could not read directory ${levelPath}:`, error);
         }
@@ -36,7 +45,7 @@ async function main(): Promise<void> {
 
   const unsolvedPuzzles = puzzles.filter(puzzle => !solvedPuzzleIds.includes(puzzle.prettyId));
 
-  console.log(`Found ${unsolvedPuzzles.length} unsolved puzzles.`);
+  console.log(`Found ${unsolvedPuzzles.length} unsolved puzzles (${perc(unsolvedPuzzles.length / puzzles.length)}).`);
 
   if (unsolvedPuzzles.length === 0) {
     return;
@@ -44,17 +53,21 @@ async function main(): Promise<void> {
 
   const gemini = new Gemini(process.env.GOOGLE_GEMINI_USE_PRO === '1');
 
+  let puzzleNum = 0;
   for (const puzzle of unsolvedPuzzles) {
-    console.log(`\nSolving puzzle: "${puzzle.title}"`);
+    const startRetrieveTime = dayjs();
+    console.log(`\nSolving puzzle ${++puzzleNum} of ${unsolvedPuzzles.length} (${perc(puzzleNum / unsolvedPuzzles.length)}): "${puzzle.title}" (${puzzle.level})`);
     const { statement } = await codingame.findProgressByPrettyId(puzzle.prettyId);
 
     if (!statement) {
       console.error(`Could not find description for puzzle: ${puzzle.title}`);
       continue;
     }
-    console.log('Retrieved puzzle statement.');
+    console.log(`Retrieved puzzle statement (${dayjs.duration(dayjs().diff(startRetrieveTime)).humanize()})`);
 
+    const startSolutionTime = new Date();
     const result = await gemini.solvePuzzle(puzzle, statement);
+    console.log(`Solution generated (${dayjs.duration(dayjs().diff(startSolutionTime)).humanize()})`);
 
     if ('error' in result) {
       console.error(`Could not extract TypeScript code from response for puzzle: ${puzzle.title}`);
@@ -86,8 +99,6 @@ async function main(): Promise<void> {
     console.log(`Wrote reasoning to ${reasoningFilePath}`);
 
     console.log(`Successfully solved puzzle: "${puzzle.title}"`);
-
-    break;
   }
 }
 
