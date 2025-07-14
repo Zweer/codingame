@@ -27,13 +27,14 @@ function updateReadme(puzzles: Puzzle[]): void {
     .sort(([level1], [level2]) => CodinGame.LEVEL_WEIGHT[level1] - CodinGame.LEVEL_WEIGHT[level2])
     .map(([level, puzzles]) => {
       puzzles.sort((p1, p2) => p1.id - p2.id);
+      const solved = puzzles.filter(puzzle => directories.includes(puzzle.prettyId));
 
       const puzzleString: string[] = [
         '<details>',
         '',
         '<summary>',
         '',
-        `### ${level}`,
+        `### ${level} (${solved.length}/${puzzles.length})`,
         '',
         '</summary>',
         '',
