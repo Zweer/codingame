@@ -1,11 +1,5 @@
-import * as readline from 'readline';
+const sequence = readline();
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.on('line', (sequence: string) => {
     // Initialize tag weights for all lowercase letters
     // Using a Map for clarity, though a plain object would also work.
     const tagWeights: Map<string, number> = new Map<string, number>();
@@ -32,7 +26,7 @@ rl.on('line', (sequence: string) => {
             // This is an opening tag (e.g., 'a')
             const tagChar = char;
             currentDepth++; // Entering a tag increases depth for current and subsequent tags
-            
+
             // Add the reciprocal of the current depth to the tag's total weight
             tagWeights.set(tagChar, (tagWeights.get(tagChar) || 0) + (1 / currentDepth));
             i++; // Move past the tag character
@@ -53,11 +47,10 @@ rl.on('line', (sequence: string) => {
             // Found a new maximum weight
             maxWeight = weight;
             resultTag = tagChar;
-        } 
+        }
         // If weight === maxWeight, we do nothing because resultTag is already
         // holding the alphabetically smaller tag due to our iteration order.
     }
 
     // Output the result
     console.log(resultTag);
-});
