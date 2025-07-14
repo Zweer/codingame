@@ -682,7 +682,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 <summary>
 
-### hard (57/179)
+### hard (56/179)
 
 </summary>
 
@@ -744,7 +744,7 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 - [ ] 231. Misère Nim [:link:](https://www.codingame.com/training/hard/misere-nim)
 - [ ] 232. Inertia ride [:link:](https://www.codingame.com/training/hard/inertia-ride)
 - [x] 236. [Laser and mirrors](src/laser-and-mirrors) [:link:](https://www.codingame.com/training/hard/laser-and-mirrors)
-- [x] 240. [Winamax Sponsored Contest](src/winamax-sponsored-contest) [:link:](https://www.codingame.com/training/hard/winamax-sponsored-contest)
+- [ ] 240. Winamax Sponsored Contest [:link:](https://www.codingame.com/training/hard/winamax-sponsored-contest)
 - [ ] 241. Kolakoski Sequence [:link:](https://www.codingame.com/training/hard/kolakoski-sequence)
 - [ ] 248. To Sky's Edge [:link:](https://www.codingame.com/training/hard/to-skys-edge)
 - [ ] 249. Execution Circle [:link:](https://www.codingame.com/training/hard/execution-circle)
