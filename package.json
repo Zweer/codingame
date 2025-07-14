@@ -21,9 +21,9 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest run",
-    "script:retrieve": "node --import tsx --env-file .env scripts/retrieve-puzzles.ts",
-    "script:solve": "node --import tsx --env-file .env scripts/solve-puzzles.ts",
-    "script:readme": "node --import tsx --env-file .env scripts/update-readme.ts"
+    "script:retrieve": "node --import tsx --env-file-if-exists .env scripts/retrieve-puzzles.ts",
+    "script:solve": "node --import tsx --env-file-if-exists .env scripts/solve-puzzles.ts",
+    "script:readme": "node --import tsx --env-file-if-exists .env scripts/update-readme.ts"
   },
   "dependencies": {
     "@google/genai": "^1.9.0",
