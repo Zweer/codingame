@@ -13,8 +13,8 @@
     "doneAchievementCount": 0,
     "forumLink": "death-first-search-episode-1-puzzle-discussion/28",
     "chatRoom": "skynet_revolution_episode_1",
-    "solvedCount": 50128,
-    "attemptCount": 88036,
+    "solvedCount": 50158,
+    "attemptCount": 88084,
     "xpPoints": 150,
     "feedback": {
       "feedbackId": 68,
@@ -23,7 +23,7 @@
         40,
         253,
         1265,
-        5684
+        5688
       ]
     },
     "topics": [
@@ -79,17 +79,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "power-of-thor-episode-1-puzzle-discussion/30",
-    "solvedCount": 432974,
-    "attemptCount": 704587,
+    "solvedCount": 433268,
+    "attemptCount": 705120,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 39,
       "feedbacks": [
         779,
         681,
-        3806,
-        12980,
-        28926
+        3810,
+        12987,
+        28944
       ]
     },
     "topics": [
@@ -133,17 +133,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "temperatures-puzzle-discussion/33",
-    "solvedCount": 284235,
-    "attemptCount": 397661,
+    "solvedCount": 284410,
+    "attemptCount": 397927,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 118,
       "feedbacks": [
         631,
         635,
-        3949,
-        11153,
-        19643
+        3950,
+        11161,
+        19653
       ]
     },
     "topics": [
@@ -200,17 +200,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "ascii-art-puzzle-discussion/34",
-    "solvedCount": 129827,
-    "attemptCount": 202156,
+    "solvedCount": 129904,
+    "attemptCount": 202276,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 119,
       "feedbacks": [
-        386,
-        300,
+        387,
+        301,
         1247,
         4912,
-        11740
+        11752
       ]
     },
     "topics": [
@@ -273,8 +273,8 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "unary-puzzle-discussion/35",
-    "solvedCount": 103276,
-    "attemptCount": 145255,
+    "solvedCount": 103329,
+    "attemptCount": 145333,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 69,
@@ -282,8 +282,8 @@
         259,
         444,
         1394,
-        3997,
-        7155
+        4000,
+        7166
       ]
     },
     "topics": [
@@ -346,17 +346,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "mime-type-puzzle-discussion/36",
-    "solvedCount": 86980,
-    "attemptCount": 112445,
+    "solvedCount": 87022,
+    "attemptCount": 112509,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 130,
       "feedbacks": [
-        183,
+        184,
         248,
         1337,
-        3396,
-        5620
+        3398,
+        5628
       ]
     },
     "topics": [
@@ -426,8 +426,8 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "defribillators-puzzle-discussion/37",
-    "solvedCount": 77736,
-    "attemptCount": 93278,
+    "solvedCount": 77756,
+    "attemptCount": 93301,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 62,
@@ -435,8 +435,8 @@
         193,
         239,
         1125,
-        2989,
-        5293
+        2990,
+        5296
       ]
     },
     "topics": [
@@ -493,8 +493,8 @@
     "achievementCount": 3,
     "doneAchievementCount": 0,
     "forumLink": "horse-racing-duals-puzzle-discussion/38",
-    "solvedCount": 106708,
-    "attemptCount": 143278,
+    "solvedCount": 106750,
+    "attemptCount": 143348,
     "xpPoints": 75,
     "feedback": {
       "feedbackId": 131,
@@ -502,8 +502,8 @@
         197,
         277,
         1606,
-        4169,
-        7158
+        4170,
+        7160
       ]
     },
     "topics": [
@@ -541,8 +541,8 @@
     "doneAchievementCount": 0,
     "forumLink": "the-fall-episode-1-puzzle-discussion/39",
     "chatRoom": "last_crusade_episode_1",
-    "solvedCount": 22210,
-    "attemptCount": 29519,
+    "solvedCount": 22222,
+    "attemptCount": 29534,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 132,
@@ -597,8 +597,8 @@
     "doneAchievementCount": 0,
     "forumLink": "mars-lander-puzzle-discussion/32",
     "chatRoom": "mars_lander",
-    "solvedCount": 14880,
-    "attemptCount": 51361,
+    "solvedCount": 14888,
+    "attemptCount": 51387,
     "xpPoints": 150,
     "feedback": {
       "feedbackId": 133,
@@ -607,7 +607,7 @@
         42,
         81,
         351,
-        2010
+        2011
       ]
     },
     "topics": [
@@ -656,17 +656,17 @@
     "doneAchievementCount": 0,
     "forumLink": "stock-exchange-losses-puzzle-discussion/40",
     "chatRoom": "stock_exchange_losses",
-    "solvedCount": 31872,
-    "attemptCount": 39823,
+    "solvedCount": 31896,
+    "attemptCount": 39849,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 134,
       "feedbacks": [
         37,
         74,
-        498,
-        1235,
-        2390
+        500,
+        1236,
+        2391
       ]
     },
     "topics": [
@@ -724,8 +724,8 @@
     "doneAchievementCount": 0,
     "forumLink": "network-cabling-puzzle-discussion/41",
     "chatRoom": "network_cabling",
-    "solvedCount": 15314,
-    "attemptCount": 22044,
+    "solvedCount": 15322,
+    "attemptCount": 22050,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 135,
@@ -792,8 +792,8 @@
     "doneAchievementCount": 0,
     "forumLink": "conway-sequence-puzzle-discussion/42",
     "chatRoom": "conway_sequence",
-    "solvedCount": 19687,
-    "attemptCount": 21866,
+    "solvedCount": 19693,
+    "attemptCount": 21870,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 136,
@@ -802,7 +802,7 @@
         37,
         212,
         687,
-        1279
+        1280
       ]
     },
     "topics": [
@@ -841,8 +841,8 @@
     "doneAchievementCount": 0,
     "forumLink": "telephone-numbers-puzzle-discussion/43",
     "chatRoom": "telephone_numbers",
-    "solvedCount": 18130,
-    "attemptCount": 22314,
+    "solvedCount": 18137,
+    "attemptCount": 22322,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 137,
@@ -850,7 +850,7 @@
         13,
         24,
         193,
-        618,
+        619,
         1292
       ]
     },
@@ -896,8 +896,8 @@
     "doneAchievementCount": 0,
     "forumLink": "dwarfs-standing-on-the-shoulders-of-giants-puzzle-discussion/44",
     "chatRoom": "dwarfs_standing_on_shoulders_of_giants",
-    "solvedCount": 14118,
-    "attemptCount": 17385,
+    "solvedCount": 14123,
+    "attemptCount": 17392,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 138,
@@ -906,7 +906,7 @@
         20,
         147,
         489,
-        990
+        991
       ]
     },
     "topics": [
@@ -962,8 +962,8 @@
     "doneAchievementCount": 0,
     "forumLink": "blunder-episode-1-puzzle-discussion/45",
     "chatRoom": "bender_episode_1",
-    "solvedCount": 11969,
-    "attemptCount": 19038,
+    "solvedCount": 11972,
+    "attemptCount": 19046,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 139,
@@ -972,7 +972,7 @@
         28,
         114,
         450,
-        1363
+        1364
       ]
     },
     "topics": [
@@ -1017,8 +1017,8 @@
     "doneAchievementCount": 0,
     "forumLink": "scrabble-puzzle-discussion/46",
     "chatRoom": "scrabble",
-    "solvedCount": 20233,
-    "attemptCount": 26393,
+    "solvedCount": 20247,
+    "attemptCount": 26408,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 140,
@@ -1026,8 +1026,8 @@
         41,
         46,
         249,
-        819,
-        1753
+        820,
+        1755
       ]
     },
     "topics": [
@@ -1072,8 +1072,8 @@
     "doneAchievementCount": 0,
     "forumLink": "doctor-who-the-gift-puzzle-discussion/47",
     "chatRoom": "doctor_who_gift",
-    "solvedCount": 16762,
-    "attemptCount": 20266,
+    "solvedCount": 16768,
+    "attemptCount": 20272,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 141,
@@ -1082,7 +1082,7 @@
         28,
         196,
         636,
-        1081
+        1082
       ]
     },
     "topics": [
@@ -1121,8 +1121,8 @@
     "doneAchievementCount": 0,
     "forumLink": "mayan-calculation-puzzle-discussion/48",
     "chatRoom": "mayan_calculation",
-    "solvedCount": 12061,
-    "attemptCount": 14995,
+    "solvedCount": 12067,
+    "attemptCount": 14999,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 142,
@@ -1131,7 +1131,7 @@
         25,
         102,
         459,
-        1043
+        1045
       ]
     },
     "topics": [
@@ -1182,8 +1182,8 @@
     "doneAchievementCount": 0,
     "forumLink": "death-first-search-episode-2-puzzle-discussion/61",
     "chatRoom": "skynet_revolution_episode_2",
-    "solvedCount": 7118,
-    "attemptCount": 24432,
+    "solvedCount": 7123,
+    "attemptCount": 24450,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 143,
@@ -1192,7 +1192,7 @@
         19,
         46,
         193,
-        1486
+        1487
       ]
     },
     "topics": [
@@ -1252,8 +1252,8 @@
     "doneAchievementCount": 0,
     "forumLink": "the-bridge-episode-2-puzzle-discussion/60",
     "chatRoom": "bridge_episode_2",
-    "solvedCount": 3823,
-    "attemptCount": 15122,
+    "solvedCount": 3831,
+    "attemptCount": 15137,
     "xpPoints": 375,
     "feedback": {
       "feedbackId": 144,
@@ -1262,7 +1262,7 @@
         7,
         42,
         129,
-        580
+        581
       ]
     },
     "topics": [
@@ -1321,8 +1321,8 @@
     "doneAchievementCount": 0,
     "forumLink": "the-labyrinth-puzzle-discussion/59",
     "chatRoom": "labyrinth",
-    "solvedCount": 8549,
-    "attemptCount": 42780,
+    "solvedCount": 8566,
+    "attemptCount": 42821,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 145,
@@ -1331,7 +1331,7 @@
         16,
         56,
         298,
-        1597
+        1598
       ]
     },
     "topics": [
@@ -1385,8 +1385,8 @@
     "doneAchievementCount": 0,
     "forumLink": "power-of-thor-episode-2-puzzle-discussion/58",
     "chatRoom": "power_of_thor_episode_2",
-    "solvedCount": 1916,
-    "attemptCount": 9713,
+    "solvedCount": 1918,
+    "attemptCount": 9718,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 146,
@@ -1395,7 +1395,7 @@
         12,
         24,
         86,
-        246
+        247
       ]
     },
     "topics": [
@@ -1459,8 +1459,8 @@
     "doneAchievementCount": 0,
     "forumLink": "super-computer-puzzle-discussion/57",
     "chatRoom": "super_computer",
-    "solvedCount": 5377,
-    "attemptCount": 7525,
+    "solvedCount": 5405,
+    "attemptCount": 7562,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 147,
@@ -1469,7 +1469,7 @@
         16,
         74,
         198,
-        473
+        475
       ]
     },
     "topics": [
@@ -1514,8 +1514,8 @@
     "doneAchievementCount": 0,
     "forumLink": "roller-coaster-puzzle-discussion/21",
     "chatRoom": "roller_coaster",
-    "solvedCount": 7244,
-    "attemptCount": 10613,
+    "solvedCount": 7263,
+    "attemptCount": 10634,
     "xpPoints": 375,
     "feedback": {
       "feedbackId": 148,
@@ -1576,8 +1576,8 @@
     "doneAchievementCount": 0,
     "forumLink": "cgx-formatter-puzzle-discussion/22",
     "chatRoom": "cgx_formatter",
-    "solvedCount": 4451,
-    "attemptCount": 6379,
+    "solvedCount": 4454,
+    "attemptCount": 6382,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 149,
@@ -1586,7 +1586,7 @@
         14,
         68,
         183,
-        388
+        389
       ]
     },
     "topics": [
@@ -1631,13 +1631,13 @@
     "doneAchievementCount": 0,
     "forumLink": "tan-network-puzzle-discussion/23",
     "chatRoom": "tan_network",
-    "solvedCount": 2673,
-    "attemptCount": 4018,
+    "solvedCount": 2689,
+    "attemptCount": 4035,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 150,
       "feedbacks": [
-        8,
+        9,
         10,
         33,
         94,
@@ -1712,8 +1712,8 @@
     "doneAchievementCount": 0,
     "forumLink": "genome-sequencing-puzzle-discussion/24",
     "chatRoom": "genome_sequencing",
-    "solvedCount": 4189,
-    "attemptCount": 5913,
+    "solvedCount": 4191,
+    "attemptCount": 5914,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 151,
@@ -1767,8 +1767,8 @@
     "doneAchievementCount": 0,
     "forumLink": "surface-puzzle-discussion/26",
     "chatRoom": "surface",
-    "solvedCount": 5014,
-    "attemptCount": 6535,
+    "solvedCount": 5018,
+    "attemptCount": 6539,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 152,
@@ -1777,7 +1777,7 @@
         9,
         38,
         183,
-        495
+        496
       ]
     },
     "topics": [
@@ -1832,8 +1832,8 @@
     "doneAchievementCount": 0,
     "forumLink": "blunder-episode-2-puzzle-discussion/56",
     "chatRoom": "bender_episode_2",
-    "solvedCount": 3472,
-    "attemptCount": 4784,
+    "solvedCount": 3473,
+    "attemptCount": 4785,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 153,
@@ -1897,8 +1897,8 @@
     "doneAchievementCount": 0,
     "forumLink": "blunder-episode-3-puzzle-discussion/55",
     "chatRoom": "bender_episode_3",
-    "solvedCount": 2172,
-    "attemptCount": 3812,
+    "solvedCount": 2174,
+    "attemptCount": 3813,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 154,
@@ -1946,7 +1946,7 @@
     "forumLink": "the-fall-episode-2-puzzle-discussion/52",
     "chatRoom": "last_crusade_episode_2",
     "solvedCount": 1292,
-    "attemptCount": 5025,
+    "attemptCount": 5031,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 155,
@@ -2008,8 +2008,8 @@
     "doneAchievementCount": 0,
     "forumLink": "the-fall-episode-3-puzzle-discussion/1675",
     "chatRoom": "last_crusade_episode_3",
-    "solvedCount": 773,
-    "attemptCount": 6868,
+    "solvedCount": 776,
+    "attemptCount": 6876,
     "xpPoints": 500,
     "feedback": {
       "feedbackId": 156,
@@ -2069,8 +2069,8 @@
     "doneAchievementCount": 0,
     "forumLink": "the-resistance-puzzle-discussion/25",
     "chatRoom": "resistance",
-    "solvedCount": 4434,
-    "attemptCount": 10662,
+    "solvedCount": 4441,
+    "attemptCount": 10676,
     "xpPoints": 500,
     "feedback": {
       "feedbackId": 157,
@@ -2136,8 +2136,8 @@
     "doneAchievementCount": 0,
     "forumLink": "music-scores-puzzle-discussion",
     "chatRoom": "doctor_who_music_sheets",
-    "solvedCount": 2219,
-    "attemptCount": 3900,
+    "solvedCount": 2223,
+    "attemptCount": 3905,
     "xpPoints": 500,
     "feedback": {
       "feedbackId": 158,
@@ -2197,8 +2197,8 @@
     "doneAchievementCount": 0,
     "forumLink": "mars-lander-puzzle-discussion/32",
     "chatRoom": "mars_lander",
-    "solvedCount": 2224,
-    "attemptCount": 7958,
+    "solvedCount": 2228,
+    "attemptCount": 7966,
     "xpPoints": 750,
     "feedback": {
       "feedbackId": 159,
@@ -2255,17 +2255,17 @@
     "achievementCount": 3,
     "doneAchievementCount": 0,
     "forumLink": "mars-lander-puzzle-discussion/32",
-    "solvedCount": 202964,
-    "attemptCount": 272459,
+    "solvedCount": 203080,
+    "attemptCount": 272635,
     "xpPoints": 75,
     "feedback": {
       "feedbackId": 160,
       "feedbacks": [
         366,
         679,
-        2371,
-        4869,
-        10713
+        2372,
+        4877,
+        10721
       ]
     },
     "topics": [
@@ -2306,17 +2306,17 @@
     "doneAchievementCount": 0,
     "forumLink": "shadows-of-the-knight-episode-1-puzzle-discussion/264",
     "chatRoom": "shadows_of_knight_episode_1",
-    "solvedCount": 100812,
-    "attemptCount": 233055,
+    "solvedCount": 100910,
+    "attemptCount": 233325,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 161,
       "feedbacks": [
         236,
         154,
-        835,
-        3856,
-        13320
+        837,
+        3857,
+        13336
       ]
     },
     "topics": [
@@ -2376,17 +2376,17 @@
     "doneAchievementCount": 0,
     "forumLink": "shadows-of-the-knight-episode-2-puzzle-discussion/1676",
     "chatRoom": "shadows_of_knight_episode_2",
-    "solvedCount": 3517,
-    "attemptCount": 21011,
+    "solvedCount": 3525,
+    "attemptCount": 21040,
     "xpPoints": 750,
     "feedback": {
       "feedbackId": 162,
       "feedbacks": [
         26,
-        15,
+        16,
         38,
         145,
-        640
+        643
       ]
     },
     "topics": [
@@ -2438,17 +2438,17 @@
     "achievementCount": 1,
     "doneAchievementCount": 0,
     "forumLink": "onboarding-puzzle-discussion/119",
-    "solvedCount": 2765846,
-    "attemptCount": 3252816,
+    "solvedCount": 2769908,
+    "attemptCount": 3257847,
     "xpPoints": 5,
     "feedback": {
       "feedbackId": 3,
       "feedbacks": [
-        2166,
-        1573,
-        13941,
-        32216,
-        170701
+        2169,
+        1574,
+        13965,
+        32271,
+        170971
       ]
     },
     "topics": [
@@ -2491,8 +2491,8 @@
     "doneAchievementCount": 0,
     "forumLink": "vox-codei-puzzle-discussion/285",
     "chatRoom": "vox_codei",
-    "solvedCount": 2566,
-    "attemptCount": 6847,
+    "solvedCount": 2572,
+    "attemptCount": 6855,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 105,
@@ -2501,7 +2501,7 @@
         7,
         18,
         90,
-        354
+        355
       ]
     },
     "topics": [
@@ -2571,8 +2571,8 @@
     "doneAchievementCount": 0,
     "forumLink": "vox-codei-episode-2/188229",
     "chatRoom": "vox_codei",
-    "solvedCount": 925,
-    "attemptCount": 2877,
+    "solvedCount": 930,
+    "attemptCount": 2884,
     "xpPoints": 500,
     "feedback": {
       "feedbackId": 107,
@@ -2657,8 +2657,8 @@
     "doneAchievementCount": 0,
     "forumLink": "dont-panic-episode-1-puzzle-discussion/314",
     "chatRoom": "dont_panic_episode_1",
-    "solvedCount": 41229,
-    "attemptCount": 64643,
+    "solvedCount": 41247,
+    "attemptCount": 64688,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 110,
@@ -2666,8 +2666,8 @@
         56,
         98,
         490,
-        1681,
-        3730
+        1683,
+        3731
       ]
     },
     "topics": [
@@ -2715,8 +2715,8 @@
     "doneAchievementCount": 0,
     "forumLink": "dont-panic-episode-2-puzzle-discussion/315",
     "chatRoom": "dont_panic_episode_2",
-    "solvedCount": 1646,
-    "attemptCount": 10305,
+    "solvedCount": 1649,
+    "attemptCount": 10314,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 112,
@@ -2775,8 +2775,8 @@
     "doneAchievementCount": 0,
     "forumLink": "nintendo-challenge/801",
     "chatRoom": "nintendo_challenge",
-    "solvedCount": 716,
-    "attemptCount": 30278,
+    "solvedCount": 717,
+    "attemptCount": 30316,
     "xpPoints": 500,
     "feedback": {
       "feedbackId": 1614,
@@ -2784,8 +2784,8 @@
         16,
         3,
         11,
-        14,
-        133
+        15,
+        134
       ]
     },
     "topics": [
@@ -2823,17 +2823,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "war-puzzle-discussion/2417",
-    "solvedCount": 23813,
-    "attemptCount": 37037,
+    "solvedCount": 23834,
+    "attemptCount": 37059,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 1615,
       "feedbacks": [
         89,
-        143,
+        144,
         300,
         717,
-        1323
+        1325
       ]
     },
     "topics": [
@@ -2871,8 +2871,8 @@
     "doneAchievementCount": 0,
     "forumLink": "there-is-no-spoon-episode-1-puzzle-discussion/661",
     "chatRoom": "there_is_no_spoon_episode_1",
-    "solvedCount": 81701,
-    "attemptCount": 163386,
+    "solvedCount": 81773,
+    "attemptCount": 163498,
     "xpPoints": 100,
     "feedback": {
       "feedbackId": 61,
@@ -2880,8 +2880,8 @@
         232,
         248,
         1080,
-        3444,
-        6726
+        3446,
+        6735
       ]
     },
     "topics": [
@@ -2929,8 +2929,8 @@
     "doneAchievementCount": 0,
     "forumLink": "there-is-no-spoon-episode-2-puzzle-discussion/662",
     "chatRoom": "there_is_no_spoon_episode_2",
-    "solvedCount": 1574,
-    "attemptCount": 8472,
+    "solvedCount": 1578,
+    "attemptCount": 8479,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 106,
@@ -2939,7 +2939,7 @@
         6,
         12,
         47,
-        263
+        264
       ]
     },
     "topics": [
@@ -2999,10 +2999,10 @@
     "doneAchievementCount": 0,
     "forumLink": "mars-lander-fuel-puzzle-discussion/685",
     "chatRoom": "mars_lander_fuel",
-    "total": 8266,
-    "globalTotal": 8266,
-    "solvedCount": 7056,
-    "attemptCount": 19735,
+    "total": 8276,
+    "globalTotal": 8276,
+    "solvedCount": 7063,
+    "attemptCount": 19757,
     "feedback": {
       "feedbackId": 88,
       "feedbacks": [
@@ -3010,7 +3010,7 @@
         17,
         71,
         248,
-        978
+        980
       ]
     },
     "optimCriteriaId": "fuel",
@@ -3062,10 +3062,10 @@
     "doneAchievementCount": 0,
     "forumLink": "dont-panic-episode-1-codesize-puzzle-discussion/686",
     "chatRoom": "dont_panic_episode_1_codesize",
-    "total": 15225,
-    "globalTotal": 15225,
-    "solvedCount": 10740,
-    "attemptCount": 20380,
+    "total": 15239,
+    "globalTotal": 15239,
+    "solvedCount": 10750,
+    "attemptCount": 20396,
     "feedback": {
       "feedbackId": 87,
       "feedbacks": [
@@ -3073,7 +3073,7 @@
         33,
         135,
         453,
-        1035
+        1037
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -3123,18 +3123,18 @@
     "doneAchievementCount": 0,
     "forumLink": "power-of-thor-codesize-puzzle-discussion/687",
     "chatRoom": "power_of_thor_codesize",
-    "total": 52660,
-    "globalTotal": 52660,
-    "solvedCount": 39777,
-    "attemptCount": 71496,
+    "total": 52721,
+    "globalTotal": 52721,
+    "solvedCount": 39824,
+    "attemptCount": 71617,
     "feedback": {
       "feedbackId": 101,
       "feedbacks": [
         73,
         74,
         553,
-        1749,
-        3676
+        1752,
+        3682
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -3182,10 +3182,10 @@
     "doneAchievementCount": 0,
     "forumLink": "brain-fork-optimization-puzzle-discussion/784",
     "chatRoom": "code_of_the_rings",
-    "total": 9156,
-    "globalTotal": 9156,
-    "solvedCount": 8259,
-    "attemptCount": 17588,
+    "total": 9166,
+    "globalTotal": 9166,
+    "solvedCount": 8270,
+    "attemptCount": 17607,
     "feedback": {
       "feedbackId": 103,
       "feedbacks": [
@@ -3193,7 +3193,7 @@
         14,
         93,
         356,
-        1288
+        1289
       ]
     },
     "optimCriteriaId": "character_count",
@@ -3249,10 +3249,10 @@
     "doneAchievementCount": 0,
     "forumLink": "tron-battle-aka-line-racing-multiplayer-challenge-discussion/49",
     "chatRoom": "tron_battle",
-    "total": 8031,
-    "globalTotal": 8031,
+    "total": 8034,
+    "globalTotal": 8034,
     "solvedCount": 0,
-    "attemptCount": 19130,
+    "attemptCount": 19135,
     "feedback": {
       "feedbackId": 84,
       "feedbacks": [
@@ -3260,7 +3260,7 @@
         2,
         14,
         36,
-        490
+        491
       ]
     },
     "optimCriteriaId": "rank",
@@ -3325,10 +3325,10 @@
     "doneAchievementCount": 0,
     "forumLink": "game-of-drones-multiplayer-challenge-discussion/50",
     "chatRoom": "game_of_drones",
-    "total": 4574,
-    "globalTotal": 4574,
+    "total": 4577,
+    "globalTotal": 4577,
     "solvedCount": 0,
-    "attemptCount": 13271,
+    "attemptCount": 13279,
     "feedback": {
       "feedbackId": 93,
       "feedbacks": [
@@ -3395,10 +3395,10 @@
     "doneAchievementCount": 0,
     "forumLink": "platinum-rift-multiplayer-contest-discussion/356",
     "chatRoom": "pr2",
-    "total": 2069,
-    "globalTotal": 2069,
+    "total": 2070,
+    "globalTotal": 2070,
     "solvedCount": 0,
-    "attemptCount": 5088,
+    "attemptCount": 5089,
     "feedback": {
       "feedbackId": 82,
       "feedbacks": [
@@ -3474,7 +3474,7 @@
     "total": 2196,
     "globalTotal": 2196,
     "solvedCount": 0,
-    "attemptCount": 6798,
+    "attemptCount": 6799,
     "feedback": {
       "feedbackId": 111,
       "feedbacks": [
@@ -3547,10 +3547,10 @@
     "doneAchievementCount": 0,
     "forumLink": "the-great-escape-strategies/592/",
     "chatRoom": "great_escape",
-    "total": 4504,
-    "globalTotal": 4504,
+    "total": 4505,
+    "globalTotal": 4505,
     "solvedCount": 0,
-    "attemptCount": 13310,
+    "attemptCount": 13313,
     "feedback": {
       "feedbackId": 96,
       "feedbacks": [
@@ -3690,7 +3690,7 @@
     "total": 5162,
     "globalTotal": 5162,
     "solvedCount": 0,
-    "attemptCount": 19799,
+    "attemptCount": 19800,
     "feedback": {
       "feedbackId": 91,
       "feedbacks": [
@@ -3770,18 +3770,18 @@
     "doneAchievementCount": 0,
     "forumLink": "code-vs-zombies-optimization-puzzle-discussion/2416",
     "chatRoom": "cvz",
-    "total": 24563,
-    "globalTotal": 24563,
-    "solvedCount": 15238,
-    "attemptCount": 46341,
+    "total": 24595,
+    "globalTotal": 24595,
+    "solvedCount": 15264,
+    "attemptCount": 46407,
     "feedback": {
       "feedbackId": 113,
       "feedbacks": [
         37,
         37,
         209,
-        969,
-        3550
+        970,
+        3557
       ]
     },
     "optimCriteriaId": "score",
@@ -3858,18 +3858,18 @@
     "doneAchievementCount": 0,
     "forumLink": "codingame-sponsored-challenge-discussion/1200",
     "chatRoom": "codingame_sponsored_challenge",
-    "total": 20524,
-    "globalTotal": 20524,
-    "solvedCount": 20290,
-    "attemptCount": 56800,
+    "total": 20542,
+    "globalTotal": 20542,
+    "solvedCount": 20306,
+    "attemptCount": 56854,
     "feedback": {
       "feedbackId": 117,
       "feedbacks": [
         260,
         131,
         226,
-        362,
-        1342
+        363,
+        1346
       ]
     },
     "optimCriteriaId": "score",
@@ -3914,18 +3914,18 @@
     "doneAchievementCount": 0,
     "forumLink": "temperature-code-golf-puzzle-discussion/1239",
     "chatRoom": "temperature_code_golf",
-    "total": 31418,
-    "globalTotal": 31418,
-    "solvedCount": 23440,
-    "attemptCount": 34002,
+    "total": 31440,
+    "globalTotal": 31440,
+    "solvedCount": 23455,
+    "attemptCount": 34034,
     "feedback": {
       "feedbackId": 100,
       "feedbacks": [
         43,
         50,
-        480,
+        481,
         1341,
-        2492
+        2495
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -3987,7 +3987,7 @@
       "avatar": 2101345344828
     },
     "solvedCount": 2412,
-    "attemptCount": 3179,
+    "attemptCount": 3180,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 129,
@@ -4021,8 +4021,8 @@
       "publicHandle": "d3a3a43aad96dea9f1ab5fa81ed849a9725351",
       "avatar": 147192844729716
     },
-    "solvedCount": 1130,
-    "attemptCount": 1537,
+    "solvedCount": 1131,
+    "attemptCount": 1538,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 65,
@@ -4127,7 +4127,7 @@
       "avatar": 29407964997640,
       "cover": 2508945958620
     },
-    "solvedCount": 534,
+    "solvedCount": 535,
     "attemptCount": 920,
     "xpPoints": 50,
     "feedback": {
@@ -4137,7 +4137,7 @@
         4,
         6,
         21,
-        66
+        67
       ]
     },
     "topics": [],
@@ -4164,7 +4164,7 @@
       "cover": 2242431266271
     },
     "solvedCount": 564,
-    "attemptCount": 1174,
+    "attemptCount": 1175,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 180,
@@ -4198,8 +4198,8 @@
       "publicHandle": "c4f3734b38d6b1ae5c5a7456516762d1796509",
       "avatar": 99917284995764
     },
-    "solvedCount": 416,
-    "attemptCount": 539,
+    "solvedCount": 417,
+    "attemptCount": 540,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 195,
@@ -4233,8 +4233,8 @@
       "publicHandle": "06297d390cfe78beb7c9c8f836f837bc536495",
       "avatar": 52510643792425
     },
-    "solvedCount": 1374,
-    "attemptCount": 1714,
+    "solvedCount": 1375,
+    "attemptCount": 1715,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 165,
@@ -4305,8 +4305,8 @@
       "avatar": 1833057833457,
       "cover": 1833091174140
     },
-    "solvedCount": 1299,
-    "attemptCount": 1582,
+    "solvedCount": 1300,
+    "attemptCount": 1584,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 108,
@@ -4341,8 +4341,8 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 1091,
-    "attemptCount": 1454,
+    "solvedCount": 1093,
+    "attemptCount": 1456,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 128,
@@ -4378,15 +4378,15 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 766,
-    "attemptCount": 1175,
+    "solvedCount": 770,
+    "attemptCount": 1179,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 194,
       "feedbacks": [
         13,
         18,
-        41,
+        42,
         49,
         91
       ]
@@ -4544,8 +4544,8 @@
       "publicHandle": "d3a3a43aad96dea9f1ab5fa81ed849a9725351",
       "avatar": 147192844729716
     },
-    "solvedCount": 573,
-    "attemptCount": 678,
+    "solvedCount": 574,
+    "attemptCount": 679,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 164,
@@ -4579,7 +4579,7 @@
       "publicHandle": "f0dc5bc9f06a827cdd26b5c158e36e86273451",
       "avatar": 7959085736890
     },
-    "solvedCount": 9926,
+    "solvedCount": 9927,
     "attemptCount": 11597,
     "xpPoints": 50,
     "feedback": {
@@ -4686,8 +4686,8 @@
       "publicHandle": "d3a3a43aad96dea9f1ab5fa81ed849a9725351",
       "avatar": 147192844729716
     },
-    "solvedCount": 1016,
-    "attemptCount": 1220,
+    "solvedCount": 1017,
+    "attemptCount": 1221,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 64,
@@ -4758,8 +4758,8 @@
       "avatar": 29407964997640,
       "cover": 2508945958620
     },
-    "solvedCount": 1145,
-    "attemptCount": 1609,
+    "solvedCount": 1146,
+    "attemptCount": 1610,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 187,
@@ -4831,7 +4831,7 @@
       "cover": 9342275484220
     },
     "solvedCount": 403,
-    "attemptCount": 1022,
+    "attemptCount": 1023,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 122,
@@ -4864,17 +4864,17 @@
     "achievementCount": 2,
     "doneAchievementCount": 0,
     "forumLink": "the-descent-puzzle-discussion/1332",
-    "solvedCount": 709433,
-    "attemptCount": 1320644,
+    "solvedCount": 709954,
+    "attemptCount": 1321779,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 45,
       "feedbacks": [
-        1705,
-        1317,
-        6611,
-        17594,
-        41689
+        1706,
+        1318,
+        6617,
+        17605,
+        41727
       ]
     },
     "topics": [
@@ -5029,8 +5029,8 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 210,
-    "attemptCount": 726,
+    "solvedCount": 211,
+    "attemptCount": 728,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 181,
@@ -5505,7 +5505,7 @@
       "cover": 2508945958620
     },
     "solvedCount": 223,
-    "attemptCount": 371,
+    "attemptCount": 372,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 74,
@@ -5576,8 +5576,8 @@
       "avatar": 3823739809641,
       "cover": 2754242453763
     },
-    "solvedCount": 1243,
-    "attemptCount": 2436,
+    "solvedCount": 1245,
+    "attemptCount": 2438,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 109,
@@ -5586,7 +5586,7 @@
         2,
         19,
         54,
-        167
+        168
       ]
     },
     "topics": [],
@@ -5611,8 +5611,8 @@
       "publicHandle": "d3a3a43aad96dea9f1ab5fa81ed849a9725351",
       "avatar": 147192844729716
     },
-    "solvedCount": 453,
-    "attemptCount": 573,
+    "solvedCount": 455,
+    "attemptCount": 575,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 198,
@@ -5729,8 +5729,8 @@
       "avatar": 52487021619351,
       "cover": 1775987663405
     },
-    "solvedCount": 783,
-    "attemptCount": 1857,
+    "solvedCount": 784,
+    "attemptCount": 1860,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 169,
@@ -5958,8 +5958,8 @@
       "avatar": 3794653646628,
       "cover": 3795022767303
     },
-    "solvedCount": 1188,
-    "attemptCount": 1530,
+    "solvedCount": 1189,
+    "attemptCount": 1531,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 123,
@@ -5990,18 +5990,18 @@
     "doneAchievementCount": 0,
     "forumLink": "mad-pod-racing-puzzle-discussion/1833",
     "chatRoom": "csb",
-    "total": 227547,
-    "globalTotal": 227547,
+    "total": 227818,
+    "globalTotal": 227818,
     "solvedCount": 0,
-    "attemptCount": 342363,
+    "attemptCount": 342863,
     "feedback": {
       "feedbackId": 47,
       "feedbacks": [
-        163,
+        164,
         50,
         115,
         509,
-        4322
+        4324
       ]
     },
     "optimCriteriaId": "rank",
@@ -6123,8 +6123,8 @@
       "avatar": 3638627508334,
       "cover": 4091343147688
     },
-    "solvedCount": 1529,
-    "attemptCount": 2214,
+    "solvedCount": 1531,
+    "attemptCount": 2217,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 125,
@@ -6133,7 +6133,7 @@
         8,
         38,
         47,
-        94
+        95
       ]
     },
     "topics": [
@@ -6207,7 +6207,7 @@
       "publicHandle": "4c92354c7dd1e9489c82ddc9b7d23e6d4463011"
     },
     "solvedCount": 807,
-    "attemptCount": 3232,
+    "attemptCount": 3233,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 127,
@@ -6333,7 +6333,7 @@
     "total": 2945,
     "globalTotal": 2945,
     "solvedCount": 0,
-    "attemptCount": 5427,
+    "attemptCount": 5428,
     "feedback": {
       "feedbackId": 90,
       "feedbacks": [
@@ -6462,8 +6462,8 @@
       "avatar": 4427902115063,
       "cover": 4611708607881
     },
-    "solvedCount": 1111,
-    "attemptCount": 1462,
+    "solvedCount": 1112,
+    "attemptCount": 1463,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 63,
@@ -6512,8 +6512,8 @@
       "avatar": 19902303477203,
       "cover": 6070583307319
     },
-    "solvedCount": 1395,
-    "attemptCount": 1751,
+    "solvedCount": 1397,
+    "attemptCount": 1753,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 99,
@@ -6603,8 +6603,8 @@
       "avatar": 52487021619351,
       "cover": 1775987663405
     },
-    "solvedCount": 989,
-    "attemptCount": 1274,
+    "solvedCount": 991,
+    "attemptCount": 1275,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 77,
@@ -6640,8 +6640,8 @@
       "avatar": 52487021619351,
       "cover": 1775987663405
     },
-    "solvedCount": 1107,
-    "attemptCount": 1543,
+    "solvedCount": 1108,
+    "attemptCount": 1545,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 98,
@@ -6735,10 +6735,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "codebusters-aka-soul-snatchers-puzzle-discussion/1832",
-    "total": 3136,
-    "globalTotal": 3136,
+    "total": 3140,
+    "globalTotal": 3140,
     "solvedCount": 0,
-    "attemptCount": 5835,
+    "attemptCount": 5838,
     "feedback": {
       "feedbackId": 114,
       "feedbacks": [
@@ -6817,8 +6817,8 @@
       "publicHandle": "ff0208f05f1260a9798ba68f92e61e89002923",
       "avatar": 7407206403800
     },
-    "solvedCount": 1134,
-    "attemptCount": 1400,
+    "solvedCount": 1135,
+    "attemptCount": 1401,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 167,
@@ -6853,8 +6853,8 @@
       "avatar": 13508591864679,
       "cover": 4773486305554
     },
-    "solvedCount": 1172,
-    "attemptCount": 1375,
+    "solvedCount": 1174,
+    "attemptCount": 1377,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 120,
@@ -6966,8 +6966,8 @@
       "avatar": 4434079921061,
       "cover": 5010080891564
     },
-    "solvedCount": 1264,
-    "attemptCount": 1663,
+    "solvedCount": 1265,
+    "attemptCount": 1664,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 124,
@@ -7014,8 +7014,8 @@
       "publicHandle": "1f902a3213291dfd0de802207d362bdf979991",
       "avatar": 4699081038708
     },
-    "solvedCount": 600,
-    "attemptCount": 673,
+    "solvedCount": 601,
+    "attemptCount": 674,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 104,
@@ -7077,8 +7077,8 @@
       "avatar": 3823739809641,
       "cover": 2754242453763
     },
-    "solvedCount": 617,
-    "attemptCount": 957,
+    "solvedCount": 619,
+    "attemptCount": 959,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 172,
@@ -7250,7 +7250,7 @@
       "cover": 11137706548385
     },
     "solvedCount": 287,
-    "attemptCount": 618,
+    "attemptCount": 619,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 168,
@@ -7357,8 +7357,8 @@
       "avatar": 1724581872168,
       "cover": 5892382698276
     },
-    "solvedCount": 328,
-    "attemptCount": 523,
+    "solvedCount": 329,
+    "attemptCount": 524,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 116,
@@ -7367,7 +7367,7 @@
         3,
         4,
         14,
-        33
+        34
       ]
     },
     "topics": [],
@@ -7430,7 +7430,7 @@
       "cover": 2508945958620
     },
     "solvedCount": 3562,
-    "attemptCount": 5160,
+    "attemptCount": 5161,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 57,
@@ -7479,7 +7479,7 @@
       "avatar": 24623991925371,
       "cover": 3038050714514
     },
-    "solvedCount": 3597,
+    "solvedCount": 3598,
     "attemptCount": 5598,
     "xpPoints": 50,
     "feedback": {
@@ -7558,9 +7558,9 @@
       "feedbacks": [
         8,
         5,
-        37,
+        36,
         42,
-        65
+        66
       ]
     },
     "topics": [],
@@ -7585,8 +7585,8 @@
       "publicHandle": "fef2c49bbeb7b956c5b40d89d9b2d20a593182",
       "avatar": 1905416285031
     },
-    "solvedCount": 296,
-    "attemptCount": 671,
+    "solvedCount": 297,
+    "attemptCount": 672,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 42,
@@ -7634,8 +7634,8 @@
       "publicHandle": "7e28f173e24c28d629665c0ad5f0184c7423701",
       "avatar": 2509638482149
     },
-    "solvedCount": 854,
-    "attemptCount": 1109,
+    "solvedCount": 855,
+    "attemptCount": 1110,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 38,
@@ -7684,7 +7684,7 @@
       "cover": 4660098414133
     },
     "solvedCount": 3533,
-    "attemptCount": 6398,
+    "attemptCount": 6401,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6,
@@ -7784,7 +7784,7 @@
       "cover": 1735058494121
     },
     "solvedCount": 1070,
-    "attemptCount": 1546,
+    "attemptCount": 1547,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 53,
@@ -8146,8 +8146,8 @@
       "avatar": 2425294393314,
       "cover": 2003445440614
     },
-    "solvedCount": 914,
-    "attemptCount": 1202,
+    "solvedCount": 915,
+    "attemptCount": 1203,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 60,
@@ -8195,8 +8195,8 @@
       "publicHandle": "821ebd4bea99150259b15185278380d3255843",
       "avatar": 16629535987834
     },
-    "solvedCount": 810,
-    "attemptCount": 1781,
+    "solvedCount": 811,
+    "attemptCount": 1782,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 59,
@@ -8248,8 +8248,8 @@
       "pseudo": "dogther",
       "publicHandle": "4c92354c7dd1e9489c82ddc9b7d23e6d4463011"
     },
-    "solvedCount": 252,
-    "attemptCount": 432,
+    "solvedCount": 253,
+    "attemptCount": 433,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2,
@@ -8333,8 +8333,8 @@
       "avatar": 30030005277104,
       "cover": 30030147418943
     },
-    "solvedCount": 717,
-    "attemptCount": 1222,
+    "solvedCount": 718,
+    "attemptCount": 1223,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 201,
@@ -8396,7 +8396,7 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 2236,
+    "solvedCount": 2237,
     "attemptCount": 3044,
     "xpPoints": 50,
     "feedback": {
@@ -8673,8 +8673,8 @@
       "avatar": 5866231841227,
       "cover": 5866328638507
     },
-    "solvedCount": 808,
-    "attemptCount": 1136,
+    "solvedCount": 810,
+    "attemptCount": 1138,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 218,
@@ -8707,8 +8707,8 @@
       "pseudo": "JBM",
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
-    "solvedCount": 718,
-    "attemptCount": 1014,
+    "solvedCount": 719,
+    "attemptCount": 1015,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 219,
@@ -8766,10 +8766,10 @@
     "doneAchievementCount": 0,
     "forumLink": "hypersonic-puzzle-discussion/2193",
     "chatRoom": "hypersonic",
-    "total": 3343,
-    "globalTotal": 3343,
+    "total": 3345,
+    "globalTotal": 3345,
     "solvedCount": 0,
-    "attemptCount": 6140,
+    "attemptCount": 6142,
     "feedback": {
       "feedbackId": 220,
       "feedbacks": [
@@ -8849,8 +8849,8 @@
       "avatar": 4367050238110,
       "cover": 8187822376146
     },
-    "solvedCount": 258,
-    "attemptCount": 443,
+    "solvedCount": 259,
+    "attemptCount": 444,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 221,
@@ -9086,8 +9086,8 @@
       "avatar": 10307803807981,
       "cover": 8272966048611
     },
-    "solvedCount": 833,
-    "attemptCount": 1441,
+    "solvedCount": 834,
+    "attemptCount": 1442,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 226,
@@ -9135,7 +9135,7 @@
       "avatar": 9552765056380,
       "cover": 9634123381295
     },
-    "solvedCount": 329,
+    "solvedCount": 330,
     "attemptCount": 905,
     "xpPoints": 50,
     "feedback": {
@@ -9216,7 +9216,7 @@
       "pseudo": "JBM",
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
-    "solvedCount": 3311,
+    "solvedCount": 3312,
     "attemptCount": 4541,
     "xpPoints": 50,
     "feedback": {
@@ -9386,8 +9386,8 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 2444,
-    "attemptCount": 3511,
+    "solvedCount": 2446,
+    "attemptCount": 3513,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 233,
@@ -9446,8 +9446,8 @@
       "pseudo": "JBM",
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
-    "solvedCount": 2529,
-    "attemptCount": 3448,
+    "solvedCount": 2531,
+    "attemptCount": 3449,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 234,
@@ -9456,7 +9456,7 @@
         16,
         82,
         152,
-        273
+        274
       ]
     },
     "topics": [
@@ -9568,8 +9568,8 @@
       "avatar": 1833057833457,
       "cover": 1833091174140
     },
-    "solvedCount": 1926,
-    "attemptCount": 2756,
+    "solvedCount": 1927,
+    "attemptCount": 2757,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 237,
@@ -9650,8 +9650,8 @@
     "doneAchievementCount": 0,
     "forumLink": "winamax-sponsored-contest-golf-puzzle-discussion/2470",
     "chatRoom": "",
-    "solvedCount": 2161,
-    "attemptCount": 11613,
+    "solvedCount": 2165,
+    "attemptCount": 11620,
     "xpPoints": 250,
     "feedback": {
       "feedbackId": 1612,
@@ -9660,7 +9660,7 @@
         2,
         10,
         46,
-        189
+        190
       ]
     },
     "topics": [
@@ -9757,8 +9757,8 @@
       "avatar": 52487021619351,
       "cover": 1775987663405
     },
-    "solvedCount": 96,
-    "attemptCount": 444,
+    "solvedCount": 97,
+    "attemptCount": 445,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 241,
@@ -9820,17 +9820,17 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 3210,
-    "attemptCount": 4356,
+    "solvedCount": 3217,
+    "attemptCount": 4373,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 242,
       "feedbacks": [
-        5,
+        7,
         8,
         57,
         243,
-        599
+        601
       ]
     },
     "topics": [
@@ -9895,8 +9895,8 @@
       "publicHandle": "6f5bc9831713526e19561bddd96a9ab69291961",
       "avatar": 8734602753318
     },
-    "solvedCount": 2830,
-    "attemptCount": 3313,
+    "solvedCount": 2831,
+    "attemptCount": 3314,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 243,
@@ -9950,8 +9950,8 @@
       "avatar": 9552765056380,
       "cover": 9634123381295
     },
-    "solvedCount": 1389,
-    "attemptCount": 1811,
+    "solvedCount": 1392,
+    "attemptCount": 1814,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 244,
@@ -10051,10 +10051,10 @@
     "doneAchievementCount": 0,
     "forumLink": "fantastic-bits-aka-broomstick-flyers-puzzle-discussion/2413",
     "chatRoom": "fantastic-bits",
-    "total": 4112,
-    "globalTotal": 4112,
+    "total": 4113,
+    "globalTotal": 4113,
     "solvedCount": 0,
-    "attemptCount": 6395,
+    "attemptCount": 6396,
     "feedback": {
       "feedbackId": 247,
       "feedbacks": [
@@ -10147,8 +10147,8 @@
       "avatar": 4367050238110,
       "cover": 8187822376146
     },
-    "solvedCount": 367,
-    "attemptCount": 568,
+    "solvedCount": 368,
+    "attemptCount": 569,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 249,
@@ -10500,8 +10500,8 @@
       "avatar": 29407964997640,
       "cover": 2508945958620
     },
-    "solvedCount": 541,
-    "attemptCount": 964,
+    "solvedCount": 542,
+    "attemptCount": 965,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 380,
@@ -10533,10 +10533,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "ghost-in-the-cell-aka-cyborg-uprising-puzzle-discussion/2644",
-    "total": 7471,
-    "globalTotal": 7471,
+    "total": 7473,
+    "globalTotal": 7473,
     "solvedCount": 0,
-    "attemptCount": 12579,
+    "attemptCount": 12582,
     "feedback": {
       "feedbackId": 430,
       "feedbacks": [
@@ -10669,7 +10669,7 @@
       "cover": 1869151336464
     },
     "solvedCount": 623,
-    "attemptCount": 1056,
+    "attemptCount": 1057,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 489,
@@ -10736,7 +10736,7 @@
       "avatar": 10307803807981,
       "cover": 8272966048611
     },
-    "solvedCount": 706,
+    "solvedCount": 707,
     "attemptCount": 1091,
     "xpPoints": 50,
     "feedback": {
@@ -10774,7 +10774,7 @@
       "cover": 1775987663405
     },
     "solvedCount": 189,
-    "attemptCount": 790,
+    "attemptCount": 791,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 499,
@@ -10910,8 +10910,8 @@
       "avatar": 15808915160175,
       "cover": 4579314798542
     },
-    "solvedCount": 654,
-    "attemptCount": 1029,
+    "solvedCount": 655,
+    "attemptCount": 1030,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 548,
@@ -10980,8 +10980,8 @@
       "avatar": 9870244569932,
       "cover": 6798329554273
     },
-    "solvedCount": 916,
-    "attemptCount": 1638,
+    "solvedCount": 917,
+    "attemptCount": 1639,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 566,
@@ -11253,8 +11253,8 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 1245,
-    "attemptCount": 2669,
+    "solvedCount": 1246,
+    "attemptCount": 2670,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 613,
@@ -11316,8 +11316,8 @@
       "avatar": 15808915160175,
       "cover": 4579314798542
     },
-    "solvedCount": 306,
-    "attemptCount": 730,
+    "solvedCount": 307,
+    "attemptCount": 731,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 625,
@@ -11349,10 +11349,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "coders-of-the-caribbean-aka-galleon-wars-puzzle-discussion/2843",
-    "total": 4815,
-    "globalTotal": 4815,
+    "total": 4821,
+    "globalTotal": 4821,
     "solvedCount": 0,
-    "attemptCount": 7745,
+    "attemptCount": 7750,
     "feedback": {
       "feedbackId": 660,
       "feedbacks": [
@@ -11501,8 +11501,8 @@
       "avatar": 116233148488094,
       "cover": 16372034826405
     },
-    "solvedCount": 1327,
-    "attemptCount": 1664,
+    "solvedCount": 1329,
+    "attemptCount": 1666,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 703,
@@ -11552,7 +11552,7 @@
       "avatar": 4210501575817,
       "cover": 4256317302946
     },
-    "solvedCount": 122,
+    "solvedCount": 123,
     "attemptCount": 369,
     "xpPoints": 50,
     "feedback": {
@@ -11616,8 +11616,8 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 158,
-    "attemptCount": 536,
+    "solvedCount": 159,
+    "attemptCount": 537,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1445,
@@ -11682,8 +11682,8 @@
     "doneAchievementCount": 0,
     "forumLink": "wondev-woman-previously-amazonial-puzzle-discussion/2987",
     "chatRoom": "wondev-woman",
-    "total": 1994,
-    "globalTotal": 1994,
+    "total": 1993,
+    "globalTotal": 1993,
     "solvedCount": 0,
     "attemptCount": 3913,
     "feedback": {
@@ -11820,8 +11820,8 @@
       "avatar": 13640687952038,
       "cover": 13787100050992
     },
-    "solvedCount": 696,
-    "attemptCount": 959,
+    "solvedCount": 697,
+    "attemptCount": 960,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1559,
@@ -11883,8 +11883,8 @@
       "avatar": 5529883558499,
       "cover": 5720695198457
     },
-    "solvedCount": 512,
-    "attemptCount": 686,
+    "solvedCount": 513,
+    "attemptCount": 687,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1560,
@@ -11933,15 +11933,15 @@
       "avatar": 4210501575817,
       "cover": 4256317302946
     },
-    "solvedCount": 690,
-    "attemptCount": 1407,
+    "solvedCount": 693,
+    "attemptCount": 1410,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1563,
       "feedbacks": [
         4,
         3,
-        15,
+        16,
         59,
         148
       ]
@@ -12002,8 +12002,8 @@
       "avatar": 4210501575817,
       "cover": 4256317302946
     },
-    "solvedCount": 609,
-    "attemptCount": 1149,
+    "solvedCount": 611,
+    "attemptCount": 1151,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1564,
@@ -12012,7 +12012,7 @@
         4,
         8,
         38,
-        119
+        120
       ]
     },
     "topics": [
@@ -12223,8 +12223,8 @@
       "avatar": 6122501543829,
       "cover": 9568807980544
     },
-    "solvedCount": 716,
-    "attemptCount": 972,
+    "solvedCount": 717,
+    "attemptCount": 973,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1569,
@@ -12278,8 +12278,8 @@
       "publicHandle": "49316ef39de457534b015cbb79097fb25426222",
       "avatar": 14840652021604
     },
-    "solvedCount": 12756,
-    "attemptCount": 15610,
+    "solvedCount": 12757,
+    "attemptCount": 15611,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1570,
@@ -12288,7 +12288,7 @@
         37,
         266,
         831,
-        1635
+        1636
       ]
     },
     "topics": [
@@ -12379,8 +12379,8 @@
       "publicHandle": "49316ef39de457534b015cbb79097fb25426222",
       "avatar": 14840652021604
     },
-    "solvedCount": 5981,
-    "attemptCount": 7323,
+    "solvedCount": 5982,
+    "attemptCount": 7324,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1572,
@@ -12388,7 +12388,7 @@
         15,
         28,
         132,
-        380,
+        381,
         712
       ]
     },
@@ -12429,8 +12429,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 518,
-    "attemptCount": 986,
+    "solvedCount": 519,
+    "attemptCount": 988,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1573,
@@ -12574,8 +12574,8 @@
       "pseudo": "brexe",
       "publicHandle": "0545fa75af0c35d6a386dd7d2d4411600857141"
     },
-    "solvedCount": 849,
-    "attemptCount": 1103,
+    "solvedCount": 851,
+    "attemptCount": 1104,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1576,
@@ -12623,8 +12623,8 @@
       "avatar": 35463269744021,
       "cover": 11467670580041
     },
-    "solvedCount": 556,
-    "attemptCount": 781,
+    "solvedCount": 557,
+    "attemptCount": 782,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1577,
@@ -12763,8 +12763,8 @@
       "avatar": 17500773502453,
       "cover": 14921221988632
     },
-    "solvedCount": 484,
-    "attemptCount": 599,
+    "solvedCount": 486,
+    "attemptCount": 601,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1581,
@@ -12985,8 +12985,8 @@
       "avatar": 57032502077757,
       "cover": 33829204642904
     },
-    "solvedCount": 1871,
-    "attemptCount": 3207,
+    "solvedCount": 1872,
+    "attemptCount": 3208,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1585,
@@ -13036,10 +13036,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "mean-max-suggestions/24920/6",
-    "total": 3183,
-    "globalTotal": 3183,
+    "total": 3184,
+    "globalTotal": 3184,
     "solvedCount": 0,
-    "attemptCount": 6453,
+    "attemptCount": 6454,
     "feedback": {
       "feedbackId": 1586,
       "feedbacks": [
@@ -13111,8 +13111,8 @@
       "avatar": 22969543379593,
       "cover": 1826694291243
     },
-    "solvedCount": 2073,
-    "attemptCount": 2558,
+    "solvedCount": 2074,
+    "attemptCount": 2559,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1587,
@@ -13175,8 +13175,8 @@
       "avatar": 57032502077757,
       "cover": 33829204642904
     },
-    "solvedCount": 254,
-    "attemptCount": 509,
+    "solvedCount": 255,
+    "attemptCount": 510,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1588,
@@ -13289,8 +13289,8 @@
       "avatar": 24527192100984,
       "cover": 34393828481597
     },
-    "solvedCount": 585,
-    "attemptCount": 946,
+    "solvedCount": 586,
+    "attemptCount": 947,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1591,
@@ -13440,8 +13440,8 @@
       "avatar": 57032502077757,
       "cover": 33829204642904
     },
-    "solvedCount": 808,
-    "attemptCount": 1510,
+    "solvedCount": 809,
+    "attemptCount": 1512,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1594,
@@ -13644,8 +13644,8 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 692,
-    "attemptCount": 1501,
+    "solvedCount": 694,
+    "attemptCount": 1502,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1598,
@@ -13768,7 +13768,7 @@
       "cover": 1735058494121
     },
     "solvedCount": 926,
-    "attemptCount": 1644,
+    "attemptCount": 1646,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1600,
@@ -13893,8 +13893,8 @@
       "avatar": 17500773502453,
       "cover": 14921221988632
     },
-    "solvedCount": 715,
-    "attemptCount": 1206,
+    "solvedCount": 717,
+    "attemptCount": 1207,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1602,
@@ -13927,10 +13927,10 @@
     "doneAchievementCount": 0,
     "forumLink": "code4life-feedback-strategy/2835",
     "chatRoom": "code4life",
-    "total": 4827,
-    "globalTotal": 4827,
+    "total": 4830,
+    "globalTotal": 4830,
     "solvedCount": 0,
-    "attemptCount": 11717,
+    "attemptCount": 11731,
     "feedback": {
       "feedbackId": 1603,
       "feedbacks": [
@@ -14004,8 +14004,8 @@
       "avatar": 57032502077757,
       "cover": 33829204642904
     },
-    "solvedCount": 874,
-    "attemptCount": 1588,
+    "solvedCount": 875,
+    "attemptCount": 1589,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1604,
@@ -14126,10 +14126,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "ultimate-tic-tac-toe-puzzle-discussion/22616",
-    "total": 9832,
-    "globalTotal": 9832,
+    "total": 9838,
+    "globalTotal": 9838,
     "solvedCount": 0,
-    "attemptCount": 16427,
+    "attemptCount": 16436,
     "feedback": {
       "feedbackId": 1607,
       "feedbacks": [
@@ -14204,7 +14204,7 @@
       "cover": 14921221988632
     },
     "solvedCount": 145,
-    "attemptCount": 352,
+    "attemptCount": 353,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1608,
@@ -14236,10 +14236,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "botters-of-the-galaxy-multiplayer-challenge-discussion/23895",
-    "total": 1270,
-    "globalTotal": 1270,
+    "total": 1271,
+    "globalTotal": 1271,
     "solvedCount": 0,
-    "attemptCount": 2213,
+    "attemptCount": 2215,
     "feedback": {
       "feedbackId": 1609,
       "feedbacks": [
@@ -14306,10 +14306,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "code-royale-puzzle-discussion/34688",
-    "total": 6133,
-    "globalTotal": 6133,
+    "total": 6138,
+    "globalTotal": 6138,
     "solvedCount": 0,
-    "attemptCount": 12380,
+    "attemptCount": 12391,
     "feedback": {
       "feedbackId": 1610,
       "feedbacks": [
@@ -14461,8 +14461,8 @@
       "publicHandle": "2ad5cc4919ed368f16de4aecd570e21e477551",
       "avatar": 17785582865119
     },
-    "solvedCount": 209,
-    "attemptCount": 475,
+    "solvedCount": 211,
+    "attemptCount": 477,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1616,
@@ -14823,8 +14823,8 @@
       "avatar": 106268221946596,
       "cover": 106268306958656
     },
-    "solvedCount": 7537,
-    "attemptCount": 10952,
+    "solvedCount": 7538,
+    "attemptCount": 10953,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1627,
@@ -14953,8 +14953,8 @@
       "avatar": 14499107805962,
       "cover": 121015421783067
     },
-    "solvedCount": 121,
-    "attemptCount": 191,
+    "solvedCount": 122,
+    "attemptCount": 192,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1630,
@@ -15025,8 +15025,8 @@
       "avatar": 13299201749477,
       "cover": 13675935248560
     },
-    "solvedCount": 674,
-    "attemptCount": 941,
+    "solvedCount": 675,
+    "attemptCount": 942,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1631,
@@ -15085,8 +15085,8 @@
       "pseudo": "lmat",
       "publicHandle": "ddb6435f9201901ee744bd42903363b13306762"
     },
-    "solvedCount": 339,
-    "attemptCount": 411,
+    "solvedCount": 340,
+    "attemptCount": 412,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1632,
@@ -15214,8 +15214,8 @@
       "publicHandle": "503a978674e857c1bee16389b6232e445068261",
       "avatar": 7383620750883
     },
-    "solvedCount": 1985,
-    "attemptCount": 2628,
+    "solvedCount": 1986,
+    "attemptCount": 2629,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1634,
@@ -15370,8 +15370,8 @@
       "avatar": 5020626234049,
       "cover": 9383296864308
     },
-    "solvedCount": 533,
-    "attemptCount": 1217,
+    "solvedCount": 534,
+    "attemptCount": 1218,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1637,
@@ -15406,8 +15406,8 @@
       "avatar": 3105645724538,
       "cover": 3105679780011
     },
-    "solvedCount": 294,
-    "attemptCount": 759,
+    "solvedCount": 295,
+    "attemptCount": 760,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1638,
@@ -15535,10 +15535,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "code-of-kutulu-puzzle-discussion/43281",
-    "total": 2248,
-    "globalTotal": 2248,
+    "total": 2250,
+    "globalTotal": 2250,
     "solvedCount": 0,
-    "attemptCount": 4658,
+    "attemptCount": 4660,
     "feedback": {
       "feedbackId": 1641,
       "feedbacks": [
@@ -15593,7 +15593,7 @@
       "cover": 1775987663405
     },
     "solvedCount": 119,
-    "attemptCount": 283,
+    "attemptCount": 285,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1642,
@@ -15630,7 +15630,7 @@
       "cover": 1775987663405
     },
     "solvedCount": 92,
-    "attemptCount": 274,
+    "attemptCount": 275,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1643,
@@ -15663,8 +15663,8 @@
       "pseudo": "JBM",
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
-    "solvedCount": 913,
-    "attemptCount": 1442,
+    "solvedCount": 914,
+    "attemptCount": 1443,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1644,
@@ -15729,8 +15729,8 @@
       "publicHandle": "53b30107f3d9f68d3d1a95e98ce51c7e880225",
       "avatar": 8063098456757
     },
-    "solvedCount": 110,
-    "attemptCount": 377,
+    "solvedCount": 112,
+    "attemptCount": 379,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1645,
@@ -15835,7 +15835,7 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 180,
+    "solvedCount": 181,
     "attemptCount": 438,
     "xpPoints": 50,
     "feedback": {
@@ -15939,8 +15939,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 15962,
-    "attemptCount": 22816,
+    "solvedCount": 15971,
+    "attemptCount": 22833,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1650,
@@ -15948,8 +15948,8 @@
         16,
         31,
         207,
-        1052,
-        2547
+        1053,
+        2550
       ]
     },
     "topics": [
@@ -15993,10 +15993,10 @@
     "doneAchievementCount": 0,
     "forumLink": "legends-of-code-magic-puzzle-discussion/54294",
     "chatRoom": "legends_of_code_magic",
-    "total": 3270,
-    "globalTotal": 3270,
+    "total": 3273,
+    "globalTotal": 3273,
     "solvedCount": 0,
-    "attemptCount": 7824,
+    "attemptCount": 7829,
     "feedback": {
       "feedbackId": 1651,
       "feedbacks": [
@@ -16123,8 +16123,8 @@
       "avatar": 18798469788923,
       "cover": 17076933974801
     },
-    "solvedCount": 428,
-    "attemptCount": 497,
+    "solvedCount": 429,
+    "attemptCount": 498,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1653,
@@ -16214,8 +16214,8 @@
       "publicHandle": "9191c8e25f6aff658380730d7b826ff23929072",
       "avatar": 20298274793776
     },
-    "solvedCount": 562,
-    "attemptCount": 1010,
+    "solvedCount": 563,
+    "attemptCount": 1011,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1655,
@@ -16320,8 +16320,8 @@
       "avatar": 16542412157988,
       "cover": 12975896340891
     },
-    "solvedCount": 1146,
-    "attemptCount": 3134,
+    "solvedCount": 1147,
+    "attemptCount": 3135,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1657,
@@ -16369,8 +16369,8 @@
       "avatar": 17321371685533,
       "cover": 17321419238385
     },
-    "solvedCount": 824,
-    "attemptCount": 1115,
+    "solvedCount": 826,
+    "attemptCount": 1117,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1658,
@@ -16438,8 +16438,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 3029,
-    "attemptCount": 3649,
+    "solvedCount": 3030,
+    "attemptCount": 3650,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1659,
@@ -16509,7 +16509,7 @@
         22,
         12,
         131,
-        261,
+        263,
         446
       ]
     },
@@ -16684,8 +16684,8 @@
       "publicHandle": "3b034ff8e396772b3271686d470b78bd9552082",
       "avatar": 21191945710888
     },
-    "solvedCount": 10406,
-    "attemptCount": 13555,
+    "solvedCount": 10410,
+    "attemptCount": 13561,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1664,
@@ -16815,8 +16815,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 1367,
-    "attemptCount": 2207,
+    "solvedCount": 1368,
+    "attemptCount": 2208,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1666,
@@ -16891,7 +16891,7 @@
       "cover": 4802137848767
     },
     "solvedCount": 126,
-    "attemptCount": 500,
+    "attemptCount": 501,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1667,
@@ -17056,10 +17056,10 @@
     "doneAchievementCount": 0,
     "forumLink": "a-craft-puzzle-discussion/62927",
     "chatRoom": "astarcraft",
-    "total": 2199,
-    "globalTotal": 2199,
-    "solvedCount": 2254,
-    "attemptCount": 4291,
+    "total": 2201,
+    "globalTotal": 2201,
+    "solvedCount": 2256,
+    "attemptCount": 4294,
     "feedback": {
       "feedbackId": 1670,
       "feedbacks": [
@@ -17172,7 +17172,7 @@
       "avatar": 10207929641393
     },
     "solvedCount": 1009,
-    "attemptCount": 1383,
+    "attemptCount": 1384,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1672,
@@ -17220,15 +17220,15 @@
       "avatar": 22722418380787,
       "cover": 22722446499079
     },
-    "solvedCount": 2158,
-    "attemptCount": 2789,
+    "solvedCount": 2159,
+    "attemptCount": 2790,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1673,
       "feedbacks": [
         8,
         11,
-        54,
+        55,
         202,
         291
       ]
@@ -17479,8 +17479,8 @@
       "avatar": 14505336358731,
       "cover": 14542669807480
     },
-    "solvedCount": 656,
-    "attemptCount": 1158,
+    "solvedCount": 657,
+    "attemptCount": 1159,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1679,
@@ -17526,10 +17526,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "xmas-rush-puzzle-discussion/203202",
-    "total": 833,
-    "globalTotal": 833,
+    "total": 835,
+    "globalTotal": 835,
     "solvedCount": 0,
-    "attemptCount": 1871,
+    "attemptCount": 1873,
     "feedback": {
       "feedbackId": 1681,
       "feedbacks": [
@@ -17607,8 +17607,8 @@
       "avatar": 121108445695421,
       "cover": 23804854990134
     },
-    "solvedCount": 4319,
-    "attemptCount": 4838,
+    "solvedCount": 4320,
+    "attemptCount": 4839,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1682,
@@ -17773,7 +17773,7 @@
       "avatar": 42045341826591
     },
     "solvedCount": 2200,
-    "attemptCount": 3388,
+    "attemptCount": 3390,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1685,
@@ -17872,8 +17872,8 @@
       "avatar": 52730426530429,
       "cover": 24104390477551
     },
-    "solvedCount": 578,
-    "attemptCount": 827,
+    "solvedCount": 579,
+    "attemptCount": 829,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1687,
@@ -17968,8 +17968,8 @@
       "avatar": 11911528647474,
       "cover": 23895974876164
     },
-    "solvedCount": 104,
-    "attemptCount": 327,
+    "solvedCount": 105,
+    "attemptCount": 328,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1689,
@@ -17978,7 +17978,7 @@
         0,
         2,
         8,
-        27
+        28
       ]
     },
     "topics": [
@@ -18170,8 +18170,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-bender-episode-4/84756",
-    "total": 402,
-    "globalTotal": 402,
+    "total": 405,
+    "globalTotal": 405,
     "contributor": {
       "userId": 1500515,
       "pseudo": "eulerscheZahl",
@@ -18179,8 +18179,8 @@
       "avatar": 43135502422075,
       "cover": 26120069129738
     },
-    "solvedCount": 126,
-    "attemptCount": 1606,
+    "solvedCount": 128,
+    "attemptCount": 1609,
     "feedback": {
       "feedbackId": 1692,
       "feedbacks": [
@@ -18188,7 +18188,7 @@
         1,
         1,
         6,
-        53
+        54
       ]
     },
     "optimCriteriaId": "Points",
@@ -18340,10 +18340,10 @@
     "doneAchievementCount": 0,
     "forumLink": "unary-code-golf-puzzle-discussion/203204",
     "chatRoom": "chuck_norris_code_golf",
-    "total": 10590,
-    "globalTotal": 10590,
-    "solvedCount": 7686,
-    "attemptCount": 12642,
+    "total": 10599,
+    "globalTotal": 10599,
+    "solvedCount": 7692,
+    "attemptCount": 12658,
     "feedback": {
       "feedbackId": 1695,
       "feedbacks": [
@@ -18351,7 +18351,7 @@
         22,
         152,
         486,
-        1073
+        1075
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -18426,8 +18426,8 @@
       "avatar": 52730426530429,
       "cover": 24104390477551
     },
-    "solvedCount": 7903,
-    "attemptCount": 10963,
+    "solvedCount": 7904,
+    "attemptCount": 10964,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1696,
@@ -18576,8 +18576,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 3663,
-    "attemptCount": 4936,
+    "solvedCount": 3665,
+    "attemptCount": 4938,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1700,
@@ -18586,7 +18586,7 @@
         9,
         98,
         246,
-        444
+        445
       ]
     },
     "topics": [
@@ -18768,14 +18768,14 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-yavalath/93192",
-    "total": 210,
-    "globalTotal": 210,
+    "total": 211,
+    "globalTotal": 211,
     "contributor": {
       "userId": 3217628,
       "publicHandle": "2367a0a46aa85db2b3707353b69d4b278267123"
     },
     "solvedCount": 0,
-    "attemptCount": 349,
+    "attemptCount": 350,
     "feedback": {
       "feedbackId": 1704,
       "feedbacks": [
@@ -18846,10 +18846,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "code-a-la-mode-puzzle-discussion/93986",
-    "total": 2438,
-    "globalTotal": 2438,
+    "total": 2448,
+    "globalTotal": 2448,
     "solvedCount": 0,
-    "attemptCount": 5802,
+    "attemptCount": 5821,
     "feedback": {
       "feedbackId": 1705,
       "feedbacks": [
@@ -18940,7 +18940,7 @@
       "cover": 34652142691381
     },
     "solvedCount": 395,
-    "attemptCount": 568,
+    "attemptCount": 569,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1706,
@@ -19001,8 +19001,8 @@
       "avatar": 2925297592678,
       "cover": 2925108018824
     },
-    "solvedCount": 215,
-    "attemptCount": 1365,
+    "solvedCount": 218,
+    "attemptCount": 1366,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1707,
@@ -19064,7 +19064,7 @@
       "cover": 1971438243440
     },
     "solvedCount": 144,
-    "attemptCount": 753,
+    "attemptCount": 754,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1708,
@@ -19289,8 +19289,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-cultist-wars/98099",
-    "total": 361,
-    "globalTotal": 361,
+    "total": 362,
+    "globalTotal": 362,
     "contributor": {
       "userId": 2114947,
       "pseudo": "Nixerrr",
@@ -19299,7 +19299,7 @@
       "cover": 29704789700783
     },
     "solvedCount": 0,
-    "attemptCount": 840,
+    "attemptCount": 841,
     "feedback": {
       "feedbackId": 1712,
       "feedbacks": [
@@ -19362,7 +19362,7 @@
       "cover": 21056434843597
     },
     "solvedCount": 242,
-    "attemptCount": 801,
+    "attemptCount": 802,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1713,
@@ -19417,8 +19417,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-bit-runner-2048/98861",
-    "total": 329,
-    "globalTotal": 329,
+    "total": 330,
+    "globalTotal": 330,
     "contributor": {
       "userId": 1378958,
       "pseudo": "Illedan",
@@ -19427,7 +19427,7 @@
       "cover": 26389141405401
     },
     "solvedCount": 0,
-    "attemptCount": 669,
+    "attemptCount": 671,
     "feedback": {
       "feedbackId": 1714,
       "feedbacks": [
@@ -19609,8 +19609,8 @@
       "avatar": 30069480173944,
       "cover": 30075222090945
     },
-    "solvedCount": 122,
-    "attemptCount": 239,
+    "solvedCount": 124,
+    "attemptCount": 241,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1717,
@@ -19672,7 +19672,7 @@
       "cover": 26189854101470
     },
     "solvedCount": 144,
-    "attemptCount": 462,
+    "attemptCount": 463,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1718,
@@ -19970,8 +19970,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-a-code-of-ice-and-fire/107292",
-    "total": 887,
-    "globalTotal": 887,
+    "total": 888,
+    "globalTotal": 888,
     "contributor": {
       "userId": 1049935,
       "pseudo": "Azkellas",
@@ -19979,7 +19979,7 @@
       "avatar": 20993257292354
     },
     "solvedCount": 0,
-    "attemptCount": 1187,
+    "attemptCount": 1188,
     "feedback": {
       "feedbackId": 1731,
       "feedbacks": [
@@ -20196,8 +20196,8 @@
       "pseudo": "PolyB",
       "publicHandle": "508bb9db8b154bae1c6e5b8c2db49982183439"
     },
-    "solvedCount": 12320,
-    "attemptCount": 17641,
+    "solvedCount": 12326,
+    "attemptCount": 17648,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1736,
@@ -20266,7 +20266,7 @@
       "cover": 16334391729174
     },
     "solvedCount": 148,
-    "attemptCount": 606,
+    "attemptCount": 607,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1737,
@@ -20350,7 +20350,7 @@
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
     "solvedCount": 836,
-    "attemptCount": 1627,
+    "attemptCount": 1628,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1739,
@@ -20436,7 +20436,7 @@
       "avatar": 85347681949465,
       "cover": 30650642800738
     },
-    "solvedCount": 2017,
+    "solvedCount": 2019,
     "attemptCount": 4009,
     "xpPoints": 50,
     "feedback": {
@@ -20445,8 +20445,8 @@
         7,
         6,
         29,
-        85,
-        433
+        86,
+        434
       ]
     },
     "topics": [
@@ -20552,8 +20552,8 @@
       "pseudo": "JBM",
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
-    "solvedCount": 826,
-    "attemptCount": 1531,
+    "solvedCount": 827,
+    "attemptCount": 1532,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1743,
@@ -20608,8 +20608,8 @@
       "avatar": 46459187054094,
       "cover": 46459140055345
     },
-    "solvedCount": 1220,
-    "attemptCount": 1670,
+    "solvedCount": 1222,
+    "attemptCount": 1671,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1746,
@@ -20617,7 +20617,7 @@
         5,
         9,
         22,
-        78,
+        79,
         177
       ]
     },
@@ -20657,8 +20657,8 @@
       "avatar": 21782473296749,
       "cover": 23537399448164
     },
-    "solvedCount": 847,
-    "attemptCount": 912,
+    "solvedCount": 848,
+    "attemptCount": 913,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1747,
@@ -20867,7 +20867,7 @@
       "cover": 46459140055345
     },
     "solvedCount": 2491,
-    "attemptCount": 4207,
+    "attemptCount": 4208,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1750,
@@ -20904,7 +20904,7 @@
       "cover": 16905905262068
     },
     "solvedCount": 5065,
-    "attemptCount": 7105,
+    "attemptCount": 7106,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1751,
@@ -20958,16 +20958,16 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 2679,
+    "solvedCount": 2680,
     "attemptCount": 5178,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1752,
       "feedbacks": [
         14,
-        17,
+        18,
         49,
-        184,
+        185,
         486
       ]
     },
@@ -21171,7 +21171,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 320,
-    "attemptCount": 1455,
+    "attemptCount": 1461,
     "feedback": {
       "feedbackId": 1755,
       "feedbacks": [
@@ -21227,7 +21227,7 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 4750,
+    "solvedCount": 4751,
     "attemptCount": 6711,
     "xpPoints": 50,
     "feedback": {
@@ -21353,8 +21353,8 @@
       "avatar": 26083283518959,
       "cover": 26814726882948
     },
-    "solvedCount": 302,
-    "attemptCount": 1061,
+    "solvedCount": 303,
+    "attemptCount": 1065,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1758,
@@ -21363,7 +21363,7 @@
         2,
         7,
         18,
-        73
+        74
       ]
     },
     "topics": [
@@ -21607,8 +21607,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 315,
-    "attemptCount": 662,
+    "solvedCount": 316,
+    "attemptCount": 663,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1762,
@@ -21707,7 +21707,7 @@
       "cover": 23171865265206
     },
     "solvedCount": 230,
-    "attemptCount": 412,
+    "attemptCount": 413,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1764,
@@ -21770,8 +21770,8 @@
       "avatar": 26750785092441,
       "cover": 27032383437051
     },
-    "solvedCount": 639,
-    "attemptCount": 1183,
+    "solvedCount": 640,
+    "attemptCount": 1184,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1766,
@@ -21882,8 +21882,8 @@
       "avatar": 11911528647474,
       "cover": 23895974876164
     },
-    "solvedCount": 571,
-    "attemptCount": 1005,
+    "solvedCount": 573,
+    "attemptCount": 1006,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1769,
@@ -21891,7 +21891,7 @@
         5,
         1,
         11,
-        56,
+        57,
         168
       ]
     },
@@ -21995,8 +21995,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 6810,
-    "attemptCount": 11985,
+    "solvedCount": 6811,
+    "attemptCount": 11987,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1773,
@@ -22203,7 +22203,7 @@
       "cover": 16905905262068
     },
     "solvedCount": 411,
-    "attemptCount": 1027,
+    "attemptCount": 1028,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1776,
@@ -22370,8 +22370,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 671,
-    "attemptCount": 1332,
+    "solvedCount": 672,
+    "attemptCount": 1335,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1779,
@@ -22687,8 +22687,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-onitama/144170",
-    "total": 439,
-    "globalTotal": 439,
+    "total": 441,
+    "globalTotal": 441,
     "contributor": {
       "userId": 1500515,
       "pseudo": "eulerscheZahl",
@@ -22697,7 +22697,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 0,
-    "attemptCount": 794,
+    "attemptCount": 796,
     "feedback": {
       "feedbackId": 1784,
       "feedbacks": [
@@ -22760,7 +22760,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 25,
-    "attemptCount": 539,
+    "attemptCount": 540,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1786,
@@ -22834,8 +22834,8 @@
       "publicHandle": "8033033dd617ddb3122af1354f4446bb9004653",
       "avatar": 44751789808331
     },
-    "solvedCount": 5854,
-    "attemptCount": 7463,
+    "solvedCount": 5856,
+    "attemptCount": 7466,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1789,
@@ -22844,7 +22844,7 @@
         15,
         118,
         438,
-        825
+        826
       ]
     },
     "topics": [
@@ -22928,8 +22928,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-tower-dereference/150708",
-    "total": 370,
-    "globalTotal": 370,
+    "total": 371,
+    "globalTotal": 371,
     "contributor": {
       "userId": 1500515,
       "pseudo": "eulerscheZahl",
@@ -22938,7 +22938,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 0,
-    "attemptCount": 1076,
+    "attemptCount": 1080,
     "feedback": {
       "feedbackId": 1791,
       "feedbacks": [
@@ -23068,8 +23068,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 3847,
-    "attemptCount": 5375,
+    "solvedCount": 3849,
+    "attemptCount": 5377,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1793,
@@ -23078,7 +23078,7 @@
         12,
         61,
         200,
-        439
+        440
       ]
     },
     "topics": [
@@ -23110,8 +23110,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-number-shifting/152425",
-    "total": 870,
-    "globalTotal": 870,
+    "total": 876,
+    "globalTotal": 876,
     "contributor": {
       "userId": 1500515,
       "pseudo": "eulerscheZahl",
@@ -23119,8 +23119,8 @@
       "avatar": 43135502422075,
       "cover": 26120069129738
     },
-    "solvedCount": 857,
-    "attemptCount": 1832,
+    "solvedCount": 863,
+    "attemptCount": 1839,
     "feedback": {
       "feedbackId": 1794,
       "feedbacks": [
@@ -23150,8 +23150,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-twixt-pp/154662",
-    "total": 93,
-    "globalTotal": 93,
+    "total": 94,
+    "globalTotal": 94,
     "contributor": {
       "userId": 1489865,
       "pseudo": "EricSMSO",
@@ -23159,7 +23159,7 @@
       "avatar": 10005277870281
     },
     "solvedCount": 0,
-    "attemptCount": 222,
+    "attemptCount": 223,
     "feedback": {
       "feedbackId": 1795,
       "feedbacks": [
@@ -23360,8 +23360,8 @@
       "avatar": 44660101966182,
       "cover": 20864899700870
     },
-    "solvedCount": 1029,
-    "attemptCount": 1581,
+    "solvedCount": 1030,
+    "attemptCount": 1582,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1800,
@@ -23417,7 +23417,7 @@
       "cover": 33829204642904
     },
     "solvedCount": 145,
-    "attemptCount": 344,
+    "attemptCount": 345,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1801,
@@ -23615,8 +23615,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-bulls-and-cows-2/164149",
-    "total": 705,
-    "globalTotal": 705,
+    "total": 707,
+    "globalTotal": 707,
     "contributor": {
       "userId": 3533119,
       "pseudo": "wlesavo",
@@ -23624,7 +23624,7 @@
       "avatar": 44695284080274
     },
     "solvedCount": 352,
-    "attemptCount": 1533,
+    "attemptCount": 1536,
     "feedback": {
       "feedbackId": 1806,
       "feedbacks": [
@@ -23675,8 +23675,8 @@
       "avatar": 43656827983780,
       "cover": 64004320065964
     },
-    "solvedCount": 8463,
-    "attemptCount": 12726,
+    "solvedCount": 8468,
+    "attemptCount": 12734,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1807,
@@ -23735,10 +23735,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "crystal-rush-puzzle-discussion-previously-unleash-the-geek/167500",
-    "total": 3378,
-    "globalTotal": 3378,
+    "total": 3381,
+    "globalTotal": 3381,
     "solvedCount": 0,
-    "attemptCount": 5145,
+    "attemptCount": 5150,
     "feedback": {
       "feedbackId": 1808,
       "feedbacks": [
@@ -23966,17 +23966,17 @@
       "avatar": 9117321578046,
       "cover": 41971886386876
     },
-    "solvedCount": 2408,
-    "attemptCount": 5314,
+    "solvedCount": 2409,
+    "attemptCount": 5323,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1812,
       "feedbacks": [
         10,
         19,
-        78,
+        79,
         172,
-        347
+        348
       ]
     },
     "topics": [
@@ -24048,8 +24048,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 469,
-    "attemptCount": 968,
+    "solvedCount": 470,
+    "attemptCount": 969,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1813,
@@ -24111,10 +24111,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "ocean-of-code-puzzle-discussion/176028",
-    "total": 3119,
-    "globalTotal": 3119,
+    "total": 3121,
+    "globalTotal": 3121,
     "solvedCount": 0,
-    "attemptCount": 4817,
+    "attemptCount": 4821,
     "feedback": {
       "feedbackId": 1814,
       "feedbacks": [
@@ -24312,8 +24312,8 @@
       "avatar": 39693608946814,
       "cover": 39693685143960
     },
-    "solvedCount": 8916,
-    "attemptCount": 13673,
+    "solvedCount": 8917,
+    "attemptCount": 13681,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1818,
@@ -24376,7 +24376,7 @@
       "cover": 4663612331453
     },
     "solvedCount": 243,
-    "attemptCount": 751,
+    "attemptCount": 754,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1821,
@@ -24491,10 +24491,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "spring-challenge-2020-puzzle-discussion/184533",
-    "total": 7560,
-    "globalTotal": 7560,
+    "total": 7563,
+    "globalTotal": 7563,
     "solvedCount": 0,
-    "attemptCount": 13213,
+    "attemptCount": 13220,
     "feedback": {
       "feedbackId": 1823,
       "feedbacks": [
@@ -24580,8 +24580,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-search-race/184849",
-    "total": 1522,
-    "globalTotal": 1522,
+    "total": 1524,
+    "globalTotal": 1524,
     "contributor": {
       "userId": 1378958,
       "pseudo": "Illedan",
@@ -24589,8 +24589,8 @@
       "avatar": 16222515698472,
       "cover": 26389141405401
     },
-    "solvedCount": 1069,
-    "attemptCount": 2649,
+    "solvedCount": 1070,
+    "attemptCount": 2653,
     "feedback": {
       "feedbackId": 1824,
       "feedbacks": [
@@ -24915,8 +24915,8 @@
       "publicHandle": "5bbc0f4b299d3bb28410b96df8a45b607624692",
       "avatar": 22915430912225
     },
-    "solvedCount": 662,
-    "attemptCount": 1272,
+    "solvedCount": 663,
+    "attemptCount": 1273,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1843,
@@ -25037,8 +25037,8 @@
       "avatar": 68983084061211,
       "cover": 49681388010408
     },
-    "solvedCount": 987,
-    "attemptCount": 1499,
+    "solvedCount": 988,
+    "attemptCount": 1500,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1845,
@@ -25185,8 +25185,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-atari-go/185707",
-    "total": 175,
-    "globalTotal": 175,
+    "total": 176,
+    "globalTotal": 176,
     "contributor": {
       "userId": 1443538,
       "pseudo": "Tux4711",
@@ -25195,7 +25195,7 @@
       "cover": 4663612331453
     },
     "solvedCount": 0,
-    "attemptCount": 364,
+    "attemptCount": 365,
     "feedback": {
       "feedbackId": 1848,
       "feedbacks": [
@@ -25386,8 +25386,8 @@
       "userId": 257832,
       "publicHandle": "51cf3569a28219e695585f664d80a5b5238752"
     },
-    "solvedCount": 1897,
-    "attemptCount": 2883,
+    "solvedCount": 1898,
+    "attemptCount": 2884,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1851,
@@ -25495,8 +25495,8 @@
       "avatar": 16732569385856,
       "cover": 16641294081716
     },
-    "solvedCount": 80,
-    "attemptCount": 166,
+    "solvedCount": 81,
+    "attemptCount": 167,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1853,
@@ -25551,8 +25551,8 @@
       "avatar": 18908025938362,
       "cover": 19638365097585
     },
-    "solvedCount": 641,
-    "attemptCount": 1147,
+    "solvedCount": 642,
+    "attemptCount": 1148,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1854,
@@ -25608,7 +25608,7 @@
       "cover": 5689194399170
     },
     "solvedCount": 479,
-    "attemptCount": 1279,
+    "attemptCount": 1280,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1855,
@@ -25753,8 +25753,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-samegame/185879",
-    "total": 1000,
-    "globalTotal": 1000,
+    "total": 1004,
+    "globalTotal": 1004,
     "contributor": {
       "userId": 484004,
       "pseudo": "aCat",
@@ -25762,8 +25762,8 @@
       "avatar": 4210501575817,
       "cover": 4256317302946
     },
-    "solvedCount": 822,
-    "attemptCount": 1832,
+    "solvedCount": 823,
+    "attemptCount": 1837,
     "feedback": {
       "feedbackId": 1857,
       "feedbacks": [
@@ -25850,8 +25850,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 1983,
-    "attemptCount": 2855,
+    "solvedCount": 1984,
+    "attemptCount": 2856,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1858,
@@ -25964,8 +25964,8 @@
       "avatar": 46874260719816,
       "cover": 46874345039500
     },
-    "solvedCount": 849,
-    "attemptCount": 2162,
+    "solvedCount": 850,
+    "attemptCount": 2163,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1860,
@@ -26028,15 +26028,15 @@
       "avatar": 5689020242575,
       "cover": 5689194399170
     },
-    "solvedCount": 5022,
-    "attemptCount": 7187,
+    "solvedCount": 5023,
+    "attemptCount": 7189,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1861,
       "feedbacks": [
         11,
         18,
-        98,
+        99,
         358,
         970
       ]
@@ -26103,8 +26103,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-atari-go-9x9/186016",
-    "total": 219,
-    "globalTotal": 219,
+    "total": 220,
+    "globalTotal": 220,
     "contributor": {
       "userId": 1443538,
       "pseudo": "Tux4711",
@@ -26113,7 +26113,7 @@
       "cover": 4663612331453
     },
     "solvedCount": 0,
-    "attemptCount": 459,
+    "attemptCount": 461,
     "feedback": {
       "feedbackId": 1862,
       "feedbacks": [
@@ -26242,8 +26242,8 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 71,
-    "attemptCount": 114,
+    "solvedCount": 72,
+    "attemptCount": 115,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1864,
@@ -26372,8 +26372,8 @@
       "publicHandle": "8685a88755dd21f4c90403c0e5ff72c0504681",
       "avatar": 7899805743942
     },
-    "solvedCount": 634,
-    "attemptCount": 788,
+    "solvedCount": 635,
+    "attemptCount": 789,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1870,
@@ -26648,8 +26648,8 @@
       "publicHandle": "fcf5c75ef75e383465760cad6ef7487a4970323",
       "avatar": 25714480415254
     },
-    "solvedCount": 3277,
-    "attemptCount": 4577,
+    "solvedCount": 3278,
+    "attemptCount": 4580,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1875,
@@ -26905,7 +26905,7 @@
       "cover": 42822401321419
     },
     "solvedCount": 892,
-    "attemptCount": 1057,
+    "attemptCount": 1059,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1879,
@@ -27160,8 +27160,8 @@
       "avatar": 57247748477088,
       "cover": 44849265026786
     },
-    "solvedCount": 817,
-    "attemptCount": 1255,
+    "solvedCount": 818,
+    "attemptCount": 1256,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1883,
@@ -27196,7 +27196,7 @@
       "publicHandle": "1bdbce62604eb92020659b4474ab3a224810833"
     },
     "solvedCount": 4523,
-    "attemptCount": 5932,
+    "attemptCount": 5934,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1884,
@@ -27204,7 +27204,7 @@
         7,
         5,
         90,
-        351,
+        352,
         747
       ]
     },
@@ -27315,8 +27315,8 @@
       "avatar": 16893233232561,
       "cover": 50459007935372
     },
-    "solvedCount": 1207,
-    "attemptCount": 1803,
+    "solvedCount": 1209,
+    "attemptCount": 1804,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1886,
@@ -27325,7 +27325,7 @@
         6,
         28,
         87,
-        197
+        198
       ]
     },
     "topics": [
@@ -27363,8 +27363,8 @@
       "userId": 1781541,
       "publicHandle": "64cfb8c7922f18182f9d06579688f9ba1451871"
     },
-    "solvedCount": 4431,
-    "attemptCount": 6516,
+    "solvedCount": 4437,
+    "attemptCount": 6520,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1887,
@@ -27372,7 +27372,7 @@
         10,
         25,
         64,
-        331,
+        333,
         940
       ]
     },
@@ -27488,8 +27488,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-2048/186735",
-    "total": 1989,
-    "globalTotal": 1989,
+    "total": 1996,
+    "globalTotal": 1996,
     "contributor": {
       "userId": 1500515,
       "pseudo": "eulerscheZahl",
@@ -27497,14 +27497,14 @@
       "avatar": 43135502422075,
       "cover": 26120069129738
     },
-    "solvedCount": 1947,
-    "attemptCount": 3145,
+    "solvedCount": 1953,
+    "attemptCount": 3152,
     "feedback": {
       "feedbackId": 1889,
       "feedbacks": [
         13,
         4,
-        24,
+        25,
         56,
         314
       ]
@@ -27562,8 +27562,8 @@
       "avatar": 36646766447960,
       "cover": 36611588286621
     },
-    "solvedCount": 1044,
-    "attemptCount": 1487,
+    "solvedCount": 1045,
+    "attemptCount": 1488,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1890,
@@ -27638,8 +27638,8 @@
       "avatar": 22740742148777,
       "cover": 25670127913800
     },
-    "solvedCount": 126,
-    "attemptCount": 385,
+    "solvedCount": 127,
+    "attemptCount": 386,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1891,
@@ -27705,8 +27705,8 @@
       "publicHandle": "9e5366ccb595bcfa6ec33ec8128b3edb3233393",
       "avatar": 48508700385008
     },
-    "solvedCount": 1878,
-    "attemptCount": 2520,
+    "solvedCount": 1881,
+    "attemptCount": 2525,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1892,
@@ -27769,7 +27769,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 256,
-    "attemptCount": 1752,
+    "attemptCount": 1754,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1893,
@@ -27965,8 +27965,8 @@
       "publicHandle": "ee22a3a22d16d638aa7e4190bfeda486459866",
       "avatar": 1832090086325
     },
-    "solvedCount": 561,
-    "attemptCount": 1126,
+    "solvedCount": 562,
+    "attemptCount": 1127,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1901,
@@ -28340,7 +28340,7 @@
     "total": 8791,
     "globalTotal": 8791,
     "solvedCount": 0,
-    "attemptCount": 12302,
+    "attemptCount": 12304,
     "feedback": {
       "feedbackId": 1915,
       "feedbacks": [
@@ -28481,8 +28481,8 @@
       "avatar": 16542412157988,
       "cover": 12975896340891
     },
-    "solvedCount": 384,
-    "attemptCount": 693,
+    "solvedCount": 385,
+    "attemptCount": 694,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1918,
@@ -28579,8 +28579,8 @@
       "publicHandle": "a2ebf7a19e3271d5c1a532a5d49cb17e5928304",
       "avatar": 131150463618116
     },
-    "solvedCount": 1420,
-    "attemptCount": 1954,
+    "solvedCount": 1421,
+    "attemptCount": 1955,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1921,
@@ -28628,8 +28628,8 @@
       "avatar": 52835383345680,
       "cover": 46294369898722
     },
-    "solvedCount": 2115,
-    "attemptCount": 3197,
+    "solvedCount": 2116,
+    "attemptCount": 3198,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1922,
@@ -28811,7 +28811,7 @@
       "cover": 56803868426057
     },
     "solvedCount": 270,
-    "attemptCount": 871,
+    "attemptCount": 872,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1925,
@@ -28872,7 +28872,7 @@
       "publicHandle": "0d71f9df5da706f9f77c07c34d12480e609451"
     },
     "solvedCount": 8,
-    "attemptCount": 136,
+    "attemptCount": 138,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1926,
@@ -28974,8 +28974,8 @@
       "avatar": 52647904853809,
       "cover": 55670785735271
     },
-    "solvedCount": 2344,
-    "attemptCount": 2624,
+    "solvedCount": 2345,
+    "attemptCount": 2625,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1928,
@@ -28984,7 +28984,7 @@
         3,
         71,
         174,
-        403
+        404
       ]
     },
     "topics": [
@@ -29060,8 +29060,8 @@
       "avatar": 51600040008150,
       "cover": 42822401321419
     },
-    "solvedCount": 95,
-    "attemptCount": 414,
+    "solvedCount": 96,
+    "attemptCount": 415,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1929,
@@ -29127,8 +29127,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-chess/188843",
-    "total": 422,
-    "globalTotal": 422,
+    "total": 425,
+    "globalTotal": 425,
     "contributor": {
       "userId": 1400179,
       "pseudo": "reCurse",
@@ -29137,7 +29137,7 @@
       "cover": 54240486095841
     },
     "solvedCount": 0,
-    "attemptCount": 1753,
+    "attemptCount": 1761,
     "feedback": {
       "feedbackId": 1930,
       "feedbacks": [
@@ -29189,7 +29189,7 @@
       "cover": 48936529097183
     },
     "solvedCount": 60,
-    "attemptCount": 337,
+    "attemptCount": 338,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1931,
@@ -29273,7 +29273,7 @@
       "cover": 26120069129738
     },
     "solvedCount": 0,
-    "attemptCount": 422,
+    "attemptCount": 423,
     "feedback": {
       "feedbackId": 1932,
       "feedbacks": [
@@ -29403,8 +29403,8 @@
       "avatar": 26610668117960,
       "cover": 26742825031346
     },
-    "solvedCount": 713,
-    "attemptCount": 1353,
+    "solvedCount": 715,
+    "attemptCount": 1355,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1934,
@@ -29583,7 +29583,7 @@
       "avatar": 79146641399080,
       "cover": 80356242725018
     },
-    "solvedCount": 417,
+    "solvedCount": 418,
     "attemptCount": 942,
     "xpPoints": 50,
     "feedback": {
@@ -29699,8 +29699,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-connect-4/189435",
-    "total": 865,
-    "globalTotal": 865,
+    "total": 864,
+    "globalTotal": 864,
     "contributor": {
       "userId": 1360513,
       "pseudo": "AshKetchum",
@@ -29709,7 +29709,7 @@
       "cover": 7485067916768
     },
     "solvedCount": 0,
-    "attemptCount": 1619,
+    "attemptCount": 1624,
     "feedback": {
       "feedbackId": 1939,
       "feedbacks": [
@@ -29760,8 +29760,8 @@
       "avatar": 12290760605610,
       "cover": 86100681403159
     },
-    "solvedCount": 408,
-    "attemptCount": 643,
+    "solvedCount": 409,
+    "attemptCount": 644,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1940,
@@ -29884,7 +29884,7 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 471,
+    "solvedCount": 472,
     "attemptCount": 713,
     "xpPoints": 50,
     "feedback": {
@@ -30371,8 +30371,8 @@
       "publicHandle": "bdb9b04f80071565baa07373f60c8c899032973",
       "avatar": 58313205988826
     },
-    "solvedCount": 761,
-    "attemptCount": 957,
+    "solvedCount": 763,
+    "attemptCount": 959,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1949,
@@ -30437,8 +30437,8 @@
       "publicHandle": "15f542cbada8c7d47242ab3377e62d9a3451893",
       "avatar": 50556106957921
     },
-    "solvedCount": 765,
-    "attemptCount": 943,
+    "solvedCount": 766,
+    "attemptCount": 944,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1950,
@@ -30697,8 +30697,8 @@
       "avatar": 20517704819076,
       "cover": 20517697136420
     },
-    "solvedCount": 768,
-    "attemptCount": 866,
+    "solvedCount": 769,
+    "attemptCount": 867,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1954,
@@ -30706,7 +30706,7 @@
         1,
         3,
         36,
-        45,
+        46,
         125
       ]
     },
@@ -30757,8 +30757,8 @@
       "avatar": 68614443569253,
       "cover": 53376568588439
     },
-    "solvedCount": 4378,
-    "attemptCount": 7055,
+    "solvedCount": 4379,
+    "attemptCount": 7057,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1955,
@@ -30808,8 +30808,8 @@
       "avatar": 59791745647170,
       "cover": 59791785724685
     },
-    "solvedCount": 1469,
-    "attemptCount": 1979,
+    "solvedCount": 1470,
+    "attemptCount": 1980,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1956,
@@ -30855,8 +30855,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-night-of-war/190016",
-    "total": 247,
-    "globalTotal": 247,
+    "total": 248,
+    "globalTotal": 248,
     "contributor": {
       "userId": 3721214,
       "pseudo": "jrke",
@@ -30865,7 +30865,7 @@
       "cover": 49681388010408
     },
     "solvedCount": 0,
-    "attemptCount": 493,
+    "attemptCount": 494,
     "feedback": {
       "feedbackId": 1957,
       "feedbacks": [
@@ -30928,7 +30928,7 @@
       "cover": 46573862364374
     },
     "solvedCount": 339,
-    "attemptCount": 510,
+    "attemptCount": 511,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1958,
@@ -30978,7 +30978,7 @@
       "cover": 16905905262068
     },
     "solvedCount": 2562,
-    "attemptCount": 3654,
+    "attemptCount": 3655,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1959,
@@ -31028,10 +31028,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "spring-challenge-2021-puzzle-discussion/190918",
-    "total": 8414,
-    "globalTotal": 8414,
+    "total": 8417,
+    "globalTotal": 8417,
     "solvedCount": 0,
-    "attemptCount": 13743,
+    "attemptCount": 13749,
     "feedback": {
       "feedbackId": 1961,
       "feedbacks": [
@@ -31095,8 +31095,8 @@
       "avatar": 112957121803450,
       "cover": 61609603615765
     },
-    "solvedCount": 105,
-    "attemptCount": 193,
+    "solvedCount": 106,
+    "attemptCount": 194,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1962,
@@ -31175,8 +31175,8 @@
       "userId": 2043908,
       "publicHandle": "e9c83cc4767eb16667a33d90907479d08093402"
     },
-    "solvedCount": 566,
-    "attemptCount": 4390,
+    "solvedCount": 568,
+    "attemptCount": 4395,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1963,
@@ -31185,7 +31185,7 @@
         10,
         18,
         52,
-        95
+        96
       ]
     },
     "topics": [
@@ -31253,8 +31253,8 @@
       "avatar": 12290760605610,
       "cover": 86100681403159
     },
-    "solvedCount": 29,
-    "attemptCount": 387,
+    "solvedCount": 30,
+    "attemptCount": 388,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1964,
@@ -31449,8 +31449,8 @@
       "avatar": 46641547586781,
       "cover": 116245722111534
     },
-    "solvedCount": 2966,
-    "attemptCount": 4060,
+    "solvedCount": 2968,
+    "attemptCount": 4064,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1968,
@@ -31458,7 +31458,7 @@
         8,
         15,
         58,
-        192,
+        194,
         592
       ]
     },
@@ -31584,8 +31584,8 @@
       "avatar": 127666725990808,
       "cover": 45599489881814
     },
-    "solvedCount": 5528,
-    "attemptCount": 8312,
+    "solvedCount": 5530,
+    "attemptCount": 8319,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1970,
@@ -32075,8 +32075,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-volcanoes/191167",
-    "total": 224,
-    "globalTotal": 224,
+    "total": 223,
+    "globalTotal": 223,
     "contributor": {
       "userId": 3533314,
       "pseudo": "skotz",
@@ -32084,7 +32084,7 @@
       "avatar": 97334021748803
     },
     "solvedCount": 0,
-    "attemptCount": 412,
+    "attemptCount": 413,
     "feedback": {
       "feedbackId": 1979,
       "feedbacks": [
@@ -32147,8 +32147,8 @@
       "publicHandle": "bdb9b04f80071565baa07373f60c8c899032973",
       "avatar": 58313205988826
     },
-    "solvedCount": 182,
-    "attemptCount": 289,
+    "solvedCount": 183,
+    "attemptCount": 290,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1980,
@@ -32251,8 +32251,8 @@
       "avatar": 43965748895173,
       "cover": 52653106519293
     },
-    "solvedCount": 2200,
-    "attemptCount": 3126,
+    "solvedCount": 2201,
+    "attemptCount": 3128,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1982,
@@ -32419,8 +32419,8 @@
       "avatar": 132419401284681,
       "cover": 132415825187527
     },
-    "solvedCount": 577,
-    "attemptCount": 800,
+    "solvedCount": 578,
+    "attemptCount": 801,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1985,
@@ -32501,7 +32501,7 @@
       "avatar": 4210501575817,
       "cover": 4256317302946
     },
-    "solvedCount": 23,
+    "solvedCount": 24,
     "attemptCount": 168,
     "xpPoints": 50,
     "feedback": {
@@ -32511,7 +32511,7 @@
         0,
         1,
         1,
-        5
+        6
       ]
     },
     "topics": [
@@ -32846,7 +32846,7 @@
       "cover": 62231149301519
     },
     "solvedCount": 279,
-    "attemptCount": 504,
+    "attemptCount": 505,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1991,
@@ -33106,8 +33106,8 @@
       "avatar": 2057355958953,
       "cover": 45638265482565
     },
-    "solvedCount": 1374,
-    "attemptCount": 1645,
+    "solvedCount": 1376,
+    "attemptCount": 1647,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1996,
@@ -33144,7 +33144,7 @@
       "cover": 62991182251052
     },
     "solvedCount": 811,
-    "attemptCount": 1722,
+    "attemptCount": 1723,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 1997,
@@ -33334,8 +33334,8 @@
       "publicHandle": "b6d6d98797750f27c9e409cb88847d4b3942611",
       "avatar": 41778187572893
     },
-    "solvedCount": 1643,
-    "attemptCount": 2763,
+    "solvedCount": 1644,
+    "attemptCount": 2764,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2000,
@@ -33724,7 +33724,7 @@
       "cover": 46570580666110
     },
     "solvedCount": 0,
-    "attemptCount": 286,
+    "attemptCount": 287,
     "feedback": {
       "feedbackId": 2007,
       "feedbacks": [
@@ -33926,8 +33926,8 @@
       "avatar": 54970169109216,
       "cover": 59051567884201
     },
-    "solvedCount": 1567,
-    "attemptCount": 1760,
+    "solvedCount": 1568,
+    "attemptCount": 1761,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2011,
@@ -34034,7 +34034,7 @@
       "avatar": 42360341161981
     },
     "solvedCount": 0,
-    "attemptCount": 881,
+    "attemptCount": 882,
     "feedback": {
       "feedbackId": 2013,
       "feedbacks": [
@@ -34300,7 +34300,7 @@
       "avatar": 46459187054094,
       "cover": 46459140055345
     },
-    "solvedCount": 396,
+    "solvedCount": 397,
     "attemptCount": 484,
     "xpPoints": 50,
     "feedback": {
@@ -34350,7 +34350,7 @@
       "cover": 26742825031346
     },
     "solvedCount": 745,
-    "attemptCount": 1444,
+    "attemptCount": 1445,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2018,
@@ -34463,8 +34463,8 @@
       "avatar": 77239068916081,
       "cover": 15944207795790
     },
-    "solvedCount": 708,
-    "attemptCount": 782,
+    "solvedCount": 709,
+    "attemptCount": 783,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2020,
@@ -34473,7 +34473,7 @@
         10,
         28,
         40,
-        116
+        117
       ]
     },
     "topics": [
@@ -34512,8 +34512,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-clash-of-bots/192776",
-    "total": 448,
-    "globalTotal": 448,
+    "total": 450,
+    "globalTotal": 450,
     "contributor": {
       "userId": 3760551,
       "pseudo": "stivens",
@@ -34521,7 +34521,7 @@
       "avatar": 42642900402244
     },
     "solvedCount": 0,
-    "attemptCount": 1033,
+    "attemptCount": 1035,
     "feedback": {
       "feedbackId": 2021,
       "feedbacks": [
@@ -34584,7 +34584,7 @@
       "cover": 45604967452565
     },
     "solvedCount": 300,
-    "attemptCount": 1007,
+    "attemptCount": 1008,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2022,
@@ -34728,8 +34728,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-counting-tictactoe/192910",
-    "total": 456,
-    "globalTotal": 456,
+    "total": 457,
+    "globalTotal": 457,
     "contributor": {
       "userId": 836264,
       "pseudo": "RezaSi",
@@ -34737,7 +34737,7 @@
       "avatar": 67378867720467
     },
     "solvedCount": 0,
-    "attemptCount": 829,
+    "attemptCount": 830,
     "feedback": {
       "feedbackId": 2024,
       "feedbacks": [
@@ -35026,8 +35026,8 @@
       "publicHandle": "2f83851383bfbeb11ccef19f4841e8191527061",
       "avatar": 18176849207993
     },
-    "solvedCount": 629,
-    "attemptCount": 794,
+    "solvedCount": 631,
+    "attemptCount": 796,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2028,
@@ -35035,7 +35035,7 @@
         1,
         6,
         18,
-        41,
+        42,
         111
       ]
     },
@@ -35205,7 +35205,7 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 28,
+    "solvedCount": 29,
     "attemptCount": 44,
     "xpPoints": 50,
     "feedback": {
@@ -35359,7 +35359,7 @@
       "publicHandle": "89a3ef9e862681a84a925d8b89fc19fb4515024",
       "avatar": 60791864998463
     },
-    "solvedCount": 315,
+    "solvedCount": 316,
     "attemptCount": 406,
     "xpPoints": 50,
     "feedback": {
@@ -35612,8 +35612,8 @@
       "pseudo": "FBF_Luis",
       "publicHandle": "fc09071670a8085c6df515ea116866975103834"
     },
-    "solvedCount": 448,
-    "attemptCount": 537,
+    "solvedCount": 449,
+    "attemptCount": 538,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2037,
@@ -35698,8 +35698,8 @@
       "avatar": 54970169109216,
       "cover": 59051567884201
     },
-    "solvedCount": 601,
-    "attemptCount": 1856,
+    "solvedCount": 603,
+    "attemptCount": 1858,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2039,
@@ -35708,7 +35708,7 @@
         5,
         15,
         41,
-        91
+        92
       ]
     },
     "topics": [
@@ -35930,7 +35930,7 @@
       "cover": 16905905262068
     },
     "solvedCount": 361,
-    "attemptCount": 615,
+    "attemptCount": 616,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2043,
@@ -36254,8 +36254,8 @@
       "avatar": 54970169109216,
       "cover": 59051567884201
     },
-    "solvedCount": 400,
-    "attemptCount": 803,
+    "solvedCount": 401,
+    "attemptCount": 804,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2049,
@@ -36562,8 +36562,8 @@
       "avatar": 115730569738380,
       "cover": 75055380952277
     },
-    "solvedCount": 355,
-    "attemptCount": 571,
+    "solvedCount": 356,
+    "attemptCount": 572,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2054,
@@ -36624,8 +36624,8 @@
       "avatar": 54970169109216,
       "cover": 59051567884201
     },
-    "solvedCount": 503,
-    "attemptCount": 607,
+    "solvedCount": 504,
+    "attemptCount": 608,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2055,
@@ -36761,8 +36761,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-travelling-salesman/194500",
-    "total": 1290,
-    "globalTotal": 1290,
+    "total": 1293,
+    "globalTotal": 1293,
     "contributor": {
       "userId": 4194994,
       "pseudo": "zLuki",
@@ -36770,8 +36770,8 @@
       "avatar": 76544943247384,
       "cover": 76861927940212
     },
-    "solvedCount": 1227,
-    "attemptCount": 2046,
+    "solvedCount": 1230,
+    "attemptCount": 2051,
     "feedback": {
       "feedbackId": 2058,
       "feedbacks": [
@@ -36779,7 +36779,7 @@
         2,
         20,
         56,
-        186
+        188
       ]
     },
     "optimCriteriaId": "distance",
@@ -37023,8 +37023,8 @@
       "avatar": 75434945111960,
       "cover": 80806268246792
     },
-    "solvedCount": 431,
-    "attemptCount": 758,
+    "solvedCount": 432,
+    "attemptCount": 759,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2062,
@@ -37125,8 +37125,8 @@
       "publicHandle": "d180b60a25752e28dccd4c180a495bda3703264",
       "avatar": 73993369310252
     },
-    "solvedCount": 85,
-    "attemptCount": 157,
+    "solvedCount": 86,
+    "attemptCount": 158,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2064,
@@ -37271,7 +37271,7 @@
       "cover": 127656041082668
     },
     "solvedCount": 270,
-    "attemptCount": 344,
+    "attemptCount": 346,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2066,
@@ -37635,8 +37635,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 507,
-    "attemptCount": 649,
+    "solvedCount": 509,
+    "attemptCount": 650,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2231,
@@ -37704,7 +37704,7 @@
       "cover": 45604967452565
     },
     "solvedCount": 23,
-    "attemptCount": 46,
+    "attemptCount": 47,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2264,
@@ -37755,7 +37755,7 @@
       "cover": 31940826975984
     },
     "solvedCount": 364,
-    "attemptCount": 626,
+    "attemptCount": 627,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2297,
@@ -37905,7 +37905,7 @@
       "avatar": 75444428976198
     },
     "solvedCount": 745,
-    "attemptCount": 1803,
+    "attemptCount": 1804,
     "feedback": {
       "feedbackId": 2363,
       "feedbacks": [
@@ -37993,8 +37993,8 @@
       "avatar": 76637729809540,
       "cover": 76637684463115
     },
-    "solvedCount": 72,
-    "attemptCount": 134,
+    "solvedCount": 73,
+    "attemptCount": 135,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2429,
@@ -38109,8 +38109,8 @@
       "publicHandle": "bd64474e3b32e9165373644361f8196e1855933",
       "avatar": 79480941435387
     },
-    "solvedCount": 171,
-    "attemptCount": 201,
+    "solvedCount": 172,
+    "attemptCount": 203,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2495,
@@ -38119,7 +38119,7 @@
         0,
         4,
         18,
-        39
+        40
       ]
     },
     "topics": [
@@ -38173,7 +38173,7 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 270,
+    "solvedCount": 271,
     "attemptCount": 814,
     "xpPoints": 50,
     "feedback": {
@@ -38456,8 +38456,8 @@
       "publicHandle": "eb194565c4cf5e6842f06f0319b51f751840084",
       "avatar": 80456143361167
     },
-    "solvedCount": 382,
-    "attemptCount": 641,
+    "solvedCount": 383,
+    "attemptCount": 642,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2726,
@@ -38555,8 +38555,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-start-up/195776",
-    "total": 237,
-    "globalTotal": 237,
+    "total": 239,
+    "globalTotal": 239,
     "contributor": {
       "userId": 1492668,
       "pseudo": "MatthieuC",
@@ -38565,7 +38565,7 @@
       "cover": 81695925934754
     },
     "solvedCount": 0,
-    "attemptCount": 649,
+    "attemptCount": 653,
     "feedback": {
       "feedbackId": 2825,
       "feedbacks": [
@@ -38573,7 +38573,7 @@
         1,
         1,
         4,
-        5
+        6
       ]
     },
     "optimCriteriaId": "rank",
@@ -38711,10 +38711,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "spider-attack-spring-challenge-2022-puzzle-discussion/195823",
-    "total": 9269,
-    "globalTotal": 9269,
+    "total": 9277,
+    "globalTotal": 9277,
     "solvedCount": 0,
-    "attemptCount": 14593,
+    "attemptCount": 14603,
     "feedback": {
       "feedbackId": 2957,
       "feedbacks": [
@@ -38771,8 +38771,8 @@
       "avatar": 71707560017158,
       "cover": 71707622005465
     },
-    "solvedCount": 577,
-    "attemptCount": 978,
+    "solvedCount": 579,
+    "attemptCount": 980,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 2990,
@@ -38821,7 +38821,7 @@
       "avatar": 82820829158124
     },
     "solvedCount": 366,
-    "attemptCount": 1113,
+    "attemptCount": 1115,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3023,
@@ -39120,7 +39120,7 @@
       "cover": 4256317302946
     },
     "solvedCount": 0,
-    "attemptCount": 256,
+    "attemptCount": 257,
     "feedback": {
       "feedbackId": 3188,
       "feedbacks": [
@@ -39171,17 +39171,17 @@
       "avatar": 1848632360793,
       "cover": 30367980759736
     },
-    "solvedCount": 9009,
-    "attemptCount": 13075,
+    "solvedCount": 9014,
+    "attemptCount": 13083,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3221,
       "feedbacks": [
-        12,
+        13,
         13,
         125,
         570,
-        1550
+        1551
       ]
     },
     "topics": [
@@ -39319,7 +39319,7 @@
       "avatar": 83468425096870
     },
     "solvedCount": 1407,
-    "attemptCount": 2772,
+    "attemptCount": 2773,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3320,
@@ -39393,8 +39393,8 @@
       "avatar": 92655986267164,
       "cover": 89522940424658
     },
-    "solvedCount": 362,
-    "attemptCount": 611,
+    "solvedCount": 363,
+    "attemptCount": 612,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3353,
@@ -39558,8 +39558,8 @@
       "publicHandle": "1e09cef1ba0241009076f39ee351ecdf8324703",
       "avatar": 76218624776940
     },
-    "solvedCount": 817,
-    "attemptCount": 982,
+    "solvedCount": 818,
+    "attemptCount": 983,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3452,
@@ -39595,8 +39595,8 @@
       "avatar": 97662026388574,
       "cover": 100913988137660
     },
-    "solvedCount": 498,
-    "attemptCount": 853,
+    "solvedCount": 499,
+    "attemptCount": 854,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3485,
@@ -39664,17 +39664,17 @@
       "avatar": 97662026388574,
       "cover": 100913988137660
     },
-    "solvedCount": 2926,
-    "attemptCount": 5694,
+    "solvedCount": 2931,
+    "attemptCount": 5711,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3518,
       "feedbacks": [
         10,
         10,
-        44,
-        151,
-        579
+        45,
+        152,
+        580
       ]
     },
     "topics": [
@@ -39854,7 +39854,7 @@
       "avatar": 53342280146328
     },
     "solvedCount": 827,
-    "attemptCount": 1116,
+    "attemptCount": 1118,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3617,
@@ -40174,8 +40174,8 @@
       "avatar": 88026624631087,
       "cover": 86848100618699
     },
-    "solvedCount": 374,
-    "attemptCount": 463,
+    "solvedCount": 375,
+    "attemptCount": 464,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3782,
@@ -40295,7 +40295,7 @@
       "cover": 80356242725018
     },
     "solvedCount": 319,
-    "attemptCount": 453,
+    "attemptCount": 454,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3848,
@@ -40324,8 +40324,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-green-circle/196637",
-    "total": 1861,
-    "globalTotal": 1861,
+    "total": 1862,
+    "globalTotal": 1862,
     "contributor": {
       "userId": 828239,
       "pseudo": "[SG]Sebastien",
@@ -40334,7 +40334,7 @@
       "cover": 5245314704179
     },
     "solvedCount": 0,
-    "attemptCount": 5022,
+    "attemptCount": 5023,
     "feedback": {
       "feedbackId": 3881,
       "feedbacks": [
@@ -40527,8 +40527,8 @@
       "avatar": 57340707535268,
       "cover": 62682682363940
     },
-    "solvedCount": 130,
-    "attemptCount": 276,
+    "solvedCount": 131,
+    "attemptCount": 277,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 3980,
@@ -40590,8 +40590,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 8375,
-    "attemptCount": 10288,
+    "solvedCount": 8384,
+    "attemptCount": 10304,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4013,
@@ -40600,7 +40600,7 @@
         8,
         133,
         455,
-        1620
+        1622
       ]
     },
     "topics": [
@@ -40653,7 +40653,7 @@
       "avatar": 79146641399080,
       "cover": 80356242725018
     },
-    "solvedCount": 266,
+    "solvedCount": 267,
     "attemptCount": 422,
     "xpPoints": 50,
     "feedback": {
@@ -40703,8 +40703,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 1974,
-    "attemptCount": 2952,
+    "solvedCount": 1977,
+    "attemptCount": 2956,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4079,
@@ -40765,7 +40765,7 @@
       "avatar": 92655986267164,
       "cover": 89522940424658
     },
-    "solvedCount": 78,
+    "solvedCount": 79,
     "attemptCount": 108,
     "xpPoints": 50,
     "feedback": {
@@ -40940,7 +40940,7 @@
       "cover": 100913988137660
     },
     "solvedCount": 171,
-    "attemptCount": 874,
+    "attemptCount": 875,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4211,
@@ -41012,8 +41012,8 @@
       "publicHandle": "7b96eb1ebed8346475261270895030460667793",
       "avatar": 50273000579366
     },
-    "solvedCount": 510,
-    "attemptCount": 928,
+    "solvedCount": 511,
+    "attemptCount": 929,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4244,
@@ -41075,8 +41075,8 @@
       "avatar": 85817160600607,
       "cover": 116622500819473
     },
-    "solvedCount": 392,
-    "attemptCount": 448,
+    "solvedCount": 393,
+    "attemptCount": 449,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4277,
@@ -41084,7 +41084,7 @@
         3,
         2,
         11,
-        31,
+        32,
         63
       ]
     },
@@ -41595,8 +41595,8 @@
       "avatar": 45914866433343,
       "cover": 87208789376046
     },
-    "solvedCount": 997,
-    "attemptCount": 1360,
+    "solvedCount": 998,
+    "attemptCount": 1361,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4574,
@@ -41766,7 +41766,7 @@
       "avatar": 11740712510393
     },
     "solvedCount": 86,
-    "attemptCount": 112,
+    "attemptCount": 113,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4640,
@@ -41828,8 +41828,8 @@
       "avatar": 26090852120005,
       "cover": 1735058494121
     },
-    "solvedCount": 66,
-    "attemptCount": 159,
+    "solvedCount": 67,
+    "attemptCount": 160,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4673,
@@ -41903,8 +41903,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 1804,
-    "attemptCount": 2185,
+    "solvedCount": 1807,
+    "attemptCount": 2188,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4706,
@@ -41913,7 +41913,7 @@
         11,
         47,
         96,
-        346
+        347
       ]
     },
     "topics": [
@@ -41998,8 +41998,8 @@
       "avatar": 92655986267164,
       "cover": 89522940424658
     },
-    "solvedCount": 1010,
-    "attemptCount": 1435,
+    "solvedCount": 1011,
+    "attemptCount": 1439,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4739,
@@ -42111,8 +42111,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 270,
-    "attemptCount": 322,
+    "solvedCount": 271,
+    "attemptCount": 323,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4805,
@@ -42161,8 +42161,8 @@
       "avatar": 88335361317239,
       "cover": 90254804988679
     },
-    "solvedCount": 2296,
-    "attemptCount": 3052,
+    "solvedCount": 2300,
+    "attemptCount": 3057,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4806,
@@ -42171,7 +42171,7 @@
         6,
         37,
         138,
-        433
+        434
       ]
     },
     "topics": [
@@ -42231,7 +42231,7 @@
       "avatar": 97662026388574,
       "cover": 100913988137660
     },
-    "solvedCount": 90,
+    "solvedCount": 91,
     "attemptCount": 197,
     "xpPoints": 50,
     "feedback": {
@@ -42241,7 +42241,7 @@
         1,
         1,
         2,
-        34
+        35
       ]
     },
     "topics": [
@@ -42388,8 +42388,8 @@
       "avatar": 88652463005854,
       "cover": 88652524095164
     },
-    "solvedCount": 615,
-    "attemptCount": 679,
+    "solvedCount": 616,
+    "attemptCount": 680,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4904,
@@ -42397,7 +42397,7 @@
         2,
         3,
         27,
-        31,
+        32,
         110
       ]
     },
@@ -42514,8 +42514,8 @@
       "avatar": 71740209396076,
       "cover": 92306764967241
     },
-    "solvedCount": 383,
-    "attemptCount": 492,
+    "solvedCount": 384,
+    "attemptCount": 493,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 4970,
@@ -42524,7 +42524,7 @@
         4,
         10,
         31,
-        59
+        60
       ]
     },
     "topics": [
@@ -42615,8 +42615,8 @@
       "avatar": 92655986267164,
       "cover": 89522940424658
     },
-    "solvedCount": 392,
-    "attemptCount": 569,
+    "solvedCount": 393,
+    "attemptCount": 571,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5036,
@@ -42869,13 +42869,13 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 2545,
-    "attemptCount": 3574,
+    "solvedCount": 2550,
+    "attemptCount": 3580,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5168,
       "feedbacks": [
-        5,
+        6,
         7,
         43,
         162,
@@ -43013,8 +43013,8 @@
       "avatar": 87796107098194,
       "cover": 80848868597385
     },
-    "solvedCount": 273,
-    "attemptCount": 326,
+    "solvedCount": 281,
+    "attemptCount": 351,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5234,
@@ -43063,7 +43063,7 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 426,
+    "solvedCount": 427,
     "attemptCount": 531,
     "xpPoints": 50,
     "feedback": {
@@ -43150,8 +43150,8 @@
       "avatar": 87736728529732,
       "cover": 87737384787178
     },
-    "solvedCount": 250,
-    "attemptCount": 314,
+    "solvedCount": 251,
+    "attemptCount": 315,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5333,
@@ -43288,8 +43288,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 320,
-    "attemptCount": 700,
+    "solvedCount": 321,
+    "attemptCount": 705,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5399,
@@ -43442,8 +43442,8 @@
       "avatar": 93257383351485,
       "cover": 94887704029191
     },
-    "solvedCount": 1181,
-    "attemptCount": 1529,
+    "solvedCount": 1184,
+    "attemptCount": 1531,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5465,
@@ -43451,7 +43451,7 @@
         1,
         5,
         25,
-        79,
+        80,
         231
       ]
     },
@@ -43500,7 +43500,7 @@
       "cover": 64562224782618
     },
     "solvedCount": 64,
-    "attemptCount": 341,
+    "attemptCount": 342,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5498,
@@ -43549,7 +43549,7 @@
     "total": 4974,
     "globalTotal": 4974,
     "solvedCount": 0,
-    "attemptCount": 13275,
+    "attemptCount": 13276,
     "feedback": {
       "feedbackId": 5532,
       "feedbacks": [
@@ -43608,8 +43608,8 @@
       "publicHandle": "23863af73ab30aa34c1abeb77f21de4e2878884",
       "avatar": 94478025275138
     },
-    "solvedCount": 93,
-    "attemptCount": 323,
+    "solvedCount": 94,
+    "attemptCount": 325,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5564,
@@ -43617,7 +43617,7 @@
         3,
         1,
         1,
-        4,
+        5,
         24
       ]
     },
@@ -43866,8 +43866,8 @@
       "avatar": 83642545084473,
       "cover": 83294008562322
     },
-    "solvedCount": 270,
-    "attemptCount": 336,
+    "solvedCount": 271,
+    "attemptCount": 337,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5696,
@@ -43992,8 +43992,8 @@
       "avatar": 97662026388574,
       "cover": 100913988137660
     },
-    "solvedCount": 1919,
-    "attemptCount": 3931,
+    "solvedCount": 1925,
+    "attemptCount": 3939,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5762,
@@ -44001,8 +44001,8 @@
         8,
         8,
         34,
-        130,
-        378
+        131,
+        379
       ]
     },
     "topics": [
@@ -44057,7 +44057,7 @@
       "cover": 70561827658523
     },
     "solvedCount": 330,
-    "attemptCount": 372,
+    "attemptCount": 373,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 5828,
@@ -44199,8 +44199,8 @@
       "avatar": 96314909854613,
       "cover": 96315066689892
     },
-    "solvedCount": 287,
-    "attemptCount": 400,
+    "solvedCount": 288,
+    "attemptCount": 401,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6059,
@@ -44317,8 +44317,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 432,
-    "attemptCount": 499,
+    "solvedCount": 433,
+    "attemptCount": 500,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6125,
@@ -44515,8 +44515,8 @@
       "avatar": 96314909854613,
       "cover": 96315066689892
     },
-    "solvedCount": 78,
-    "attemptCount": 130,
+    "solvedCount": 79,
+    "attemptCount": 132,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6224,
@@ -44579,7 +44579,7 @@
       "cover": 87737384787178
     },
     "solvedCount": 31,
-    "attemptCount": 174,
+    "attemptCount": 175,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6257,
@@ -44629,8 +44629,8 @@
       "avatar": 96314909854613,
       "cover": 96315066689892
     },
-    "solvedCount": 195,
-    "attemptCount": 343,
+    "solvedCount": 196,
+    "attemptCount": 344,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6290,
@@ -44931,8 +44931,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-wordle/199788",
-    "total": 1206,
-    "globalTotal": 1206,
+    "total": 1211,
+    "globalTotal": 1211,
     "contributor": {
       "userId": 1694829,
       "pseudo": "Tanvir_Ahmed",
@@ -44940,8 +44940,8 @@
       "avatar": 147285828623859,
       "cover": 94855689586214
     },
-    "solvedCount": 1047,
-    "attemptCount": 2271,
+    "solvedCount": 1051,
+    "attemptCount": 2279,
     "feedback": {
       "feedbackId": 6455,
       "feedbacks": [
@@ -44949,7 +44949,7 @@
         1,
         15,
         44,
-        266
+        268
       ]
     },
     "optimCriteriaId": "guess",
@@ -45131,7 +45131,7 @@
       "avatar": 98148489465106
     },
     "solvedCount": 49,
-    "attemptCount": 84,
+    "attemptCount": 85,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6587,
@@ -45180,7 +45180,7 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 158,
+    "solvedCount": 159,
     "attemptCount": 250,
     "xpPoints": 50,
     "feedback": {
@@ -45244,7 +45244,7 @@
       "cover": 96237129908977
     },
     "solvedCount": 204,
-    "attemptCount": 470,
+    "attemptCount": 471,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6653,
@@ -45307,7 +45307,7 @@
       "cover": 115818488627984
     },
     "solvedCount": 455,
-    "attemptCount": 618,
+    "attemptCount": 619,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6686,
@@ -45316,7 +45316,7 @@
         3,
         10,
         39,
-        81
+        82
       ]
     },
     "topics": [],
@@ -45343,8 +45343,8 @@
       "avatar": 96314909854613,
       "cover": 96315066689892
     },
-    "solvedCount": 1543,
-    "attemptCount": 2042,
+    "solvedCount": 1546,
+    "attemptCount": 2049,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6719,
@@ -45392,7 +45392,7 @@
       "publicHandle": "2e8c4a0117c99cbda49c7a2b38d690052842883"
     },
     "solvedCount": 168,
-    "attemptCount": 207,
+    "attemptCount": 208,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6752,
@@ -45474,7 +45474,7 @@
       "cover": 4074310996660
     },
     "solvedCount": 753,
-    "attemptCount": 1156,
+    "attemptCount": 1158,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6785,
@@ -45509,7 +45509,7 @@
     "total": 1496,
     "globalTotal": 1496,
     "solvedCount": 1216,
-    "attemptCount": 1891,
+    "attemptCount": 1893,
     "feedback": {
       "feedbackId": 6818,
       "feedbacks": [
@@ -45572,10 +45572,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "ascii-art-code-golf-puzzle-discussion/203193",
-    "total": 3881,
-    "globalTotal": 3881,
-    "solvedCount": 3086,
-    "attemptCount": 3628,
+    "total": 3887,
+    "globalTotal": 3887,
+    "solvedCount": 3089,
+    "attemptCount": 3632,
     "feedback": {
       "feedbackId": 6819,
       "feedbacks": [
@@ -45583,7 +45583,7 @@
         3,
         38,
         109,
-        262
+        263
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -45800,9 +45800,9 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "vox-codei-episode-1-code-golf-puzzle-discussion/203199",
-    "total": 1414,
-    "globalTotal": 1414,
-    "solvedCount": 1099,
+    "total": 1415,
+    "globalTotal": 1415,
+    "solvedCount": 1100,
     "attemptCount": 1583,
     "feedback": {
       "feedbackId": 6822,
@@ -45882,10 +45882,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "blunder-episode-3-code-golf-puzzle-discussion/203185",
-    "total": 1410,
-    "globalTotal": 1410,
-    "solvedCount": 1034,
-    "attemptCount": 1137,
+    "total": 1411,
+    "globalTotal": 1411,
+    "solvedCount": 1035,
+    "attemptCount": 1138,
     "feedback": {
       "feedbackId": 6823,
       "feedbacks": [
@@ -45934,10 +45934,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "mars-lander-episode-3-code-golf-puzzle-discussion/203186",
-    "total": 1500,
-    "globalTotal": 1500,
-    "solvedCount": 1131,
-    "attemptCount": 1432,
+    "total": 1501,
+    "globalTotal": 1501,
+    "solvedCount": 1132,
+    "attemptCount": 1434,
     "feedback": {
       "feedbackId": 6824,
       "feedbacks": [
@@ -45996,10 +45996,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "the-descent-code-golf-puzzle-discussion/203203",
-    "total": 6299,
-    "globalTotal": 6299,
-    "solvedCount": 4319,
-    "attemptCount": 4858,
+    "total": 6310,
+    "globalTotal": 6310,
+    "solvedCount": 4326,
+    "attemptCount": 4865,
     "feedback": {
       "feedbackId": 6825,
       "feedbacks": [
@@ -46007,7 +46007,7 @@
         7,
         56,
         155,
-        394
+        396
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -46055,10 +46055,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "the-resistance-code-golf-puzzle-discussion/203187",
-    "total": 1638,
-    "globalTotal": 1638,
-    "solvedCount": 1259,
-    "attemptCount": 1522,
+    "total": 1640,
+    "globalTotal": 1640,
+    "solvedCount": 1261,
+    "attemptCount": 1524,
     "feedback": {
       "feedbackId": 6826,
       "feedbacks": [
@@ -46066,7 +46066,7 @@
         1,
         6,
         14,
-        51
+        52
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -46125,10 +46125,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "genome-sequencing-code-golf-puzzle-discussion/203192",
-    "total": 1535,
-    "globalTotal": 1535,
-    "solvedCount": 1195,
-    "attemptCount": 1262,
+    "total": 1536,
+    "globalTotal": 1536,
+    "solvedCount": 1196,
+    "attemptCount": 1263,
     "feedback": {
       "feedbackId": 6827,
       "feedbacks": [
@@ -46186,7 +46186,7 @@
     "total": 1490,
     "globalTotal": 1490,
     "solvedCount": 1252,
-    "attemptCount": 1895,
+    "attemptCount": 1896,
     "feedback": {
       "feedbackId": 6828,
       "feedbacks": [
@@ -46251,10 +46251,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "roller-coaster-code-golf-puzzle-discussion/203197",
-    "total": 1634,
-    "globalTotal": 1634,
+    "total": 1635,
+    "globalTotal": 1635,
     "solvedCount": 1249,
-    "attemptCount": 1363,
+    "attemptCount": 1364,
     "feedback": {
       "feedbackId": 6829,
       "feedbacks": [
@@ -46449,10 +46449,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "shadows-of-the-knight-episode-1-code-golf-puzzle-discussion/203194",
-    "total": 4419,
-    "globalTotal": 4419,
-    "solvedCount": 3303,
-    "attemptCount": 6734,
+    "total": 4427,
+    "globalTotal": 4427,
+    "solvedCount": 3309,
+    "attemptCount": 6757,
     "feedback": {
       "feedbackId": 6832,
       "feedbacks": [
@@ -46460,7 +46460,7 @@
         4,
         23,
         120,
-        350
+        352
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -46523,10 +46523,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "the-bridge-code-golf-puzzle-discussion/203198",
-    "total": 1386,
-    "globalTotal": 1386,
-    "solvedCount": 1151,
-    "attemptCount": 1483,
+    "total": 1388,
+    "globalTotal": 1388,
+    "solvedCount": 1153,
+    "attemptCount": 1484,
     "feedback": {
       "feedbackId": 6833,
       "feedbacks": [
@@ -46593,10 +46593,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "blunder-episode-1-code-golf-puzzle-discussion/203182",
-    "total": 1655,
-    "globalTotal": 1655,
-    "solvedCount": 1372,
-    "attemptCount": 1530,
+    "total": 1658,
+    "globalTotal": 1658,
+    "solvedCount": 1374,
+    "attemptCount": 1532,
     "feedback": {
       "feedbackId": 6834,
       "feedbacks": [
@@ -46651,15 +46651,15 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "dwarfs-standing-on-the-shoulders-of-giants-code-golf-puzzle-discussion/203196",
-    "total": 2236,
-    "globalTotal": 2236,
-    "solvedCount": 1758,
-    "attemptCount": 1992,
+    "total": 2240,
+    "globalTotal": 2240,
+    "solvedCount": 1760,
+    "attemptCount": 1995,
     "feedback": {
       "feedbackId": 6835,
       "feedbacks": [
         2,
-        1,
+        2,
         8,
         31,
         97
@@ -46722,17 +46722,17 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "network-cabling-code-golf-puzzle-discussion/203200",
-    "total": 2651,
-    "globalTotal": 2651,
-    "solvedCount": 1949,
-    "attemptCount": 2780,
+    "total": 2657,
+    "globalTotal": 2657,
+    "solvedCount": 1955,
+    "attemptCount": 2785,
     "feedback": {
       "feedbackId": 6836,
       "feedbacks": [
         2,
         2,
         20,
-        46,
+        47,
         116
       ]
     },
@@ -46793,10 +46793,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "super-computer-code-golf-puzzle-discussion/203190",
-    "total": 1783,
-    "globalTotal": 1783,
-    "solvedCount": 1350,
-    "attemptCount": 1530,
+    "total": 1815,
+    "globalTotal": 1815,
+    "solvedCount": 1376,
+    "attemptCount": 1558,
     "feedback": {
       "feedbackId": 6837,
       "feedbacks": [
@@ -46851,10 +46851,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "telephone-numbers-codesize-puzzle-discussion/203149",
-    "total": 2908,
-    "globalTotal": 2908,
-    "solvedCount": 2161,
-    "attemptCount": 2885,
+    "total": 2914,
+    "globalTotal": 2914,
+    "solvedCount": 2167,
+    "attemptCount": 2893,
     "feedback": {
       "feedbackId": 6838,
       "feedbacks": [
@@ -46862,7 +46862,7 @@
         1,
         14,
         68,
-        155
+        156
       ]
     },
     "optimCriteriaId": "source_code_size",
@@ -46975,10 +46975,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "mayan-calculation-code-golf-puzzle-discussion/203201",
-    "total": 1829,
-    "globalTotal": 1829,
-    "solvedCount": 1487,
-    "attemptCount": 1591,
+    "total": 1831,
+    "globalTotal": 1831,
+    "solvedCount": 1488,
+    "attemptCount": 1594,
     "feedback": {
       "feedbackId": 6840,
       "feedbacks": [
@@ -47043,8 +47043,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 574,
-    "attemptCount": 672,
+    "solvedCount": 575,
+    "attemptCount": 673,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6851,
@@ -47105,8 +47105,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 972,
-    "attemptCount": 1777,
+    "solvedCount": 976,
+    "attemptCount": 1779,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 6884,
@@ -47115,7 +47115,7 @@
         6,
         19,
         65,
-        194
+        195
       ]
     },
     "topics": [
@@ -47396,7 +47396,7 @@
       "avatar": 60160869689179
     },
     "solvedCount": 119,
-    "attemptCount": 193,
+    "attemptCount": 194,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7016,
@@ -47459,8 +47459,8 @@
       "avatar": 98376709796567,
       "cover": 99675487712643
     },
-    "solvedCount": 281,
-    "attemptCount": 365,
+    "solvedCount": 282,
+    "attemptCount": 366,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7017,
@@ -47522,8 +47522,8 @@
       "avatar": 72010225615995,
       "cover": 1869151336464
     },
-    "solvedCount": 183,
-    "attemptCount": 373,
+    "solvedCount": 185,
+    "attemptCount": 374,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7049,
@@ -47640,7 +47640,7 @@
       "avatar": 80946308795008,
       "cover": 96237129908977
     },
-    "solvedCount": 222,
+    "solvedCount": 223,
     "attemptCount": 370,
     "xpPoints": 50,
     "feedback": {
@@ -47702,7 +47702,7 @@
       "cover": 24597293653336
     },
     "solvedCount": 121,
-    "attemptCount": 449,
+    "attemptCount": 453,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7148,
@@ -47865,8 +47865,8 @@
       "avatar": 115730569738380,
       "cover": 75055380952277
     },
-    "solvedCount": 199,
-    "attemptCount": 469,
+    "solvedCount": 200,
+    "attemptCount": 471,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7214,
@@ -48265,7 +48265,7 @@
       "cover": 102726305134115
     },
     "solvedCount": 267,
-    "attemptCount": 399,
+    "attemptCount": 400,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7412,
@@ -48392,7 +48392,7 @@
       "cover": 70561827658523
     },
     "solvedCount": 385,
-    "attemptCount": 440,
+    "attemptCount": 441,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7478,
@@ -48459,8 +48459,8 @@
       "avatar": 102118582822399,
       "cover": 103562269026978
     },
-    "solvedCount": 254,
-    "attemptCount": 301,
+    "solvedCount": 255,
+    "attemptCount": 302,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7511,
@@ -48469,7 +48469,7 @@
         3,
         7,
         20,
-        51
+        52
       ]
     },
     "topics": [
@@ -48588,10 +48588,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "spring-challenge-2023-ants-puzzle-discussion/200948",
-    "total": 5667,
-    "globalTotal": 5667,
+    "total": 5668,
+    "globalTotal": 5668,
     "solvedCount": 0,
-    "attemptCount": 11714,
+    "attemptCount": 11718,
     "feedback": {
       "feedbackId": 7612,
       "feedbacks": [
@@ -48663,8 +48663,8 @@
       "publicHandle": "14a6f9fb972f723d06789c969370ff2e7411725",
       "avatar": 96235642204607
     },
-    "solvedCount": 166,
-    "attemptCount": 388,
+    "solvedCount": 167,
+    "attemptCount": 389,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7643,
@@ -48714,15 +48714,15 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 700,
-    "attemptCount": 897,
+    "solvedCount": 701,
+    "attemptCount": 899,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7676,
       "feedbacks": [
         4,
         3,
-        19,
+        20,
         40,
         130
       ]
@@ -48804,7 +48804,7 @@
       "cover": 70561827658523
     },
     "solvedCount": 194,
-    "attemptCount": 227,
+    "attemptCount": 228,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7709,
@@ -48859,7 +48859,7 @@
       "avatar": 96235642204607
     },
     "solvedCount": 102,
-    "attemptCount": 255,
+    "attemptCount": 256,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7742,
@@ -49065,7 +49065,7 @@
       "cover": 3844047877034
     },
     "solvedCount": 210,
-    "attemptCount": 296,
+    "attemptCount": 297,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7841,
@@ -49312,8 +49312,8 @@
       "avatar": 46459187054094,
       "cover": 46459140055345
     },
-    "solvedCount": 104,
-    "attemptCount": 192,
+    "solvedCount": 105,
+    "attemptCount": 193,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 7973,
@@ -49322,7 +49322,7 @@
         0,
         1,
         8,
-        23
+        24
       ]
     },
     "topics": [
@@ -49375,8 +49375,8 @@
       "avatar": 109775423519832,
       "cover": 120885629696444
     },
-    "solvedCount": 979,
-    "attemptCount": 1378,
+    "solvedCount": 981,
+    "attemptCount": 1380,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8006,
@@ -49556,8 +49556,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 744,
-    "attemptCount": 1068,
+    "solvedCount": 746,
+    "attemptCount": 1071,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8105,
@@ -49565,8 +49565,8 @@
         2,
         3,
         15,
-        51,
-        139
+        52,
+        140
       ]
     },
     "topics": [
@@ -49605,8 +49605,8 @@
       "publicHandle": "a84006dce072dd9c3e3285f7216c78a57591443",
       "avatar": 107747101588065
     },
-    "solvedCount": 197,
-    "attemptCount": 246,
+    "solvedCount": 198,
+    "attemptCount": 247,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8138,
@@ -49615,7 +49615,7 @@
         2,
         6,
         14,
-        43
+        44
       ]
     },
     "topics": [],
@@ -49643,7 +49643,7 @@
       "cover": 56724706555090
     },
     "solvedCount": 109,
-    "attemptCount": 128,
+    "attemptCount": 129,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8171,
@@ -49712,7 +49712,7 @@
       "avatar": 92869880984408,
       "cover": 97651361592180
     },
-    "solvedCount": 148,
+    "solvedCount": 149,
     "attemptCount": 193,
     "xpPoints": 50,
     "feedback": {
@@ -49837,7 +49837,7 @@
       "avatar": 22915430912225
     },
     "solvedCount": 43,
-    "attemptCount": 114,
+    "attemptCount": 115,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8270,
@@ -49978,8 +49978,8 @@
       "avatar": 58573342794732,
       "cover": 110202688891958
     },
-    "solvedCount": 754,
-    "attemptCount": 1347,
+    "solvedCount": 757,
+    "attemptCount": 1358,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8336,
@@ -49988,7 +49988,7 @@
         2,
         11,
         52,
-        141
+        142
       ]
     },
     "topics": [
@@ -50103,8 +50103,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 102,
-    "attemptCount": 142,
+    "solvedCount": 103,
+    "attemptCount": 143,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8402,
@@ -50252,7 +50252,7 @@
       "cover": 31940826975984
     },
     "solvedCount": 0,
-    "attemptCount": 125,
+    "attemptCount": 126,
     "feedback": {
       "feedbackId": 8468,
       "feedbacks": [
@@ -50396,8 +50396,8 @@
       "avatar": 129102504823083,
       "cover": 127656041082668
     },
-    "solvedCount": 197,
-    "attemptCount": 236,
+    "solvedCount": 198,
+    "attemptCount": 237,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8534,
@@ -50646,7 +50646,7 @@
       "cover": 5720695198457
     },
     "solvedCount": 182,
-    "attemptCount": 383,
+    "attemptCount": 384,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8633,
@@ -50758,8 +50758,8 @@
       "avatar": 17144268818519,
       "cover": 3070042563567
     },
-    "solvedCount": 416,
-    "attemptCount": 546,
+    "solvedCount": 417,
+    "attemptCount": 548,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8699,
@@ -50809,7 +50809,7 @@
       "avatar": 64972086680238,
       "cover": 68772145645027
     },
-    "solvedCount": 245,
+    "solvedCount": 247,
     "attemptCount": 276,
     "xpPoints": 50,
     "feedback": {
@@ -50884,8 +50884,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 74,
-    "attemptCount": 155,
+    "solvedCount": 75,
+    "attemptCount": 156,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8765,
@@ -50998,8 +50998,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 520,
-    "attemptCount": 766,
+    "solvedCount": 521,
+    "attemptCount": 768,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8831,
@@ -51007,7 +51007,7 @@
         3,
         6,
         6,
-        29,
+        30,
         107
       ]
     },
@@ -51054,8 +51054,8 @@
       "avatar": 115730569738380,
       "cover": 75055380952277
     },
-    "solvedCount": 309,
-    "attemptCount": 345,
+    "solvedCount": 311,
+    "attemptCount": 346,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 8864,
@@ -51063,7 +51063,7 @@
         1,
         3,
         12,
-        22,
+        23,
         60
       ]
     },
@@ -51105,10 +51105,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "seabed-security-fall-challenge-2023-puzzle-discussion/203148",
-    "total": 5224,
-    "globalTotal": 5224,
+    "total": 5228,
+    "globalTotal": 5228,
     "solvedCount": 0,
-    "attemptCount": 10272,
+    "attemptCount": 10278,
     "feedback": {
       "feedbackId": 8897,
       "feedbacks": [
@@ -51293,8 +51293,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-snake/202961",
-    "total": 280,
-    "globalTotal": 280,
+    "total": 283,
+    "globalTotal": 283,
     "contributor": {
       "userId": 4897832,
       "pseudo": "Dr Meyss'",
@@ -51302,15 +51302,15 @@
       "avatar": 83988905905404,
       "cover": 141057269302025
     },
-    "solvedCount": 214,
-    "attemptCount": 602,
+    "solvedCount": 217,
+    "attemptCount": 607,
     "feedback": {
       "feedbackId": 8996,
       "feedbacks": [
         0,
         0,
         4,
-        14,
+        15,
         35
       ]
     },
@@ -51385,8 +51385,8 @@
       "avatar": 145184720089323,
       "cover": 142292701719329
     },
-    "solvedCount": 326,
-    "attemptCount": 376,
+    "solvedCount": 327,
+    "attemptCount": 377,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9029,
@@ -51685,8 +51685,8 @@
       "avatar": 112962981037815,
       "cover": 112963105685618
     },
-    "solvedCount": 657,
-    "attemptCount": 811,
+    "solvedCount": 660,
+    "attemptCount": 814,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9194,
@@ -51695,7 +51695,7 @@
         1,
         19,
         48,
-        107
+        108
       ]
     },
     "topics": [
@@ -51736,8 +51736,8 @@
       "avatar": 102002083382216,
       "cover": 107991085771915
     },
-    "solvedCount": 408,
-    "attemptCount": 434,
+    "solvedCount": 410,
+    "attemptCount": 437,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9227,
@@ -51745,7 +51745,7 @@
         1,
         3,
         13,
-        30,
+        31,
         77
       ]
     },
@@ -51773,8 +51773,8 @@
       "avatar": 43965748895173,
       "cover": 52653106519293
     },
-    "solvedCount": 821,
-    "attemptCount": 1106,
+    "solvedCount": 826,
+    "attemptCount": 1113,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9293,
@@ -51783,7 +51783,7 @@
         2,
         10,
         46,
-        156
+        157
       ]
     },
     "topics": [
@@ -51856,8 +51856,8 @@
       "avatar": 94714081045618,
       "cover": 70561827658523
     },
-    "solvedCount": 182,
-    "attemptCount": 206,
+    "solvedCount": 183,
+    "attemptCount": 207,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9326,
@@ -51990,7 +51990,7 @@
       "cover": 111042505190892
     },
     "solvedCount": 200,
-    "attemptCount": 246,
+    "attemptCount": 247,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9392,
@@ -52053,8 +52053,8 @@
       "avatar": 97662026388574,
       "cover": 100913988137660
     },
-    "solvedCount": 373,
-    "attemptCount": 776,
+    "solvedCount": 374,
+    "attemptCount": 777,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9458,
@@ -52062,7 +52062,7 @@
         5,
         2,
         5,
-        29,
+        30,
         81
       ]
     },
@@ -52140,8 +52140,8 @@
       "publicHandle": "da2fe4fbf3c0ab008c6dcf304920ec602979743",
       "avatar": 33990586394707
     },
-    "solvedCount": 2379,
-    "attemptCount": 3546,
+    "solvedCount": 2397,
+    "attemptCount": 3572,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9491,
@@ -52149,8 +52149,8 @@
         1,
         5,
         27,
-        121,
-        419
+        123,
+        422
       ]
     },
     "topics": [
@@ -52210,8 +52210,8 @@
       "avatar": 73542168807997,
       "cover": 128358500389487
     },
-    "solvedCount": 456,
-    "attemptCount": 586,
+    "solvedCount": 457,
+    "attemptCount": 587,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9524,
@@ -52219,7 +52219,7 @@
         3,
         2,
         12,
-        27,
+        28,
         81
       ]
     },
@@ -52468,7 +52468,7 @@
       "avatar": 67205527942183
     },
     "solvedCount": 16,
-    "attemptCount": 65,
+    "attemptCount": 66,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9623,
@@ -52592,8 +52592,8 @@
       "publicHandle": "f59ea03038f2075143aa0fa2e0c2267a1717575",
       "avatar": 125417383316159
     },
-    "solvedCount": 543,
-    "attemptCount": 603,
+    "solvedCount": 544,
+    "attemptCount": 604,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9689,
@@ -52602,7 +52602,7 @@
         0,
         8,
         36,
-        93
+        94
       ]
     },
     "topics": [
@@ -52674,7 +52674,7 @@
       "cover": 117043286946658
     },
     "solvedCount": 233,
-    "attemptCount": 308,
+    "attemptCount": 310,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9722,
@@ -52735,7 +52735,7 @@
       "publicHandle": "6aed1b19fc10b92d8f1d78dce39fb7592906301",
       "avatar": 117815661507237
     },
-    "solvedCount": 25,
+    "solvedCount": 26,
     "attemptCount": 83,
     "xpPoints": 50,
     "feedback": {
@@ -52791,8 +52791,8 @@
       "avatar": 115730569738380,
       "cover": 75055380952277
     },
-    "solvedCount": 344,
-    "attemptCount": 527,
+    "solvedCount": 345,
+    "attemptCount": 534,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9788,
@@ -52800,7 +52800,7 @@
         2,
         4,
         6,
-        25,
+        26,
         92
       ]
     },
@@ -52828,8 +52828,8 @@
       "avatar": 80946308795008,
       "cover": 96237129908977
     },
-    "solvedCount": 166,
-    "attemptCount": 203,
+    "solvedCount": 167,
+    "attemptCount": 204,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9821,
@@ -52838,7 +52838,7 @@
         2,
         5,
         13,
-        32
+        33
       ]
     },
     "topics": [
@@ -53021,15 +53021,15 @@
       "avatar": 124095764084955,
       "cover": 70546700728395
     },
-    "solvedCount": 463,
-    "attemptCount": 811,
+    "solvedCount": 466,
+    "attemptCount": 813,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 9920,
       "feedbacks": [
         2,
         4,
-        13,
+        14,
         40,
         95
       ]
@@ -53242,7 +53242,7 @@
       "avatar": 113237700854929
     },
     "solvedCount": 110,
-    "attemptCount": 187,
+    "attemptCount": 188,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10019,
@@ -53295,8 +53295,8 @@
       "userId": 5748659,
       "publicHandle": "dff504e289720a4e94fe5ee24f86d26b9568475"
     },
-    "solvedCount": 62,
-    "attemptCount": 97,
+    "solvedCount": 63,
+    "attemptCount": 98,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10052,
@@ -53358,7 +53358,7 @@
       "avatar": 117815661507237
     },
     "solvedCount": 22,
-    "attemptCount": 67,
+    "attemptCount": 68,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10085,
@@ -53422,10 +53422,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "olymbits-summer-challenge-2024-puzzle-discussion/204472",
-    "total": 6199,
-    "globalTotal": 6199,
+    "total": 6220,
+    "globalTotal": 6220,
     "solvedCount": 0,
-    "attemptCount": 8257,
+    "attemptCount": 8286,
     "feedback": {
       "feedbackId": 10118,
       "feedbacks": [
@@ -53476,8 +53476,8 @@
       "avatar": 124698525377421,
       "cover": 123129009466188
     },
-    "solvedCount": 158,
-    "attemptCount": 184,
+    "solvedCount": 159,
+    "attemptCount": 185,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10151,
@@ -53607,8 +53607,8 @@
       "avatar": 22693843177667,
       "cover": 22693917013778
     },
-    "solvedCount": 256,
-    "attemptCount": 321,
+    "solvedCount": 258,
+    "attemptCount": 323,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10217,
@@ -53663,8 +53663,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-vehicle-routing-problem-puzzle-discussion/204643",
-    "total": 234,
-    "globalTotal": 234,
+    "total": 239,
+    "globalTotal": 239,
     "contributor": {
       "userId": 3358879,
       "pseudo": "PierreLaur",
@@ -53672,15 +53672,15 @@
       "avatar": 152796248512039,
       "cover": 120775205051133
     },
-    "solvedCount": 213,
-    "attemptCount": 627,
+    "solvedCount": 218,
+    "attemptCount": 634,
     "feedback": {
       "feedbackId": 10250,
       "feedbacks": [
         0,
         0,
         1,
-        9,
+        10,
         30
       ]
     },
@@ -53897,7 +53897,7 @@
       "avatar": 122843082275603
     },
     "solvedCount": 341,
-    "attemptCount": 404,
+    "attemptCount": 405,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10382,
@@ -53971,7 +53971,7 @@
       "cover": 117043286946658
     },
     "solvedCount": 57,
-    "attemptCount": 100,
+    "attemptCount": 101,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10415,
@@ -54228,7 +54228,7 @@
       "cover": 137387283120267
     },
     "solvedCount": 500,
-    "attemptCount": 889,
+    "attemptCount": 890,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10547,
@@ -54522,8 +54522,8 @@
       "avatar": 36523383873142,
       "cover": 37397281393126
     },
-    "solvedCount": 51,
-    "attemptCount": 75,
+    "solvedCount": 52,
+    "attemptCount": 76,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10679,
@@ -55001,7 +55001,7 @@
       "cover": 16905905262068
     },
     "solvedCount": 150,
-    "attemptCount": 248,
+    "attemptCount": 249,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10877,
@@ -55074,8 +55074,8 @@
       "avatar": 128569885297741,
       "cover": 128744667939682
     },
-    "solvedCount": 52,
-    "attemptCount": 65,
+    "solvedCount": 53,
+    "attemptCount": 66,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10910,
@@ -55143,8 +55143,8 @@
       "avatar": 13281799951852,
       "cover": 16905905262068
     },
-    "solvedCount": 188,
-    "attemptCount": 228,
+    "solvedCount": 190,
+    "attemptCount": 231,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 10943,
@@ -55356,8 +55356,8 @@
       "avatar": 132419401284681,
       "cover": 132415825187527
     },
-    "solvedCount": 2299,
-    "attemptCount": 3523,
+    "solvedCount": 2315,
+    "attemptCount": 3546,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11075,
@@ -55365,8 +55365,8 @@
         3,
         3,
         25,
-        121,
-        397
+        122,
+        398
       ]
     },
     "topics": [
@@ -55556,8 +55556,8 @@
       "avatar": 132419401284681,
       "cover": 132415825187527
     },
-    "solvedCount": 192,
-    "attemptCount": 225,
+    "solvedCount": 193,
+    "attemptCount": 226,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11174,
@@ -55566,7 +55566,7 @@
         3,
         2,
         14,
-        43
+        44
       ]
     },
     "topics": [
@@ -55625,8 +55625,8 @@
       "avatar": 132419401284681,
       "cover": 132415825187527
     },
-    "solvedCount": 1256,
-    "attemptCount": 1849,
+    "solvedCount": 1283,
+    "attemptCount": 1893,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11207,
@@ -55635,7 +55635,7 @@
         2,
         12,
         81,
-        269
+        274
       ]
     },
     "topics": [
@@ -55701,8 +55701,8 @@
       "avatar": 124698525377421,
       "cover": 123129009466188
     },
-    "solvedCount": 153,
-    "attemptCount": 187,
+    "solvedCount": 155,
+    "attemptCount": 189,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11240,
@@ -55710,8 +55710,8 @@
         2,
         2,
         1,
-        12,
-        33
+        13,
+        34
       ]
     },
     "topics": [],
@@ -55738,8 +55738,8 @@
       "avatar": 95120829746216,
       "cover": 134994062315006
     },
-    "solvedCount": 819,
-    "attemptCount": 1151,
+    "solvedCount": 834,
+    "attemptCount": 1168,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11273,
@@ -55747,8 +55747,8 @@
         2,
         1,
         7,
-        55,
-        157
+        57,
+        161
       ]
     },
     "topics": [
@@ -55940,8 +55940,8 @@
       "avatar": 132419401284681,
       "cover": 132415825187527
     },
-    "solvedCount": 268,
-    "attemptCount": 449,
+    "solvedCount": 269,
+    "attemptCount": 450,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11372,
@@ -56007,7 +56007,7 @@
       "cover": 49197740603520
     },
     "solvedCount": 0,
-    "attemptCount": 83,
+    "attemptCount": 84,
     "feedback": {
       "feedbackId": 11405,
       "feedbacks": [
@@ -56083,7 +56083,7 @@
       "avatar": 136778820182751,
       "cover": 137387283120267
     },
-    "solvedCount": 62,
+    "solvedCount": 63,
     "attemptCount": 104,
     "xpPoints": 50,
     "feedback": {
@@ -56267,8 +56267,8 @@
       "avatar": 79146641399080,
       "cover": 80356242725018
     },
-    "solvedCount": 13,
-    "attemptCount": 171,
+    "solvedCount": 14,
+    "attemptCount": 174,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11537,
@@ -56318,8 +56318,8 @@
       "avatar": 115818227951264,
       "cover": 115818488627984
     },
-    "solvedCount": 134,
-    "attemptCount": 182,
+    "solvedCount": 136,
+    "attemptCount": 184,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11570,
@@ -56439,10 +56439,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "cellularena-winter-challenge-2024-puzzle-discussion/205852",
-    "total": 4242,
-    "globalTotal": 4242,
+    "total": 4246,
+    "globalTotal": 4246,
     "solvedCount": 0,
-    "attemptCount": 7207,
+    "attemptCount": 7221,
     "feedback": {
       "feedbackId": 11636,
       "feedbacks": [
@@ -56763,7 +56763,7 @@
       "cover": 132415825187527
     },
     "solvedCount": 48,
-    "attemptCount": 78,
+    "attemptCount": 79,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11834,
@@ -57048,7 +57048,7 @@
       "cover": 137387283120267
     },
     "solvedCount": 41,
-    "attemptCount": 55,
+    "attemptCount": 56,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11966,
@@ -57116,17 +57116,17 @@
       "avatar": 87736728529732,
       "cover": 87737384787178
     },
-    "solvedCount": 129,
-    "attemptCount": 179,
+    "solvedCount": 132,
+    "attemptCount": 182,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 11999,
       "feedbacks": [
         1,
         1,
-        3,
+        4,
         8,
-        25
+        27
       ]
     },
     "topics": [
@@ -57179,8 +57179,8 @@
       "avatar": 87736728529732,
       "cover": 87737384787178
     },
-    "solvedCount": 53,
-    "attemptCount": 72,
+    "solvedCount": 54,
+    "attemptCount": 73,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12032,
@@ -57245,8 +57245,8 @@
       "publicHandle": "145e8a18c75b6de889ccbb6cf3c9ebf98523446",
       "avatar": 136927547925397
     },
-    "solvedCount": 109,
-    "attemptCount": 127,
+    "solvedCount": 110,
+    "attemptCount": 128,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12065,
@@ -57395,8 +57395,8 @@
       "avatar": 138621329790424,
       "cover": 138593381970550
     },
-    "solvedCount": 49,
-    "attemptCount": 51,
+    "solvedCount": 50,
+    "attemptCount": 53,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12131,
@@ -57543,8 +57543,8 @@
       "avatar": 87736728529732,
       "cover": 87737384787178
     },
-    "solvedCount": 42,
-    "attemptCount": 64,
+    "solvedCount": 43,
+    "attemptCount": 65,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12197,
@@ -57610,8 +57610,8 @@
       "avatar": 93798463743273,
       "cover": 1787730489105
     },
-    "solvedCount": 218,
-    "attemptCount": 263,
+    "solvedCount": 220,
+    "attemptCount": 265,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12230,
@@ -57728,8 +57728,8 @@
       "avatar": 80946308795008,
       "cover": 96237129908977
     },
-    "solvedCount": 35,
-    "attemptCount": 49,
+    "solvedCount": 36,
+    "attemptCount": 50,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12296,
@@ -57737,7 +57737,7 @@
         0,
         0,
         1,
-        2,
+        3,
         8
       ]
     },
@@ -57790,8 +57790,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-domain-expansion-puzzle-discussion/206273",
-    "total": 36,
-    "globalTotal": 36,
+    "total": 37,
+    "globalTotal": 37,
     "contributor": {
       "userId": 4420742,
       "pseudo": "Mortis_666",
@@ -57800,7 +57800,7 @@
       "cover": 72491083307254
     },
     "solvedCount": 0,
-    "attemptCount": 42,
+    "attemptCount": 43,
     "feedback": {
       "feedbackId": 12329,
       "feedbacks": [
@@ -57914,7 +57914,7 @@
       "cover": 51700744554970
     },
     "solvedCount": 19,
-    "attemptCount": 97,
+    "attemptCount": 99,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12395,
@@ -57981,8 +57981,8 @@
       "avatar": 12585096610807,
       "cover": 86062688517054
     },
-    "solvedCount": 44,
-    "attemptCount": 84,
+    "solvedCount": 45,
+    "attemptCount": 85,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12428,
@@ -58031,8 +58031,8 @@
       "avatar": 87736728529732,
       "cover": 87737384787178
     },
-    "solvedCount": 29,
-    "attemptCount": 76,
+    "solvedCount": 30,
+    "attemptCount": 78,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12461,
@@ -58183,8 +58183,8 @@
       "pseudo": "JimmyX304",
       "publicHandle": "135f362cc64b1eb16a4579c3584599781182036"
     },
-    "solvedCount": 53,
-    "attemptCount": 60,
+    "solvedCount": 54,
+    "attemptCount": 61,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12528,
@@ -58192,7 +58192,7 @@
         0,
         0,
         5,
-        5,
+        6,
         8
       ]
     },
@@ -58266,7 +58266,7 @@
       "cover": 137387283120267
     },
     "solvedCount": 42,
-    "attemptCount": 66,
+    "attemptCount": 67,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12560,
@@ -58347,8 +58347,8 @@
       "avatar": 77623682146098,
       "cover": 117479363896145
     },
-    "solvedCount": 97,
-    "attemptCount": 129,
+    "solvedCount": 98,
+    "attemptCount": 130,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12593,
@@ -58409,8 +58409,8 @@
       "avatar": 79146641399080,
       "cover": 80356242725018
     },
-    "solvedCount": 110,
-    "attemptCount": 135,
+    "solvedCount": 111,
+    "attemptCount": 136,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12626,
@@ -58419,7 +58419,7 @@
         2,
         1,
         8,
-        23
+        24
       ]
     },
     "topics": [],
@@ -58447,7 +58447,7 @@
       "cover": 127709108309908
     },
     "solvedCount": 17,
-    "attemptCount": 70,
+    "attemptCount": 71,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12659,
@@ -58509,8 +58509,8 @@
       "avatar": 118130566868021,
       "cover": 136930325390336
     },
-    "solvedCount": 194,
-    "attemptCount": 260,
+    "solvedCount": 201,
+    "attemptCount": 271,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12692,
@@ -58518,8 +58518,8 @@
         1,
         0,
         5,
-        14,
-        42
+        15,
+        43
       ]
     },
     "topics": [
@@ -58596,8 +58596,8 @@
       "publicHandle": "f7fec9fe2157410ef9c301ee1b3182e39959626",
       "avatar": 129036189483019
     },
-    "solvedCount": 81,
-    "attemptCount": 113,
+    "solvedCount": 83,
+    "attemptCount": 116,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12725,
@@ -58666,7 +58666,7 @@
       "cover": 52653106519293
     },
     "solvedCount": 94,
-    "attemptCount": 111,
+    "attemptCount": 112,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12758,
@@ -58723,8 +58723,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-game-of-life-or-death-puzzle-discussion/206721",
-    "total": 30,
-    "globalTotal": 30,
+    "total": 31,
+    "globalTotal": 31,
     "contributor": {
       "userId": 5160622,
       "pseudo": "Unsupervision",
@@ -58733,7 +58733,7 @@
       "cover": 148405724451515
     },
     "solvedCount": 0,
-    "attemptCount": 60,
+    "attemptCount": 61,
     "feedback": {
       "feedbackId": 12791,
       "feedbacks": [
@@ -58811,8 +58811,8 @@
       "avatar": 154204769409682,
       "cover": 154204829307922
     },
-    "solvedCount": 124,
-    "attemptCount": 140,
+    "solvedCount": 127,
+    "attemptCount": 144,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12824,
@@ -58821,7 +58821,7 @@
         1,
         5,
         9,
-        26
+        27
       ]
     },
     "topics": [
@@ -58880,8 +58880,8 @@
       "avatar": 142520440975249,
       "cover": 116612623589846
     },
-    "solvedCount": 155,
-    "attemptCount": 163,
+    "solvedCount": 160,
+    "attemptCount": 169,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 12857,
@@ -58890,7 +58890,7 @@
         3,
         8,
         13,
-        33
+        34
       ]
     },
     "topics": [
@@ -59158,8 +59158,8 @@
       "avatar": 136778820182751,
       "cover": 137387283120267
     },
-    "solvedCount": 325,
-    "attemptCount": 493,
+    "solvedCount": 328,
+    "attemptCount": 500,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13055,
@@ -59208,8 +59208,8 @@
       "avatar": 137410581888381,
       "cover": 137413987255536
     },
-    "solvedCount": 36,
-    "attemptCount": 45,
+    "solvedCount": 38,
+    "attemptCount": 48,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13088,
@@ -59365,17 +59365,17 @@
       "avatar": 154204769409682,
       "cover": 154204829307922
     },
-    "solvedCount": 388,
-    "attemptCount": 506,
+    "solvedCount": 401,
+    "attemptCount": 526,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13154,
       "feedbacks": [
         0,
         1,
-        3,
-        32,
-        71
+        4,
+        33,
+        75
       ]
     },
     "topics": [
@@ -59427,15 +59427,15 @@
       "publicHandle": "da2fe4fbf3c0ab008c6dcf304920ec602979743",
       "avatar": 33990586394707
     },
-    "solvedCount": 100,
-    "attemptCount": 132,
+    "solvedCount": 102,
+    "attemptCount": 134,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13187,
       "feedbacks": [
         1,
         1,
-        3,
+        4,
         9,
         16
       ]
@@ -59495,8 +59495,8 @@
       "avatar": 130769403588418,
       "cover": 147659884805538
     },
-    "solvedCount": 52,
-    "attemptCount": 67,
+    "solvedCount": 53,
+    "attemptCount": 68,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13220,
@@ -59504,7 +59504,7 @@
         0,
         0,
         0,
-        4,
+        5,
         13
       ]
     },
@@ -59558,8 +59558,8 @@
       "avatar": 130769403588418,
       "cover": 147659884805538
     },
-    "solvedCount": 27,
-    "attemptCount": 34,
+    "solvedCount": 29,
+    "attemptCount": 36,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13253,
@@ -59721,7 +59721,7 @@
       "publicHandle": "3dc42e70351c726eccf7b953756386924902706"
     },
     "solvedCount": 85,
-    "attemptCount": 106,
+    "attemptCount": 107,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13319,
@@ -59780,10 +59780,10 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "soak-overflow-summer-challenge-2025-puzzle-discussion/207075",
-    "total": 4056,
-    "globalTotal": 4056,
+    "total": 4063,
+    "globalTotal": 4063,
     "solvedCount": 0,
-    "attemptCount": 5159,
+    "attemptCount": 5168,
     "feedback": {
       "feedbackId": 13352,
       "feedbacks": [
@@ -59977,8 +59977,8 @@
       "avatar": 154204769409682,
       "cover": 154204829307922
     },
-    "solvedCount": 247,
-    "attemptCount": 334,
+    "solvedCount": 251,
+    "attemptCount": 340,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13451,
@@ -60039,8 +60039,8 @@
       "avatar": 79778741456399,
       "cover": 144297825165019
     },
-    "solvedCount": 71,
-    "attemptCount": 80,
+    "solvedCount": 72,
+    "attemptCount": 81,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13517,
@@ -60181,8 +60181,8 @@
       "avatar": 154204769409682,
       "cover": 154204829307922
     },
-    "solvedCount": 23,
-    "attemptCount": 52,
+    "solvedCount": 24,
+    "attemptCount": 54,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13583,
@@ -60237,13 +60237,13 @@
       "avatar": 154204769409682,
       "cover": 154204829307922
     },
-    "solvedCount": 199,
-    "attemptCount": 229,
+    "solvedCount": 203,
+    "attemptCount": 233,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13616,
       "feedbacks": [
-        0,
+        1,
         0,
         6,
         14,
@@ -60286,8 +60286,8 @@
       "publicHandle": "d920c79ef81eca8d4aa2034a1b8ebc1e8581356",
       "avatar": 140912423272113
     },
-    "solvedCount": 109,
-    "attemptCount": 114,
+    "solvedCount": 114,
+    "attemptCount": 119,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13649,
@@ -60295,8 +60295,8 @@
         0,
         3,
         3,
-        9,
-        21
+        10,
+        23
       ]
     },
     "topics": [
@@ -60337,7 +60337,7 @@
       "cover": 147659884805538
     },
     "solvedCount": 23,
-    "attemptCount": 63,
+    "attemptCount": 66,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13682,
@@ -60494,17 +60494,17 @@
       "avatar": 143871801993425,
       "cover": 143871923786995
     },
-    "solvedCount": 206,
-    "attemptCount": 383,
+    "solvedCount": 220,
+    "attemptCount": 394,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13715,
       "feedbacks": [
-        0,
+        1,
         2,
         3,
-        17,
-        51
+        19,
+        53
       ]
     },
     "topics": [
@@ -60551,8 +60551,8 @@
     "achievementCount": 0,
     "doneAchievementCount": 0,
     "forumLink": "community-puzzle-beeminegame-puzzle-discussion/207301",
-    "total": 103,
-    "globalTotal": 103,
+    "total": 104,
+    "globalTotal": 104,
     "contributor": {
       "userId": 484004,
       "pseudo": "aCat",
@@ -60561,7 +60561,7 @@
       "cover": 4256317302946
     },
     "solvedCount": 0,
-    "attemptCount": 125,
+    "attemptCount": 129,
     "feedback": {
       "feedbackId": 13748,
       "feedbacks": [
@@ -60569,7 +60569,7 @@
         0,
         0,
         1,
-        5
+        6
       ]
     },
     "optimCriteriaId": "rank",
@@ -60618,8 +60618,8 @@
       "avatar": 66724700708963,
       "cover": 142783407520791
     },
-    "solvedCount": 36,
-    "attemptCount": 43,
+    "solvedCount": 37,
+    "attemptCount": 44,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13781,
@@ -60675,7 +60675,7 @@
       "cover": 51700744554970
     },
     "solvedCount": 21,
-    "attemptCount": 39,
+    "attemptCount": 40,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13814,
@@ -60731,8 +60731,8 @@
       "avatar": 130575027242778,
       "cover": 130575582826072
     },
-    "solvedCount": 206,
-    "attemptCount": 244,
+    "solvedCount": 212,
+    "attemptCount": 249,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13847,
@@ -60809,7 +60809,7 @@
       "cover": 26189854101470
     },
     "solvedCount": 43,
-    "attemptCount": 77,
+    "attemptCount": 79,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13880,
@@ -60864,8 +60864,8 @@
       "avatar": 82217880354500,
       "cover": 51700744554970
     },
-    "solvedCount": 14,
-    "attemptCount": 45,
+    "solvedCount": 15,
+    "attemptCount": 46,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13913,
@@ -60931,8 +60931,8 @@
       "publicHandle": "fa42e54cfaf4fa617af027a58f09a2a59089725",
       "avatar": 106040884315189
     },
-    "solvedCount": 54,
-    "attemptCount": 93,
+    "solvedCount": 56,
+    "attemptCount": 95,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13946,
@@ -60981,8 +60981,8 @@
       "avatar": 77623682146098,
       "cover": 117479363896145
     },
-    "solvedCount": 29,
-    "attemptCount": 41,
+    "solvedCount": 30,
+    "attemptCount": 45,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 13979,
@@ -61117,8 +61117,8 @@
       "avatar": 117043408685180,
       "cover": 117043286946658
     },
-    "solvedCount": 26,
-    "attemptCount": 36,
+    "solvedCount": 28,
+    "attemptCount": 41,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14045,
@@ -61180,8 +61180,8 @@
       "avatar": 62657803902661,
       "cover": 62657465724286
     },
-    "solvedCount": 77,
-    "attemptCount": 87,
+    "solvedCount": 82,
+    "attemptCount": 94,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14078,
@@ -61248,8 +61248,8 @@
       "avatar": 143871801993425,
       "cover": 143871923786995
     },
-    "solvedCount": 16,
-    "attemptCount": 20,
+    "solvedCount": 17,
+    "attemptCount": 21,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14111,
@@ -61317,8 +61317,8 @@
       "avatar": 130769403588418,
       "cover": 147659884805538
     },
-    "solvedCount": 14,
-    "attemptCount": 33,
+    "solvedCount": 16,
+    "attemptCount": 35,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14144,
@@ -61327,7 +61327,7 @@
         0,
         0,
         0,
-        6
+        7
       ]
     },
     "topics": [
@@ -61386,8 +61386,8 @@
       "avatar": 130769403588418,
       "cover": 147659884805538
     },
-    "solvedCount": 10,
-    "attemptCount": 15,
+    "solvedCount": 11,
+    "attemptCount": 16,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14177,
@@ -61396,7 +61396,7 @@
         0,
         0,
         0,
-        4
+        5
       ]
     },
     "topics": [
@@ -61455,8 +61455,8 @@
       "avatar": 12329456921169,
       "cover": 50894783968440
     },
-    "solvedCount": 48,
-    "attemptCount": 58,
+    "solvedCount": 49,
+    "attemptCount": 59,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14210,
@@ -61511,8 +61511,8 @@
       "avatar": 152348584185982,
       "cover": 152348683936478
     },
-    "solvedCount": 56,
-    "attemptCount": 57,
+    "solvedCount": 59,
+    "attemptCount": 61,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14243,
@@ -61521,7 +61521,7 @@
         2,
         0,
         7,
-        5
+        6
       ]
     },
     "topics": [
@@ -61586,8 +61586,8 @@
       "avatar": 82217880354500,
       "cover": 51700744554970
     },
-    "solvedCount": 9,
-    "attemptCount": 13,
+    "solvedCount": 13,
+    "attemptCount": 19,
     "xpPoints": 50,
     "feedback": {
       "feedbackId": 14276,
@@ -61596,7 +61596,7 @@
         0,
         0,
         0,
-        2
+        3
       ]
     },
     "topics": [
@@ -61624,6 +61624,145 @@
     "type": "SOLO",
     "prettyId": "entanglement---episode-1",
     "detailsPageUrl": "/training/medium/entanglement---episode-1",
+    "communityCreation": true
+  },
+  {
+    "id": 13078,
+    "level": "hard",
+    "rank": 0,
+    "coverBinaryId": 150966104594537,
+    "title": "Magnets",
+    "validatorScore": 0,
+    "achievementCount": 0,
+    "doneAchievementCount": 0,
+    "forumLink": "community-puzzle-magnets-puzzle-discussion/207759",
+    "contributor": {
+      "userId": 3996809,
+      "pseudo": "VizGhar",
+      "publicHandle": "c152bee9fe8dc90ac4f6b84505b59ebb9086993",
+      "avatar": 82217880354500,
+      "cover": 51700744554970
+    },
+    "solvedCount": 6,
+    "attemptCount": 11,
+    "xpPoints": 50,
+    "feedback": {
+      "feedbackId": 14309,
+      "feedbacks": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "topics": [
+      {
+        "handle": "algorithms",
+        "category": "INTERMEDIATE",
+        "value": "Algorithms",
+        "children": [
+          {
+            "handle": "DFS",
+            "category": "ADVANCED",
+            "value": "DFS",
+            "children": []
+          },
+          {
+            "handle": "recursion",
+            "category": "FUNDAMENTALS",
+            "value": "Recursion",
+            "children": []
+          }
+        ]
+      },
+      {
+        "handle": "uncategorized",
+        "value": "Uncategorized",
+        "children": [
+          {
+            "handle": "logic",
+            "category": "FUNDAMENTALS",
+            "value": "Logic",
+            "children": []
+          },
+          {
+            "handle": "heuristic-search",
+            "category": "INTERMEDIATE",
+            "value": "Heuristic search",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "creationTime": 1765744990310,
+    "type": "SOLO",
+    "prettyId": "magnets",
+    "detailsPageUrl": "/training/hard/magnets",
+    "communityCreation": true
+  },
+  {
+    "id": 13111,
+    "level": "medium",
+    "rank": 0,
+    "coverBinaryId": 152477944001847,
+    "title": "Tic Tac Toe Engine",
+    "validatorScore": 0,
+    "achievementCount": 0,
+    "doneAchievementCount": 0,
+    "forumLink": "community-puzzle-tic-tac-toe-engine-puzzle-discussion/207770",
+    "contributor": {
+      "userId": 3232421,
+      "pseudo": "User123",
+      "publicHandle": "c3b956997f0e142fcaa109d71c0ecd431242323",
+      "avatar": 143871801993425,
+      "cover": 143871923786995
+    },
+    "solvedCount": 9,
+    "attemptCount": 11,
+    "xpPoints": 50,
+    "feedback": {
+      "feedbackId": 14342,
+      "feedbacks": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "topics": [
+      {
+        "handle": "algorithms",
+        "category": "INTERMEDIATE",
+        "value": "Algorithms",
+        "children": [
+          {
+            "handle": "backtracking",
+            "category": "ADVANCED",
+            "value": "Backtracking",
+            "children": []
+          }
+        ]
+      },
+      {
+        "handle": "artificial-intelligence",
+        "category": "ADVANCED",
+        "value": "Artificial Intelligence",
+        "children": [
+          {
+            "handle": "minimax",
+            "category": "ADVANCED",
+            "value": "Minimax",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "creationTime": 1766053681091,
+    "type": "CODE",
+    "prettyId": "tic-tac-toe-engine",
+    "detailsPageUrl": "/training/medium/tic-tac-toe-engine",
     "communityCreation": true
   }
 ]
