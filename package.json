@@ -25,6 +25,7 @@
     "script:achievements": "node --import tsx --env-file-if-exists .env scripts/retrieve-achievements.ts",
     "script:plan": "node --import tsx --env-file-if-exists .env scripts/plan-achievements.ts",
     "script:batches": "node --import tsx --env-file-if-exists .env scripts/generate-batches.ts",
+    "script:submit": "node --import tsx --env-file-if-exists .env scripts/list-submissions.ts",
     "script:solve": "node --import tsx --env-file-if-exists .env scripts/solve-puzzles.ts",
     "script:readme": "node --import tsx --env-file-if-exists .env scripts/update-readme.ts",
     "script:generate-readmes": "node --import tsx --env-file-if-exists .env scripts/generate-readmes.ts"
