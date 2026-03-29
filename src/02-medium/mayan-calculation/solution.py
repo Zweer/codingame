@@ -1,9 +1,10 @@
 import sys
+input = sys.stdin.readline
 
 l, h = map(int, input().split())
 glyphs = [[] for _ in range(20)]
 for i in range(h):
-    row = input()
+    row = input().rstrip('\n')
     for j in range(20):
         glyphs[j].append(row[j*l:(j+1)*l])
 
@@ -13,7 +14,7 @@ for i in range(20):
 
 def read_mayan():
     s = int(input())
-    lines = [input() for _ in range(s)]
+    lines = [input().rstrip('\n') for _ in range(s)]
     val = 0
     for i in range(s // h):
         key = '\n'.join(lines[i*h:(i+1)*h])
@@ -22,7 +23,7 @@ def read_mayan():
 
 a = read_mayan()
 b = read_mayan()
-op = input()
+op = input().strip()
 r = {'+': a+b, '-': a-b, '*': a*b, '/': a//b}[op]
 
 digits = []

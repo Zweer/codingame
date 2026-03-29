@@ -1,7 +1,5 @@
 // Define readline and print for local development if not running in CodinGame environment directly
 // In CodinGame's environment, these are globally available.
-declare function readline(): string;
-declare function print(message: string): void;
 
 /**
  * Represents a node (island) in the Hashi puzzle.
@@ -384,7 +382,7 @@ function solve(board: CurrentBoardState): boolean {
             solutionFound = true; // Mark global flag to stop other branches
             // Print the solution links to standard output
             for (const link of board.links) {
-                print(`${link.n1.x} ${link.n1.y} ${link.n2.x} ${link.n2.y} ${link.amount}`);
+                console.log(`${link.n1.x} ${link.n1.y} ${link.n2.x} ${link.n2.y} ${link.amount}`);
             }
             return true; // Solution found!
         } else {

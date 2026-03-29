@@ -1,5 +1,4 @@
 // Helper function to read a line from standard input (provided by CodinGame environment)
-declare function readline(): string;
 
 // Enum for room ports (directions relative to the room)
 enum Port {

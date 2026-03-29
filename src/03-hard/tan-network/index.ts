@@ -1,6 +1,4 @@
 // Required for CodinGame environment
-declare function readline(): string;
-declare function print(message: any): void; // print is usually just an alias for console.log
 
 // --- MinHeap Implementation (for Dijkstra's Priority Queue) ---
 // A generic MinHeap implementation to store [distance, stopId] tuples,

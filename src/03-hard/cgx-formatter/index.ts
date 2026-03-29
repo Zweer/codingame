@@ -1,9 +1,7 @@
 /**
- * Reads input from stdin. In a CodinGame environment, `readline()` reads a line and `print()` writes to stdout.
+ * Reads input from stdin. In a CodinGame environment, `readline()` reads a line and `console.log()` writes to stdout.
  * For local testing, you might need to mock these or provide input via file redirection.
  */
-declare function readline(): string;
-declare function print(message: string): void;
 
 function solve() {
     const N: number = parseInt(readline());
@@ -128,7 +126,7 @@ function solve() {
     }
 
     // 6. Output the formatted content
-    print(formattedLines.join('\n'));
+    console.log(formattedLines.join('\n'));
 }
 
 solve();

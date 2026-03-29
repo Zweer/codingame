@@ -1,7 +1,4 @@
 // Standard input/output functions (provided by CodinGame environment)
-declare function readline(): string;
-declare function print(message: string): void;
-declare function console.error(message: any): void;
 
 // Global variables for grid dimensions and initial map (read once at the start)
 let GRID_WIDTH: number;
@@ -226,7 +223,7 @@ function runGameLoop() {
 
         // --- Step 2: Check if all surveillance nodes are destroyed *after* current turn's explosions ---
         if (count_surveillance_nodes(currentGameState.grid) === 0) {
-            print("WAIT"); // All nodes destroyed, nothing left to do.
+            console.log("WAIT"); // All nodes destroyed, nothing left to do.
             continue; // Proceed to the next game turn
         }
 
@@ -352,7 +349,7 @@ function runGameLoop() {
             }
         }
         // Output the best action determined by BFS for the current turn.
-        print(bestAction);
+        console.log(bestAction);
     }
 }
 

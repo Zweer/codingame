@@ -1,5 +1,4 @@
 // Define readline for CodinGame environment
-declare function readline(): string;
 
 // Helper to print debug messages (will be ignored in production by CG)
 const DEBUG = false; // Set to true to enable console.error logs for debugging
