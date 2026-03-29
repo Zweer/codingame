@@ -5,61 +5,93 @@ export interface State {
   cy: number;
   px: number;
   py: number;
-  xLo: number;
-  xHi: number;
-  yLo: number;
-  yHi: number;
-  doingX: boolean;
+  candidates: [number, number][];
+  scale: number;
+  refined: boolean;
 }
 
 export function initState(W: number, H: number, x0: number, y0: number): State {
-  return { W, H, cx: x0, cy: y0, px: x0, py: y0, xLo: 0, xHi: W - 1, yLo: 0, yHi: H - 1, doingX: true };
+  let scale = 1;
+  while (Math.ceil(W / scale) * Math.ceil(H / scale) > 10000) scale *= 2;
+
+  const candidates: [number, number][] = [];
+  for (let y = 0; y < H; y += scale) {
+    for (let x = 0; x < W; x += scale) {
+      // Use center of each cell
+      candidates.push([
+        Math.min(x + Math.floor(scale / 2), W - 1),
+        Math.min(y + Math.floor(scale / 2), H - 1),
+      ]);
+    }
+  }
+
+  return { W, H, cx: x0, cy: y0, px: x0, py: y0, candidates, scale, refined: scale === 1 };
 }
 
 export function step(s: State, hint: string): [number, number] {
-  if (hint !== 'UNKNOWN') {
-    if (s.doingX && s.cy === s.py) update(s, 'x', hint);
-    else if (!s.doingX && s.cx === s.px) update(s, 'y', hint);
-  }
+  if (hint === 'WARMER' || hint === 'COLDER' || hint === 'SAME') {
+    const { px, py, cx, cy } = s;
 
-  const wasDoingX = s.doingX;
-  if (s.xLo >= s.xHi) s.doingX = false;
+    s.candidates = s.candidates.filter(([bx, by]) => {
+      const dPrev = (bx - px) ** 2 + (by - py) ** 2;
+      const dCur = (bx - cx) ** 2 + (by - cy) ** 2;
+      if (hint === 'WARMER') return dCur < dPrev;
+      if (hint === 'COLDER') return dCur > dPrev;
+      return dCur === dPrev;
+    });
+
+    // Refine when few super-windows remain
+    if (!s.refined && s.candidates.length <= 4) {
+      const newCandidates: [number, number][] = [];
+      const half = Math.ceil(s.scale / 2);
+      for (const [sx, sy] of s.candidates) {
+        for (let dy = -half; dy <= half; dy++) {
+          for (let dx = -half; dx <= half; dx++) {
+            const nx = sx + dx, ny = sy + dy;
+            if (nx >= 0 && nx < s.W && ny >= 0 && ny < s.H) {
+              const dPrev = (nx - px) ** 2 + (ny - py) ** 2;
+              const dCur = (nx - cx) ** 2 + (ny - cy) ** 2;
+              const ok = hint === 'WARMER' ? dCur < dPrev : hint === 'COLDER' ? dCur > dPrev : dCur === dPrev;
+              if (ok) newCandidates.push([nx, ny]);
+            }
+          }
+        }
+      }
+      // Deduplicate
+      const seen = new Set<string>();
+      s.candidates = newCandidates.filter(([x, y]) => {
+        const k = `${x},${y}`;
+        if (seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      });
+      s.refined = true;
+    }
+  }
 
   s.px = s.cx; s.py = s.cy;
 
-  if (s.doingX) {
-    s.cx = pick(s.cx, s.xLo, s.xHi);
-  } else if (wasDoingX && s.cx !== s.xLo) {
-    s.cx = s.xLo;
-  } else {
-    s.cx = s.xLo;
-    s.cy = pick(s.cy, s.yLo, s.yHi);
+  if (s.candidates.length <= 1) {
+    if (s.candidates.length === 1) [s.cx, s.cy] = s.candidates[0];
+    return [s.cx, s.cy];
   }
+
+  // Jump to centroid
+  let sumX = 0, sumY = 0;
+  for (const [x, y] of s.candidates) { sumX += x; sumY += y; }
+  let nx = Math.round(sumX / s.candidates.length);
+  let ny = Math.round(sumY / s.candidates.length);
+
+  if (nx === s.cx && ny === s.cy) {
+    // Find furthest candidate
+    let maxD = -1;
+    for (const [x, y] of s.candidates) {
+      const d = (x - nx) ** 2 + (y - ny) ** 2;
+      if (d > maxD) { maxD = d; nx = x; ny = y; }
+    }
+  }
+
+  s.cx = Math.max(0, Math.min(s.W - 1, nx));
+  s.cy = Math.max(0, Math.min(s.H - 1, ny));
   return [s.cx, s.cy];
-}
-
-function update(s: State, axis: 'x' | 'y', hint: string): void {
-  const prev = axis === 'x' ? s.px : s.py;
-  const cur = axis === 'x' ? s.cx : s.cy;
-  const mid = (prev + cur) / 2;
-  if (hint === 'SAME') {
-    if (axis === 'x') s.xLo = s.xHi = Math.round(mid);
-    else s.yLo = s.yHi = Math.round(mid);
-    return;
-  }
-  const above = (hint === 'WARMER' && cur > prev) || (hint === 'COLDER' && cur < prev);
-  if (above) {
-    if (axis === 'x') s.xLo = Math.max(s.xLo, Math.floor(mid) + 1);
-    else s.yLo = Math.max(s.yLo, Math.floor(mid) + 1);
-  } else {
-    if (axis === 'x') s.xHi = Math.min(s.xHi, Math.ceil(mid) - 1);
-    else s.yHi = Math.min(s.yHi, Math.ceil(mid) - 1);
-  }
-}
-
-function pick(cur: number, lo: number, hi: number): number {
-  if (lo === hi) return lo;
-  const m = Math.round((lo + hi) / 2);
-  if (m !== cur) return m;
-  return cur === lo ? hi : lo;
 }
