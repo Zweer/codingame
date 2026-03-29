@@ -11,15 +11,14 @@ for (let y = 0; y < H; y++) {
     }
 }
 
-// Precompute: for each empty cell, which targets it can hit
+const NT = targets.length;
+const allMask = (1 << NT) - 1;
 const DIRS = [[0, -1], [0, 1], [-1, 0], [1, 0]];
-interface BombSpot {
-    x: number;
-    y: number;
-    hits: number; // bitmask of targets hit
-}
 
-const spots: BombSpot[] = [];
+// For each empty cell, compute bitmask of targets it can destroy
+interface Spot { x: number; y: number; hits: number; }
+const spots: Spot[] = [];
+
 for (let y = 0; y < H; y++) {
     for (let x = 0; x < W; x++) {
         if (grid[y][x] !== '.') continue;
@@ -28,52 +27,52 @@ for (let y = 0; y < H; y++) {
             for (let i = 1; i <= 3; i++) {
                 const nx = x + dx * i, ny = y + dy * i;
                 if (nx < 0 || nx >= W || ny < 0 || ny >= H) break;
-                if (grid[ny][nx] === '#') break;
-                if (grid[ny][nx] === '@') {
-                    const idx = targets.findIndex(([tx, ty]) => tx === nx && ty === ny);
-                    if (idx >= 0) hits |= (1 << idx);
+                const c = grid[ny][nx];
+                if (c === '#') break;
+                if (c === '@') {
+                    for (let t = 0; t < NT; t++) {
+                        if (targets[t][0] === nx && targets[t][1] === ny) hits |= 1 << t;
+                    }
                 }
             }
         }
-        if (hits > 0) spots.push({ x, y, hits });
+        if (hits) spots.push({ x, y, hits });
     }
 }
 
-// Sort spots by number of targets hit (descending) for better pruning
-spots.sort((a, b) => bitcount(b.hits) - bitcount(a.hits));
+// Sort by most targets hit
+spots.sort((a, b) => popcount(b.hits) - popcount(a.hits));
 
-function bitcount(n: number): number {
-    let c = 0;
-    while (n) { c += n & 1; n >>= 1; }
-    return c;
+function popcount(n: number): number {
+    n = n - ((n >> 1) & 0x55555555);
+    n = (n & 0x33333333) + ((n >> 2) & 0x33333333);
+    return (((n + (n >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
 }
 
-const allTargets = (1 << targets.length) - 1;
+// DFS set cover: find minimum spots to cover all targets
+let solution: Spot[] | null = null;
 
-// DFS: find minimal set of bomb placements that cover all targets
-let solution: { x: number; y: number }[] | null = null;
-
-function dfs(destroyed: number, bombsLeft: number, startIdx: number, chosen: { x: number; y: number }[]): boolean {
-    if (destroyed === allTargets) {
+function dfs(covered: number, maxBombs: number, start: number, chosen: Spot[]): boolean {
+    if (covered === allMask) {
         solution = [...chosen];
         return true;
     }
-    if (bombsLeft === 0) return false;
+    if (chosen.length >= maxBombs) return false;
 
-    // Pruning: check if remaining spots can cover what's left
-    let reachable = destroyed;
-    for (let i = startIdx; i < spots.length; i++) {
-        reachable |= spots[i].hits;
-    }
-    if (reachable !== allTargets) return false;
+    // Pruning: can remaining spots cover what's missing?
+    let canCover = covered;
+    for (let i = start; i < spots.length; i++) canCover |= spots[i].hits;
+    if (canCover !== allMask) return false;
 
-    for (let i = startIdx; i < spots.length; i++) {
-        const s = spots[i];
-        // Only consider if this spot hits at least one new target
-        if ((s.hits & ~destroyed) === 0) continue;
+    // Find first uncovered target to force coverage
+    let uncovered = allMask & ~covered;
+    let firstUncovered = 0;
+    while (!((uncovered >> firstUncovered) & 1)) firstUncovered++;
 
-        chosen.push({ x: s.x, y: s.y });
-        if (dfs(destroyed | s.hits, bombsLeft - 1, i + 1, chosen)) return true;
+    for (let i = start; i < spots.length; i++) {
+        if (!((spots[i].hits >> firstUncovered) & 1)) continue; // must cover this target
+        chosen.push(spots[i]);
+        if (dfs(covered | spots[i].hits, maxBombs, i + 1, chosen)) return true;
         chosen.pop();
     }
     return false;
@@ -82,20 +81,29 @@ function dfs(destroyed: number, bombsLeft: number, startIdx: number, chosen: { x
 // Read first turn
 let [rounds, bombs] = readline().split(' ').map(Number);
 
-// Find solution
-dfs(0, bombs, 0, []);
+// Try with increasing bomb count for faster search
+for (let b = 1; b <= bombs; b++) {
+    if (dfs(0, b, 0, [])) break;
+}
 
-// Output solution moves, then WAIT for the rest
-let moveIdx = 0;
+if (!solution) {
+    // Fallback: shouldn't happen but just in case
+    console.error('No solution found!');
+    solution = [];
+}
+
+console.error(`Solution: ${solution.length} bombs`);
+for (const s of solution) console.error(`  ${s.x},${s.y} hits=${s.hits.toString(2)}`);
+
+// Game loop: place bombs then WAIT
+let turn = 0;
 while (true) {
-    if (moveIdx > 0) {
-        readline(); // read subsequent turns (we ignore them)
-    }
+    if (turn > 0) readline(); // consume turn input
 
-    if (solution && moveIdx < solution.length) {
-        console.log(`${solution[moveIdx].x} ${solution[moveIdx].y}`);
+    if (turn < solution.length) {
+        console.log(`${solution[turn].x} ${solution[turn].y}`);
     } else {
         console.log('WAIT');
     }
-    moveIdx++;
+    turn++;
 }
