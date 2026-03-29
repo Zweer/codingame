@@ -5,13 +5,17 @@ const N = Number(readline());
 const [x0, y0] = readline().split(' ').map(Number);
 const s = initState(W, H, x0, y0);
 
-console.error(`INIT W=${W} H=${H} N=${N} start=(${x0},${y0}) scale=${s.scale} cands=${s.candidates.length}`);
+console.error(
+  `INIT W=${W} H=${H} N=${N} start=(${x0},${y0}) scale=${s.scale} cands=${s.candidates.length}`,
+);
 
 let turn = 0;
 while (true) {
   const hint = readline().trim();
   turn++;
-  console.error(`T${turn} hint=${hint} pos=(${s.cx},${s.cy}) cands=${s.candidates.length} scale=${s.scale}`);
+  console.error(
+    `T${turn} hint=${hint} pos=(${s.cx},${s.cy}) cands=${s.candidates.length} scale=${s.scale}`,
+  );
   const [nx, ny] = step(s, hint);
   console.error(`  -> (${nx},${ny})`);
   console.log(`${nx} ${ny}`);
