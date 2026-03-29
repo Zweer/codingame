@@ -10,9 +10,13 @@ function updateReadme(puzzles: Puzzle[]): void {
   const endTag = '\n<!-- TABLE:END -->';
 
   const solvedSet = new Set(
-    readdirSync(join(__dirname, '..', 'src')).flatMap((dir) =>
-      readdirSync(join(__dirname, '..', 'src', dir)),
-    ),
+    readdirSync(join(__dirname, '..', 'src')).flatMap((dir) => {
+      try {
+        return readdirSync(join(__dirname, '..', 'src', dir));
+      } catch {
+        return [];
+      }
+    }),
   );
 
   const grouped: Record<string, Puzzle[]> = {};
