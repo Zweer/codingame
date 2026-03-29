@@ -81,9 +81,8 @@ export function step(s: State, hint: string): [number, number] {
   let nx = Math.round(sx / s.candidates.length);
   let ny = Math.round(sy / s.candidates.length);
 
-  if (s.candidates.length <= 200) {
-    // Exhaustive optimal split
-    let bestScore = splitScore(s.candidates, s.cx, s.cy, nx, ny);
+  if (s.candidates.length <= 90) {
+    let bestScore = Infinity;
     for (const [tx, ty] of s.candidates) {
       if (tx === s.cx && ty === s.cy) continue;
       const score = splitScore(s.candidates, s.cx, s.cy, tx, ty);
