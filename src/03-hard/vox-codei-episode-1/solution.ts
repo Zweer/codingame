@@ -11,10 +11,8 @@ for (let y = 0; y < H; y++) {
     }
 }
 
-// Debug: print grid
 console.error(`Grid ${W}x${H}, ${targets.length} targets:`);
 for (let y = 0; y < H; y++) console.error(`  ${grid[y].join('')}`);
-for (let i = 0; i < targets.length; i++) console.error(`  T${i}: (${targets[i][0]},${targets[i][1]})`);
 
 const NT = targets.length;
 const allMask = (1 << NT) - 1;
@@ -27,24 +25,28 @@ function targetIdx(x: number, y: number): number {
     return -1;
 }
 
+// For each non-wall cell, which targets a bomb there hits directly
+function computeHits(x: number, y: number): number {
+    let hits = 0;
+    for (const [dx, dy] of DIRS) {
+        for (let i = 1; i <= 3; i++) {
+            const nx = x + dx * i, ny = y + dy * i;
+            if (nx < 0 || nx >= W || ny < 0 || ny >= H) break;
+            if (grid[ny][nx] === '#') break;
+            const ti = targetIdx(nx, ny);
+            if (ti >= 0) hits |= 1 << ti;
+        }
+    }
+    return hits;
+}
+
 interface Spot { x: number; y: number; hits: number; selfTarget: number; }
 const spots: Spot[] = [];
 
 for (let y = 0; y < H; y++) {
     for (let x = 0; x < W; x++) {
         if (grid[y][x] === '#') continue;
-        let hits = 0;
-        for (const [dx, dy] of DIRS) {
-            for (let i = 1; i <= 3; i++) {
-                const nx = x + dx * i, ny = y + dy * i;
-                if (nx < 0 || nx >= W || ny < 0 || ny >= H) break;
-                if (grid[ny][nx] === '#') break;
-                if (grid[ny][nx] === '@') {
-                    const ti = targetIdx(nx, ny);
-                    if (ti >= 0) hits |= 1 << ti;
-                }
-            }
-        }
+        const hits = computeHits(x, y);
         const self = targetIdx(x, y);
         if (hits) spots.push({ x, y, hits, selfTarget: self });
     }
@@ -58,14 +60,122 @@ function popcount(n: number): number {
 
 spots.sort((a, b) => popcount(b.hits) - popcount(a.hits));
 
-let solution: Spot[] | null = null;
-
-function dfs(covered: number, maxBombs: number, chosen: Spot[]): boolean {
-    if (covered === allMask) {
-        solution = [...chosen];
-        return true;
+// Check if bomb at (bx,by) reaches cell (cx,cy) — for chain detection
+function bombReaches(bx: number, by: number, cx: number, cy: number): boolean {
+    if (bx === cx && by === cy) return false;
+    if (bx !== cx && by !== cy) return false;
+    const dx = Math.sign(cx - bx), dy = Math.sign(cy - by);
+    const dist = Math.abs(cx - bx) + Math.abs(cy - by);
+    if (dist > 3) return false;
+    // Check no wall in between
+    for (let i = 1; i < dist; i++) {
+        if (grid[by + dy * i][bx + dx * i] === '#') return false;
     }
-    if (chosen.length >= maxBombs) return false;
+    return true;
+}
+
+// Simulate a set of bomb placements with chain reactions
+// Returns bitmask of destroyed targets, or -1 if placement is invalid
+function simulate(placements: Spot[], maxRounds: number): { destroyed: number; schedule: { turn: number; spot: Spot }[] } | null {
+    // We need to figure out the order: bombs on target cells need that target destroyed first
+    // Also chain reactions: bomb A explodes and triggers bomb B if A's blast reaches B
+
+    interface BombState { spot: Spot; placeTurn: number; explodeTurn: number; }
+    const scheduled: BombState[] = [];
+    const remaining = [...placements];
+    const destroyedByTurn = new Map<number, number>(); // turn -> cumulative destroyed mask
+    let destroyed = 0;
+    let turn = 0;
+
+    while (remaining.length > 0 && turn < maxRounds) {
+        // Process explosions this turn
+        let changed = true;
+        while (changed) {
+            changed = false;
+            for (const b of scheduled) {
+                if (b.explodeTurn === turn) {
+                    const newDestroyed = b.spot.hits & ~destroyed;
+                    if (newDestroyed) {
+                        destroyed |= b.spot.hits;
+                        changed = true;
+                    }
+                    // Chain: check if this bomb triggers other placed bombs
+                    for (const other of scheduled) {
+                        if (other.explodeTurn > turn && bombReaches(b.spot.x, b.spot.y, other.spot.x, other.spot.y)) {
+                            if (other.explodeTurn !== turn) {
+                                other.explodeTurn = turn;
+                                changed = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Try to place a bomb
+        for (let i = 0; i < remaining.length; i++) {
+            const s = remaining[i];
+            if (s.selfTarget < 0 || ((destroyed >> s.selfTarget) & 1)) {
+                scheduled.push({ spot: s, placeTurn: turn, explodeTurn: turn + 3 });
+                remaining.splice(i, 1);
+                break;
+            }
+        }
+
+        turn++;
+    }
+
+    // Process remaining explosions
+    while (turn < maxRounds + 5) {
+        let changed = true;
+        let anyExploded = false;
+        while (changed) {
+            changed = false;
+            for (const b of scheduled) {
+                if (b.explodeTurn === turn) {
+                    destroyed |= b.spot.hits;
+                    anyExploded = true;
+                    for (const other of scheduled) {
+                        if (other.explodeTurn > turn && bombReaches(b.spot.x, b.spot.y, other.spot.x, other.spot.y)) {
+                            other.explodeTurn = turn;
+                            changed = true;
+                        }
+                    }
+                }
+            }
+        }
+        if (!anyExploded && scheduled.every(b => b.explodeTurn <= turn)) break;
+        turn++;
+    }
+
+    if (remaining.length > 0) return null;
+
+    const schedule = scheduled.map(b => ({ turn: b.placeTurn, spot: b.spot }));
+    return { destroyed, schedule };
+}
+
+// DFS: find bomb placements
+let bestSolution: { turn: number; spot: Spot }[] | null = null;
+
+function dfs(covered: number, maxBombs: number, chosen: Spot[], maxRounds: number): boolean {
+    if (covered === allMask) {
+        // Verify with simulation
+        const result = simulate(chosen, maxRounds);
+        if (result && result.destroyed === allMask) {
+            bestSolution = result.schedule;
+            return true;
+        }
+        return false;
+    }
+    if (chosen.length >= maxBombs) {
+        // Check if chain reactions help
+        const result = simulate(chosen, maxRounds);
+        if (result && result.destroyed === allMask) {
+            bestSolution = result.schedule;
+            return true;
+        }
+        return false;
+    }
 
     const uncovered = allMask & ~covered;
     let firstUncovered = 0;
@@ -73,10 +183,19 @@ function dfs(covered: number, maxBombs: number, chosen: Spot[]): boolean {
 
     for (const s of spots) {
         if (!((s.hits >> firstUncovered) & 1)) continue;
-        if (s.selfTarget >= 0 && !((covered >> s.selfTarget) & 1)) continue;
+        // Skip if on a target that isn't covered by chosen bombs yet
+        // (but allow it — simulation will handle ordering)
+        if (s.selfTarget >= 0 && !((covered >> s.selfTarget) & 1)) {
+            // Check if any already-chosen bomb covers this target
+            let coveredByChosen = false;
+            for (const c of chosen) {
+                if ((c.hits >> s.selfTarget) & 1) { coveredByChosen = true; break; }
+            }
+            if (!coveredByChosen) continue;
+        }
 
         chosen.push(s);
-        if (dfs(covered | s.hits, maxBombs, chosen)) return true;
+        if (dfs(covered | s.hits, maxBombs, chosen, maxRounds)) return true;
         chosen.pop();
     }
     return false;
@@ -86,65 +205,24 @@ const [rounds, bombs] = readline().split(' ').map(Number);
 console.error(`Rounds: ${rounds}, Bombs: ${bombs}`);
 
 for (let b = 1; b <= bombs; b++) {
-    if (dfs(0, b, [])) break;
+    if (dfs(0, b, [], rounds)) break;
 }
 
-if (!solution) {
+if (!bestSolution) {
     console.error('No solution found!');
-    solution = [];
+    bestSolution = [];
 }
 
-// Order solution respecting timing: a bomb on a target cell needs that target
-// destroyed first, and bombs take 3 turns to explode.
-// We simulate turn-by-turn: track which targets are destroyed at which turn.
-const schedule: { turn: number; spot: Spot }[] = [];
-const pendingBombs: { spot: Spot; explodeTurn: number }[] = [];
-const destroyedSet = new Set<number>();
-const toPlace = [...solution!];
-let t = 0;
-
-while (toPlace.length > 0 || pendingBombs.length > 0) {
-    // Explode bombs that are due
-    const exploding = pendingBombs.filter(b => b.explodeTurn === t);
-    for (const b of exploding) {
-        for (let ti = 0; ti < NT; ti++) {
-            if ((b.spot.hits >> ti) & 1) destroyedSet.add(ti);
-        }
-    }
-    // Remove exploded bombs
-    for (let i = pendingBombs.length - 1; i >= 0; i--) {
-        if (pendingBombs[i].explodeTurn === t) pendingBombs.splice(i, 1);
-    }
-
-    // Try to place a bomb this turn
-    let placed = false;
-    for (let i = 0; i < toPlace.length; i++) {
-        const s = toPlace[i];
-        if (s.selfTarget < 0 || destroyedSet.has(s.selfTarget)) {
-            schedule.push({ turn: t, spot: s });
-            pendingBombs.push({ spot: s, explodeTurn: t + 3 });
-            toPlace.splice(i, 1);
-            placed = true;
-            break;
-        }
-    }
-
-    t++;
-    // Safety: don't loop forever
-    if (t > rounds + 10) break;
-}
-
-console.error(`Schedule: ${schedule.length} bombs over ${t} turns`);
-for (const s of schedule) console.error(`  turn ${s.turn}: (${s.spot.x},${s.spot.y})`);
+console.error(`Schedule: ${bestSolution.length} bombs`);
+for (const s of bestSolution) console.error(`  turn ${s.turn}: (${s.spot.x},${s.spot.y})`);
 
 // Game loop
 let gameTurn = 0;
 const scheduleMap = new Map<number, Spot>();
-for (const s of schedule) scheduleMap.set(s.turn, s.spot);
+for (const s of bestSolution) scheduleMap.set(s.turn, s.spot);
 
 while (true) {
     if (gameTurn > 0) readline();
-
     const action = scheduleMap.get(gameTurn);
     if (action) {
         console.log(`${action.x} ${action.y}`);
