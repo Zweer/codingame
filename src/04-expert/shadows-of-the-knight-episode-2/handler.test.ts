@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { type State, initState, step } from './handler.js';
+import { initState, step } from './handler.js';
 
 function dist(x1: number, y1: number, x2: number, y2: number): number {
   return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
@@ -22,17 +22,12 @@ function simulate(
     else if (curDist > prevDist) hint = 'COLDER';
     else hint = 'SAME';
 
-    if (verbose) {
-      console.log(
-        `T${t + 1} hint=${hint} pos=(${s.cx},${s.cy}) x=[${s.xLo},${s.xHi}] y=[${s.yLo},${s.yHi}] doX=${s.doingX}`,
-      );
-    }
+    if (verbose) console.log(`T${t + 1} hint=${hint} pos=(${s.cx},${s.cy}) cands=${s.candidates.length} scale=${s.scale}`);
 
     prevDist = curDist;
     const [nx, ny] = step(s, hint);
 
     if (verbose) console.log(`  -> (${nx},${ny})`);
-
     if (nx === bombX && ny === bombY) return { found: true, turns: t + 1 };
     if (nx < 0 || nx >= W || ny < 0 || ny >= H) return { found: false, turns: t + 1 };
   }
@@ -40,73 +35,58 @@ function simulate(
 }
 
 describe('shadows-of-the-knight-episode-2', () => {
-  // --- PASSING on CodinGame ---
-  it('A lot of jumps: 5x16, start (1,5), N=80', () => {
-    // Bomb deduced from debug: (4,10) — found at T9
-    expect(simulate(5, 16, 1, 5, 4, 10, 80).found).toBe(true);
-  });
+  // Real CG test cases with known bomb positions
+  const cases: [string, number, number, number, number, number, number, number][] = [
+    // [name, W, H, x0, y0, bombX, bombY, N]
+    ['[1] A lot of jumps', 5, 16, 1, 5, 1, 10, 80],
+    ['[2] Less jumps', 18, 32, 17, 31, 2, 1, 45],
+    ['[3] Tower', 1, 100, 0, 98, 0, 0, 12],
+    ['[4] Lesser jumps', 15, 15, 3, 6, 2, 0, 12],
+    ['[5] Exact nb of jumps', 24, 24, 22, 13, 23, 23, 15],
+    ['[6] More windows', 50, 50, 17, 29, 48, 0, 16],
+    ['[6b] More windows alt', 50, 50, 17, 29, 43, 48, 16],
+    ['[7] A lot of windows', 1000, 1000, 501, 501, 999, 963, 27],
+    ['[7b] A lot of windows alt', 1000, 1000, 501, 501, 750, 750, 27],
+    ['[7c] A lot of windows alt2', 1000, 1000, 501, 501, 84, 1, 27],
+    ['[7d] A lot of windows alt3', 1000, 1000, 501, 501, 975, 984, 27],
+    ['[7e] A lot of windows alt4', 1000, 1000, 501, 501, 735, 300, 27],
+    ['[7f] A lot of windows alt5', 1000, 1000, 501, 501, 626, 540, 27],
+    ['[8] So many windows', 8000, 8000, 3200, 2100, 0, 1, 31],
+    ['[8b] So many windows alt', 8000, 8000, 3201, 2100, 0, 1, 31],
+  ];
 
-  it('Less jumps: 18x32, start (17,31), N=45', () => {
-    // Bomb: (2,1)
-    expect(simulate(18, 32, 17, 31, 2, 1, 45).found).toBe(true);
-  });
-
-  it('Tower: 1x100, start (0,98), N=12', () => {
-    // Bomb: (0,0)
-    expect(simulate(1, 100, 0, 98, 0, 0, 12).found).toBe(true);
-  });
-
-  it('Lesser jumps: 15x15, start (3,6), N=12', () => {
-    // Bomb: (0,0)
-    expect(simulate(15, 15, 3, 6, 0, 0, 12).found).toBe(true);
-  });
-
-  it('Exact nb of jumps: 24x24, start (22,13), N=15', () => {
-    // Bomb: (23,23)
-    expect(simulate(24, 24, 22, 13, 23, 23, 15).found).toBe(true);
-  });
-
-  // --- FAILING on CodinGame ---
-  it('More windows: 50x50, start (17,29), N=16', () => {
-    // Bomb: (48,0) — deduced: X=48 found, Y search ran out of turns
-    // From debug: X converged to 48, then Y was searching toward 0
-    // Last jump was (48,1), still WARMER → bomb at y=0
-    expect(simulate(50, 50, 17, 29, 48, 0, 16).found).toBe(true);
-  });
-
-  it('A lot of windows: 1000x1000, start (501,501), N=27', () => {
-    // Bomb: (998, ~680?) — X converged to 998, Y was still searching
-    // From debug: last Y range was [0,44], heading toward small Y
-    // Actually bomb Y seems small. Let's try (998, 10)
-    // X took 14 turns! Way too many for binary search on 1000.
-    // Binary search on 1000 should take ~10 turns (log2(1000)≈10)
-    expect(simulate(1000, 1000, 501, 501, 998, 10, 27).found).toBe(true);
-  });
-
-  it('So many windows: 8000x8000, start (3200,2100), N=31', () => {
-    const positions = [[0, 10], [7999, 7999], [4000, 4000], [100, 7000], [0, 0]];
-    for (const [bx, by] of positions) {
-      const r = simulate(8000, 8000, 3200, 2100, bx, by, 31);
-      if (!r.found) {
-        // Run again verbose to see X/Y split
-        simulate(8000, 8000, 3200, 2100, bx, by, 35, true);
-        console.log(`Failed for bomb (${bx},${by}): ${r.turns} turns`);
-      } else {
-        console.log(`OK bomb (${bx},${by}): ${r.turns} turns`);
+  // Stress test [7]: 1000x1000 with many bomb positions
+  it('[7] stress test: various bombs from (501,501)', () => {
+    const fails: string[] = [];
+    for (let bx = 0; bx < 1000; bx += 50) {
+      for (let by = 0; by < 1000; by += 50) {
+        const r = simulate(1000, 1000, 501, 501, bx, by, 27);
+        if (!r.found) fails.push(`(${bx},${by})`);
       }
-      expect(r.found).toBe(true);
-      expect(r.found).toBe(true);
     }
+    console.log(`[7] stress: ${fails.length} failures out of 400`);
+    if (fails.length > 0) console.log('Failed:', fails.slice(0, 10).join(' '));
+    expect(fails.length).toBe(0);
   });
 
-  it('binary search on X should take <=14 turns for W=1000', () => {
-    const r = simulate(1000, 1, 500, 0, 999, 0, 14);
-    expect(r.found).toBe(true);
+  // Stress test [8]
+  it('8000x8000 stress test: bomb (0,1) various starts', () => {
+    const fails: string[] = [];
+    for (let x0 = 3000; x0 <= 3500; x0 += 100) {
+      for (let y0 = 1900; y0 <= 2300; y0 += 100) {
+        const r = simulate(8000, 8000, x0, y0, 0, 1, 31);
+        if (!r.found) fails.push(`(${x0},${y0}):${r.turns}`);
+      }
+    }
+    if (fails.length > 0) console.log('Failed starts:', fails.join(' '));
+    expect(fails.length).toBe(0);
   });
 
-  it('total turns should be ~log2(W) + log2(H)', () => {
-    // 1000x1000: should take ~20 turns total (10+10)
-    const r = simulate(1000, 1000, 500, 500, 999, 1, 25);
-    expect(r.found).toBe(true);
-  });
+  for (const [name, W, H, x0, y0, bx, by, N] of cases) {
+    it(`${name}: bomb (${bx},${by})`, () => {
+      const r = simulate(W, H, x0, y0, bx, by, N);
+      if (!r.found) console.log(`FAILED ${name}: ${r.turns} turns for bomb (${bx},${by})`);
+      expect(r.found).toBe(true);
+    });
+  }
 });
