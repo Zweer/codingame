@@ -1,4 +1,4 @@
-let line = readLine()!.split(" ").map { Int($0)! }
+let line = readLine()!.split(separator: " ").map { Int($0)! }
 var lx = line[0], ly = line[1], tx = line[2], ty = line[3]
 while true {
     _ = readLine()

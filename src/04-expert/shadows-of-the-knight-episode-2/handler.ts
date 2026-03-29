@@ -9,7 +9,6 @@ export interface State {
   scale: number;
   refined: boolean;
   history: { px: number; py: number; cx: number; cy: number; hint: string }[];
-  turn: number;
 }
 
 export function initState(W: number, H: number, x0: number, y0: number): State {
@@ -21,7 +20,7 @@ export function initState(W: number, H: number, x0: number, y0: number): State {
       candidates.push([Math.min(x + (scale >> 1), W - 1), Math.min(y + (scale >> 1), H - 1)]);
     }
   }
-  return { W, H, cx: x0, cy: y0, px: x0, py: y0, candidates, scale, refined: scale === 1, history: [], turn: 0 };
+  return { W, H, cx: x0, cy: y0, px: x0, py: y0, candidates, scale, refined: scale === 1, history: [] };
 }
 
 function filt(c: [number, number][], px: number, py: number, cx: number, cy: number, h: string): [number, number][] {
@@ -32,9 +31,17 @@ function filt(c: [number, number][], px: number, py: number, cx: number, cy: num
   });
 }
 
-export function step(s: State, hint: string): [number, number] {
-  s.turn++;
+function splitScore(candidates: [number, number][], cx: number, cy: number, tx: number, ty: number): number {
+  let w = 0, c = 0;
+  for (const [bx, by] of candidates) {
+    const dp = (bx - cx) ** 2 + (by - cy) ** 2;
+    const dt = (bx - tx) ** 2 + (by - ty) ** 2;
+    if (dt < dp) w++; else if (dt > dp) c++;
+  }
+  return Math.abs(w - c);
+}
 
+export function step(s: State, hint: string): [number, number] {
   if (hint === 'WARMER' || hint === 'COLDER' || hint === 'SAME') {
     s.history.push({ px: s.px, py: s.py, cx: s.cx, cy: s.cy, hint });
     s.candidates = filt(s.candidates, s.px, s.py, s.cx, s.cy, hint);
@@ -68,30 +75,23 @@ export function step(s: State, hint: string): [number, number] {
     return [s.cx, s.cy];
   }
 
-  // Compute centroid
+  // Centroid
   let sx = 0, sy = 0;
   for (const [x, y] of s.candidates) { sx += x; sy += y; }
   let nx = Math.round(sx / s.candidates.length);
   let ny = Math.round(sy / s.candidates.length);
 
-  // Optimal split: find target that divides candidates ~50/50
-  let bestScore = Infinity;
-  const maxT = Math.min(s.candidates.length, 60);
-  const step = Math.max(1, Math.floor(s.candidates.length / maxT));
-  for (let i = 0; i < s.candidates.length; i += step) {
-    const [tx, ty] = s.candidates[i];
-    if (tx === s.cx && ty === s.cy) continue;
-    let w = 0, c = 0;
-    for (const [bx, by] of s.candidates) {
-      const dp = (bx - s.cx) ** 2 + (by - s.cy) ** 2;
-      const dt = (bx - tx) ** 2 + (by - ty) ** 2;
-      if (dt < dp) w++; else if (dt > dp) c++;
+  if (s.candidates.length <= 200) {
+    // Exhaustive optimal split
+    let bestScore = splitScore(s.candidates, s.cx, s.cy, nx, ny);
+    for (const [tx, ty] of s.candidates) {
+      if (tx === s.cx && ty === s.cy) continue;
+      const score = splitScore(s.candidates, s.cx, s.cy, tx, ty);
+      if (score < bestScore) { bestScore = score; nx = tx; ny = ty; }
     }
-    const score = Math.abs(w - c);
-    if (score < bestScore) { bestScore = score; nx = tx; ny = ty; }
   }
+  // For large sets, centroid is used as-is
 
-  // Avoid staying in place
   if (nx === s.cx && ny === s.cy) {
     let md = -1;
     for (const [x, y] of s.candidates) {

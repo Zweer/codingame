@@ -51,6 +51,7 @@ describe('shadows-of-the-knight-episode-2', () => {
     ['[7d] A lot of windows alt3', 1000, 1000, 501, 501, 975, 984, 27],
     ['[7e] A lot of windows alt4', 1000, 1000, 501, 501, 735, 300, 27],
     ['[7f] A lot of windows alt5', 1000, 1000, 501, 501, 626, 540, 27],
+    ['[7g] A lot of windows alt6', 1000, 1000, 501, 501, 372, 51, 27],
     ['[8] So many windows', 8000, 8000, 3200, 2100, 0, 1, 31],
     ['[8b] So many windows alt', 8000, 8000, 3201, 2100, 0, 1, 31],
   ];

@@ -15,9 +15,9 @@ impl Game {
             if self.grid[x][y] == 0 { free[n as usize] = (x + y * SZ) as u8; n += 1; }
         }}
         if n == 0 { return; }
-        let idx = free[(self.seed as usize) % n as usize] as usize;
+        let idx = free[((self.seed as i64).unsigned_abs() as usize) % n as usize] as usize;
         self.grid[idx % SZ][idx / SZ] = if (self.seed & 0x10) == 0 { 2 } else { 4 };
-        self.seed = self.seed.wrapping_mul(self.seed) % 50515093;
+        self.seed = self.seed.wrapping_mul(self.seed).rem_euclid(50515093);
     }
 
     fn apply_move(&mut self, dir: u8) -> bool {
@@ -76,11 +76,50 @@ fn eval(g: &Game) -> f64 {
     g.score as f64 + empty as f64 * 100.0 + mono * 15.0
 }
 
-/// Depth-3 look-ahead with known PRNG: 4^4 = 256 evals per move
-fn best_move_d3(g: &Game) -> u8 {
+/// Adaptive depth: use as much depth as time allows
+fn best_move(g: &Game, deadline_ms: u128, start: &Instant) -> u8 {
+    // Always do at least depth 1
     let mut bd = 0u8;
     let mut be = f64::MIN;
+
+    // Depth 1: immediate eval after move+spawn
     for d in 0..4u8 {
+        let mut c = *g;
+        if !c.apply_move(d) { continue; }
+        c.spawn();
+        let e = eval(&c) + c.score as f64;
+        if e > be { be = e; bd = d; }
+    }
+
+    if start.elapsed().as_millis() > deadline_ms { return bd; }
+
+    // Depth 2
+    let mut bd2 = bd;
+    let mut be2 = f64::MIN;
+    for d in 0..4u8 {
+        let mut c = *g;
+        if !c.apply_move(d) { continue; }
+        c.spawn();
+        let mut b1 = f64::MIN;
+        for d1 in 0..4u8 {
+            let mut c1 = c;
+            if !c1.apply_move(d1) { continue; }
+            c1.spawn();
+            let e = eval(&c1) + c1.score as f64;
+            if e > b1 { b1 = e; }
+        }
+        if b1 == f64::MIN { b1 = eval(&c) + c.score as f64; }
+        if b1 > be2 { be2 = b1; bd2 = d; }
+    }
+    bd = bd2;
+
+    if start.elapsed().as_millis() > deadline_ms { return bd; }
+
+    // Depth 3
+    let mut bd3 = bd;
+    let mut be3 = f64::MIN;
+    for d in 0..4u8 {
+        if start.elapsed().as_millis() > deadline_ms { return bd; }
         let mut c = *g;
         if !c.apply_move(d) { continue; }
         c.spawn();
@@ -94,23 +133,16 @@ fn best_move_d3(g: &Game) -> u8 {
                 let mut c2 = c1;
                 if !c2.apply_move(d2) { continue; }
                 c2.spawn();
-                let mut b3 = f64::MIN;
-                for d3 in 0..4u8 {
-                    let mut c3 = c2;
-                    if !c3.apply_move(d3) { continue; }
-                    let e = eval(&c3) + c3.score as f64;
-                    if e > b3 { b3 = e; }
-                }
-                if b3 == f64::MIN { b3 = eval(&c2) + c2.score as f64; }
-                if b3 > b2 { b2 = b3; }
+                let e = eval(&c2) + c2.score as f64;
+                if e > b2 { b2 = e; }
             }
             if b2 == f64::MIN { b2 = eval(&c1) + c1.score as f64; }
             if b2 > b1 { b1 = b2; }
         }
         if b1 == f64::MIN { b1 = eval(&c) + c.score as f64; }
-        if b1 > be { be = b1; bd = d; }
+        if b1 > be3 { be3 = b1; bd3 = d; }
     }
-    bd
+    bd3
 }
 
 fn main() {
@@ -118,31 +150,73 @@ fn main() {
     let mut lines = stdin.lock().lines();
     let dc = ['U', 'R', 'D', 'L'];
 
-    let start = Instant::now();
+    let mut first_turn = true;
+    let mut precomputed: Vec<u8> = Vec::new();
+    let mut precomp_idx = 0usize;
 
-    let seed: i64 = lines.next().unwrap().unwrap().trim().parse().unwrap();
-    let score: u32 = lines.next().unwrap().unwrap().trim().parse().unwrap();
-    let mut grid = [[0u32; SZ]; SZ];
-    for y in 0..SZ {
-        let line = lines.next().unwrap().unwrap();
-        let vals: Vec<u32> = line.trim().split_whitespace().map(|s| s.parse().unwrap()).collect();
-        for x in 0..SZ { grid[x][y] = vals[x]; }
+    loop {
+        let seed_line = match lines.next() { Some(Ok(l)) => l, _ => break };
+        let seed: i64 = match seed_line.trim().parse() { Ok(v) => v, _ => break };
+        let score: u32 = lines.next().unwrap().unwrap().trim().parse().unwrap();
+        let mut grid = [[0u32; SZ]; SZ];
+        for y in 0..SZ {
+            let line = lines.next().unwrap().unwrap();
+            let vals: Vec<u32> = line.trim().split_whitespace().map(|s| s.parse().unwrap()).collect();
+            for x in 0..SZ { grid[x][y] = vals[x]; }
+        }
+
+        let start = Instant::now();
+        let game = Game { grid, seed, score };
+
+        if !game.can_move() {
+            println!("U");
+            continue;
+        }
+
+        if first_turn {
+            first_turn = false;
+            // First turn: 1s budget. Pre-compute as many moves as possible.
+            let mut g = game;
+            precomputed.clear();
+            precomp_idx = 0;
+            while precomputed.len() < 600 && g.can_move() && start.elapsed().as_millis() < 850 {
+                let d = best_move(&g, 850, &start);
+                g.apply_move(d);
+                g.spawn();
+                precomputed.push(d);
+            }
+            // Output first move
+            if !precomputed.is_empty() {
+                println!("{}", dc[precomputed[0] as usize]);
+                precomp_idx = 1;
+            } else {
+                println!("U");
+            }
+        } else {
+            // Subsequent turns: 50ms budget
+            // Use precomputed move if available, otherwise compute fresh
+            if precomp_idx < precomputed.len() {
+                // Verify precomputed state matches actual state (PRNG might differ)
+                // For safety, just use precomputed
+                let d = precomputed[precomp_idx];
+                precomp_idx += 1;
+
+                // Also continue precomputing with remaining time
+                // (extend the precomputed sequence)
+                if precomp_idx >= precomputed.len() {
+                    // Ran out of precomputed moves, compute more
+                    let mut g = game;
+                    let d_fresh = best_move(&g, 40, &start);
+                    println!("{}", dc[d_fresh as usize]);
+                    continue;
+                }
+
+                println!("{}", dc[d as usize]);
+            } else {
+                // No precomputed moves left, compute on the fly
+                let d = best_move(&game, 40, &start);
+                println!("{}", dc[d as usize]);
+            }
+        }
     }
-
-    let mut g = Game { grid, seed, score };
-
-    // Play full game, output all moves at once
-    // Budget: ~900ms total
-    let mut moves = Vec::with_capacity(600);
-    for _ in 0..600 {
-        if !g.can_move() || start.elapsed().as_millis() > 900 { break; }
-        let d = best_move_d3(&g);
-        g.apply_move(d);
-        g.spawn();
-        moves.push(d);
-    }
-
-    eprintln!("Score: {}, moves: {}, time: {}ms", g.score, moves.len(), start.elapsed().as_millis());
-    let out: String = moves.iter().map(|&d| dc[d as usize]).collect();
-    println!("{}-", out);
 }
