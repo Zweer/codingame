@@ -1,14 +1,14 @@
-import type { Puzzle } from './types';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 
 import { dataFolder, puzzlesFilepath } from './constants';
 import { CodinGame } from './libs/codingame';
+import type { Puzzle } from './types';
 
 const codingame = new CodinGame();
 
 async function retrievePuzzles(): Promise<Puzzle[]> {
   const miniPuzzles = await codingame.findAllMinimalProgress();
-  const puzzles = await codingame.findProgressByIds(miniPuzzles.map(miniPuzzle => miniPuzzle.id));
+  const puzzles = await codingame.findProgressByIds(miniPuzzles.map((miniPuzzle) => miniPuzzle.id));
 
   return puzzles.sort((p1, p2) => p1.id - p2.id);
 }

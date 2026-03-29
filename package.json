@@ -18,8 +18,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "biome check --write",
+    "lint:typecheck": "tsc --noEmit",
     "test": "vitest run",
     "script:retrieve": "node --import tsx --env-file-if-exists .env scripts/retrieve-puzzles.ts",
     "script:solve": "node --import tsx --env-file-if-exists .env scripts/solve-puzzles.ts",
@@ -31,7 +31,7 @@
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.16.2",
+    "@biomejs/biome": "^2.4.9",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^24.0.13",
     "tsx": "^4.20.3",

@@ -1,6 +1,6 @@
-import type { Puzzle } from '../types';
-
 import { GoogleGenAI } from '@google/genai';
+
+import type { Puzzle } from '../types';
 
 export class Gemini {
   static PUZZLE_SOLVE_PROMPT = `Solve the following CodinGame puzzle in TypeScript.
@@ -28,17 +28,18 @@ Please provide the full code, do not use placeholders.`;
     puzzle: Puzzle,
     statement: string,
   ): Promise<{ solutionCode: string; reasoning: string } | { error: string }> {
-    const contents = Gemini.PUZZLE_SOLVE_PROMPT
-      .replace('{TITLE}', puzzle.title)
-      .replace('{STATEMENT}', statement);
+    const contents = Gemini.PUZZLE_SOLVE_PROMPT.replace('{TITLE}', puzzle.title).replace(
+      '{STATEMENT}',
+      statement,
+    );
 
     const result = await this.genAI.models.generateContent({ contents, model: this.model });
-    const response = result.text!;
+    const response = result.text ?? '';
 
     const codeBlockRegex = /```typescript\n([\s\S]*?)\n```/;
     const codeMatch = codeBlockRegex.exec(response);
 
-    if (!codeMatch || !codeMatch[1]) {
+    if (!codeMatch?.[1]) {
       return { error: response };
     }
 

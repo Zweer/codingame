@@ -1,35 +1,36 @@
-import type { Puzzle } from './types';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-
 import { join } from 'node:path';
+
 import { puzzlesFilepath, readmeFilepath } from './constants';
 import { CodinGame } from './libs/codingame';
+import type { Puzzle } from './types';
 
 function updateReadme(puzzles: Puzzle[]): void {
   const startTag = '<!-- TABLE:START -->\n';
   const endTag = '\n<!-- TABLE:END -->';
 
-  const directories = readdirSync(join(__dirname, '..', 'src'))
-    .map(directory => readdirSync(join(__dirname, '..', 'src', directory)))
-    .flat();
+  const solvedSet = new Set(
+    readdirSync(join(__dirname, '..', 'src')).flatMap((dir) =>
+      readdirSync(join(__dirname, '..', 'src', dir)),
+    ),
+  );
 
-  const weightedPuzzle: Record<string, Puzzle[]> = {};
-  puzzles.forEach((puzzle) => {
-    // eslint-disable-next-line ts/strict-boolean-expressions
-    if (!weightedPuzzle[puzzle.level]) {
-      weightedPuzzle[puzzle.level] = [];
+  const grouped: Record<string, Puzzle[]> = {};
+  for (const puzzle of puzzles) {
+    if (!grouped[puzzle.level]) {
+      grouped[puzzle.level] = [];
     }
+    grouped[puzzle.level].push(puzzle);
+  }
 
-    weightedPuzzle[puzzle.level].push(puzzle);
-  });
-
-  const newReadmePartialString = Object.entries(weightedPuzzle)
-    .sort(([level1], [level2]) => CodinGame.LEVEL_WEIGHT[level1] - CodinGame.LEVEL_WEIGHT[level2])
+  const newReadmePartialString = Object.entries(grouped)
+    .sort(([a], [b]) => CodinGame.LEVEL_WEIGHT[a] - CodinGame.LEVEL_WEIGHT[b])
     .map(([level, puzzles]) => {
-      puzzles.sort((p1, p2) => p1.id - p2.id);
-      const solved = puzzles.filter(puzzle => directories.includes(puzzle.prettyId));
+      puzzles.sort((a, b) => a.id - b.id);
+      const solved = puzzles.filter((p) => solvedSet.has(p.prettyId));
+      const levelDir = CodinGame.LEVEL_DIR[level];
 
-      const puzzleString: string[] = [
+      return [
         '<details>',
         '',
         '<summary>',
@@ -38,43 +39,30 @@ function updateReadme(puzzles: Puzzle[]): void {
         '',
         '</summary>',
         '',
-        ...puzzles.map(puzzle =>
-          [
-            `- [${directories.includes(puzzle.prettyId) ? 'x' : ' '}]`,
-            `${puzzle.id}.`,
-            directories.includes(puzzle.prettyId)
-              ? `[${puzzle.title}](src/${puzzle.prettyId})`
-              : puzzle.title,
-            `[:link:](${CodinGame.BASE_URL}${puzzle.detailsPageUrl})`,
-          ].join(' '),
-        ),
+        ...puzzles.map((puzzle) => {
+          const isSolved = solvedSet.has(puzzle.prettyId);
+          const check = isSolved ? 'x' : ' ';
+          const title = isSolved
+            ? `[${puzzle.title}](src/${levelDir}/${puzzle.prettyId})`
+            : puzzle.title;
+          return `- [${check}] ${puzzle.id}. ${title} [:link:](${CodinGame.BASE_URL}${puzzle.detailsPageUrl})`;
+        }),
         '',
         '</details>',
-      ];
-
-      return puzzleString.join('\n');
+      ].join('\n');
     })
     .join('\n');
 
   const readmeString = readFileSync(readmeFilepath, 'utf8');
   const tableMatch = new RegExp(`${startTag}(.*)${endTag}`, 's').exec(readmeString);
 
-  if (!tableMatch || !tableMatch[1]) {
-    throw new Error(
-      'Something strange happened while processing the readme. Is the table present?',
-    );
+  if (!tableMatch?.[1]) {
+    throw new Error('Could not find table markers in README.md');
   }
 
-  const newReadmeString = readmeString.replace(tableMatch[1], newReadmePartialString);
-
-  writeFileSync(readmeFilepath, newReadmeString);
+  writeFileSync(readmeFilepath, readmeString.replace(tableMatch[1], newReadmePartialString));
 }
 
-function main(): void {
-  const puzzles: Puzzle[] = JSON.parse(readFileSync(puzzlesFilepath, 'utf8')) as Puzzle[];
-  updateReadme(puzzles);
-
-  console.log('Finished updating readme');
-}
-
-main();
+const puzzles: Puzzle[] = JSON.parse(readFileSync(puzzlesFilepath, 'utf8')) as Puzzle[];
+updateReadme(puzzles);
+console.log('Finished updating readme');
