@@ -1,3 +1,7 @@
+// ---------------------------------------------------------------------------
+// Puzzles
+// ---------------------------------------------------------------------------
+
 export interface MiniPuzzle {
   id: number;
   level: string;
@@ -15,6 +19,7 @@ export interface Topic {
   value: string;
   children: Topic[];
 }
+
 export interface DetailedPuzzle {
   id: number;
   level: string;
@@ -46,4 +51,93 @@ export interface DetailedPuzzle {
   replayIds: number[];
   communityCreation: boolean;
 }
+
 export type Puzzle = Omit<DetailedPuzzle, 'titleMap' | 'statement' | 'linkedAchievements'>;
+
+// ---------------------------------------------------------------------------
+// Programming Languages
+// ---------------------------------------------------------------------------
+
+export interface LanguageSolveCount {
+  programmingLanguageId: string;
+  languageName: string;
+  logoId: number;
+  puzzleCount: number;
+}
+
+// ---------------------------------------------------------------------------
+// CodinGamer (user profile)
+// ---------------------------------------------------------------------------
+
+export interface CodinGamerPublicInfo {
+  userId: number;
+  pseudo: string;
+  countryId: string;
+  publicHandle: string;
+  formValues: Record<string, string>;
+  schoolId?: number;
+  avatar?: number;
+  company?: string;
+  city?: string;
+  level: number;
+}
+
+export interface RankHistoryEntry {
+  rank: number;
+  total: number;
+  points: number;
+  contestPoints: number;
+  optimPoints: number;
+  codegolfPoints: number;
+  multiTrainingPoints: number;
+  clashPoints: number;
+  date: number;
+}
+
+export interface PointsRanking {
+  rankHistory: RankHistoryEntry[];
+  codingamePointsTotal: number;
+  codingamePointsRank: number;
+  codingamePointsContests: number;
+  codingamePointsAchievements: number;
+  codingamePointsXp: number;
+  codingamePointsOptim: number;
+  codingamePointsCodegolf: number;
+  codingamePointsMultiTraining: number;
+  codingamePointsClash: number;
+  numberCodingamers: number;
+  numberCodingamersGlobal: number;
+}
+
+export interface PointsStats {
+  codingamerPoints: number;
+  achievementCount: number;
+  codingamer: CodinGamerPublicInfo & {
+    rank: number;
+    onlineSince: number;
+    xp: number;
+    category: string;
+  };
+  codingamePointsRankingDto: PointsRanking;
+  xpThresholds: unknown[];
+}
+
+// ---------------------------------------------------------------------------
+// Challenges
+// ---------------------------------------------------------------------------
+
+export interface Challenge {
+  challengeId: number;
+  title: string;
+  date: number;
+  utc: number;
+  enable: boolean;
+  publicId: string;
+  type: string;
+  finished: boolean;
+  closed: boolean;
+  started: boolean;
+  visible: boolean;
+  training: boolean;
+  lateTimeMax: number;
+}

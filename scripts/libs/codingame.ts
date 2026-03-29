@@ -1,9 +1,19 @@
 import axios from 'axios';
 
-import type { DetailedPuzzle, MiniPuzzle, Puzzle } from '../types';
+import type { Achievement } from '../types-achievements.js';
+import type {
+  Challenge,
+  CodinGamerPublicInfo,
+  DetailedPuzzle,
+  LanguageSolveCount,
+  MiniPuzzle,
+  PointsStats,
+  Puzzle,
+} from '../types.js';
 
 export class CodinGame {
   static BASE_URL = 'https://www.codingame.com';
+
   static LEVEL_WEIGHT: Record<string, number> = {
     tutorial: 0,
     easy: 1,
@@ -32,20 +42,56 @@ export class CodinGame {
     'codegolf-expert': '10-codegolf-expert',
   };
 
+  static ALL_LANGUAGES = [
+    'Bash',
+    'C',
+    'C#',
+    'C++',
+    'Clojure',
+    'D',
+    'Dart',
+    'F#',
+    'Go',
+    'Groovy',
+    'Haskell',
+    'Java',
+    'Javascript',
+    'Kotlin',
+    'Lua',
+    'ObjectiveC',
+    'OCaml',
+    'Pascal',
+    'Perl',
+    'PHP',
+    'Python3',
+    'Ruby',
+    'Rust',
+    'Scala',
+    'Swift',
+    'TypeScript',
+    'VB.NET',
+  ] as const;
+
   request: axios.AxiosInstance;
 
   constructor(public readonly userId?: number) {
-    this.request = axios.create({
-      baseURL: CodinGame.BASE_URL,
-    });
+    this.request = axios.create({ baseURL: CodinGame.BASE_URL });
   }
+
+  /** Extract userId from the rememberMe cookie (first 7 chars). */
+  static userIdFromRememberMe(cookie: string): number {
+    return Number.parseInt(cookie.slice(0, 7), 10);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Puzzles
+  // ---------------------------------------------------------------------------
 
   async findAllMinimalProgress(): Promise<MiniPuzzle[]> {
     const { data } = await this.request.post<MiniPuzzle[]>(
       '/services/Puzzle/findAllMinimalProgress',
       [this.userId],
     );
-
     return data;
   }
 
@@ -55,7 +101,6 @@ export class CodinGame {
       this.userId,
       2,
     ]);
-
     return data;
   }
 
@@ -64,7 +109,122 @@ export class CodinGame {
       '/services/Puzzle/findProgressByPrettyId',
       [prettyId, this.userId],
     );
-
     return data;
+  }
+
+  /** Count of puzzles solved per programming language for a user. */
+  async countSolvedPuzzlesByProgrammingLanguage(
+    userId?: number,
+  ): Promise<LanguageSolveCount[]> {
+    const { data } = await this.request.post<LanguageSolveCount[]>(
+      '/services/Puzzle/countSolvedPuzzlesByProgrammingLanguage',
+      [userId ?? this.userId],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Achievements
+  // ---------------------------------------------------------------------------
+
+  /** All achievements with progress for a given user (0 = anonymous). */
+  async findAchievements(userId?: number): Promise<Achievement[]> {
+    const { data } = await this.request.post<Achievement[]>(
+      '/services/Achievement/findByCodingamerId',
+      [userId ?? this.userId ?? 0],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // CodinGamer (user profile)
+  // ---------------------------------------------------------------------------
+
+  async findCodinGamerPublicInformations(userId?: number): Promise<CodinGamerPublicInfo> {
+    const { data } = await this.request.post<CodinGamerPublicInfo>(
+      '/services/CodinGamer/findCodinGamerPublicInformations',
+      [userId ?? this.userId],
+    );
+    return data;
+  }
+
+  /** Full points stats including rank history. Requires publicHandle. */
+  async findCodingamePointsStatsByHandle(publicHandle: string): Promise<PointsStats> {
+    const { data } = await this.request.post<PointsStats>(
+      '/services/CodinGamerRemoteService/findCodingamePointsStatsByHandle',
+      [publicHandle],
+    );
+    return data;
+  }
+
+  async findFollowerIds(userId?: number): Promise<number[]> {
+    const { data } = await this.request.post<number[]>('/services/CodinGamer/findFollowerIds', [
+      userId ?? this.userId,
+    ]);
+    return data;
+  }
+
+  async findFollowingIds(userId?: number): Promise<number[]> {
+    const { data } = await this.request.post<number[]>('/services/CodinGamer/findFollowingIds', [
+      userId ?? this.userId,
+    ]);
+    return data;
+  }
+
+  /** Console info: recent challenges and puzzle activity. */
+  async getMyConsoleInformation(
+    userId?: number,
+  ): Promise<{ challenges: unknown[]; puzzles: unknown[] }> {
+    const { data } = await this.request.post<{ challenges: unknown[]; puzzles: unknown[] }>(
+      '/services/CodinGamer/getMyConsoleInformation',
+      [userId ?? this.userId],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Challenges
+  // ---------------------------------------------------------------------------
+
+  async findAllChallenges(): Promise<Challenge[]> {
+    const { data } = await this.request.post<Challenge[]>(
+      '/services/Challenge/findAllChallenges',
+      [],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Clash of Code
+  // ---------------------------------------------------------------------------
+
+  async findPendingClashes(): Promise<unknown[]> {
+    const { data } = await this.request.post<unknown[]>(
+      '/services/ClashOfCode/findPendingClashes',
+      [],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Programming Languages
+  // ---------------------------------------------------------------------------
+
+  async findAllLanguageIds(): Promise<string[]> {
+    const { data } = await this.request.post<string[]>(
+      '/services/ProgrammingLanguage/findAllIds',
+      [],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------------
+
+  /** Fetch all puzzles (mini + full details). */
+  async fetchAllPuzzles(): Promise<Puzzle[]> {
+    const mini = await this.findAllMinimalProgress();
+    return this.findProgressByIds(mini.map((p) => p.id));
   }
 }
