@@ -1,11 +1,16 @@
-import Data.List (elemIndex)
-import Data.Maybe (fromJust)
+import System.IO
+import Control.Monad
+import Data.List (maximumBy)
+import Data.Ord (comparing)
+
+main :: IO ()
+main = do
+    hSetBuffering stdout NoBuffering
+    loop
 
 loop :: IO ()
 loop = do
-    heights <- sequence [readLn :: IO Int | _ <- [1..8]]
-    putStrLn $ show $ fromJust $ elemIndex (maximum heights) heights
+    heights <- replicateM 8 readLn :: IO [Int]
+    let (_, idx) = maximumBy (comparing fst) (zip heights [0..])
+    print idx
     loop
-
-main :: IO ()
-main = loop

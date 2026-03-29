@@ -1,3 +1,4 @@
+{$H+}
 program Answer;
 var
     h, mx, idx, i: integer;
@@ -16,5 +17,6 @@ begin
             end;
         end;
         writeln(idx);
+        flush(output);
     end;
 end.

@@ -1,14 +1,10 @@
-use strict;
-use warnings;
-
+$| = 1;
 while (1) {
     my $max = -1;
     my $idx = 0;
     for my $i (0..7) {
-        my $h = <STDIN>;
-        chomp $h;
-        $h = int($h);
-        if ($h > $max) { $max = $h; $idx = $i; }
+        chomp(my $h = <STDIN>);
+        if ($h + 0 > $max) { $max = $h + 0; $idx = $i; }
     }
-    print $idx, "\n";
+    print "$idx\n";
 }
