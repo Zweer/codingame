@@ -39,7 +39,6 @@ function computeHits(x: number, y: number): number {
     return hits;
 }
 
-// Cells reachable by a bomb blast (for chain detection)
 function blastReaches(bx: number, by: number, cx: number, cy: number): boolean {
     if (bx === cx && by === cy) return false;
     if (bx !== cx && by !== cy) return false;
@@ -59,8 +58,7 @@ for (let y = 0; y < H; y++) {
     for (let x = 0; x < W; x++) {
         if (grid[y][x] === '#') continue;
         const hits = computeHits(x, y);
-        const self = targetIdx(x, y);
-        if (hits) spots.push({ x, y, hits, selfTarget: self });
+        if (hits) spots.push({ x, y, hits, selfTarget: targetIdx(x, y) });
     }
 }
 
@@ -72,19 +70,17 @@ function popcount(n: number): number {
 
 spots.sort((a, b) => popcount(b.hits) - popcount(a.hits));
 
-// Full simulation with chain reactions and proper timing
-function simulate(placements: Spot[], maxRounds: number): { destroyed: number; schedule: { turn: number; x: number; y: number }[] } | null {
+// Full simulation: place bombs in order, handle chains and timing
+function simulate(placements: Spot[], maxRounds: number): { turn: number; x: number; y: number }[] | null {
     interface Bomb { x: number; y: number; hits: number; placeTurn: number; explodeTurn: number; exploded: boolean; }
     const bombs: Bomb[] = [];
     const remaining = [...placements];
     let destroyed = 0;
-    let turn = 0;
 
-    while (turn < maxRounds + 10) {
-        // Try to place a bomb this turn
+    for (let turn = 0; turn < maxRounds + 10; turn++) {
+        // Place a bomb if possible
         for (let i = 0; i < remaining.length; i++) {
             const s = remaining[i];
-            // Can place if cell is empty or target already destroyed
             if (s.selfTarget < 0 || ((destroyed >> s.selfTarget) & 1)) {
                 bombs.push({ x: s.x, y: s.y, hits: s.hits, placeTurn: turn, explodeTurn: turn + 3, exploded: false });
                 remaining.splice(i, 1);
@@ -92,7 +88,7 @@ function simulate(placements: Spot[], maxRounds: number): { destroyed: number; s
             }
         }
 
-        // Process explosions (with chain reactions)
+        // Explode with chains
         let changed = true;
         while (changed) {
             changed = false;
@@ -101,10 +97,9 @@ function simulate(placements: Spot[], maxRounds: number): { destroyed: number; s
                     b.exploded = true;
                     destroyed |= b.hits;
                     changed = true;
-                    // Chain: trigger other bombs in blast radius
-                    for (const other of bombs) {
-                        if (!other.exploded && blastReaches(b.x, b.y, other.x, other.y)) {
-                            other.explodeTurn = turn; // explode now
+                    for (const o of bombs) {
+                        if (!o.exploded && blastReaches(b.x, b.y, o.x, o.y)) {
+                            o.explodeTurn = turn;
                         }
                     }
                 }
@@ -112,68 +107,44 @@ function simulate(placements: Spot[], maxRounds: number): { destroyed: number; s
         }
 
         if (destroyed === allMask && remaining.length === 0) {
-            return {
-                destroyed,
-                schedule: bombs.map(b => ({ turn: b.placeTurn, x: b.x, y: b.y })),
-            };
+            return bombs.map(b => ({ turn: b.placeTurn, x: b.x, y: b.y }));
         }
-
-        // If all bombs placed and exploded, no point continuing
         if (remaining.length === 0 && bombs.every(b => b.exploded)) break;
-
-        turn++;
     }
 
-    if (destroyed === allMask) {
-        return {
-            destroyed,
-            schedule: bombs.map(b => ({ turn: b.placeTurn, x: b.x, y: b.y })),
-        };
-    }
-    return null;
+    return destroyed === allMask && remaining.length === 0
+        ? bombs.map(b => ({ turn: b.placeTurn, x: b.x, y: b.y }))
+        : null;
 }
 
-// DFS: pick spots, then simulate to verify
+// DFS: no selfTarget filtering — let simulate() handle feasibility
 let bestSchedule: { turn: number; x: number; y: number }[] | null = null;
+const startTime = Date.now();
 
-function dfs(maxBombs: number, chosen: Spot[], maxRounds: number): boolean {
-    // Try simulation with current set (chains might complete coverage)
-    if (chosen.length > 0) {
+function dfs(directCover: number, maxBombs: number, chosen: Spot[], maxRounds: number): boolean {
+    if (Date.now() - startTime > 800) return false; // timeout safety
+
+    if (chosen.length > 0 && chosen.length <= maxBombs) {
+        // Check if simulation succeeds (handles chains + timing)
         const result = simulate(chosen, maxRounds);
-        if (result && result.destroyed === allMask) {
-            bestSchedule = result.schedule;
+        if (result) {
+            bestSchedule = result;
             return true;
         }
     }
 
     if (chosen.length >= maxBombs) return false;
 
-    // Find first uncovered target (by direct hits of chosen spots, ignoring chains for DFS guidance)
-    let directCover = 0;
-    for (const c of chosen) directCover |= c.hits;
-    if (directCover === allMask) return false; // all covered directly but simulate failed? shouldn't happen
-
+    // Guide DFS: pick first uncovered target (by direct hits)
     const uncovered = allMask & ~directCover;
+    if (uncovered === 0) return false; // all covered directly but simulate failed
     let firstUncovered = 0;
     while (!((uncovered >> firstUncovered) & 1)) firstUncovered++;
 
     for (const s of spots) {
         if (!((s.hits >> firstUncovered) & 1)) continue;
-
-        // If spot is on a target, some other chosen bomb must be able to destroy it
-        // (either directly via hits, or via chain — but for DFS pruning, check if any
-        // chosen bomb's blast reaches this cell)
-        if (s.selfTarget >= 0) {
-            let canFree = false;
-            for (const c of chosen) {
-                if ((c.hits >> s.selfTarget) & 1) { canFree = true; break; }
-                if (blastReaches(c.x, c.y, s.x, s.y)) { canFree = true; break; }
-            }
-            if (!canFree) continue;
-        }
-
         chosen.push(s);
-        if (dfs(maxBombs, chosen, maxRounds)) return true;
+        if (dfs(directCover | s.hits, maxBombs, chosen, maxRounds)) return true;
         chosen.pop();
     }
     return false;
@@ -183,7 +154,7 @@ const [rounds, bombs] = readline().split(' ').map(Number);
 console.error(`Rounds: ${rounds}, Bombs: ${bombs}`);
 
 for (let b = 1; b <= bombs; b++) {
-    if (dfs(b, [], rounds)) break;
+    if (dfs(0, b, [], rounds)) break;
 }
 
 if (!bestSchedule) {
@@ -194,7 +165,6 @@ if (!bestSchedule) {
 console.error(`Schedule: ${bestSchedule.length} bombs`);
 for (const s of bestSchedule) console.error(`  turn ${s.turn}: (${s.x},${s.y})`);
 
-// Game loop
 let gameTurn = 0;
 const scheduleMap = new Map<number, { x: number; y: number }>();
 for (const s of bestSchedule) scheduleMap.set(s.turn, { x: s.x, y: s.y });
