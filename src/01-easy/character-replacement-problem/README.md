@@ -1,0 +1,147 @@
+# Character replacement problem
+
+[:link: Puzzle on CodinGame](https://www.codingame.com/training/easy/character-replacement-problem)
+
+**Level:** easy
+**Topics:** Graphs, 2D array
+
+## Goal 
+
+This program problem is to replace the characters in a multi-line string m of n lines of length n.  
+  
+A **string** s is an indication of the character to be replaced and the character after the replacement.  
+  
+For example, If ox xx indicated, In this case, o is replaced by x. however the case like xx the same character indicated will be ignored.  
+  
+In answer, you should **output the final figure of the string**.  
+  
+The final figure of the string is the figure in which all letters have been replaced.  
+  
+For example, If ab bt tz indicated (in any order), the letter a in the figure must all be z in the final figure of the string.  
+  
+A set of substitutions is valid if the replacing process is well defined and eventually finishes. If the given set is not valid, output ERROR.  
+  
+Below are some example problems. (You can skip the example problems. )  
+  
+Example1:  
+  
+  
+ox xx pq  
+3  
+owe  
+uax  
+oqp  
+  
+  
+In this case, To replace o with x and p with q.  
+Thus, the answer is  
+  
+  
+xwe  
+uax  
+xqq  
+  
+  
+Example2:  
+  
+  
+ww aa zz oo ii  
+3  
+waz  
+oiw  
+stw  
+  
+  
+In this case, there is no particular replace.  
+Therefore, the answer is  
+  
+  
+waz  
+oiw  
+stw  
+  
+  
+Example3:  
+  
+  
+zy yd da ao  
+5  
+zzzzz  
+yyyyy  
+ddddd  
+aaaaa  
+ooooo  
+  
+  
+In this case, z, y, d, and a all characters end up replacing o.  
+Thus, the answer is  
+  
+  
+ooooo  
+ooooo  
+ooooo  
+ooooo  
+ooooo  
+  
+  
+Example4:  
+  
+  
+gu uy yy yu  
+4  
+gggg  
+uuuu  
+yyyy  
+uuuu  
+  
+  
+In this case, g replaces to u and u replaces to y. But since y replaces to u, it is a permanent loop.  
+Therefore, the output is ERROR as the answer.  
+  
+Example5:  
+  
+  
+ge sc xi xk  
+5  
+sfghh  
+kindd  
+xzjtk  
+uilob  
+otrne  
+  
+  
+In this case, x can replace i or k in a two patterns, which is inconsistent.  
+Therefore, the output is ERROR as the answer. 
+
+Input
+
+**Line 1:** A **string** s for the instructions for character replacement.  
+**Line 2:** An **integer** n for the size of the string figure.  
+**Next n Lines:** A multi-line string m.
+
+Output
+
+If the instructions are correct, output the final figure.  
+If not, output ERROR.
+
+Constraints
+
+A string s is all lowercase alphabetical characters.  
+8 <= s.length() < 15  
+3 <= n <= 5
+
+Example
+
+Input
+
+ox xx pq
+3
+owe
+uax
+oqp
+
+Output
+
+xwe
+uax
+xqq

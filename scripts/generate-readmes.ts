@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { NodeHtmlMarkdown } from 'node-html-markdown';
@@ -11,9 +11,9 @@ const codingame = new CodinGame();
 const srcPath = join(__dirname, '..', 'src');
 
 function flattenTopics(topics: Puzzle['topics']): string[] {
-  return topics.flatMap((t) => [
-    ...(t.children.length > 0 ? t.children.map((c) => c.value) : [t.value]),
-  ]);
+  return topics.flatMap((t) =>
+    t.children.length > 0 ? t.children.map((c) => c.value) : [t.value],
+  );
 }
 
 function buildReadme(puzzle: Puzzle, statementMd: string): string {
@@ -33,63 +33,44 @@ ${statementMd.trim()}
 
 async function main(): Promise<void> {
   const puzzles: Puzzle[] = JSON.parse(readFileSync(puzzlesFilepath, 'utf8'));
-  const puzzlesByPrettyId = new Map(puzzles.map((p) => [p.prettyId, p]));
-
-  const levelDirs = readdirSync(srcPath).filter((d) =>
-    existsSync(join(srcPath, d)) && !d.startsWith('.')
-  );
-
-  const solvedPuzzles: { prettyId: string; dir: string }[] = [];
-  for (const levelDir of levelDirs) {
-    const levelPath = join(srcPath, levelDir);
-    try {
-      for (const prettyId of readdirSync(levelPath)) {
-        const puzzlePath = join(levelPath, prettyId);
-        if (existsSync(join(puzzlePath, 'index.ts')) || existsSync(join(puzzlePath, 'main.rs'))) {
-          solvedPuzzles.push({ prettyId, dir: join(levelPath, prettyId) });
-        }
-      }
-    } catch {
-      continue;
-    }
-  }
-
-  console.log(`Found ${solvedPuzzles.length} solved puzzles.`);
+  console.log(`Loaded ${puzzles.length} puzzles from database.`);
 
   let generated = 0;
   let skipped = 0;
+  let errors = 0;
 
-  for (const { prettyId, dir } of solvedPuzzles) {
-    const readmePath = join(dir, 'README.md');
+  for (const puzzle of puzzles) {
+    const levelDir = CodinGame.LEVEL_DIR[puzzle.level];
+    if (!levelDir) continue;
+
+    const puzzlePath = join(srcPath, levelDir, puzzle.prettyId);
+    const readmePath = join(puzzlePath, 'README.md');
+
     if (existsSync(readmePath)) {
       skipped++;
       continue;
     }
 
-    const puzzle = puzzlesByPrettyId.get(prettyId);
-    if (!puzzle) {
-      console.warn(`Puzzle not found in database: ${prettyId}`);
-      continue;
-    }
-
     try {
-      const { statement } = await codingame.findProgressByPrettyId(prettyId);
+      const { statement } = await codingame.findProgressByPrettyId(puzzle.prettyId);
       if (!statement) {
-        console.warn(`No statement for: ${prettyId}`);
+        console.warn(`⚠ No statement for: ${puzzle.prettyId}`);
+        errors++;
         continue;
       }
 
+      mkdirSync(puzzlePath, { recursive: true });
       const statementMd = NodeHtmlMarkdown.translate(statement);
-      const readme = buildReadme(puzzle, statementMd);
-      writeFileSync(readmePath, readme);
+      writeFileSync(readmePath, buildReadme(puzzle, statementMd));
       generated++;
-      console.log(`✓ ${prettyId}`);
+      console.log(`✓ ${puzzle.prettyId}`);
     } catch (error) {
-      console.error(`✗ ${prettyId}: ${error instanceof Error ? error.message : error}`);
+      errors++;
+      console.error(`✗ ${puzzle.prettyId}: ${error instanceof Error ? error.message : error}`);
     }
   }
 
-  console.log(`\nDone: ${generated} generated, ${skipped} skipped (already exist).`);
+  console.log(`\nDone: ${generated} generated, ${skipped} skipped, ${errors} errors.`);
 }
 
 void main();
