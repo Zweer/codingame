@@ -15,14 +15,23 @@ const NT = targets.length;
 const allMask = (1 << NT) - 1;
 const DIRS = [[0, -1], [0, 1], [-1, 0], [1, 0]];
 
-// For each empty cell, compute bitmask of targets it can destroy
-interface Spot { x: number; y: number; hits: number; }
+function targetIdx(x: number, y: number): number {
+    for (let i = 0; i < NT; i++) {
+        if (targets[i][0] === x && targets[i][1] === y) return i;
+    }
+    return -1;
+}
+
+// For each non-wall cell, compute bitmask of targets it can destroy
+// Include '@' cells too — they can become empty after a prior bomb destroys them
+interface Spot { x: number; y: number; hits: number; selfTarget: number; }
 const spots: Spot[] = [];
 
 for (let y = 0; y < H; y++) {
     for (let x = 0; x < W; x++) {
-        if (grid[y][x] !== '.') continue;
+        if (grid[y][x] === '#') continue;
         let hits = 0;
+        // A bomb at (x,y) hits targets in cross pattern, range 3
         for (const [dx, dy] of DIRS) {
             for (let i = 1; i <= 3; i++) {
                 const nx = x + dx * i, ny = y + dy * i;
@@ -30,18 +39,17 @@ for (let y = 0; y < H; y++) {
                 const c = grid[ny][nx];
                 if (c === '#') break;
                 if (c === '@') {
-                    for (let t = 0; t < NT; t++) {
-                        if (targets[t][0] === nx && targets[t][1] === ny) hits |= 1 << t;
-                    }
+                    const ti = targetIdx(nx, ny);
+                    if (ti >= 0) hits |= 1 << ti;
                 }
             }
         }
-        if (hits) spots.push({ x, y, hits });
+        // If this cell IS a target, the bomb doesn't destroy itself but we need
+        // to track that this spot requires the target to be destroyed first
+        const self = targetIdx(x, y);
+        if (hits) spots.push({ x, y, hits, selfTarget: self });
     }
 }
-
-// Sort by most targets hit
-spots.sort((a, b) => popcount(b.hits) - popcount(a.hits));
 
 function popcount(n: number): number {
     n = n - ((n >> 1) & 0x55555555);
@@ -49,30 +57,47 @@ function popcount(n: number): number {
     return (((n + (n >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
 }
 
-// DFS set cover: find minimum spots to cover all targets
+spots.sort((a, b) => popcount(b.hits) - popcount(a.hits));
+
+// DFS set cover with dependency: if spot is on a target cell, that target must
+// already be covered (destroyed by a prior bomb) before we can place there
 let solution: Spot[] | null = null;
 
-function dfs(covered: number, maxBombs: number, start: number, chosen: Spot[]): boolean {
+function dfs(covered: number, maxBombs: number, chosen: Spot[]): boolean {
     if (covered === allMask) {
         solution = [...chosen];
         return true;
     }
     if (chosen.length >= maxBombs) return false;
 
-    // Pruning: can remaining spots cover what's missing?
-    let canCover = covered;
-    for (let i = start; i < spots.length; i++) canCover |= spots[i].hits;
-    if (canCover !== allMask) return false;
-
-    // Find first uncovered target to force coverage
-    let uncovered = allMask & ~covered;
+    // Find first uncovered target
+    const uncovered = allMask & ~covered;
     let firstUncovered = 0;
     while (!((uncovered >> firstUncovered) & 1)) firstUncovered++;
 
-    for (let i = start; i < spots.length; i++) {
-        if (!((spots[i].hits >> firstUncovered) & 1)) continue; // must cover this target
-        chosen.push(spots[i]);
-        if (dfs(covered | spots[i].hits, maxBombs, i + 1, chosen)) return true;
+    // Pruning: can any remaining spots cover this target?
+    let canCoverFirst = false;
+    for (const s of spots) {
+        if (!((s.hits >> firstUncovered) & 1)) continue;
+        // Can we use this spot? Either it's not on a target, or that target is already covered
+        if (s.selfTarget < 0 || ((covered >> s.selfTarget) & 1)) {
+            canCoverFirst = true;
+            break;
+        }
+        // Or: the target it sits on could be covered by another spot we haven't tried yet
+        canCoverFirst = true; // optimistic — let DFS handle it
+        break;
+    }
+    if (!canCoverFirst) return false;
+
+    for (const s of spots) {
+        if (!((s.hits >> firstUncovered) & 1)) continue;
+
+        // If spot is on a target cell, that target must already be destroyed
+        if (s.selfTarget >= 0 && !((covered >> s.selfTarget) & 1)) continue;
+
+        chosen.push(s);
+        if (dfs(covered | s.hits, maxBombs, chosen)) return true;
         chosen.pop();
     }
     return false;
@@ -81,27 +106,58 @@ function dfs(covered: number, maxBombs: number, start: number, chosen: Spot[]): 
 // Read first turn
 let [rounds, bombs] = readline().split(' ').map(Number);
 
-// Try with increasing bomb count for faster search
 for (let b = 1; b <= bombs; b++) {
-    if (dfs(0, b, 0, [])) break;
+    if (dfs(0, b, [])) break;
 }
 
-if (!solution) {
-    // Fallback: shouldn't happen but just in case
-    console.error('No solution found!');
-    solution = [];
+if (!solution || solution.length === 0) {
+    console.error(`No solution found! NT=${NT} spots=${spots.length}`);
+    for (const s of spots.slice(0, 20)) {
+        console.error(`  spot(${s.x},${s.y}) self=${s.selfTarget} hits=${s.hits.toString(2).padStart(NT, '0')}`);
+    }
 }
 
-console.error(`Solution: ${solution.length} bombs`);
-for (const s of solution) console.error(`  ${s.x},${s.y} hits=${s.hits.toString(2)}`);
+// Now we need to ORDER the solution: spots on target cells must come AFTER
+// the bomb that destroys that target. Bombs explode 3 turns after placement.
+// Simple approach: place "free" spots first (not on targets), then dependent ones.
+const ordered: Spot[] = [];
+if (solution) {
+    const remaining = [...solution];
+    const destroyed = new Set<number>();
 
-// Game loop: place bombs then WAIT
+    while (remaining.length > 0) {
+        let placed = false;
+        for (let i = 0; i < remaining.length; i++) {
+            const s = remaining[i];
+            if (s.selfTarget < 0 || destroyed.has(s.selfTarget)) {
+                ordered.push(s);
+                remaining.splice(i, 1);
+                // After this bomb explodes, its targets are destroyed
+                for (let t = 0; t < NT; t++) {
+                    if ((s.hits >> t) & 1) destroyed.add(t);
+                }
+                placed = true;
+                break;
+            }
+        }
+        if (!placed) {
+            // Circular dependency — just place them in order
+            ordered.push(...remaining);
+            break;
+        }
+    }
+}
+
+console.error(`Solution: ${ordered.length} bombs`);
+for (const s of ordered) console.error(`  ${s.x},${s.y}`);
+
+// Game loop
 let turn = 0;
 while (true) {
-    if (turn > 0) readline(); // consume turn input
+    if (turn > 0) readline();
 
-    if (turn < solution.length) {
-        console.log(`${solution[turn].x} ${solution[turn].y}`);
+    if (turn < ordered.length) {
+        console.log(`${ordered[turn].x} ${ordered[turn].y}`);
     } else {
         console.log('WAIT');
     }
