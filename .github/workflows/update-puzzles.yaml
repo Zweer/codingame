@@ -1,13 +1,15 @@
-name: Auto Mark Completed
+name: Update Puzzles & README
 
 on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * SUN'
   workflow_dispatch:
 
 jobs:
-  update_readme:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -17,9 +19,11 @@ jobs:
         with:
           node-version: lts/*
       - run: npm ci
+      - run: npm run script:retrieve
       - run: npm run script:readme
-      - run: |
+      - name: Commit and push if changed
+        run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -am "ci: Updated the puzzle list"
-          git push
+          git add -A
+          git diff --staged --quiet || git commit -m "ci: :construction_worker: update puzzle list and readme" && git push
