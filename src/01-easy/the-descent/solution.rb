@@ -1,4 +1,13 @@
+STDOUT.sync = true
 loop do
-    heights = 8.times.map { gets.to_i }
-    puts heights.index(heights.max)
+    mx = -1
+    idx = 0
+    8.times do |i|
+        h = gets.to_i
+        if h > mx
+            mx = h
+            idx = i
+        end
+    end
+    puts idx
 end

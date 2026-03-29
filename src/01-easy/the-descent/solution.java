@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Solution {
+class Player {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         while (true) {

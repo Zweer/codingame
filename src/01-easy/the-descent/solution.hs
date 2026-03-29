@@ -1,8 +1,11 @@
 import Data.List (elemIndex)
 import Data.Maybe (fromJust)
 
+loop :: IO ()
+loop = do
+    heights <- sequence [readLn :: IO Int | _ <- [1..8]]
+    putStrLn $ show $ fromJust $ elemIndex (maximum heights) heights
+    loop
+
 main :: IO ()
-main = do
-    heights <- mapM (\_ -> readLn :: IO Int) [1..8]
-    print $ fromJust $ elemIndex (maximum heights) heights
-    main
+main = loop

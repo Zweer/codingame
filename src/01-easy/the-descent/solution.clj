@@ -1,8 +1,8 @@
-(ns Solution
+(ns Player
   (:gen-class))
-(defn -main []
-  (loop []
-    (let [heights (map #(Integer/parseInt (read-line)) (range 8))
-          idx (.indexOf heights (apply max heights))]
-      (println idx))
-    (recur)))
+(defn -main [& args]
+  (while true
+    (let [heights (vec (for [_ (range 8)] (Integer/parseInt (read-line))))
+          mx (apply max heights)
+          idx (.indexOf heights mx)]
+      (println idx))))

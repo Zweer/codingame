@@ -1,6 +1,7 @@
 # Commit Conventions
 
 **IMPORTANT**: The agent CAN commit directly in this repo. No review/PR process needed.
+**BUT**: Never commit unless the user explicitly asks. Wait for approval.
 
 ## Format
 

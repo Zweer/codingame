@@ -21,7 +21,7 @@ Skip planning for single-file fixes, small bug fixes, or simple questions.
 
 ## Git Rules
 
-- The agent CAN commit and push in this repo
-- Use conventional commits with gitmoji (see commit-conventions.md)
-- Commit after completing a logical unit of work
+- **NEVER commit automatically.** Only commit when the user explicitly asks to commit.
+- When the user asks to commit, use conventional commits with gitmoji (see commit-conventions.md)
 - Use `git add -A` before committing to include all changes
+- Do NOT push unless explicitly asked
