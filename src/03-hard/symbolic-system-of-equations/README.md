@@ -1,0 +1,53 @@
+# Symbolic system of equations
+
+[:link: Puzzle on CodinGame](https://www.codingame.com/training/hard/symbolic-system-of-equations)
+
+**Level:** hard
+**Topics:** Graphs, Rewriting, Cycle detection
+
+## Goal 
+
+Write a program that outputs the general solution to a symbolic system of equations. The general solution is one which **cannot be simplified**.  
+  
+If a variable is not declared in any of the equations, the solution for that variable is itself (e.g. x -> x).  
+  
+There is **no solution** if any equation in the system contains **circular reference or self reference** (please refer to the test cases for the examples). 
+
+Input
+
+**Line 1:** An integer N for the number of variables.  
+**Line 2:** N space-separated variables in lexicographical order.  
+**Line 3:** An integer M for the number of equations.  
+**Next M lines:** One line for each equation in the format of variable \= function.
+
+Output
+
+**N lines:** One line for the solution for each variable in lexicographical order, in the format of variable \-> solution.  
+**Or** in the case of no solution:  
+**Line 1:** No solution!
+
+Constraints
+
+1 ≤ N ≤ 10  
+0 ≤ M ≤ 10  
+1 ≤ length of each variable name ≤ 2, and the name is in lowercase letters.  
+1 ≤ length of each function name ≤ 2, and the name is in lowercase letters.  
+All variable names and function names are distinct.  
+A variable appears in the left side of at most one equation in the system.  
+A function may appear in different equations but always contains the same number (between 1 and N) of different variables as its arguments.
+
+Example
+
+Input
+
+3
+x y z
+2
+z = f ( x y )
+y = h ( x )
+
+Output
+
+x -> x
+y -> h ( x )
+z -> f ( x h ( x ) )

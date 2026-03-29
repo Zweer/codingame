@@ -23,12 +23,14 @@
     "test": "vitest run",
     "script:retrieve": "node --import tsx --env-file-if-exists .env scripts/retrieve-puzzles.ts",
     "script:solve": "node --import tsx --env-file-if-exists .env scripts/solve-puzzles.ts",
-    "script:readme": "node --import tsx --env-file-if-exists .env scripts/update-readme.ts"
+    "script:readme": "node --import tsx --env-file-if-exists .env scripts/update-readme.ts",
+    "script:generate-readmes": "node --import tsx --env-file-if-exists .env scripts/generate-readmes.ts"
   },
   "dependencies": {
     "@google/genai": "^1.9.0",
     "axios": "^1.10.0",
-    "dayjs": "^1.11.13"
+    "dayjs": "^1.11.13",
+    "node-html-markdown": "^2.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.9",

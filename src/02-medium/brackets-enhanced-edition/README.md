@@ -1,0 +1,46 @@
+# Brackets, Enhanced Edition
+
+[:link: Puzzle on CodinGame](https://www.codingame.com/training/medium/brackets-enhanced-edition)
+
+**Level:** medium
+**Topics:** Parsing, parenthesis
+
+## Goal 
+
+You must determine whether a given expression's bracketing can be made valid by flipping them in-place. An expression has a valid bracketing when all the parentheses (), square brackets \[\], curly braces {}  and angle brackets <> are correctly paired and nested.  
+  
+You can flip a bracketing element in-place by replacing it with its counterpart, e.g. replace a ( with a ), or a \> with a <. For example, converting the second parenthesis in the expression below would make it valid: 
+
+<{[(abc(]}> → <{[(abc)]}>
+
+  
+(This is a harder version of the community puzzle “Brackets, Extended Edition”. You may want to complete that one first.) 
+
+Input
+
+**Line 1:** the number N of expressions  
+**Next N lines:** an expression
+
+Output
+
+**N lines:** true if the expression can be made valid by flipping elements in-place; false otherwise.
+
+Constraints
+
+N ≤ 100  
+number of bracketing elements ≤ 500  
+expression length ≤ 10000  
+The expression contains no whitespace.
+
+Example
+
+Input
+
+2
+<{[(abc(]}>
+<{[(abc>}])
+
+Output
+
+true
+false

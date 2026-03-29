@@ -1,0 +1,116 @@
+# Shadows of the Knight - Episode 2
+
+[:link: Puzzle on CodinGame](https://www.codingame.com/training/expert/shadows-of-the-knight-episode-2)
+
+**Level:** expert
+**Topics:** Binary search, Intervals
+
+## The Goal
+
+Due to the new heat cloak shielding the bombs, the device can no longer provide the direction of the bombs! It can only indicate whether you are getting closer or further away from the bombs.
+
+## Rules
+
+After each jump, the upgraded device will now provide you with the following information code: 
+* COLDER You are further away from the bombs than you were before jumping
+* WARMER You are closer to the bombs than you were before jumping
+* SAME You are at the same distance from the bombs as you were before jumping
+* UNKNOWN The device cannot provide you with any information: only happens before the first jump
+The Euclidean distance is used for the measurements of the distance to the bombs:  
+![](fileservlet?id=1459932446290)  
+  
+As for the previous question your mission is to program the device so that **it indicates the location of the next window you should jump to** in order to reach the bombs' room **as soon as possible**.  
+  
+Buildings are represented as a rectangular array of windows, the window in the **top left corner of the building is at index (0,0)**.
+
+## Note
+
+For some tests, **the bombs' location may change from one execution to the other**: the goal is to help you find the best algorithm in all cases.  
+  
+The tests provided are similar to the validation tests used to compute the final score but remain different.
+
+## Game Input
+
+The program must first read the initialization data from standard input. Then, within an infinite loop, read the device data from the standard input and provide to the standard output the next movement instruction.
+
+Initialization input
+
+Line 1 :  2 integers W H. The (W, H) couple represents the width and height of the building as a number of windows.
+
+Line 2 :  1 integer N, which represents the number of jumps you can make before the bombs go off.
+
+Line 3 :  2 integers X0 Y0, representing your starting position.
+
+Input for one game turn
+
+A single line providing the device code: COLDER WARMER SAME or UNKNOWN
+
+Output for one game turn
+
+A single line with 2 integers X Y separated by a space character. (X, Y) represents the location of the next window you should jump to. X represents the index along the horizontal axis, Y represents the index along the vertical axis. (0,0) is located in the top-left corner of the building.
+
+Constraints
+
+1 ≤ W ≤ 10000  
+5 ≤ H ≤ 10000  
+2 ≤ N ≤ 100  
+0 ≤ X, X0 < W  
+0 ≤ Y, Y0 < H  
+Response time per turn ≤ 150ms
+
+Example
+
+Initialization input
+
+
+10 10     _Building has 100 windows (10x10)_
+6         _You have 6 jumps to find the bombs_
+2 5       _You start at position (2,5)_
+
+No output expected
+
+Input for turn 1
+
+
+UNKNOWN
+_You have not jumped yet_
+
+![](https://code.codingame.com/fileservlet?id=1426529567951)
+
+Output for turn 1
+
+
+7 2
+_You jump to window (7,2)_
+
+Input for turn 2
+
+
+WARMER
+_You get nearer the bombs_
+
+![](https://www.codingame.com/fileservlet?id=1433858211617)
+
+Output for turn 2
+
+
+7 6
+_You jump to window (7,6)_
+
+Input for turn 3
+
+
+SAME
+_You are at the same distance from the bombs_
+
+![](https://www.codingame.com/fileservlet?id=1433873821772)
+
+Output for turn 3
+
+
+7 4
+_You jump to window (7,4)_
+
+![](https://code.codingame.com/fileservlet?id=1426558852824)
+
+_You found the hostages. You can defuse the bombs in time. You win!_

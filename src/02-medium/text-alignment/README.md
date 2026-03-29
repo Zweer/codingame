@@ -1,0 +1,52 @@
+# Text alignment
+
+[:link: Puzzle on CodinGame](https://www.codingame.com/training/medium/text-alignment)
+
+**Level:** medium
+**Topics:** String manipulation
+
+## Goal 
+
+Your program must align a text, line by line, to the width of the largest line of the text and according to the requested alignment:  
+  
+LEFT: display text as-is.  
+  
+RIGHT: align text to the right.  
+  
+CENTER: spread the remaining space evenly on both sides of the text. If the number of remaining spaces is odd, leave the extra space on the right. Don't actually append space characters to the end of the line, though.  
+  
+JUSTIFY: spread the remaining space evenly between words of the line so that all lines end at the same rightmost position, with the exception that lines with a single word should remain left-aligned. When necessary, round down the numbers of spaces to their integer part. For instance if you need to spread 11 spaces between 5 words, the theoretical number of spaces between each pair of words is 2.75, yielding a total number of used spaces of 2.75 - 5.5 - 8.25 - 11\. Round down to 2 - 5 - 8 - 11 and the effective number of spaces in each block is 2 - 3 - 3 - 3. 
+
+Input
+
+**Line 1:** The requested alignment, either LEFT, RIGHT, CENTER, or JUSTIFY  
+**Line 2:** N, the number of text lines  
+**Next N lines:** A line of text to align
+
+Output
+
+N lines of the original text, aligned according to specifications  
+Do NOT print trailing whitespace for LEFT or CENTER alignments
+
+Constraints
+
+1≤N≤10  
+The input text never contains any leading or trailing whitespace, and when a line contains multiple words, they are always separated by a single space.
+
+Example
+
+Input
+
+LEFT
+4
+Never gonna give you up, never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry, never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+Output
+
+Never gonna give you up, never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry, never gonna say goodbye
+Never gonna tell a lie and hurt you
