@@ -23,7 +23,7 @@ fn main() {
         cps.push((v[0], v[1]));
     }
 
-    // Precompute: angle change at each checkpoint (how sharp the turn is)
+    // Precompute turn sharpness at each checkpoint
     let mut turn_angle = vec![0.0f64; cp_count];
     for i in 0..cp_count {
         let prev = (i + cp_count - 1) % cp_count;
@@ -33,23 +33,25 @@ fn main() {
         turn_angle[i] = angle_diff(a1, a2).abs();
     }
 
-    // Find longest stretch for BOOST
+    // Find best BOOST checkpoint
     let mut longest_sq = 0.0_f64;
     let mut boost_cp_idx = 0;
     for i in 0..cp_count {
         let j = (i + 1) % cp_count;
         let dx = cps[j].0 - cps[i].0;
         let dy = cps[j].1 - cps[i].1;
-        let d2 = dx * dx + dy * dy;
-        // Only boost if the turn at destination is mild
-        if d2 > longest_sq && turn_angle[j] < 40.0 {
-            longest_sq = d2;
+        if dx * dx + dy * dy > longest_sq && turn_angle[j] < 40.0 {
+            longest_sq = dx * dx + dy * dy;
             boost_cp_idx = j;
         }
     }
 
     let mut boost_used = [false; 2];
-    let mut shield_cd = [0i32; 2]; // shield cooldown
+    let mut shield_cd = [0i32; 2];
+    // Track total checkpoints passed per pod to know who's ahead
+    let mut prev_cp = [0usize; 4];
+    let mut progress = [0i32; 4]; // total CPs passed
+    let mut first_turn = true;
 
     loop {
         let mut px = [0.0f64; 4]; let mut py = [0.0f64; 4];
@@ -63,11 +65,24 @@ fn main() {
             pa[i] = v[4]; pcp[i] = v[5] as usize;
         }
 
+        // Update progress tracking
+        if first_turn {
+            for i in 0..4 { prev_cp[i] = pcp[i]; }
+            first_turn = false;
+        } else {
+            for i in 0..4 {
+                if pcp[i] != prev_cp[i] {
+                    progress[i] += 1;
+                }
+                prev_cp[i] = pcp[i];
+            }
+        }
+
         for s in shield_cd.iter_mut() { if *s > 0 { *s -= 1; } }
 
-        // Determine enemy leader
-        let enemy_leader = if pcp[2] > pcp[3] { 2 }
-            else if pcp[3] > pcp[2] { 3 }
+        // Enemy leader: most progress, tiebreak by distance to next cp
+        let enemy_leader = if progress[2] > progress[3] { 2 }
+            else if progress[3] > progress[2] { 3 }
             else {
                 let d2 = (px[2]-cps[pcp[2]].0).powi(2) + (py[2]-cps[pcp[2]].1).powi(2);
                 let d3 = (px[3]-cps[pcp[3]].0).powi(2) + (py[3]-cps[pcp[3]].1).powi(2);
@@ -79,52 +94,72 @@ fn main() {
             let vx = pvx[pod]; let vy = pvy[pod];
             let angle = pa[pod];
             let cp_idx = pcp[pod];
-            let (cpx, cpy) = cps[cp_idx];
-            let next_idx = (cp_idx + 1) % cp_count;
-            let (ncx, ncy) = cps[next_idx];
-
-            let dx = cpx - x; let dy = cpy - y;
-            let dist = (dx * dx + dy * dy).sqrt();
             let speed = (vx * vx + vy * vy).sqrt();
-            let diff = angle_diff(angle, dy.atan2(dx).to_degrees());
-            let abs_diff = diff.abs();
 
-            let is_blocker = pod == 1;
-
-            // === BLOCKER LOGIC ===
-            if is_blocker {
+            // === POD 1: BLOCKER ===
+            if pod == 1 {
                 let ei = enemy_leader;
                 let ecp = pcp[ei];
                 let (ecx, ecy) = cps[ecp];
-                let edist = ((px[ei]-ecx).powi(2) + (py[ei]-ecy).powi(2)).sqrt();
 
-                // Target: between enemy and their checkpoint
-                // Weighted toward checkpoint when far, toward enemy when close
-                let w = (edist / 4000.0).min(1.0);
-                let tx = ecx * w + (px[ei] + pvx[ei] * 3.0) * (1.0 - w);
-                let ty = ecy * w + (py[ei] + pvy[ei] * 3.0) * (1.0 - w);
+                // Predict where enemy will be in ~3 turns
+                let efx = px[ei] + pvx[ei] * 3.0;
+                let efy = py[ei] + pvy[ei] * 3.0;
 
-                let my_dist = ((x - px[ei]).powi(2) + (y - py[ei]).powi(2)).sqrt();
-                let my_diff = angle_diff(angle, (ty - y).atan2(tx - x).to_degrees()).abs();
+                // Target: enemy's next checkpoint (get there before them)
+                let my_dist_to_ecp = ((x - ecx).powi(2) + (y - ecy).powi(2)).sqrt();
+                let enemy_dist_to_ecp = ((px[ei] - ecx).powi(2) + (py[ei] - ecy).powi(2)).sqrt();
 
-                // SHIELD when about to collide with enemy
-                if shield_cd[pod] <= 0 && my_dist < 900.0 && speed > 100.0 {
-                    shield_cd[pod] = 4;
-                    println!("{:.0} {:.0} SHIELD", px[ei] + pvx[ei], py[ei] + pvy[ei]);
-                    continue;
+                let (tx, ty) = if my_dist_to_ecp < 1500.0 && enemy_dist_to_ecp < 3000.0 {
+                    // We're at the checkpoint, aim at incoming enemy
+                    (efx, efy)
+                } else if enemy_dist_to_ecp < my_dist_to_ecp {
+                    // Enemy is closer to their CP than us, chase them directly
+                    (efx, efy)
+                } else {
+                    // Race to enemy's checkpoint to intercept
+                    (ecx, ecy)
+                };
+
+                let diff = angle_diff(angle, (ty - y).atan2(tx - x).to_degrees()).abs();
+                let dist_to_enemy = ((x - px[ei]).powi(2) + (y - py[ei]).powi(2)).sqrt();
+
+                // SHIELD on collision
+                if shield_cd[pod] <= 0 && dist_to_enemy < 900.0 {
+                    let closing = -((px[ei]-x) * (pvx[ei]-vx) + (py[ei]-y) * (pvy[ei]-vy));
+                    if closing > 0.0 {
+                        shield_cd[pod] = 4;
+                        println!("{:.0} {:.0} SHIELD", px[ei] + pvx[ei], py[ei] + pvy[ei]);
+                        continue;
+                    }
                 }
 
-                let t = if my_diff >= 90.0 { 0 }
-                    else { (100.0 - my_diff * 0.8) as i32 };
-                println!("{:.0} {:.0} {}", tx, ty, t.max(30).min(100));
+                // BOOST to reach intercept point
+                let thrust = if !boost_used[pod] && diff < 10.0 && my_dist_to_ecp > 5000.0 {
+                    boost_used[pod] = true;
+                    "BOOST".to_string()
+                } else if diff >= 90.0 {
+                    "0".to_string()
+                } else {
+                    format!("{}", 100)
+                };
+
+                eprintln!("BLOCKER -> enemy {} at ({:.0},{:.0}) cp{} dist={:.0}", ei, px[ei], py[ei], ecp, dist_to_enemy);
+                println!("{:.0} {:.0} {}", tx, ty, thrust);
                 continue;
             }
 
-            // === RACER LOGIC ===
+            // === POD 0: RACER ===
+            let (cpx, cpy) = cps[cp_idx];
+            let next_idx = (cp_idx + 1) % cp_count;
+            let (ncx, ncy) = cps[next_idx];
+            let dx = cpx - x; let dy = cpy - y;
+            let dist = (dx * dx + dy * dy).sqrt();
+            let diff = angle_diff(angle, dy.atan2(dx).to_degrees());
+            let abs_diff = diff.abs();
 
-            // Target: shift toward next CP when close
-            let mut tx = cpx;
-            let mut ty = cpy;
+            // Target: shift toward next CP
+            let mut tx = cpx; let mut ty = cpy;
             let dnx = ncx - cpx; let dny = ncy - cpy;
             let dn = (dnx * dnx + dny * dny).sqrt();
             if dn > 1.0 && dist < 2500.0 && abs_diff < 60.0 {
@@ -145,32 +180,26 @@ fn main() {
                 }
             }
 
-            // Collision avoidance: if enemy pod is between us and target, steer around
+            // Collision avoidance
             for ei in 2..4 {
                 let edx = px[ei] - x; let edy = py[ei] - y;
                 let ed = (edx * edx + edy * edy).sqrt();
                 if ed < 1200.0 && ed < dist {
-                    // Check if enemy is roughly in our path
                     let tdx = tx - x; let tdy = ty - y;
                     let td = (tdx * tdx + tdy * tdy).sqrt();
                     if td > 1.0 {
                         let dot = (edx * tdx + edy * tdy) / (ed * td);
-                        if dot > 0.5 { // enemy is ahead in our direction
-                            // Steer perpendicular
-                            let perpx = -tdy / td;
-                            let perpy = tdx / td;
-                            // Choose side based on cross product
+                        if dot > 0.5 {
                             let cross = edx * tdy - edy * tdx;
                             let sign = if cross > 0.0 { 1.0 } else { -1.0 };
-                            tx += perpx * 600.0 * sign;
-                            ty += perpy * 600.0 * sign;
+                            tx += (-tdy / td) * 600.0 * sign;
+                            ty += (tdx / td) * 600.0 * sign;
                         }
                     }
                 }
             }
 
-            // === THRUST ===
-            // How sharp is the upcoming turn?
+            // Thrust
             let upcoming_turn = turn_angle[cp_idx];
 
             let thrust: String = if !boost_used[pod] && cp_idx == boost_cp_idx
@@ -181,32 +210,32 @@ fn main() {
             } else if abs_diff >= 90.0 {
                 "0".to_string()
             } else {
-                // Base thrust from angle
                 let mut t = if abs_diff > 60.0 { 15.0 }
                     else { 100.0 - abs_diff * 1.4 };
 
-                // Brake for upcoming sharp turn
+                // Brake for sharp turn ahead
                 if upcoming_turn > 30.0 && dist < 3000.0 {
                     let turn_brake = (1.0 - upcoming_turn / 180.0).max(0.2);
-                    let dist_factor = (dist / 3000.0).max(0.2);
-                    t *= turn_brake * dist_factor + (1.0 - dist_factor);
+                    let dist_f = (dist / 3000.0).max(0.2);
+                    t *= turn_brake * dist_f + (1.0 - dist_f);
                 }
 
-                // Brake when approaching fast
+                // Brake when fast and close
                 if dist < 2000.0 && speed > 200.0 {
-                    let brake = (dist / speed) * 60.0;
-                    t = t.min(brake.max(10.0));
+                    t = t.min((dist / speed * 60.0).max(10.0));
                 }
 
-                // SHIELD if enemy about to ram us
+                // SHIELD if enemy ramming us
                 if shield_cd[pod] <= 0 {
                     for ei in 2..4 {
                         let ed = ((px[ei]-x).powi(2) + (py[ei]-y).powi(2)).sqrt();
-                        let espd = ((pvx[ei]).powi(2) + (pvy[ei]).powi(2)).sqrt();
-                        if ed < 900.0 && espd > 200.0 {
-                            shield_cd[pod] = 4;
-                            println!("{:.0} {:.0} SHIELD", tx, ty);
-                            break;
+                        if ed < 900.0 {
+                            let closing = -((px[ei]-x)*(pvx[ei]-vx) + (py[ei]-y)*(pvy[ei]-vy));
+                            if closing > 200.0 {
+                                shield_cd[pod] = 4;
+                                println!("{:.0} {:.0} SHIELD", tx, ty);
+                                break;
+                            }
                         }
                     }
                     if shield_cd[pod] == 4 { continue; }
