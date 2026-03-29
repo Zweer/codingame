@@ -16,47 +16,88 @@ fn feedback(guess: &[u8], secret: &[u8], len: usize) -> u8 {
     bulls * 16 + cows
 }
 
-/// Partial feedback: compute bulls and cows for positions 0..depth only.
-/// Returns (exact_bulls, max_possible_bulls, min_cows, max_cows)
-/// Used for pruning during generation.
-fn partial_check(guess: &[u8], partial: &[u8], depth: usize, len: usize, used: &[bool; 10], target_fb: u8) -> bool {
-    let target_bulls = target_fb >> 4;
-    let target_cows = target_fb & 0xF;
-    let total = target_bulls + target_cows;
+/// Tight partial pruning during permutation generation.
+/// p[0..depth] are placed. Check if target feedback is still achievable.
+fn partial_ok(guess: &[u8], p: &[u8; MAXLEN], depth: usize, len: usize, used: &[bool; 10], target: u8) -> bool {
+    let tb = (target >> 4) as i8;
+    let tc = (target & 0xF) as i8;
 
-    // Count bulls so far
-    let mut bulls = 0u8;
+    // Bulls from placed positions
+    let mut bulls: i8 = 0;
     for i in 0..depth {
-        if guess[i] == partial[i] { bulls += 1; }
+        if guess[i] == p[i] { bulls += 1; }
     }
-    // Already too many bulls?
-    if bulls > target_bulls { return false; }
+    if bulls > tb { return false; }
 
-    // Remaining positions can add at most (len - depth) more bulls
-    let remaining = (len - depth) as u8;
-    if bulls + remaining < target_bulls { return false; }
+    // Max additional bulls from unplaced positions
+    let remaining = (len - depth) as i8;
+    if bulls + remaining < tb { return false; }
 
-    // Count how many guess digits are "used" (present in partial so far)
-    let mut partial_mask = 0u16;
-    for i in 0..depth { partial_mask |= 1 << partial[i]; }
+    // Cows from placed positions: guess digits (not bulls) that appear in placed set
+    let mut pmask = 0u16;
+    for i in 0..depth { pmask |= 1 << p[i]; }
 
-    let mut matched = 0u8; // guess digits found in partial (bulls + cows from placed digits)
+    let mut cows: i8 = 0;
     for i in 0..len {
-        if i < depth && guess[i] == partial[i] {
-            matched += 1; // bull
-        } else if partial_mask & (1 << guess[i]) != 0 {
-            matched += 1; // cow (from already-placed digits)
+        if i < depth {
+            // This position is placed; if not a bull, check if guess[i] is elsewhere in secret
+            // We can't know yet, but we know placed digits
+            continue;
+        }
+        // Unplaced guess position: if guess[i] is in placed digits (and not a bull at that pos)
+        if pmask & (1 << guess[i]) != 0 {
+            // guess[i] matches a placed digit — this will be a cow
+            // But only if guess[i] != p[i] (which we don't know for unplaced i)
+            // Conservative: count it
+            cows += 1;
+        }
+    }
+    // Also count placed non-bull guess digits that match unplaced secret digits
+    // This is hard to bound tightly, so use: total matched = bulls + cows_so_far
+    // where cows_so_far counts guess digits matched by placed secret digits
+    let mut placed_cows: i8 = 0;
+    for i in 0..depth {
+        if guess[i] != p[i] {
+            // guess[i] at position i is not a bull. Is guess[i] in the secret?
+            // We don't know the full secret, but if guess[i] is used (placed somewhere), it's a cow
+            // Actually we need: is guess[i] in the SECRET, not in the partial
+            // Skip — too complex for partial check
         }
     }
 
-    // matched can only grow as we place more digits. If already > total, prune.
-    if matched > total { return false; }
+    // Simpler tight bound: count total matches possible
+    // Digits in guess that are in placed set (pmask): these are guaranteed matches (bull or cow)
+    let mut guaranteed = 0i8;
+    let mut gmask_used = 0u16; // avoid double-counting same digit
+    for i in 0..len {
+        let d = guess[i];
+        if pmask & (1 << d) != 0 && gmask_used & (1 << d) == 0 {
+            guaranteed += 1;
+            gmask_used |= 1 << d;
+        }
+    }
+    // Digits in guess NOT in placed set: could still match unplaced digits
+    let mut could_match = 0i8;
+    for i in 0..len {
+        let d = guess[i];
+        if gmask_used & (1 << d) != 0 { continue; }
+        if !used[d as usize] { // digit d is not yet placed, could appear later
+            could_match += 1;
+            gmask_used |= 1 << d;
+        }
+    }
 
-    // How many unplaced guess digits could still match?
-    // Unplaced digits are those not yet in `used` and not in partial_mask
-    // This is hard to compute exactly, so just check: can we still reach `total`?
-    let unplaced_slots = remaining;
-    if matched + unplaced_slots < total { return false; }
+    let total_target = tb + tc;
+    if guaranteed > total_target { return false; }
+    if guaranteed + could_match < total_target { return false; }
+
+    // Also: bulls can't exceed tb, and we already have `bulls` from placed positions
+    // For remaining positions, count how many COULD be bulls
+    let mut possible_extra_bulls = 0i8;
+    for i in depth..len {
+        if !used[guess[i] as usize] { possible_extra_bulls += 1; }
+    }
+    if bulls + possible_extra_bulls < tb { return false; }
 
     true
 }
@@ -66,10 +107,9 @@ fn generate_filtered(len: usize, constraints: &[(Vec<u8>, u8)]) -> Vec<u64> {
     let mut p = [0u8; MAXLEN];
     let mut used = [false; 10];
 
-    // Precompute cant_have
     let mut cant_have = 0u16;
     for (guess, fb) in constraints {
-        if *fb == 0 { // 0 bulls, 0 cows
+        if *fb == 0 {
             for i in 0..len { cant_have |= 1 << guess[i]; }
         }
     }
@@ -87,16 +127,14 @@ fn generate_filtered(len: usize, constraints: &[(Vec<u8>, u8)]) -> Vec<u64> {
         }
         let start = if depth == 0 { 1u8 } else { 0u8 };
         for d in start..10 {
-            if used[d as usize] { continue; }
-            if cant_have & (1 << d) != 0 { continue; }
+            if used[d as usize] || cant_have & (1 << d) != 0 { continue; }
 
             p[depth] = d;
             used[d as usize] = true;
 
-            // Partial pruning: check each constraint
             let mut ok = true;
             for (guess, fb) in constraints.iter() {
-                if !partial_check(guess, p, depth + 1, len, used, *fb) {
+                if !partial_ok(guess, p, depth + 1, len, used, *fb) {
                     ok = false;
                     break;
                 }
@@ -105,7 +143,6 @@ fn generate_filtered(len: usize, constraints: &[(Vec<u8>, u8)]) -> Vec<u64> {
             if ok {
                 build(p, depth + 1, used, len, result, constraints, cant_have);
             }
-
             used[d as usize] = false;
         }
     }
@@ -122,12 +159,12 @@ fn decode(v: u64, len: usize) -> Vec<u8> {
 }
 
 fn feedback_enc(guess: &[u8], secret: u64, len: usize) -> u8 {
-    let mut bulls = 0u8;
-    let mut cows = 0u8;
+    let mut sd = [0u8; MAXLEN];
     let mut smask = 0u16;
     let mut s = secret;
-    let mut sd = [0u8; MAXLEN];
     for i in (0..len).rev() { sd[i] = (s & 0xF) as u8; s >>= 4; smask |= 1 << sd[i]; }
+    let mut bulls = 0u8;
+    let mut cows = 0u8;
     for i in 0..len {
         if guess[i] == sd[i] { bulls += 1; }
         else if smask & (1 << guess[i]) != 0 { cows += 1; }
@@ -156,11 +193,9 @@ fn first_guess(len: usize) -> Vec<u8> {
 fn best_guess(cands: &[u64], len: usize, start: &Instant) -> Vec<u8> {
     if cands.len() <= 1 { return if cands.is_empty() { first_guess(len) } else { decode(cands[0], len) }; }
     if cands.len() > 5000 { return decode(cands[cands.len() / 2], len); }
-
     let max_sample = 2000.min(cands.len());
     let max_guesses = if cands.len() > 1000 { 50 } else { cands.len().min(200) };
     let step = (cands.len() / max_guesses).max(1);
-
     let mut best_v = cands[0];
     let mut best_s = f64::MAX;
     for i in (0..cands.len()).step_by(step) {
@@ -221,7 +256,6 @@ fn main() {
             }
         }
 
-        // Use hardcoded guesses until we have enough constraints for fast generation
         let min_hc = if num_len >= 10 { hc.len() } else if num_len >= 9 { 6 } else if num_len >= 8 { 3 } else if num_len >= 7 { 2 } else { 1 };
         if !generated && constraints.len() < min_hc {
             let idx = turn - 1;
