@@ -25,41 +25,41 @@ while i < len(raw):
         i = j
 
 # Format
-indent = 0
 lines = []
-i = 0
-while i < len(tokens):
-    t = tokens[i]
-    if t == '(':
+indent = 0
+t = 0
+while t < len(tokens):
+    tok = tokens[t]
+    if tok == '(':
         lines.append(' ' * indent + '(')
         indent += 4
-        i += 1
-    elif t == ')':
+        t += 1
+    elif tok == ')':
         indent -= 4
-        lines.append(' ' * indent + ')')
-        i += 1
-    elif i + 1 < len(tokens) and tokens[i+1] == '=':
-        # key=value pair
-        line = t + '='
-        i += 2  # skip key and =
-        if i < len(tokens) and tokens[i] not in ('(', ')', ';'):
-            line += tokens[i]
-            i += 1
-            if i < len(tokens) and tokens[i] == ';':
-                line += ';'
-                i += 1
-            lines.append(' ' * indent + line)
-        elif i < len(tokens) and tokens[i] == '(':
-            lines.append(' ' * indent + line)
-            # ( will be handled next iteration
+        if t + 1 < len(tokens) and tokens[t+1] == ';':
+            lines.append(' ' * indent + ');')
+            t += 2
         else:
+            lines.append(' ' * indent + ')')
+            t += 1
+    elif t + 1 < len(tokens) and tokens[t+1] == '=':
+        key = tok
+        t += 2
+        if t < len(tokens) and tokens[t] == '(':
+            lines.append(' ' * indent + key + '=')
+        elif t < len(tokens):
+            line = key + '=' + tokens[t]
+            t += 1
+            if t < len(tokens) and tokens[t] == ';':
+                line += ';'
+                t += 1
             lines.append(' ' * indent + line)
     else:
-        line = t
-        i += 1
-        if i < len(tokens) and tokens[i] == ';':
+        line = tok
+        t += 1
+        if t < len(tokens) and tokens[t] == ';':
             line += ';'
-            i += 1
+            t += 1
         lines.append(' ' * indent + line)
 
 print('\n'.join(lines))
