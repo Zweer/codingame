@@ -17,5 +17,11 @@
     "introspect",
     "thinking",
     "code"
-  ]
+  ],
+  "toolsSettings": {
+    "subagent": {
+      "availableAgents": ["puzzle-solver"],
+      "trustedAgents": ["puzzle-solver"]
+    }
+  }
 }

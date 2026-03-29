@@ -1,0 +1,17 @@
+{
+  "name": "puzzle-solver",
+  "description": "Solves a CodinGame puzzle in a specific programming language. Give it a puzzle prettyId and target language.",
+  "prompt": "file://../prompts/puzzle-solver.md",
+  "resources": [
+    "file://data/puzzles.json"
+  ],
+  "tools": [
+    "read",
+    "write",
+    "shell",
+    "grep",
+    "glob",
+    "web_fetch",
+    "code"
+  ]
+}
