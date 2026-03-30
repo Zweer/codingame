@@ -1,0 +1,1 @@
+class Player{public static void main(String[]a){var s=new java.util.Scanner(System.in);int l=s.nextInt(),h=s.nextInt();s.nextLine();var t=s.nextLine().toUpperCase();var r=new String[h];for(int i=0;i<h;i++)r[i]=s.nextLine();for(var x:r){var o="";for(char c:t.toCharArray()){int j=c-65;if(j<0||j>25)j=26;o+=x.substring(j*l,j*l+l);}System.out.println(o);}}}

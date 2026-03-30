@@ -1,0 +1,1 @@
+print([...readline()].map(c=>c.charCodeAt().toString(2).padStart(7,0)).join``.match(/1+|0+/g).map(g=>"00 ".slice(g[0]>0)+"0".repeat(g.length)).join` `)

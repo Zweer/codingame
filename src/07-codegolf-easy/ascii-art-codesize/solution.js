@@ -1,0 +1,1 @@
+l=+readline();h=+readline();t=[...readline().toUpperCase()];for(r=[];h--;)r.push(readline());r.map(x=>print(t.map(c=>x.substr(((i=c.charCodeAt()-65)<0|i>25?26:i)*l,l)).join``))

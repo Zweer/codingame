@@ -1,33 +1,33 @@
 {
   "total": 273,
-  "completed": 164,
-  "pending": 109,
+  "completed": 170,
+  "pending": 103,
   "totalPoints": 18295,
-  "earnedPoints": 7850,
+  "earnedPoints": 9120,
   "byCategory": {
-    "puzzle-very-hard": {
-      "completed": 4,
-      "total": 16,
-      "points": 4000,
-      "earned": 1000
-    },
     "puzzle": {
-      "completed": 16,
+      "completed": 17,
       "total": 25,
       "points": 2180,
-      "earned": 1040
+      "earned": 1540
+    },
+    "puzzle-very-hard": {
+      "completed": 6,
+      "total": 16,
+      "points": 4000,
+      "earned": 1500
     },
     "coder": {
-      "completed": 67,
+      "completed": 68,
       "total": 116,
       "points": 2095,
-      "earned": 885
+      "earned": 905
     },
     "puzzle-hard": {
-      "completed": 23,
+      "completed": 25,
       "total": 36,
       "points": 4500,
-      "earned": 2875
+      "earned": 3125
     },
     "puzzle-medium": {
       "completed": 30,
@@ -56,11 +56,11 @@
   },
   "byLevel": {
     "PLATINUM": {
-      "completed": 6,
+      "completed": 8,
       "total": 52
     },
     "GOLD": {
-      "completed": 33,
+      "completed": 37,
       "total": 83
     },
     "SILVER": {
@@ -73,6 +73,22 @@
     }
   },
   "achievements": [
+    {
+      "id": "PZ_EXPERT_3",
+      "puzzleId": 0,
+      "title": "Damn I'm good",
+      "description": "Reach a 100% score on three very hard puzzles.",
+      "points": 500,
+      "progress": 3,
+      "progressMax": 3,
+      "completionTime": 1774825165008,
+      "imageBinaryId": 1925067246288,
+      "categoryId": "puzzle",
+      "groupId": "puzzle-level",
+      "level": "PLATINUM",
+      "unit": "very hard puzzles",
+      "weight": 24100
+    },
     {
       "id": "PZ_100P_P42",
       "puzzleId": 0,
@@ -104,6 +120,22 @@
       "level": "PLATINUM",
       "unlockText": "reach 100%",
       "weight": 23700
+    },
+    {
+      "id": "PZ_100P_P38",
+      "puzzleId": 0,
+      "title": "100% Music Scores",
+      "description": "Reach a 100% score on Music Scores puzzle.",
+      "points": 250,
+      "progress": 1,
+      "progressMax": 1,
+      "completionTime": 1774825166003,
+      "imageBinaryId": 1924611580559,
+      "categoryId": "puzzle-very-hard",
+      "groupId": "puzzle-veryhard-partitions",
+      "level": "PLATINUM",
+      "unlockText": "reach 100%",
+      "weight": 23600
     },
     {
       "id": "PZ_15_LANGUAGES",
@@ -244,6 +276,21 @@
       "weight": 20200
     },
     {
+      "id": "PZ_100P_C++_7",
+      "puzzleId": 0,
+      "title": "C++ Lover",
+      "description": "Solve 7 puzzles with a 100% score in C++",
+      "points": 20,
+      "progress": 7,
+      "progressMax": 7,
+      "completionTime": 1774824815016,
+      "imageBinaryId": 1922913444746,
+      "categoryId": "coder",
+      "groupId": "coder-c++",
+      "level": "GOLD",
+      "weight": 20000
+    },
+    {
       "id": "PZ_100P_PYTHON3_7",
       "puzzleId": 0,
       "title": "Python3 Lover",
@@ -302,6 +349,22 @@
       "groupId": "puzzle-hard-skynet",
       "level": "GOLD",
       "weight": 18000
+    },
+    {
+      "id": "PZ_100P_P44",
+      "puzzleId": 0,
+      "title": "100% Vox Codei - Episode 1",
+      "description": "Reach a 100% score on Vox Codei - Episode 1 puzzle.",
+      "points": 125,
+      "progress": 1,
+      "progressMax": 1,
+      "completionTime": 1774826617003,
+      "imageBinaryId": 1925012031771,
+      "categoryId": "puzzle-hard",
+      "groupId": "puzzle-hard-vox",
+      "level": "GOLD",
+      "unlockText": "reach 100%",
+      "weight": 17800
     },
     {
       "id": "PZ_100P_P25",
@@ -508,6 +571,36 @@
       "groupId": "puzzle-veryhard-resistance",
       "level": "GOLD",
       "weight": 15900
+    },
+    {
+      "id": "PZ_50P_P38",
+      "puzzleId": 0,
+      "title": "50% Music Scores",
+      "description": "Reach a 50% score on Music Scores puzzle.",
+      "points": 250,
+      "progress": 1,
+      "progressMax": 1,
+      "completionTime": 1774825166003,
+      "imageBinaryId": 1924097734874,
+      "categoryId": "puzzle-very-hard",
+      "groupId": "puzzle-veryhard-partitions",
+      "level": "GOLD",
+      "weight": 15800
+    },
+    {
+      "id": "PZ_50P_P44",
+      "puzzleId": 0,
+      "title": "50% Vox Codei - Episode 1",
+      "description": "Reach a 50% score on Vox Codei - Episode 1 puzzle.",
+      "points": 125,
+      "progress": 1,
+      "progressMax": 1,
+      "completionTime": 1774824916008,
+      "imageBinaryId": 1924481622385,
+      "categoryId": "puzzle-hard",
+      "groupId": "puzzle-hard-vox",
+      "level": "GOLD",
+      "weight": 15400
     },
     {
       "id": "PZ_50P_P25",
@@ -720,21 +813,6 @@
       "weight": 13000
     },
     {
-      "id": "PZ_100P_JAVASCRIPT_3",
-      "puzzleId": 0,
-      "title": "Javascript Regular",
-      "description": "Solve 3 puzzles with a 100% score in Javascript",
-      "points": 15,
-      "progress": 3,
-      "progressMax": 3,
-      "completionTime": 1469537058006,
-      "imageBinaryId": 1923222645728,
-      "categoryId": "coder",
-      "groupId": "coder-javascript",
-      "level": "SILVER",
-      "weight": 12900
-    },
-    {
       "id": "PZ_100P_TYPESCRIPT_3",
       "puzzleId": 0,
       "title": "TypeScript Regular",
@@ -746,6 +824,21 @@
       "imageBinaryId": 41971289853037,
       "categoryId": "coder",
       "groupId": "coder-typescript",
+      "level": "SILVER",
+      "weight": 12900
+    },
+    {
+      "id": "PZ_100P_JAVASCRIPT_3",
+      "puzzleId": 0,
+      "title": "Javascript Regular",
+      "description": "Solve 3 puzzles with a 100% score in Javascript",
+      "points": 15,
+      "progress": 3,
+      "progressMax": 3,
+      "completionTime": 1469537058006,
+      "imageBinaryId": 1923222645728,
+      "categoryId": "coder",
+      "groupId": "coder-javascript",
       "level": "SILVER",
       "weight": 12900
     },
@@ -795,21 +888,6 @@
       "weight": 12601
     },
     {
-      "id": "PZ_100P_D_3",
-      "puzzleId": 0,
-      "title": "D Regular",
-      "description": "Solve 3 puzzles with a 100% score in D",
-      "points": 15,
-      "progress": 3,
-      "progressMax": 3,
-      "completionTime": 1774818394008,
-      "imageBinaryId": 34889068537748,
-      "categoryId": "coder",
-      "groupId": "coder-d",
-      "level": "SILVER",
-      "weight": 12600
-    },
-    {
       "id": "PZ_100P_C_3",
       "puzzleId": 0,
       "title": "C Regular",
@@ -821,6 +899,21 @@
       "imageBinaryId": 1922827728944,
       "categoryId": "coder",
       "groupId": "coder-c",
+      "level": "SILVER",
+      "weight": 12600
+    },
+    {
+      "id": "PZ_100P_D_3",
+      "puzzleId": 0,
+      "title": "D Regular",
+      "description": "Solve 3 puzzles with a 100% score in D",
+      "points": 15,
+      "progress": 3,
+      "progressMax": 3,
+      "completionTime": 1774818394008,
+      "imageBinaryId": 34889068537748,
+      "categoryId": "coder",
+      "groupId": "coder-d",
       "level": "SILVER",
       "weight": 12600
     },
@@ -1821,21 +1914,6 @@
       "weight": 5700
     },
     {
-      "id": "PZ_100P_TYPESCRIPT_1",
-      "puzzleId": 0,
-      "title": "TypeScript Explorer",
-      "description": "Solve 1 puzzle with a 100% score in TypeScript",
-      "points": 10,
-      "progress": 1,
-      "progressMax": 1,
-      "completionTime": 1703018668012,
-      "imageBinaryId": 38822903463906,
-      "categoryId": "coder",
-      "groupId": "coder-typescript",
-      "level": "BRONZE",
-      "weight": 5600
-    },
-    {
       "id": "PZ_100P_JAVASCRIPT_1",
       "puzzleId": 0,
       "title": "Javascript Explorer",
@@ -1847,6 +1925,21 @@
       "imageBinaryId": 1923218680795,
       "categoryId": "coder",
       "groupId": "coder-javascript",
+      "level": "BRONZE",
+      "weight": 5600
+    },
+    {
+      "id": "PZ_100P_TYPESCRIPT_1",
+      "puzzleId": 0,
+      "title": "TypeScript Explorer",
+      "description": "Solve 1 puzzle with a 100% score in TypeScript",
+      "points": 10,
+      "progress": 1,
+      "progressMax": 1,
+      "completionTime": 1703018668012,
+      "imageBinaryId": 38822903463906,
+      "categoryId": "coder",
+      "groupId": "coder-typescript",
       "level": "BRONZE",
       "weight": 5600
     },
@@ -2704,22 +2797,6 @@
       "weight": 24300
     },
     {
-      "id": "PZ_EXPERT_3",
-      "puzzleId": 0,
-      "title": "Damn I'm good",
-      "description": "Reach a 100% score on three very hard puzzles.",
-      "points": 500,
-      "progress": 2,
-      "progressMax": 3,
-      "completionTime": 0,
-      "imageBinaryId": 1925067246288,
-      "categoryId": "puzzle",
-      "groupId": "puzzle-level",
-      "level": "PLATINUM",
-      "unit": "very hard puzzles",
-      "weight": 24100
-    },
-    {
       "id": "PZ_3JUMPS",
       "puzzleId": 0,
       "title": "Triple jump",
@@ -2749,22 +2826,6 @@
       "level": "PLATINUM",
       "unlockText": "reach 100%",
       "weight": 23900
-    },
-    {
-      "id": "PZ_100P_P38",
-      "puzzleId": 0,
-      "title": "100% Music Scores",
-      "description": "Reach a 100% score on Music Scores puzzle.",
-      "points": 250,
-      "progress": 0,
-      "progressMax": 1,
-      "completionTime": 0,
-      "imageBinaryId": 1924611580559,
-      "categoryId": "puzzle-very-hard",
-      "groupId": "puzzle-veryhard-partitions",
-      "level": "PLATINUM",
-      "unlockText": "reach 100%",
-      "weight": 23600
     },
     {
       "id": "PZ_100P_P49",
@@ -2910,7 +2971,7 @@
       "title": "C++ Addict",
       "description": "Solve 15 puzzles with a 100% score in C++",
       "points": 30,
-      "progress": 6,
+      "progress": 10,
       "progressMax": 15,
       "completionTime": 0,
       "imageBinaryId": 1922922204694,
@@ -3000,7 +3061,7 @@
       "title": "Rust Addict",
       "description": "Solve 15 puzzles with a 100% score in Rust",
       "points": 30,
-      "progress": 12,
+      "progress": 13,
       "progressMax": 15,
       "completionTime": 0,
       "imageBinaryId": 3448445416671,
@@ -3008,21 +3069,6 @@
       "groupId": "coder-rust",
       "level": "PLATINUM",
       "weight": 21801
-    },
-    {
-      "id": "PZ_100P_BASH_15",
-      "puzzleId": 0,
-      "title": "Bash Addict",
-      "description": "Solve 15 puzzles with a 100% score in Bash",
-      "points": 30,
-      "progress": 4,
-      "progressMax": 15,
-      "completionTime": 0,
-      "imageBinaryId": 1922800676298,
-      "categoryId": "coder",
-      "groupId": "coder-bash",
-      "level": "PLATINUM",
-      "weight": 21800
     },
     {
       "id": "PZ_100P_KOTLIN_15",
@@ -3036,6 +3082,21 @@
       "imageBinaryId": 14440178045771,
       "categoryId": "coder",
       "groupId": "coder-kotlin",
+      "level": "PLATINUM",
+      "weight": 21800
+    },
+    {
+      "id": "PZ_100P_BASH_15",
+      "puzzleId": 0,
+      "title": "Bash Addict",
+      "description": "Solve 15 puzzles with a 100% score in Bash",
+      "points": 30,
+      "progress": 4,
+      "progressMax": 15,
+      "completionTime": 0,
+      "imageBinaryId": 1922800676298,
+      "categoryId": "coder",
+      "groupId": "coder-bash",
       "level": "PLATINUM",
       "weight": 21800
     },
@@ -3340,21 +3401,6 @@
       "weight": 20100
     },
     {
-      "id": "PZ_100P_C++_7",
-      "puzzleId": 0,
-      "title": "C++ Lover",
-      "description": "Solve 7 puzzles with a 100% score in C++",
-      "points": 20,
-      "progress": 6,
-      "progressMax": 7,
-      "completionTime": 0,
-      "imageBinaryId": 1922913444746,
-      "categoryId": "coder",
-      "groupId": "coder-c++",
-      "level": "GOLD",
-      "weight": 20000
-    },
-    {
       "id": "PZ_CLASHOFCODE_500",
       "puzzleId": 0,
       "title": "Clash of Code legend",
@@ -3445,21 +3491,6 @@
       "weight": 19500
     },
     {
-      "id": "PZ_100P_KOTLIN_7",
-      "puzzleId": 0,
-      "title": "Kotlin Lover",
-      "description": "Solve 7 puzzles with a 100% score in Kotlin",
-      "points": 20,
-      "progress": 3,
-      "progressMax": 7,
-      "completionTime": 0,
-      "imageBinaryId": 14440024271852,
-      "categoryId": "coder",
-      "groupId": "coder-kotlin",
-      "level": "GOLD",
-      "weight": 19400
-    },
-    {
       "id": "PZ_100P_BASH_7",
       "puzzleId": 0,
       "title": "Bash Lover",
@@ -3471,6 +3502,21 @@
       "imageBinaryId": 1922792210588,
       "categoryId": "coder",
       "groupId": "coder-bash",
+      "level": "GOLD",
+      "weight": 19400
+    },
+    {
+      "id": "PZ_100P_KOTLIN_7",
+      "puzzleId": 0,
+      "title": "Kotlin Lover",
+      "description": "Solve 7 puzzles with a 100% score in Kotlin",
+      "points": 20,
+      "progress": 3,
+      "progressMax": 7,
+      "completionTime": 0,
+      "imageBinaryId": 14440024271852,
+      "categoryId": "coder",
+      "groupId": "coder-kotlin",
       "level": "GOLD",
       "weight": 19400
     },
@@ -3656,22 +3702,6 @@
       "weight": 17900
     },
     {
-      "id": "PZ_100P_P44",
-      "puzzleId": 0,
-      "title": "100% Vox Codei - Episode 1",
-      "description": "Reach a 100% score on Vox Codei - Episode 1 puzzle.",
-      "points": 125,
-      "progress": 0,
-      "progressMax": 1,
-      "completionTime": 0,
-      "imageBinaryId": 1925012031771,
-      "categoryId": "puzzle-hard",
-      "groupId": "puzzle-hard-vox",
-      "level": "GOLD",
-      "unlockText": "reach 100%",
-      "weight": 17800
-    },
-    {
       "id": "PZ_100P_P29",
       "puzzleId": 0,
       "title": "100% TAN Network",
@@ -3797,21 +3827,6 @@
       "weight": 16100
     },
     {
-      "id": "PZ_50P_P38",
-      "puzzleId": 0,
-      "title": "50% Music Scores",
-      "description": "Reach a 50% score on Music Scores puzzle.",
-      "points": 250,
-      "progress": 0,
-      "progressMax": 1,
-      "completionTime": 0,
-      "imageBinaryId": 1924097734874,
-      "categoryId": "puzzle-very-hard",
-      "groupId": "puzzle-veryhard-partitions",
-      "level": "GOLD",
-      "weight": 15800
-    },
-    {
       "id": "PZ_50P_P49",
       "puzzleId": 0,
       "title": "50% Nintendo",
@@ -3855,21 +3870,6 @@
       "groupId": "puzzle-veryhard-indiana",
       "level": "GOLD",
       "weight": 15500
-    },
-    {
-      "id": "PZ_50P_P44",
-      "puzzleId": 0,
-      "title": "50% Vox Codei - Episode 1",
-      "description": "Reach a 50% score on Vox Codei - Episode 1 puzzle.",
-      "points": 125,
-      "progress": 0,
-      "progressMax": 1,
-      "completionTime": 0,
-      "imageBinaryId": 1924481622385,
-      "categoryId": "puzzle-hard",
-      "groupId": "puzzle-hard-vox",
-      "level": "GOLD",
-      "weight": 15400
     },
     {
       "id": "PZ_50P_P29",
@@ -4015,7 +4015,7 @@
       "title": "Hard Worker",
       "description": "Submit your code 1000 times in the IDE",
       "points": 10,
-      "progress": 347,
+      "progress": 360,
       "progressMax": 1000,
       "completionTime": 0,
       "imageBinaryId": 1925267301420,
@@ -4045,7 +4045,7 @@
       "title": "Tester, Ultimate Edition",
       "description": "Run your code 10,000 times in the IDE",
       "points": 10,
-      "progress": 1968,
+      "progress": 2044,
       "progressMax": 10000,
       "completionTime": 0,
       "imageBinaryId": 1925193318314,

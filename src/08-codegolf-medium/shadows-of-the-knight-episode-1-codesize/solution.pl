@@ -1,0 +1,1 @@
+$|--;($c,$d)=split/ /,<>;<>;($x,$y)=split/ /,<>;{$_=<>;$d=$y if/U/;$b=$y if/D/;$c=$x if/L/;$a=$x if/R/;print(($x=$a+$c>>1)." ".($y=$b+$d>>1),$/);redo}

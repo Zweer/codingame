@@ -1,0 +1,1 @@
+while 1:h=[int(input())for _ in[0]*8];print(h.index(max(h)))

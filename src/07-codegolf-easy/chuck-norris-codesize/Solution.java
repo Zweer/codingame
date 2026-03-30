@@ -1,0 +1,1 @@
+class Player{public static void main(String[]a){var s="";for(char c:new java.util.Scanner(System.in).nextLine().toCharArray())s+=String.format("%07d",Integer.parseInt(Integer.toBinaryString(c)));var r="";for(var m:s.split("(?<=(.))(?!\\1)")){r+=(r.isEmpty()?"":" ")+(m.charAt(0)==49?"0 ":"00 ")+"0".repeat(m.length());}System.out.println(r);}}

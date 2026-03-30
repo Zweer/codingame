@@ -1,0 +1,1 @@
+<>;/(\S+) (\S+)/&&do{push@x,$1;push@y,$2}for<>;@x=sort{$a<=>$b}@x;@y=sort{$a<=>$b}@y;$s=$x[-1]-$x[0];$s+=abs($_-$y[@y/2])for@y;print$s

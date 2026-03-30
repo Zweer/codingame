@@ -1,0 +1,1 @@
+readline();print((t=readline().split(/ /))[0]?t.map(Number).sort((a,b)=>a*a*2-a-b*b*2+b)[0]:0)

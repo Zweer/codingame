@@ -1,0 +1,1 @@
+chomp($_=<>);$_=unpack"B*";s/.(.{7})/$1/g;print join" ",map{0 x(2-/1/)." ".0 x length}/(1+|0+)/g

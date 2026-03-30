@@ -1,0 +1,1 @@
+h=readline().split` `;e={[h[3]]:h[4]};for(i=h[7];i--;)[f,p]=readline().split` `,e[f]=p;for(;;)[f,p,d]=readline().split` `,t=e[f]||p,print(f<0||p==t||(d>"N")==(+p<+t)?"WAIT":"BLOCK")

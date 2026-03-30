@@ -1,0 +1,1 @@
+class Player{public static void main(String[]a){var s=new java.util.Scanner(System.in);int n=s.nextInt();if(n<1)System.out.println(0);else{int r=s.nextInt();while(--n>0){int v=s.nextInt();if(v*v*2-v<r*r*2-r)r=v;}System.out.println(r);}}}

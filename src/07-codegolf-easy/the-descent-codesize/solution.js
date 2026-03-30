@@ -1,0 +1,1 @@
+for(;;){m=x=-1;for(i=8;i--;){h=+readline();h>m&&(m=h,x=7-i)}print(x)}

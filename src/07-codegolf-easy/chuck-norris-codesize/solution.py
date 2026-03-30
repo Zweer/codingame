@@ -1,0 +1,1 @@
+import re;print(" ".join("00 "[g[0]>"0":]+"0"*len(g)for g in re.findall("1+|0+","".join(f"{c:07b}"for c in input().encode()))))

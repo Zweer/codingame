@@ -1,0 +1,1 @@
+$l=<>;<>;$_=uc<>;@c=/./g;for$r(<>){print map{substr$r,(index(join("",A..Z),$_)%27)*$l,$l}@c;print$/}

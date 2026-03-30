@@ -1,0 +1,1 @@
+<>;$_=<>;print+(sort{abs$a<=>abs$b||$b<=>$a}split)[0]||0

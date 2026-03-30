@@ -19,8 +19,8 @@ fn race_output(
     turn_angle: &[f64], boost_cp_idx: usize,
     boost_used: &mut bool, shield_cd: &mut i32,
     px: &[f64;4], py: &[f64;4], pvx: &[f64;4], pvy: &[f64;4],
-    turn: i32,
-) {
+    turn: i32, pod_id: usize,
+) -> String {
     let (cpx, cpy) = cps[cp_idx];
     let next_idx = (cp_idx + 1) % cp_count;
     let (ncx, ncy) = cps[next_idx];
@@ -79,23 +79,20 @@ fn race_output(
     if turn < 5 {
         if !*boost_used && abs_diff < 5.0 && dist > 4000.0 {
             *boost_used = true;
-            println!("{:.0} {:.0} BOOST", tx, ty);
+            return format!("{:.0} {:.0} BOOST", tx, ty);
         } else {
             let t = if abs_diff > 90.0 { 0 } else { 100 };
-            println!("{:.0} {:.0} {}", tx, ty, t);
+            return format!("{:.0} {:.0} {}", tx, ty, t);
         }
-        return;
     }
 
     if !*boost_used && cp_idx == boost_cp_idx && abs_diff < 5.0 && dist > 4000.0 {
         *boost_used = true;
-        println!("{:.0} {:.0} BOOST", tx, ty);
-        return;
+        return format!("{:.0} {:.0} BOOST", tx, ty);
     }
 
     if abs_diff >= 90.0 {
-        println!("{:.0} {:.0} 0", tx, ty);
-        return;
+        return format!("{:.0} {:.0} 0", tx, ty);
     }
 
     let mut t = if abs_diff > 60.0 { 15.0 } else { 100.0 - abs_diff * 1.4 };
@@ -120,14 +117,13 @@ fn race_output(
                 let closing = -((px[ei]-x)*(pvx[ei]-vx) + (py[ei]-y)*(pvy[ei]-vy));
                 if closing > 200.0 {
                     *shield_cd = 4;
-                    println!("{:.0} {:.0} SHIELD", tx, ty);
-                    return;
+                    return format!("{:.0} {:.0} SHIELD", tx, ty);
                 }
             }
         }
     }
 
-    println!("{:.0} {:.0} {}", tx, ty, (t as i32).max(0).min(100));
+    format!("{:.0} {:.0} {}", tx, ty, (t as i32).max(0).min(100))
 }
 
 fn main() {
@@ -159,6 +155,11 @@ fn main() {
         }
     }
 
+    eprintln!("LAPS={} CPS={}", _laps, cp_count);
+    for (i, cp) in cps.iter().enumerate() {
+        eprintln!("CP{}: {:.0} {:.0}", i, cp.0, cp.1);
+    }
+
     let mut boost_used = [false; 2];
     let mut shield_cd = [0i32; 2];
     let mut prev_cp = [0usize; 4];
@@ -181,6 +182,13 @@ fn main() {
         else { for i in 0..4 { if pcp[i] != prev_cp[i] { progress[i] += 1; } prev_cp[i] = pcp[i]; } }
         for s in shield_cd.iter_mut() { if *s > 0 { *s -= 1; } }
 
+        // DEBUG: log state of all 4 pods
+        for i in 0..4 {
+            let label = if i < 2 { format!("M{}", i) } else { format!("E{}", i-2) };
+            eprintln!("T{} {}: x={:.0} y={:.0} vx={:.0} vy={:.0} a={:.0} ncp={} prog={}",
+                turn, label, px[i], py[i], pvx[i], pvy[i], pa[i], pcp[i], progress[i]);
+        }
+
         // Dynamic role: pod with more progress = racer, other = blocker
         // First 15 turns: both race
         let both_race = turn < 15;
@@ -196,15 +204,19 @@ fn main() {
             };
 
         for pod in 0..2 {
+            let role;
+            let mov;
             if both_race || pod == racer {
-                race_output(
+                role = "RACE";
+                mov = race_output(
                     px[pod], py[pod], pvx[pod], pvy[pod], pa[pod],
                     pcp[pod], &cps, cp_count, &turn_angle, boost_cp_idx,
                     &mut boost_used[pod], &mut shield_cd[pod],
-                    &px, &py, &pvx, &pvy, turn,
+                    &px, &py, &pvx, &pvy, turn, pod,
                 );
             } else {
                 // BLOCKER
+                role = "BLOCK";
                 let ei = enemy_leader;
                 let ecp = pcp[ei];
                 let (ecx, ecy) = cps[ecp];
@@ -227,14 +239,18 @@ fn main() {
                     let closing = -((px[ei]-px[pod])*(pvx[ei]-pvx[pod])+(py[ei]-py[pod])*(pvy[ei]-pvy[pod]));
                     if closing > 100.0 {
                         shield_cd[pod] = 4;
-                        println!("{:.0} {:.0} SHIELD", efx, efy);
+                        mov = format!("{:.0} {:.0} SHIELD", efx, efy);
+                        eprintln!("T{} M{} {}: {}", turn, pod, role, mov);
+                        println!("{}", mov);
                         continue;
                     }
                 }
 
                 let t = if diff >= 90.0 { 0 } else { 100 };
-                println!("{:.0} {:.0} {}", tx, ty, t);
+                mov = format!("{:.0} {:.0} {}", tx, ty, t);
             }
+            eprintln!("T{} M{} {}: {}", turn, pod, role, mov);
+            println!("{}", mov);
         }
         turn += 1;
     }

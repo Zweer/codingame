@@ -1,0 +1,1 @@
+class Player{public static void main(String[]a){var s=new java.util.Scanner(System.in);int b=s.nextInt(),c=s.nextInt(),x=s.nextInt(),y=s.nextInt();for(;;){s.next();var d="";if(y>c){d="N";y--;}if(y<c){d="S";y++;}if(x>b){d+="W";x--;}if(x<b){d+="E";x++;}System.out.println(d);}}}

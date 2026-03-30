@@ -1,0 +1,1 @@
+input();t=input().split();print(t and min(map(int,t),key=lambda x:x*x*2-x)or 0)

@@ -1,0 +1,1 @@
+[a,b,x,y]=readline().split` `.map(Number);for(;;){readline();v=(y>b)-(y<b);h=(x>a)-(x<a);y-=v;x-=h;print(("S N"[v+1]+"E W"[h+1]).trim())}
