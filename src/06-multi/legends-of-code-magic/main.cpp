@@ -30,6 +30,40 @@ using namespace std;
 typedef unsigned long long ull;
 #define ADD_CARD 10
 
+// Tier list from Coac's winning bot (CEC/COG 2019 champion)
+// Cards ordered from best to worst by cardNumber
+const int TIER_LIST[] = {
+    68, 7, 65, 49, 116, 69, 151, 48, 53, 51,
+    44, 67, 29, 139, 84, 18, 158, 28, 64, 80,
+    33, 85, 32, 147, 103, 37, 54, 52, 50, 99,
+    23, 87, 66, 81, 148, 88, 150, 121, 82, 95,
+    115, 133, 152, 19, 109, 157, 105, 3, 75, 96,
+    114, 9, 106, 144, 129, 17, 111, 128, 12, 11,
+    145, 15, 21, 8, 134, 155, 141, 70, 90, 135,
+    104, 41, 112, 61, 5, 97, 26, 34, 73, 6,
+    36, 86, 77, 83, 13, 89, 79, 93, 149, 59,
+    159, 74, 94, 38, 98, 126, 39, 30, 137, 100,
+    62, 122, 22, 72, 118, 1, 47, 71, 4, 91,
+    27, 56, 119, 101, 45, 16, 146, 58, 120, 142,
+    127, 25, 108, 132, 40, 14, 76, 125, 102, 131,
+    123, 2, 35, 130, 107, 43, 63, 31, 138, 124,
+    154, 78, 46, 24, 10, 136, 113, 60, 57, 92,
+    117, 42, 55, 153, 20, 156, 143, 110, 160, 140
+};
+const int TIER_LIST_SIZE = 160;
+
+// Returns rank of a card (lower = better). 999 if not found.
+int getCardRank(int cardNumber) {
+    for (int i = 0; i < TIER_LIST_SIZE; i++) {
+        if (TIER_LIST[i] == cardNumber) return i;
+    }
+    return 999;
+}
+
+// Mana curve targets: how many cards of each cost we ideally want
+// Index = mana cost (0-12), value = max desired count
+const int MANA_CURVE_MAX[] = {2, 4, 8, 7, 5, 3, 2, 1, 1, 0, 0, 0, 1};
+
 chrono::system_clock::time_point start;
 
 struct card{
@@ -961,19 +995,14 @@ int battle(vector<card>deck[2]){
 int main()
 {
     vector<card>deck;
-    int iter=0;
-    // game loop
+    int manaCurveCount[13] = {0}; // track mana curve of drafted deck
+    // Draft phase
     for(int t=0;t<30;t++) {
         for (int i = 0; i < 2; i++) {
-            int playerHealth;
-            int playerMana;
-            int playerDeck;
-            int playerRune;
-            int playerDraw;
+            int playerHealth, playerMana, playerDeck, playerRune, playerDraw;
             cin >> playerHealth >> playerMana >> playerDeck >> playerRune >> playerDraw; cin.ignore();
         }
-        int opponentHand;
-        int opponentActions;
+        int opponentHand, opponentActions;
         cin >> opponentHand >> opponentActions; cin.ignore();
         for (int i = 0; i < opponentActions; i++) {
             string cardNumberAndAction;
@@ -983,17 +1012,9 @@ int main()
         int cardCount;
         cin >> cardCount; cin.ignore();
         for (int i = 0; i < cardCount; i++) {
-            int cardNumber;
-            int instanceId;
-            int location;
-            int cardType;
-            int cost;
-            int attack;
-            int defense;
+            int cardNumber, instanceId, location, cardType, cost, attack, defense;
             string abilities;
-            int myHealthChange;
-            int opponentHealthChange;
-            int cardDraw;
+            int myHealthChange, opponentHealthChange, cardDraw;
             cin >> cardNumber >> instanceId >> location >> cardType >> cost >> attack >> defense >> abilities >> myHealthChange >> opponentHealthChange >> cardDraw; cin.ignore();
             draft_card[i].cardNumber=cardNumber;
             draft_card[i].instanceId=instanceId;
@@ -1008,181 +1029,30 @@ int main()
             draft_card[i].cardDraw=cardDraw;
         }
 
-        string action="";
-
-        int loop=1;
-
-        int priority[3]={0};
-
-        start = chrono::system_clock::now();
-
-        iter=0;
-
-        while(1){
-
-        double elapsed = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() / 1000.;
-
-        if(t==0){
-        if(elapsed>=0.85){break;}
-        }
-        else{
-        if(elapsed>=0.085){break;}
-        }
-
-        vector<card>tmp_deck[2];
-
-        tmp_deck[0]=deck;
-        tmp_deck[1]=deck;
-
-        tmp_deck[0].push_back(draft_card[0]);
-        tmp_deck[1].push_back(draft_card[1]);
-        
-        //for(int i=0;i<29-t;i++){
-        for(int i=0;i<ADD_CARD;i++){
-            tmp_deck[0].push_back(draft_card[0]);
-            tmp_deck[1].push_back(draft_card[1]);
-        }
-
-        for(int i=0;i<(int)tmp_deck[0].size();i++){
-            tmp_deck[0][i].instanceId=i+1;
-        }
-
-        for(int i=0;i<(int)tmp_deck[1].size();i++){
-            tmp_deck[1][i].instanceId=5001+i;
-        }
-
-        for(int n=0;n<loop;n++){
-            vector<card>tmp2_deck[2];
-            tmp2_deck[0]=tmp_deck[0];
-            tmp2_deck[1]=tmp_deck[1];
-            int result=battle(tmp2_deck);
-            if(result==1){
-                priority[0]++;
+        // Tier list draft with mana curve adjustment
+        int bestIdx = 0;
+        int bestRank = 999;
+        for (int i = 0; i < 3; i++) {
+            int rank = getCardRank(draft_card[i].cardNumber);
+            // Penalize cards if we already have too many at that mana cost
+            int mc = min(draft_card[i].cost, 12);
+            if (manaCurveCount[mc] >= MANA_CURVE_MAX[mc]) {
+                rank += 30; // push down in priority
             }
-            else{
-                priority[1]++;
+            if (rank < bestRank) {
+                bestRank = rank;
+                bestIdx = i;
             }
         }
 
-        elapsed = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() / 1000.;
+        int mc = min(draft_card[bestIdx].cost, 12);
+        manaCurveCount[mc]++;
+        deck.push_back(draft_card[bestIdx]);
 
-        if(t==0){
-        if(elapsed>=0.85){break;}
-        }
-        else{
-        if(elapsed>=0.085){break;}
-        }
+        cerr << "PICK " << bestIdx << " card=" << draft_card[bestIdx].cardNumber
+             << " rank=" << getCardRank(draft_card[bestIdx].cardNumber) << endl;
 
-        tmp_deck[0]=deck;
-        tmp_deck[1]=deck;
-
-        tmp_deck[0].push_back(draft_card[0]);
-        tmp_deck[1].push_back(draft_card[2]);
-
-        //for(int i=0;i<29-t;i++){
-            for(int i=0;i<ADD_CARD;i++){
-            tmp_deck[0].push_back(draft_card[0]);
-            tmp_deck[1].push_back(draft_card[2]);
-        }
-
-
-        for(int i=0;i<(int)tmp_deck[0].size();i++){
-            tmp_deck[0][i].instanceId=i+1;
-        }
-
-        for(int i=0;i<(int)tmp_deck[1].size();i++){
-            tmp_deck[1][i].instanceId=5001+i;
-        }
-        for(int n=0;n<loop;n++){
-            vector<card>tmp2_deck[2];
-            tmp2_deck[0]=tmp_deck[0];
-            tmp2_deck[1]=tmp_deck[1];
-            int result=battle(tmp2_deck);
-            if(result==1){
-                priority[0]++;
-            }
-            else{
-                priority[2]++;
-            }
-        }
-        elapsed = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() / 1000.;
-
-        if(t==0){
-        if(elapsed>=0.85){break;}
-        }
-        else{
-        if(elapsed>=0.085){break;}
-        }
-
-        tmp_deck[0]=deck;
-        tmp_deck[1]=deck;
-
-        tmp_deck[0].push_back(draft_card[1]);
-        tmp_deck[1].push_back(draft_card[2]);
-
-        //for(int i=0;i<29-t;i++){
-            for(int i=0;i<ADD_CARD;i++){
-            tmp_deck[0].push_back(draft_card[1]);
-            tmp_deck[1].push_back(draft_card[2]);
-        }
-
-
-        for(int i=0;i<(int)tmp_deck[0].size();i++){
-            tmp_deck[0][i].instanceId=i+1;
-        }
-
-        for(int i=0;i<(int)tmp_deck[1].size();i++){
-            tmp_deck[1][i].instanceId=5001+i;
-        }
-        for(int n=0;n<loop;n++){
-            vector<card>tmp2_deck[2];
-            tmp2_deck[0]=tmp_deck[0];
-            tmp2_deck[1]=tmp_deck[1];
-            int result=battle(tmp2_deck);
-            if(result==1){
-                priority[1]++;
-            }
-            else{
-                priority[2]++;
-            }
-        }
-
-        iter+=3;
-
-        }
-
-        double elapsed = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() / 1000.;
-
-        cerr<<"iterate="<<iter<<endl;
-
-        cerr<<"elapsed_time="<<elapsed<<endl;
-
-        for(int i=0;i<3;i++){
-
-        cerr<<"card_number="<<draft_card[i].cardNumber<<endl;
-        cerr<<"win_rate="<<(double)priority[i]/(double)(priority[0]+priority[1]+priority[2])<<endl;
-
-        if(draft_card[i].cardNumber==145 || draft_card[i].cardNumber==146){
-            //priority[i]=114514;
-        }
-
-        }
-
-        vector<pair<int,int> >select;
-
-        for(int i=0;i<3;i++){
-            select.push_back(make_pair(-priority[i],i));
-        }
-
-        sort(select.begin(),select.end());
-
-        action+="PICK "+to_string(select[0].second);
-
-        deck.push_back(draft_card[select[0].second]);
-
-        // Write an action using cout. DON'T FORGET THE "<< endl"
-        // To debug: cerr << "Debug messages..." << endl;
-        cout<<action<<endl;
+        cout << "PICK " << bestIdx << endl;
     }
 
     for(int t=0;;t++) {
