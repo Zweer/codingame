@@ -1,254 +1,172 @@
-// Initial read for width and height (fixed for the entire game)
-const inputs: string[] = readline().split(' ');
-const width: number = parseInt(inputs[0]);
-const height: number = parseInt(inputs[1]);
+const [W, H] = readline().split(' ').map(Number);
+const wall: boolean[][] = [];
+let nodes: { x: number; y: number; dx: number; dy: number }[] = [];
+let prevNodes: { x: number; y: number }[] = [];
+let turn = 0;
 
-// Interface for a surveillance node
-interface NodeState {
-    id: number;
-    x: number;
-    y: number;
-    dx: number; // -1, 0, or 1 (movement along X-axis)
-    dy: number; // -1, 0, or 1 (movement along Y-axis)
+// Pending bombs: [x, y, explodesAtTurn]
+const bombs: [number, number, number][] = [];
+
+function move(n: { x: number; y: number; dx: number; dy: number }): { x: number; y: number; dx: number; dy: number } {
+  const r = { x: n.x, y: n.y, dx: n.dx, dy: n.dy };
+  if (r.dx === 0 && r.dy === 0) return r;
+  const nx = r.x + r.dx, ny = r.y + r.dy;
+  if (nx < 0 || nx >= W || ny < 0 || ny >= H || wall[ny][nx]) {
+    r.dx = -r.dx; r.dy = -r.dy;
+    r.x += r.dx; r.y += r.dy;
+  } else { r.x = nx; r.y = ny; }
+  return r;
 }
 
-// Global variables, persisted across turns
-let globalTrackedNodes: NodeState[] = []; // List of all currently active surveillance nodes
-let nextGlobalNodeId = 0; // Counter for assigning unique IDs to new nodes
-let roundNumber = 0; // Tracks the current game round (0-indexed)
+function sim(ns: typeof nodes, t: number): typeof nodes {
+  let c = ns.map(n => ({ ...n }));
+  for (let i = 0; i < t; i++) c = c.map(move);
+  return c;
+}
 
-// Stores the static elements of the grid (walls '#', empty spaces '.').
-// This doesn't change after the first round, as only '@' nodes move.
-const staticGrid: string[][] = Array(height).fill(null).map(() => Array(width).fill('.'));
-
-/**
- * Simulates a single node's movement for one turn.
- * Updates the node's position and direction based on grid boundaries and passive nodes.
- * This function modifies the node object directly.
- * Assumes that a node will always find a valid next position after a potential bounce.
- * @param node The node to simulate.
- * @param currentGrid The static grid with walls.
- */
-function simulateSingleNodeMove(node: NodeState, currentGrid: string[][]) {
-    let nextX = node.x + node.dx;
-    let nextY = node.y + node.dy;
-
-    // Check for collision with boundaries or passive nodes at the *attempted* next position
-    if (nextX < 0 || nextX >= width || nextY < 0 || nextY >= height || currentGrid[nextY][nextX] === '#') {
-        // Collision detected, reverse direction
-        node.dx *= -1;
-        node.dy *= -1;
-        // Recalculate next position with the new (reversed) direction
-        nextX = node.x + node.dx;
-        nextY = node.y + node.dy;
-        // It's assumed that this 'bounced' position will always be valid,
-        // preventing a node from being stuck or moving outside the grid.
+function blastCells(bx: number, by: number): string[] {
+  const cells = [`${bx},${by}`];
+  for (const [dx, dy] of [[0, 1], [0, -1], [1, 0], [-1, 0]]) {
+    for (let r = 1; r <= 3; r++) {
+      const cx = bx + dx * r, cy = by + dy * r;
+      if (cx < 0 || cx >= W || cy < 0 || cy >= H || wall[cy][cx]) break;
+      cells.push(`${cx},${cy}`);
     }
-
-    // Update node's position to the (possibly new) nextX, nextY
-    node.x = nextX;
-    node.y = nextY;
+  }
+  return cells;
 }
 
-/**
- * Gets the coordinates affected by a bomb explosion.
- * @param bombX Bomb X coordinate.
- * @param bombY Bomb Y coordinate.
- * @param currentGrid The static grid with walls, used to check explosion blockage.
- * @returns A Set of "x,y" strings representing affected cells.
- */
-function getBlastRadius(bombX: number, bombY: number, currentGrid: string[][]): Set<string> {
-    const affectedCells = new Set<string>();
-    affectedCells.add(`${bombX},${bombY}`); // The bomb's own location is affected
-
-    const directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]; // Down, Up, Right, Left
-    const range = 3; // Explosion range
-
-    for (const [dx, dy] of directions) {
-        for (let r = 1; r <= range; r++) {
-            const currentX = bombX + dx * r;
-            const currentY = bombY + dy * r;
-
-            // Check if out of bounds
-            if (currentX < 0 || currentX >= width || currentY < 0 || currentY >= height) {
-                break;
-            }
-            // Check if blocked by a passive node
-            if (currentGrid[currentY][currentX] === '#') {
-                break;
-            }
-            affectedCells.add(`${currentX},${currentY}`);
-        }
-    }
-    return affectedCells;
-}
-
-// Main game loop
 while (true) {
-    const inputs: string[] = readline().split(' ');
-    const rounds: number = parseInt(inputs[0]); // Remaining turns before detection
-    const bombs: number = parseInt(inputs[1]); // Number of bombs available
+  const [roundsLeft, bombsAvail] = readline().split(' ').map(Number);
+  const grid: string[][] = [];
+  const curAt: [number, number][] = [];
 
-    const currentInputGrid: string[][] = []; // The grid as provided in the current turn's input
-    const currentMapAtPositions: { [key: string]: boolean } = {}; // Map of "x,y" strings for current '@' locations
+  for (let y = 0; y < H; y++) {
+    const row = readline();
+    grid.push(row.split(''));
+    for (let x = 0; x < W; x++) {
+      if (turn === 0 && row[x] === '#') { if (!wall[y]) wall[y] = Array(W).fill(false); wall[y][x] = true; }
+      if (row[x] === '@') curAt.push([x, y]);
+    }
+  }
+  if (turn === 0) for (let y = 0; y < H; y++) if (!wall[y]) wall[y] = Array(W).fill(false);
 
-    // Read the current map and populate currentInputGrid, currentMapAtPositions, and staticGrid (on round 0)
-    for (let y = 0; y < height; y++) {
-        const row = readline();
-        currentInputGrid.push(row.split(''));
-        for (let x = 0; x < width; x++) {
-            if (row[x] === '@') {
-                currentMapAtPositions[`${x},${y}`] = true;
-            }
-            // Populate staticGrid on the very first round only
-            if (roundNumber === 0 && row[x] === '#') {
-                staticGrid[y][x] = '#';
-            }
-        }
+  // --- Tracking ---
+  if (turn === 0) {
+    nodes = curAt.map(([x, y]) => ({ x, y, dx: 0, dy: 0 }));
+    prevNodes = curAt.map(([x, y]) => ({ x, y }));
+  } else if (turn === 1) {
+    // Deduce directions
+    const curSet = new Map<string, number>();
+    curAt.forEach(([x, y], i) => curSet.set(`${x},${y}`, i));
+    const usedCur = new Set<number>();
+    const newNodes: typeof nodes = [];
+
+    for (const p of prevNodes) {
+      let best = -1, bestD = 99;
+      for (const [i, [cx, cy]] of curAt.entries()) {
+        if (usedCur.has(i)) continue;
+        const d = Math.abs(cx - p.x) + Math.abs(cy - p.y);
+        if (d < bestD) { bestD = d; best = i; }
+      }
+      if (best >= 0 && bestD <= 1) {
+        usedCur.add(best);
+        newNodes.push({ x: curAt[best][0], y: curAt[best][1], dx: curAt[best][0] - p.x, dy: curAt[best][1] - p.y });
+      }
+    }
+    for (let i = 0; i < curAt.length; i++) {
+      if (!usedCur.has(i)) newNodes.push({ x: curAt[i][0], y: curAt[i][1], dx: 0, dy: 0 });
+    }
+    nodes = newNodes;
+  } else {
+    const unmatched = new Map<string, [number, number]>();
+    curAt.forEach(([x, y]) => unmatched.set(`${x},${y}`, [x, y]));
+    const newNodes: typeof nodes = [];
+    for (const n of nodes) {
+      const m = move(n);
+      const k = `${m.x},${m.y}`;
+      if (unmatched.has(k)) { newNodes.push(m); unmatched.delete(k); }
+    }
+    for (const [, [x, y]] of unmatched) newNodes.push({ x, y, dx: 0, dy: 0 });
+    nodes = newNodes;
+  }
+
+  // Process bomb explosions
+  for (const b of bombs) b[2]--;
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (let i = bombs.length - 1; i >= 0; i--) {
+      if (bombs[i][2] <= 0) {
+        const cells = new Set(blastCells(bombs[i][0], bombs[i][1]));
+        bombs.splice(i, 1);
+        nodes = nodes.filter(n => !cells.has(`${n.x},${n.y}`));
+        for (const b of bombs) if (cells.has(`${b[0]},${b[1]}`)) b[2] = 0;
+        changed = true;
+      }
+    }
+  }
+
+  console.error(`T${turn} n=${nodes.length} b=${bombsAvail} r=${roundsLeft}`);
+  for (const n of nodes) console.error(`  @(${n.x},${n.y}) d=(${n.dx},${n.dy})`);
+
+  if (bombsAvail === 0 || nodes.length === 0 || turn === 0) {
+    console.log('WAIT');
+    prevNodes = curAt.map(([x, y]) => ({ x, y }));
+    turn++;
+    continue;
+  }
+
+  // --- Greedy: find best single bomb placement considering all future explosion times ---
+  // For each wait time, simulate where nodes will be at explosion (wait+3),
+  // and where they'll be at placement time (wait) to avoid placing on them.
+  // Pick the (wait, cell) that hits the most nodes.
+
+  const maxWait = Math.min(roundsLeft - 4, 55);
+  let bestWait = -1, bestX = -1, bestY = -1, bestHits = 0;
+
+  for (let w = 0; w <= maxWait; w++) {
+    const atBoom = sim(nodes, w + 3);
+    const atPlace = w === 0 ? null : sim(nodes, w);
+
+    // Build set of node positions at explosion time
+    // For each node, find which cells could hit it, track best
+    const cellScore = new Map<string, number>();
+
+    for (const n of atBoom) {
+      for (const cell of blastCells(n.x, n.y)) {
+        cellScore.set(cell, (cellScore.get(cell) || 0) + 1);
+      }
     }
 
-    // --- Node Tracking and Reconciliation ---
-    // This section updates `globalTrackedNodes` based on the new map input.
-    const newGlobalTrackedNodes: NodeState[] = [];
-    
-    // Create a copy of tracked nodes from the previous turn for matching
-    const nodesFromPreviousTurn: NodeState[] = globalTrackedNodes.map(node => ({ ...node }));
+    const placeSet = atPlace ? new Set(atPlace.map(n => `${n.x},${n.y}`)) : null;
 
-    // Keep track of which current map '@' positions have been matched to old nodes
-    const unmatchedCurrentAtPositions: { [key: string]: boolean } = { ...currentMapAtPositions };
+    for (const [cell, hits] of cellScore) {
+      if (hits <= bestHits) continue; // skip if can't beat best
+      const [x, y] = cell.split(',').map(Number);
+      if (wall[y][x]) continue;
+      if (w === 0 && grid[y][x] !== '.') continue;
+      if (placeSet && placeSet.has(cell)) continue;
+      // Also check bomb positions
+      if (bombs.some(b => b[0] === x && b[1] === y)) continue;
 
-    // Attempt to match nodes from previous turn to current map positions
-    // We prioritize matching based on predicted forward movement, then bounced movement.
-    for (const oldNode of nodesFromPreviousTurn) {
-        let matched = false;
-
-        // 1. Try a direct move: check if the node appears at its (currentX + dx, currentY + dy) position
-        let predictedX = oldNode.x + oldNode.dx;
-        let predictedY = oldNode.y + oldNode.dy;
-        let predictedKey = `${predictedX},${predictedY}`;
-
-        if (unmatchedCurrentAtPositions[predictedKey]) {
-            oldNode.x = predictedX;
-            oldNode.y = predictedY;
-            newGlobalTrackedNodes.push(oldNode);
-            delete unmatchedCurrentAtPositions[predictedKey]; // Mark this position as used
-            matched = true;
-        } else {
-            // 2. If direct move failed, try a bounced move: check if it appears at (currentX - dx, currentY - dy)
-            let bouncedX = oldNode.x - oldNode.dx;
-            let bouncedY = oldNode.y - oldNode.dy;
-            let bouncedKey = `${bouncedX},${bouncedY}`;
-
-            if (unmatchedCurrentAtPositions[bouncedKey]) {
-                oldNode.x = bouncedX;
-                oldNode.y = bouncedY;
-                oldNode.dx *= -1; // Reverse direction
-                oldNode.dy *= -1;
-                newGlobalTrackedNodes.push(oldNode);
-                delete unmatchedCurrentAtPositions[bouncedKey]; // Mark this position as used
-                matched = true;
-            }
-        }
-        // If `matched` is false after these checks, it implies the `oldNode` was likely destroyed
-        // (e.g., by a bomb from a previous turn) and thus is not added to `newGlobalTrackedNodes`.
+      bestHits = hits;
+      bestWait = w;
+      bestX = x;
+      bestY = y;
     }
 
-    // For the very first round, we initialize all `@` nodes and their initial directions.
-    // In subsequent rounds, any `@` in `unmatchedCurrentAtPositions` would imply a new node appeared
-    // or an existing one moved unpredictably. For this puzzle, we expect nodes to be tracked or destroyed.
-    if (roundNumber === 0) {
-        for (let y = 0; y < height; y++) {
-            for (let x = 0; x < width; x++) {
-                if (currentInputGrid[y][x] === '@') {
-                    // This is an initial '@' from the first map. Assign an ID and an initial direction.
-                    // Heuristic for initial direction: try right, then left, then down, then up.
-                    // This assumes movement is along a single axis.
-                    let dx = 0;
-                    let dy = 0;
+    if (bestHits >= nodes.length) break; // can't do better
+  }
 
-                    // Try to move right
-                    if (x + 1 < width && staticGrid[y][x + 1] !== '#') { dx = 1; dy = 0; }
-                    // Else, try to move left
-                    else if (x - 1 >= 0 && staticGrid[y][x - 1] !== '#') { dx = -1; dy = 0; }
-                    // Else, try to move down
-                    else if (y + 1 < height && staticGrid[y + 1][x] !== '#') { dx = 0; dy = 1; }
-                    // Else, try to move up
-                    else if (y - 1 >= 0 && staticGrid[y - 1][x] !== '#') { dx = 0; dy = -1; }
-                    else {
-                        // If the node is completely surrounded (unlikely for solvable cases based on constraints)
-                        // or has no clear path, assign a default direction. It will immediately bounce if blocked.
-                        dx = 1; 
-                        dy = 0;
-                    }
-                    newGlobalTrackedNodes.push({ id: nextGlobalNodeId++, x: x, y: y, dx: dx, dy: dy });
-                }
-            }
-        }
-    }
-    // Update the global list of active, tracked nodes for the current turn.
-    globalTrackedNodes = newGlobalTrackedNodes;
+  console.error(`  best: w=${bestWait} (${bestX},${bestY}) hits=${bestHits}`);
 
-    // --- DECISION LOGIC: Find Best Bomb Placement ---
-    let bestBombX = -1;
-    let bestBombY = -1;
-    let maxNodesDestroyed = -1;
+  if (bestWait === 0 && bestHits > 0) {
+    bombs.push([bestX, bestY, 3]);
+    console.log(`${bestX} ${bestY}`);
+  } else {
+    console.log('WAIT');
+  }
 
-    // If no bombs are available or all surveillance nodes are already destroyed, WAIT.
-    if (bombs === 0 || globalTrackedNodes.length === 0) {
-        console.log("WAIT");
-        roundNumber++;
-        continue;
-    }
-    
-    // Iterate over all possible bomb placement locations on the grid
-    for (let by = 0; by < height; by++) {
-        for (let bx = 0; bx < width; bx++) {
-            // A bomb can only be placed on an empty cell ('.') in the *current* map.
-            // It cannot be placed on a surveillance node ('@') or a passive node ('#').
-            if (currentInputGrid[by][bx] !== '.') {
-                continue;
-            }
-
-            // Simulate the movement of all currently tracked nodes for 3 turns into the future
-            // Create deep copies of nodes to avoid modifying the actual `globalTrackedNodes`
-            const simulatedNodesIn3Turns: NodeState[] = globalTrackedNodes.map(node => ({ ...node }));
-
-            for (let i = 0; i < 3; i++) { // Simulate 3 turns (bomb fuse duration)
-                for (const node of simulatedNodesIn3Turns) {
-                    simulateSingleNodeMove(node, staticGrid);
-                }
-            }
-
-            // Calculate the blast radius for this potential bomb placement
-            const blastRadiusCells = getBlastRadius(bx, by, staticGrid);
-
-            let currentNodesDestroyed = 0;
-            // Check how many of the simulated nodes (at their 3-turn future positions) would be hit
-            for (const node of simulatedNodesIn3Turns) {
-                if (blastRadiusCells.has(`${node.x},${node.y}`)) {
-                    currentNodesDestroyed++;
-                }
-            }
-
-            // If this placement destroys more nodes than the current best, update best.
-            // Prioritize higher destruction count. If counts are equal, any is fine.
-            if (currentNodesDestroyed > maxNodesDestroyed) {
-                maxNodesDestroyed = currentNodesDestroyed;
-                bestBombX = bx;
-                bestBombY = by;
-            }
-        }
-    }
-
-    // Output the chosen action: place a bomb or WAIT.
-    if (maxNodesDestroyed > 0) {
-        console.log(`${bestBombX} ${bestBombY}`);
-        // Nodes hit by this bomb will be automatically excluded from `globalTrackedNodes`
-        // in subsequent rounds when they no longer appear in the `currentInputGrid`.
-    } else {
-        // No effective bomb placement found for this turn (or no nodes to hit by any bomb).
-        console.log("WAIT");
-    }
-
-    roundNumber++; // Increment turn counter for the next iteration of the loop
+  turn++;
 }
