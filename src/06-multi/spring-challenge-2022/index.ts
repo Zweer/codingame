@@ -332,14 +332,45 @@ class Game {
     }
   }
 
+  private rankMonsters(base: Point, threatFor: ThreatForType): Entity[] {
+    const ranked: { level: number; monster: Entity }[] = [];
+
+    for (const monster of this.monsters) {
+      const dist = base.dist(monster.coords);
+      let level = 1 / (dist + 1);
+
+      if (threatFor === ThreatForType.ENEMY_BASE) level += monster.health ?? 0;
+      if (monster.threatFor === threatFor) level *= 2;
+
+      ranked.push({ level, monster: monster });
+    }
+
+    ranked.sort((a, b) => b.level - a.level);
+    return ranked.map((r) => r.monster);
+  }
+
+  private closestEntityId(entities: Entity[], target: Entity): number {
+    let bestId = -1;
+    let bestDist = Infinity;
+
+    for (const entity of entities) {
+      const dist = entity.coords.dist(target.coords);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestId = entity.id;
+      }
+    }
+
+    return bestId;
+  }
+
   public turn(): void {
     // --- First 7 rounds: just move to starting positions ---
     // Attacker heads toward enemy half, defenders go to patrol zones.
     if (this.rounds < 7) {
-      for (const hero of this.myHeroes) {
-        const strategicPoint = Game.HEROES_STRATEGIC_POINTS[hero.id];
-        hero.action = Game.createMoveAction(strategicPoint);
-      }
+      this.doSetupTurn();
+    } else {
+      this.doNonSetupTurn();
     }
 
     // Output actions sorted by hero id (CodinGame expects hero 0/3 first)
@@ -349,6 +380,375 @@ class Game {
     }
 
     this.rounds++;
+  }
+
+  private doSetupTurn() {
+    for (const hero of this.myHeroes) {
+      const strategicPoint = Game.HEROES_STRATEGIC_POINTS[hero.id];
+      hero.action = Game.createMoveAction(strategicPoint);
+    }
+  }
+
+  private doNonSetupTurn() {
+    // Rank all monsters by threat to MY base (for defense) and ENEMY base (for attack)
+    const monstersRanked = this.rankMonsters(this.base, ThreatForType.MY_BASE);
+    const enemyMonstersRanked = this.rankMonsters(this.enemyBase, ThreatForType.ENEMY_BASE);
+
+    // Pre-compute: which of my heroes is closest to the #1 and #2 threats?
+    // This helps assign the right defender to the right threat.
+    let closestHeroToBiggest = -1;
+    if (monstersRanked.length > 0) {
+      closestHeroToBiggest = this.closestEntityId(this.myHeroes, monstersRanked[0]);
+    }
+    let closestHeroToSecond = -1;
+    if (monstersRanked.length > 1) {
+      closestHeroToSecond = this.closestEntityId(
+        this.myHeroes.filter((hero) => hero.id !== closestHeroToBiggest),
+        monstersRanked[1],
+      );
+    }
+
+    // Track which monsters are already being handled by a defender
+    const monstersBeingDealt: number[] = [];
+    // Track which monsters were already WINDed this turn (avoid double-wind)
+    const windedMonsters: number[] = [];
+
+    for (const hero of this.myHeroes) {
+      const isAttacker = hero.id === 0 || hero.id === 5;
+
+      // =============================================================
+      // ATTACKER LOGIC
+      // =============================================================
+      if (isAttacker) {
+        // Update attacker patrol point
+        const pts = attackerPoints[hero.id];
+        const [px, py] = pts[iAtkPt % pts.length];
+        heroesStrategicPoints[hero.id] = { x: px, y: py };
+
+        // Filter enemy monsters to those in range
+        // Only consider enemy-base monsters within spell range (2200) of attacker
+        const atkEnemyMonsters = enemyMonstersRanked.filter((m) => dist(hero.x, hero.y, m.x, m.y) <= 2200);
+
+        // --- FOLLOW-UP MODE: after WINDing a monster, chase its predicted position ---
+        // The attacker tracks where the pushed monster should be and moves there
+        // to cast SHIELD on it or WIND it again.
+        if (moveToPushed) {
+          let x = pushedCoords.x;
+          let y = pushedCoords.y;
+          x = x > hero.x ? x - 600 : x + 600;
+          y = y > hero.y ? y - 600 : y + 600;
+          hero.action = `MOVE ${x} ${y} mv_to`;
+          const ebhd = dist(hero.x, hero.y, enemyBaseX, enemyBaseY);
+
+          const reachedTarget =
+            (initialPos === 'top-left' && hero.x >= pushedCoords.x && hero.y >= pushedCoords.y) ||
+            (initialPos === 'bottom-right' && hero.x <= pushedCoords.x && hero.y <= pushedCoords.y);
+
+          if (
+            reachedTarget ||
+            pushedRounds >= 4 ||
+            atkEnemyMonsters.some((m) => m.id === pushedId) ||
+            ebhd <= 400 + 2200
+          ) {
+            moveToPushed = false;
+            pushedRounds = 0;
+          } else {
+            pushedCoords.x += pushedVel.vx;
+            pushedCoords.y += pushedVel.vy;
+            pushedRounds++;
+          }
+        } else if (atkEnemyMonsters.length > 0) {
+          const monster = atkEnemyMonsters[0];
+          const hmd = dist(hero.x, hero.y, monster.x, monster.y);
+          const ebmd = dist(enemyBaseX, enemyBaseY, monster.x, monster.y);
+          const ebhd = dist(hero.x, hero.y, enemyBaseX, enemyBaseY);
+          const numWind = monstersInWindRange(monsters, hero);
+          const numRange = monstersInRange(monsters, hero);
+          const numUnshieldedWind = unshieldedMonstersInWindRange(monsters, hero);
+          const { e: closestEnemy, d: closestEnemyDist } = closestEnemyToHero(enemyHeroes, hero);
+          let closestEnemyMonsterDist = Infinity;
+          let closestEnemyBaseDist = Infinity;
+          if (closestEnemy) {
+            closestEnemyMonsterDist = dist(closestEnemy.x, closestEnemy.y, monster.x, monster.y);
+            closestEnemyBaseDist = dist(closestEnemy.x, closestEnemy.y, enemyBaseX, enemyBaseY);
+          }
+
+          // === ATTACKER SPELL PRIORITY (highest to lowest) ===
+          //
+          // 1. SHIELD monster → make it unstoppable if it can reach enemy base
+          // 2. WIND enemy away → if enemy defender is blocking our monster
+          // 3. WIND monster into base → push it closer to score
+          // 4. CONTROL enemy away → send enemy defender to our base
+          // 5. CONTROL monster toward base → redirect a wandering monster
+          // 6. MOVE toward monster → get in range for next turn's spell
+          // 7. MOVE to patrol point → keep sweeping the arc
+
+          // SHIELD the monster if it's heading to enemy base and has enough HP
+          // to survive the trip. Formula: dist <= 400*i AND hp >= 2*i
+          // (monster moves 400/turn, hero does 2 damage/turn)
+          let acted = false;
+          if (
+            !acted &&
+            myMana >= 10 &&
+            !monster.shieldLife &&
+            !monster.isControlled &&
+            monster.threatFor === 2 &&
+            hmd <= 2200
+          ) {
+            let shouldShield = false;
+            for (let i = 1; i < 16; i++) {
+              if (ebmd <= 400 * i && monster.health >= 2 * i) {
+                shouldShield = true;
+                break;
+              }
+            }
+            if (shouldShield) {
+              hero.action = `SPELL SHIELD ${monster.id} shld`;
+              myMana -= 10;
+              acted = true;
+            }
+          }
+
+          // WIND enemy hero away from our monster — if enemy is closer to monster
+          // than we are, and there are no unshielded monsters we could wind instead.
+          // This clears the path for our monster to reach the base.
+          if (
+            !acted &&
+            myMana >= 10 &&
+            closestEnemy &&
+            !closestEnemy.shieldLife &&
+            closestEnemyDist <= 1280 &&
+            closestEnemyMonsterDist <= hmd &&
+            numRange > 0 &&
+            numUnshieldedWind === 0 &&
+            monster.threatFor === 2 &&
+            ebmd <= 6500
+          ) {
+            const wx = closestEnemy.x - monster.vx * 2200;
+            const wy = closestEnemy.y - monster.vy * 2200;
+            hero.action = `SPELL WIND ${wx} ${wy} wnd_out_enm`;
+            myMana -= 10;
+            acted = true;
+            if (ebmd < ebhd && monster.health >= 4) {
+              moveToPushed = true;
+              pushedId = monster.id;
+              pushedCoords = { x: monster.x + monster.vx, y: monster.y + monster.vy };
+              pushedVel = { vx: monster.vx, vy: monster.vy };
+            }
+          }
+
+          // WIND monster toward enemy base — the main scoring move.
+          // Push any unshielded monster within 1280 range toward enemy base.
+          // After pushing, enter follow-up mode to SHIELD it next turn.
+          if (!acted && myMana >= 10 && !monster.shieldLife && hmd <= 1280 && ebmd <= 8000) {
+            const wx = hero.x + (enemyBaseX - monster.x);
+            const wy = hero.y + (enemyBaseY - monster.y);
+            const newX = Math.round(monster.x + ((monster.x - enemyBaseX) * -2200) / ebmd);
+            const newY = Math.round(monster.y + ((monster.y - enemyBaseY) * -2200) / ebmd);
+            hero.action = `SPELL WIND ${wx} ${wy} wnd_in`;
+            myMana -= 10;
+            acted = true;
+            moveToPushed = true;
+            pushedId = monster.id;
+            pushedCoords = { x: newX, y: newY };
+            pushedVel = { vx: monster.vx, vy: monster.vy };
+          }
+
+          // CONTROL enemy hero — send them to OUR base (wastes their time).
+          // Only if enemy is close to our monster and monster has enough HP.
+          if (
+            !acted &&
+            myMana >= 10 &&
+            closestEnemy &&
+            !closestEnemy.shieldLife &&
+            closestEnemyDist <= 2200 &&
+            ebmd <= 6500
+          ) {
+            const shouldCtrl =
+              (closestEnemyMonsterDist > 800 * 2 && monster.health >= 2) ||
+              (closestEnemyMonsterDist <= 800 * 2 && monster.health >= 6);
+            if (shouldCtrl) {
+              hero.action = `SPELL CONTROL ${closestEnemy.id} ${baseX} ${baseY} ctrl_out_enm`;
+              myMana -= 10;
+              acted = true;
+              if (ebmd < ebhd && monster.health >= 4) {
+                moveToPushed = true;
+                pushedId = monster.id;
+                pushedCoords = { x: monster.x + monster.vx, y: monster.y + monster.vy };
+                pushedVel = { vx: monster.vx, vy: monster.vy };
+              }
+            }
+          }
+
+          // CONTROL monster toward enemy base — redirect a wandering monster.
+          // Only if no enemy nearby (or enemy is far enough that monster survives).
+          // Only for monsters > 5000 from enemy base (closer ones should be WINDed).
+          if (
+            !acted &&
+            myMana >= 10 &&
+            !monster.shieldLife &&
+            monster.threatFor !== 2 &&
+            hmd <= 2200 &&
+            ebmd > 5000
+          ) {
+            let shouldCtrl = false;
+            if (!closestEnemy) {
+              shouldCtrl = true;
+            } else {
+              for (let i = 2; i < 8; i++) {
+                if (closestEnemyMonsterDist <= 800 * i && monster.health >= 2 * (i + 1)) {
+                  if (hmd >= closestEnemyMonsterDist) {
+                    shouldCtrl = true;
+                    break;
+                  }
+                }
+              }
+            }
+            if (shouldCtrl) {
+              hero.action = `SPELL CONTROL ${monster.id} ${enemyBaseX} ${enemyBaseY} ctrl_in`;
+              myMana -= 10;
+              acted = true;
+              if (ebmd < ebhd && monster.health >= 4) {
+                moveToPushed = true;
+                pushedId = monster.id;
+                pushedCoords = { x: monster.x + monster.vx, y: monster.y + monster.vy };
+                pushedVel = { vx: monster.vx, vy: monster.vy };
+              }
+            }
+          }
+
+          // MOVE toward monster — get closer for next turn's spell.
+          // Offset by 850 to anticipate monster movement.
+          if (!acted && ebmd <= 8000 && !monster.shieldLife) {
+            let x = monster.x + monster.vx;
+            let y = monster.y + monster.vy;
+            x = x > hero.x ? x - 850 : x + 850;
+            y = y > hero.y ? y - 850 : y + 850;
+            hero.action = `MOVE ${x} ${y} flw`;
+            acted = true;
+          }
+
+          // No useful action — advance to next patrol point on the arc
+          if (!acted) {
+            const sp = heroesStrategicPoints[hero.id];
+            hero.action = `MOVE ${sp.x} ${sp.y} nxt`;
+            iAtkPt++;
+          }
+        } else {
+          // No enemy monsters — move to next patrol point
+          const sp = heroesStrategicPoints[hero.id];
+          hero.action = `MOVE ${sp.x} ${sp.y} nxt`;
+          iAtkPt++;
+        }
+      } else {
+        // =============================================================
+        // DEFENDER LOGIC
+        // =============================================================
+        // Each defender patrols a small loop of 4 points and handles
+        // monsters in their assigned zone. Priority:
+        // 1. Handle the biggest threat (if in zone and closest hero)
+        // 2. Handle the 2nd biggest threat (if in zone)
+        // 3. Handle closest unhandled monster in zone
+        // 4. If no monsters: follow enemy hero near base, or patrol
+
+        // Update patrol point for this defender
+        if (hero.id === 1 || hero.id === 3) {
+          const pts = def1Points[hero.id];
+          const [px, py] = pts[iDef1Pt % pts.length];
+          heroesStrategicPoints[hero.id] = { x: px, y: py };
+        } else if (hero.id === 2 || hero.id === 4) {
+          const pts = def2Points[hero.id];
+          const [px, py] = pts[iDef2Pt % pts.length];
+          heroesStrategicPoints[hero.id] = { x: px, y: py };
+        }
+
+        if (monstersRanked.length > 0) {
+          // Check if this hero should handle the biggest threat.
+          // Two conditions: either this hero is the closest to it,
+          // OR the monster has too much HP to kill before it reaches base.
+          // Formula: hp > (dist_to_base / 400) * 2 means "can't kill in time"
+          let monster: Entity | null = null;
+          const m0 = monstersRanked[0];
+          const th = guardsThresholds[hero.id];
+          const m0InZone = th && m0.x >= th.min.x && m0.x <= th.max.x && m0.y >= th.min.y && m0.y <= th.max.y;
+
+          if (
+            (hero.id === closestHeroToBiggest ||
+              m0.health > (dist(m0.x, m0.y, baseX, baseY) / 400) * 2) &&
+            m0InZone
+          ) {
+            monster = m0;
+          } else if (
+            monstersRanked.length > 1 &&
+            hero.id === closestHeroToSecond
+          ) {
+            const m1 = monstersRanked[1];
+            const m1InZone = th && m1.x >= th.min.x && m1.x <= th.max.x && m1.y >= th.min.y && m1.y <= th.max.y;
+            if (m1InZone) monster = m1;
+          }
+
+          if (!monster) {
+            // Find closest monster not already being dealt with
+            const closest = closestMonstersToHeroFromBase(monsters, hero, baseX, baseY, 8000, guardsThresholds);
+            let found = false;
+            for (const c of closest) {
+              if (!monstersBeingDealt.includes(c.m.id)) {
+                monster = c.m;
+                found = true;
+                break;
+              }
+            }
+            if (!found) {
+              const sp = heroesStrategicPoints[hero.id];
+              hero.action = `MOVE ${sp.x} ${sp.y} nxt`;
+              if (hero.id === 1 || hero.id === 3) iDef1Pt++;
+              else if (hero.id === 2 || hero.id === 4) iDef2Pt++;
+              continue;
+            }
+          }
+
+          if (monster) {
+            const hmd = dist(hero.x, hero.y, monster.x, monster.y);
+            const bmd = dist(baseX, baseY, monster.x, monster.y);
+            const cem = closestEnemyToMonster(enemyHeroes, monster);
+            const emd = cem ? cem.d : Infinity;
+
+            // DEFENDER SPELL: WIND monster away from base.
+            // Two conditions to wind (instead of just attacking):
+            // 1. Enemy hero is within wind range AND monster is very close (< 2600)
+            //    → enemy might SHIELD the monster, so wind it away NOW
+            // 2. Monster has too much HP to kill before it reaches base
+            //    → hp > (dist_to_base / 400) * 2 means we can't out-damage it
+            if (
+              myMana >= 10 &&
+              !monster.shieldLife &&
+              hmd <= 1280 &&
+              ((emd <= 1280 && bmd <= 2200 + 400) || monster.health > (bmd / 400) * 2)
+            ) {
+              hero.action = `SPELL WIND ${enemyBaseX} ${enemyBaseY} wnd_out`;
+              windedMonsters.push(monster.id);
+              myMana -= 10;
+            } else {
+              // Otherwise just move toward the monster to attack it
+              hero.action = `MOVE ${monster.x} ${monster.y} flw`;
+            }
+            monstersBeingDealt.push(monster.id);
+          }
+        } else {
+          // No monsters visible — follow enemy hero if near base, else patrol.
+          // Following enemy heroes prevents them from freely pushing monsters.
+          const ceb = closestEnemyToBase(enemyHeroes, baseX, baseY);
+          if (ceb && ceb.d <= 6500) {
+            hero.action = `MOVE ${ceb.e.x} ${ceb.e.y} flw_enm`;
+          } else {
+            const sp = heroesStrategicPoints[hero.id];
+            hero.action = `MOVE ${sp.x} ${sp.y} nxt`;
+            if (hero.id === 1 || hero.id === 3) iDef1Pt++;
+            else if (hero.id === 2 || hero.id === 4) iDef2Pt++;
+          }
+        }
+      }
+    }
   }
 }
 
