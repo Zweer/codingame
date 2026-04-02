@@ -30,7 +30,10 @@ void bfsDist(int owner, int dist[][50]){
         auto[x,y]=q.front();q.pop();
         for(int d=0;d<4;d++){
             int nx=x+DX[d],ny=y+DY[d];
-            if(isWall(nx,ny)||isOrgan(G[ny][nx].type))continue;
+            if(nx<0||nx>=W||ny<0||ny>=H||isWall(nx,ny))continue;
+            // Can traverse through proteins (grow onto them) but not through other organs
+            if(isOrgan(G[ny][nx].type)&&G[ny][nx].owner!=owner)continue;
+            if(isOrgan(G[ny][nx].type)&&G[ny][nx].owner==owner)continue; // already dist=0
             if(dist[ny][nx]>dist[y][x]+1){dist[ny][nx]=dist[y][x]+1;q.push({nx,ny});}
         }
     }
@@ -149,9 +152,19 @@ int main(){
 
             bool noA=!canAfford(1,0,0,0);
 
+            // A reserve: count reachable A proteins on map
+            int reachableA=0;
+            for(auto&p:prots)if(p.t==0&&distMe[p.y][p.x]<50)reachableA++;
+            // If we're low on A and there are A proteins to eat, be conservative
+            bool conserveA=remP(0)<=2&&remP(0)>0&&reachableA>0;
+
+            // Detect resource crisis: any resource ≤1 with no harvester = danger
+            bool resourceCrisis=false;
+            for(int i=0;i<4;i++)if(remP(i)<=1&&myHarv[i]==0)resourceCrisis=true;
+
             cerr<<"--- Organism rid="<<rid<<" size="<<orgs[rid].size()
                 <<" rem["<<remP(0)<<","<<remP(1)<<","<<remP(2)<<","<<remP(3)<<"]"
-                <<(noA?" NO-A":"")<<" ---"<<endl;
+                <<(noA?" NO-A":"")<<(conserveA?" CONSERVE-A":"")<<" ---"<<endl;
 
             struct Candidate{int score;string cmd;string reason;};
             vector<Candidate>candidates;
@@ -180,18 +193,37 @@ int main(){
                             if(!isProt(G[py][px].type))continue;
                             if(myHarvesterFacing(px,py))continue;
                             int pt=protIdx(G[py][px].type);
-                            // Harvester scoring: balance A income vs resource preservation
-                            int sc=(pt==0)?3500:1500;
-                            if(myP[pt]==0)sc+=600;
-                            else if(myP[pt]<=2)sc+=300;
-                            if(pt==0&&myP[0]>=8)sc-=1000; // already have plenty A
-                            if(pt!=0&&myP[pt]>=5)sc-=400;
-                            if(earlyGame&&pt!=0&&myP[pt]>=2)sc-=500; // only penalize non-A if we have enough
-                            // Boost harvester on scarce C/D (need for defense and growth)
-                            // Diversification: boost types with no harvester, penalize duplicates
-                            if(myHarv[pt]==0)sc+=800;
-                            if(pt==0&&myHarv[0]>=1&&myHarv[1]+myHarv[2]+myHarv[3]==0)sc-=1500;
-                            if(pt>=2&&myP[pt]<=2)sc+=1200;
+                            // Harvester scoring: balance income across all 4 types
+                            int sc=2000;
+                            // Huge bonus for types we have NO harvester on
+                            if(myHarv[pt]==0){
+                                sc+=2000;
+                                // Extra urgency if we're also low on this resource
+                                if(myP[pt]<=1)sc+=1500;
+                                else if(myP[pt]<=3)sc+=800;
+                            } else if(myHarv[pt]==1){
+                                sc+=400;
+                            } else {
+                                sc-=800; // already have 2+ harvesters on this type
+                            }
+                            // Penalize harvesting a type we're rich in
+                            if(myP[pt]>=8)sc-=1000;
+                            if(myP[pt]>=5&&myHarv[pt]>=1)sc-=600;
+                            // Count how many types have no harvester - urgency multiplier
+                            int unharvTypes=0;
+                            for(int i=0;i<4;i++)if(myHarv[i]==0)unharvTypes++;
+                            if(myHarv[pt]==0&&unharvTypes>=3)sc+=800; // very unbalanced
+                            // Critical: if we only harvest 0-1 types, getting a 2nd type is essential
+                            int harvTypes=0;
+                            for(int i=0;i<4;i++)if(myHarv[i]>0)harvTypes++;
+                            if(myHarv[pt]==0&&harvTypes<=1)sc+=1500; // must diversify!
+                            // A is still slightly preferred early (needed for BASIC)
+                            if(pt==0&&earlyGame&&myHarv[0]==0)sc+=500;
+                            // CRITICAL: if ANY resource is ≤2 and unharvested, harvesting it is urgent
+                            // This prevents the "burn all C/D then deadlock" pattern
+                            for(int i=0;i<4;i++){
+                                if(i==pt&&myHarv[i]==0&&myP[i]<=2)sc+=2000; // this harv fixes the crisis
+                            }
                             int cs=distOp[py][px]-distMe[py][px];
                             if(cs>=0&&cs<=2)sc+=300;
                             if(cs<0)sc-=200;
@@ -211,20 +243,19 @@ int main(){
                             for(int d2=0;d2<4;d2++){
                                 int px=nx+DX[d2],py=ny+DY[d2];
                                 for(auto&p:prots){
+                                    if(p.t!=0)continue; // prioritize direction toward A
                                     int dp=abs(px-p.x)+abs(py-p.y);
                                     if(dp<bestDist){bestDist=dp;bestDir=d2;}
                                 }
                             }
-                            // Only expand if heading toward A within 3 steps
-                            bool nearA=false;
-                            for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=3)nearA=true;
-                            int sc=nearA?1200:500; // low score if not near A - prefer WAIT
-                            // When we ONLY have C+D (0 A and 0 B), HARV is our only option
-                            if(remP(0)==0&&remP(1)==0)sc+=1200;
-                            if(nearA)for(auto&p:prots){
-                                int dp=abs(nx-p.x)+abs(ny-p.y);
-                                if(p.t==0&&dp<=3)sc+=300;
+                            if(bestDist==999)for(int d2=0;d2<4;d2++){
+                                int px=nx+DX[d2],py=ny+DY[d2];
+                                for(auto&p:prots){int dp=abs(px-p.x)+abs(py-p.y);if(dp<bestDist){bestDist=dp;bestDir=d2;}}
                             }
+                            bool nearA=false;
+                            for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=5)nearA=true;
+                            int sc=nearA?2200:800;
+                            if(remP(0)==0&&remP(1)==0)sc+=1200;
                             string cmd="GROW "+to_string(fromId)+" "+to_string(nx)+" "+to_string(ny)+" HARVESTER "+DN[bestDir];
                             string r="HARV-EXPAND "+pos+" dir="+DN[bestDir]+(nearA?" nearA":"")+" (no A)";
                             addCand(sc,cmd,r);
@@ -232,8 +263,8 @@ int main(){
                         if(noA&&targetIsProt){
                             // Absorb protein by growing harvester onto it
                             int pt=protIdx(G[ny][nx].type);
-                            int sc=1800;
-                            if(pt==0)sc+=1000; // absorbing A is critical!
+                            int sc=2500;
+                            if(pt==0)sc+=1500; // absorbing A is critical!
                             // Pick direction toward more proteins
                             int bestDir=0;int bestDist=999;
                             for(int d2=0;d2<4;d2++){
@@ -303,9 +334,8 @@ int main(){
                                 }
                             }
                             bool nearA=false;
-                            for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=3)nearA=true;
-                            int sc=nearA?1100:400;
-                            // When we ONLY have B+C (0 A and 0 D), TENT is our only option
+                            for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=5)nearA=true;
+                            int sc=nearA?2100:700;
                             if(remP(0)==0&&remP(3)==0)sc+=1200;
                             string cmd="GROW "+to_string(fromId)+" "+to_string(nx)+" "+to_string(ny)+" TENTACLE "+DN[bestDir];
                             string r="TENT-EXPAND "+pos+(nearA?" nearA":"")+" (no A)";
@@ -313,8 +343,8 @@ int main(){
                         }
                         if(noA&&targetIsProt){
                             int pt=protIdx(G[ny][nx].type);
-                            int sc=1700;
-                            if(pt==0)sc+=1000;
+                            int sc=2400;
+                            if(pt==0)sc+=1500;
                             int bestDir=0;int bestDist=999;
                             for(int d2=0;d2<4;d2++){
                                 int px=nx+DX[d2],py=ny+DY[d2];
@@ -333,7 +363,7 @@ int main(){
                     }
 
                     // === SPORER ===
-                    if(canAfford(0,1,0,1)&&canAfford(1,2,1,2)){
+                    if(canAfford(0,1,0,1)&&canAfford(1,1,1,1)){
                         for(int d2=0;d2<4;d2++){
                             int len=0;bool hasProt=false;
                             for(int r=1;r<=20;r++){
@@ -347,19 +377,26 @@ int main(){
                                 }
                             }
                             if(len>=3){
-                                int sc=1800+len*30;
-                                if(hasProt)sc+=400;
-                                if(earlyGame)sc-=600;
+                                int sc=2200+len*30;
+                                if(hasProt)sc+=600;
+                                if(earlyGame&&turn<=4)sc-=400; // only penalize very early
                                 if(lateGame)sc-=500;
+                                // Penalize building sporers when we lack harvester diversity
+                                {int ht=0;for(int i=0;i<4;i++)if(myHarv[i]>0)ht++;
+                                if(ht<=1)sc-=1000;}
                                 string cmd="GROW "+to_string(fromId)+" "+to_string(nx)+" "+to_string(ny)+" SPORER "+DN[d2];
                                 string r="SPORER "+pos+" dir="+DN[d2]+" len="+to_string(len)+(hasProt?" PROT":"");
 
-                    // === SPORER as expansion when no A (costs B+D) ===
+                                addCand(sc,cmd,r);
+                            }
+                        }
+                    }
+
+                    // === SPORER as expansion when no A (costs B+D) - INDEPENDENT gate ===
                     if(noA&&canAfford(0,1,0,1)&&!targetIsProt){
                         bool nearA=false;
-                        for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=3)nearA=true;
-                        int sc=nearA?1150:450;
-                        // When we ONLY have B+D (0 A and 0 C), SPORER is our only option - boost it
+                        for(auto&p:prots)if(p.t==0&&abs(nx-p.x)+abs(ny-p.y)<=5)nearA=true;
+                        int sc=nearA?2150:750;
                         if(remP(0)==0&&remP(2)==0)sc+=1200;
                         int bestDir=0;int bestDist=999;
                         for(int d2=0;d2<4;d2++){
@@ -372,8 +409,8 @@ int main(){
                     }
                     if(noA&&canAfford(0,1,0,1)&&targetIsProt){
                         int pt=protIdx(G[ny][nx].type);
-                        int sc=1750;
-                        if(pt==0)sc+=1000;
+                        int sc=2450;
+                        if(pt==0)sc+=1500;
                         int bestDir=0;int bestDist=999;
                         for(int d2=0;d2<4;d2++){
                             int px=nx+DX[d2],py=ny+DY[d2];
@@ -386,25 +423,40 @@ int main(){
                         string r="SPORER-ABSORB "+pos+" "+PN[pt]+" (absorb for 3"+PN[pt]+")";
                         addCand(sc,cmd,r);
                     }
-                                addCand(sc,cmd,r);
-                            }
-                        }
-                    }
 
                     // === BASIC ===
                     if(canAfford(1,0,0,0)){
                         if(targetIsProt){
                             int pt=protIdx(G[ny][nx].type);
                             int cs=distOp[ny][nx]-distMe[ny][nx];
-                            int sc=800;
-                            if(!canAfford(0,0,1,1))sc+=400;
-                            if(myP[pt]==0)sc+=300;
-                            if(cs<0&&distOp[ny][nx]<=2)sc+=200;
+                            int sc=1200;
+                            // Eating A when low is amazing (spend 1A, get 3A = net +2A)
+                            if(pt==0&&remP(0)<=2)sc+=2000;
+                            else if(pt==0&&remP(0)<=5)sc+=800;
+                            // Eating any type we have 0 of is very valuable
+                            if(myP[pt]==0&&myHarv[pt]==0)sc+=1500;
+                            else if(myP[pt]==0)sc+=800;
+                            else if(myP[pt]<=2&&myHarv[pt]==0)sc+=600;
+                            // Resource balance: eat types that unlock builds
+                            // If we can't build harvesters (need C+D), eating C or D is critical
+                            if(!canAfford(0,0,1,1)&&(pt==2||pt==3))sc+=1000;
+                            // If we can't build tentacles (need B+C), eating B or C helps
+                            if(!canAfford(0,1,1,0)&&(pt==1||pt==2))sc+=800;
+                            // Deny protein to opponent if they're close
+                            if(cs<0&&distOp[ny][nx]<=2)sc+=500;
+                            else if(cs<=1)sc+=200;
+                            // Penalize eating types we're already rich in
+                            if(myP[pt]>=10)sc-=800;
+                            else if(myP[pt]>=5)sc-=300;
                             string cmd="GROW "+to_string(fromId)+" "+to_string(nx)+" "+to_string(ny)+" BASIC";
-                            string r="BASIC-EAT "+pos+" "+PN[pt]+" have="+to_string(myP[pt])+" cs="+to_string(cs);
+                            string r="BASIC-EAT "+pos+" "+PN[pt]+" have="+to_string(myP[pt])+" harv="+to_string(myHarv[pt])+" cs="+to_string(cs);
                             addCand(sc,cmd,r);
                         } else {
                             int sc=2000;
+                            // When conserving A, strongly prefer eating A over expanding
+                            if(conserveA)sc-=1000;
+                            // When any resource is critically low, prefer harvester over expansion
+                            if(resourceCrisis)sc-=500;
                             int bestProtBonus=0;
                             string bestProtInfo="";
                             for(auto&p:prots){
@@ -449,7 +501,7 @@ int main(){
 
             // === SPORE ===
             // Only spore if we have enough A reserve (3+ after spending 1 for spore)
-            if(canAfford(1,1,1,1)&&remP(0)>=3){
+            if(canAfford(1,1,1,1)&&remP(0)>=2){
                 for(auto&[ox,oy]:orgs[rid]){
                     if(G[oy][ox].type!="SPORER")continue;
                     int di=dirIdx(G[oy][ox].dir);
@@ -458,6 +510,12 @@ int main(){
                         if(!isFree(tx,ty))break;
                         if(oppTentacleFacing(tx,ty))continue;
                         int sc=4500;
+                        if(conserveA)sc-=2000; // don't waste A on sporing when low
+                        // Penalize sporing when we lack harvester diversity
+                        int harvTypes=0;
+                        for(int i=0;i<4;i++)if(myHarv[i]>0)harvTypes++;
+                        if(harvTypes<=1)sc-=1500; // only 0-1 types harvested = too risky to spore
+                        if(resourceCrisis)sc-=2000; // don't spore when a resource is about to run out
                         int nearProts=0;
                         for(auto&p:prots){
                             int dp=abs(tx-p.x)+abs(ty-p.y);
