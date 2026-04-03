@@ -5,6 +5,7 @@ import type {
   Challenge,
   CodinGamerPublicInfo,
   DetailedPuzzle,
+  GameReplay,
   LanguageSolveCount,
   MiniPuzzle,
   PointsStats,
@@ -214,6 +215,19 @@ export class CodinGame {
     const { data } = await this.request.post<string[]>(
       '/services/ProgrammingLanguage/findAllIds',
       [],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Game Replays
+  // ---------------------------------------------------------------------------
+
+  /** Fetch full replay data for a game by its ID (from share-replay URL). */
+  async findReplayByGameId(gameId: string): Promise<GameReplay> {
+    const { data } = await this.request.post<GameReplay>(
+      '/services/gameResult/findByGameId',
+      [gameId, null],
     );
     return data;
   }

@@ -141,3 +141,45 @@ export interface Challenge {
   training: boolean;
   lateTimeMax: number;
 }
+
+// ---------------------------------------------------------------------------
+// Game Replays
+// ---------------------------------------------------------------------------
+
+export interface ReplayAgent {
+  index: number;
+  agentId: number;
+  score: number;
+  valid: boolean;
+  codingamer?: {
+    userId: number;
+    pseudo: string;
+    avatar?: number;
+  };
+  arenaboss?: {
+    nickname: string;
+    league: {
+      divisionIndex: number;
+      divisionCount: number;
+      divisionOffset: number;
+    };
+  };
+}
+
+export interface ReplayFrame {
+  gameInformation: string;
+  summary: string;
+  view: string;
+  stdout: string;
+  stderr: string;
+  keyframe: boolean;
+  agentId: number;
+}
+
+export interface GameReplay {
+  frames: ReplayFrame[];
+  agents: ReplayAgent[];
+  scores: number[];
+  ranks: number[];
+  metadata: Record<string, unknown>;
+}
