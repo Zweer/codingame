@@ -24,6 +24,48 @@ Some of the puzzles have proper tests, others (mostly the complicated / interact
 
 **Next**: 4 more puzzles × 27 languages → all Lover achievements unlocked
 
+## Scripts
+
+All scripts load credentials from `.env` (`REMEMBER_ME` cookie from codingame.com).
+
+| Script | Description |
+|--------|-------------|
+| `npm run script:retrieve` | Fetch puzzle list from CodinGame API |
+| `npm run script:readme` | Update README with solved/unsolved status |
+| `npm run script:solve` | Auto-solve puzzles with Gemini |
+| `npm run script:submit-puzzle` | Submit a solution to any puzzle |
+| `npm run script:submit-optim` | Automated solver loop for optimization puzzles |
+
+### Submit a puzzle solution
+
+Submit any source file to a CG puzzle. Language is auto-detected from the file extension.
+
+```bash
+npm run script:submit-puzzle -- <puzzle-pretty-id> <source-file> [language]
+
+# Examples:
+npm run script:submit-puzzle -- temperatures src/01-easy/temperatures/index.ts
+npm run script:submit-puzzle -- the-descent src/01-easy/the-descent/main.rs
+```
+
+### Automated optimization puzzle solver
+
+For optimization puzzles like Number Shifting where levels are solved progressively:
+
+1. A local solver binary reads the grid from stdin and writes moves to stdout
+2. The script wraps the solution in a Bash script and submits it to CG
+3. It extracts the next level from the replay and repeats
+
+```bash
+# 1. Compile the solver
+rustc -O -o src/05-optim/number-shifting/solver_bin src/05-optim/number-shifting/solver.rs
+
+# 2. Run the automated loop
+npm run script:submit-optim -- number-shifting ./src/05-optim/number-shifting/solver_bin
+```
+
+State is saved in `solver-state.json` inside the puzzle directory, so you can interrupt and resume.
+
 ## Puzzles
 
 <!-- TABLE:START -->
