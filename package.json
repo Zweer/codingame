@@ -29,7 +29,10 @@
     "script:solve": "node --import tsx --env-file-if-exists .env scripts/solve-puzzles.ts",
     "script:readme": "node --import tsx --env-file-if-exists .env scripts/update-readme.ts",
     "script:generate-readmes": "node --import tsx --env-file-if-exists .env scripts/generate-readmes.ts",
-    "script:multi-ranking": "node --import tsx --env-file-if-exists .env scripts/check-multi-ranking.ts"
+    "script:multi-ranking": "node --import tsx --env-file-if-exists .env scripts/check-multi-ranking.ts",
+    "script:submit-puzzle": "node --import tsx --env-file-if-exists .env scripts/submit-puzzle.ts",
+    "script:submit-optim": "node --import tsx --env-file-if-exists .env scripts/submit-optim.ts",
+    "script:all-solutions": "node --import tsx scripts/generate-all-solutions.ts"
   },
   "dependencies": {
     "@google/genai": "^1.9.0",

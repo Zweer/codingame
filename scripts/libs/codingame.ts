@@ -10,6 +10,7 @@ import type {
   MiniPuzzle,
   PointsStats,
   Puzzle,
+  TestSessionResult,
 } from '../types.js';
 
 export class CodinGame {
@@ -230,6 +231,48 @@ export class CodinGame {
       [gameId, null],
     );
     return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Test Sessions (submit solutions programmatically)
+  // ---------------------------------------------------------------------------
+
+  /** Create a test session for a puzzle. Returns a session handle. */
+  async createTestSession(prettyId: string): Promise<string> {
+    const { data } = await this.request.post<{ handle: string }>(
+      '/services/Puzzle/generateSessionFromPuzzlePrettyId',
+      [this.userId, prettyId, false],
+    );
+    return data.handle;
+  }
+
+  /**
+   * Submit code to a test session. Returns the full replay data.
+   * @param handle - Session handle from createTestSession
+   * @param code - Source code to submit
+   * @param language - Programming language ID (e.g. 'PHP', 'Rust', 'Python3')
+   * @param testIndex - Test case index (default 1)
+   */
+  async play(
+    handle: string,
+    code: string,
+    language: string,
+    testIndex = 1,
+  ): Promise<TestSessionResult> {
+    const { data } = await this.request.post<TestSessionResult>(
+      '/services/TestSession/play',
+      [handle, { code, programmingLanguageId: language, multipleLanguages: { testIndex } }],
+    );
+    return data;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Auth
+  // ---------------------------------------------------------------------------
+
+  /** Set the rememberMe cookie for authenticated requests. */
+  setRememberMe(cookie: string): void {
+    this.request.defaults.headers.common['Cookie'] = `rememberMe=${cookie}`;
   }
 
   // ---------------------------------------------------------------------------

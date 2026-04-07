@@ -183,3 +183,14 @@ export interface GameReplay {
   ranks: number[];
   metadata: Record<string, unknown>;
 }
+
+// ---------------------------------------------------------------------------
+// Test Sessions
+// ---------------------------------------------------------------------------
+
+export interface TestSessionResult {
+  gameId: number;
+  frames: ReplayFrame[];
+  metadata: Record<string, unknown>;
+  scores?: number[];
+}
