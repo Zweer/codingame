@@ -194,15 +194,18 @@ void defense0_pattern(){
 		cout << "SPELL WIND " << hero.x << " " << oppBase.y << endl;
 	}else{
 		int control_target = -1;
-		for(int j = 0; j < entity_count; j ++) if(entity_list[j].type == 2 && !entity_list[j].is_controlled){
+		for(int j = 0; j < entity_count; j ++) if(entity_list[j].type == 2 && !entity_list[j].is_controlled && entity_list[j].shield_life == 0){
 			ll get_distance = distsq(entity_list[j], entity_list[heroID[0]]);
-			if(get_distance <= 2200 * 2200){
+			if(get_distance <= 2200 * 2200 && entity_list[j].our_base_distance <= 7000LL * 7000){
 				control_target = j;
 				break;
 			}
 		}
 
-		cout << "MOVE " << x << " " << y << endl;
+		if(control_target != -1 && mana >= 10)
+			cout << "SPELL CONTROL " << entity_list[control_target].id << " " << oppBase.x << " " << oppBase.y << endl;
+		else
+			cout << "MOVE " << x << " " << y << endl;
 	}
 }
 
