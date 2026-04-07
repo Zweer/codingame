@@ -1,0 +1,181 @@
+LAHC Stats: Lfa:3200 Time From Reset:319 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:327ms C/I16/2
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(274)PROB:10,15,15,10,30,30
+ Best:49285,0,1979,3983417,160 Points:12/1144=98.951% Lists C/U:16/18 Numbers R / T:2 / 140 BC/U/T:121/140/140 86.4286%  GRID IS:
+21 12
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  6  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  6  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+Complete:32 |0 7 R -|6 7 R -|1 5 D +|14 6 L -|2 6 U -|10 3 D +|10 0 D -|19 4 L -|20 4 L -|5 4 L -|3 4 R -|10 4 L -|16 4 L -|17 1 D -|17 4 L -|13 4 L -|6 4 L +|2 9 R -|10 9 L -|5 3 D -|5 9 L -|3 9 R -|4 9 U -|4 4 L -|2 4 L -|1 4 D -|1 7 R -|11 7 L -|9 7 U -|9 3 U -|18 1 L -|9 1 R -|
+Complete:10 |11 2 L -|4 2 L -|10 2 L -|6 2 L -|8 2 L -|14 2 L -|2 2 U -|2 1 R -|0 1 R +|1 1 R -|
+Complete:10 |2 11 R -|15 9 R -|10 5 R -|20 5 L +|19 5 D -|19 9 D -|3 0 D -|3 11 R -|19 11 L -|1 11 R -|
+Complete:9 |11 6 D -|11 11 R -|4 7 R -|17 8 U -|17 0 D +|10 6 D -|10 7 R -|17 7 D -|17 11 U -|
+Complete:8 |0 8 R -|5 7 R -|18 7 D -|11 8 L +|2 8 R -|8 8 R -|16 5 R -|18 5 D -|
+Complete:6 |13 6 U -|14 0 D -|14 3 U -|14 1 L -|13 8 U -|13 2 U -|
+Complete:6 |12 7 R +|15 7 R -|20 6 U -|20 2 D -|3 7 R -|16 7 R -|
+Complete:5 |15 11 U -|7 0 L -|2 0 R -|6 0 R -|15 0 D -|
+Complete:4 |3 2 R -|18 2 L -|9 2 L -|5 2 U -|
+Complete:4 |19 7 U -|10 8 R -|19 8 U -|7 1 R -|
+Complete:3 |20 9 D -|2 10 R -|4 10 R -|
+Complete:2 |0 0 R -|4 6 U -|
+Complete:2 |5 6 D -|5 10 R -|
+Complete:2 |13 10 R -|16 8 D -|
+Complete:1 |12 0 R -|
+Complete:1 |10 1 R -|
+Incomplete:13 |9 5 R -|17 5 L -|13 5 L -|4 5 R -|9 9 R -|0 9 R -|16 9 L -|14 9 U -|14 11 U -|14 7 U -|14 4 D -|14 5 L -|12 6 U -|
+Incomplete:4 |13 7 L -|7 7 U -|1 2 R -|15 2 L -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:327ms C/I17/0
+ Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(274)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/1144=100% Lists C/U:17/17 Numbers R / T:0 / 140 BC/U/T:140/140/140 100% 
+Complete:32 |0 7 R -|6 7 R -|1 5 D +|14 6 L -|2 6 U -|10 3 D +|10 0 D -|19 4 L -|20 4 L -|5 4 L -|3 4 R -|10 4 L -|16 4 L -|17 1 D -|17 4 L -|13 4 L -|6 4 L +|2 9 R -|10 9 L -|5 3 D -|5 9 L -|3 9 R -|4 9 U -|4 4 L -|2 4 L -|1 4 D -|1 7 R -|11 7 L -|9 7 U -|9 3 U -|18 1 L -|9 1 R -|
+Complete:22 |0 8 R -|5 7 R -|18 7 D -|11 8 L +|2 8 R -|8 8 R -|16 5 R -|9 5 R -|17 5 L -|13 5 L -|4 5 R -|9 9 R -|0 9 R -|16 9 L -|14 9 U -|14 11 U -|14 7 U -|14 4 D -|14 5 L -|12 6 U -|12 5 R -|18 5 D -|
+Complete:10 |2 11 R -|15 9 R -|10 5 R -|20 5 L +|19 5 D -|19 9 D -|3 0 D -|3 11 R -|19 11 L -|1 11 R -|
+Complete:10 |11 2 L -|4 2 L -|10 2 L -|6 2 L -|8 2 L -|14 2 L -|2 2 U -|2 1 R -|0 1 R +|1 1 R -|
+Complete:9 |11 6 D -|11 11 R -|4 7 R -|17 8 U -|17 0 D +|10 6 D -|10 7 R -|17 7 D -|17 11 U -|
+Complete:6 |13 6 U -|14 0 D -|14 3 U -|14 1 L -|13 8 U -|13 2 U -|
+Complete:6 |12 7 R +|15 7 R -|20 6 U -|20 2 D -|3 7 R -|16 7 R -|
+Complete:5 |15 11 U -|7 0 L -|2 0 R -|6 0 R -|15 0 D -|
+Complete:4 |1 2 R -|15 2 L -|13 7 L -|7 7 U -|
+Complete:4 |19 7 U -|10 8 R -|19 8 U -|7 1 R -|
+Complete:4 |3 2 R -|18 2 L -|9 2 L -|5 2 U -|
+Complete:3 |20 9 D -|2 10 R -|4 10 R -|
+Complete:2 |0 0 R -|4 6 U -|
+Complete:2 |5 6 D -|5 10 R -|
+Complete:2 |13 10 R -|16 8 D -|
+Complete:1 |10 1 R -|
+Complete:1 |12 0 R -|
+xeexmgicpcuewuzbsgedqirwlaytjick
+0 0 R -
+4 6 U -
+3 2 R -
+18 2 L -
+9 2 L -
+5 2 U -
+12 0 R -
+11 2 L -
+4 2 L -
+10 2 L -
+6 2 L -
+8 2 L -
+14 2 L -
+2 2 U -
+2 1 R -
+0 1 R +
+1 1 R -
+0 7 R -
+6 7 R -
+1 5 D +
+14 6 L -
+2 6 U -
+10 3 D +
+10 0 D -
+19 4 L -
+20 4 L -
+5 4 L -
+3 4 R -
+10 4 L -
+16 4 L -
+17 1 D -
+17 4 L -
+13 4 L -
+6 4 L +
+2 9 R -
+10 9 L -
+5 3 D -
+5 9 L -
+3 9 R -
+4 9 U -
+4 4 L -
+2 4 L -
+1 4 D -
+1 7 R -
+11 7 L -
+9 7 U -
+9 3 U -
+18 1 L -
+9 1 R -
+13 6 U -
+14 0 D -
+14 3 U -
+14 1 L -
+13 8 U -
+13 2 U -
+19 7 U -
+10 8 R -
+19 8 U -
+7 1 R -
+10 1 R -
+1 2 R -
+15 2 L -
+13 7 L -
+7 7 U -
+15 11 U -
+7 0 L -
+2 0 R -
+6 0 R -
+15 0 D -
+12 7 R +
+15 7 R -
+20 6 U -
+20 2 D -
+3 7 R -
+16 7 R -
+0 8 R -
+5 7 R -
+18 7 D -
+11 8 L +
+2 8 R -
+8 8 R -
+16 5 R -
+9 5 R -
+17 5 L -
+13 5 L -
+4 5 R -
+9 9 R -
+0 9 R -
+16 9 L -
+14 9 U -
+14 11 U -
+14 7 U -
+14 4 D -
+14 5 L -
+12 6 U -
+12 5 R -
+18 5 D -
+11 6 D -
+11 11 R -
+4 7 R -
+17 8 U -
+17 0 D +
+10 6 D -
+10 7 R -
+17 7 D -
+17 11 U -
+5 6 D -
+5 10 R -
+13 10 R -
+16 8 D -
+20 9 D -
+2 10 R -
+4 10 R -
+2 11 R -
+15 9 R -
+10 5 R -
+20 5 L +
+19 5 D -
+19 9 D -
+3 0 D -
+3 11 R -
+19 11 L -
+1 11 R -

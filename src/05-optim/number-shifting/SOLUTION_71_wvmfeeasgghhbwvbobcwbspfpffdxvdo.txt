@@ -1,0 +1,63 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:24 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:26ms C/I7/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(138)PROB:10,15,15,10,30,30
+ Best:48648,0,1971,3980014,149 Points:2/142=98.5915% Lists C/U:7/8 Numbers R / T:1 / 37 BC/U/T:34/37/37 91.8919%  GRID IS:
+12 7
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . 2 . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+Complete:13 |11 4 L -|7 1 D -|7 5 L -|11 5 L -|1 5 R -|4 1 L -|3 1 D -|3 5 R -|10 5 L -|6 5 L -|4 5 U +|4 4 R -|7 4 R -|
+Complete:4 |3 6 R -|4 6 U -|1 0 R -|4 0 D -|
+Complete:4 |6 4 L -|7 2 L -|0 2 D -|0 3 D -|
+Complete:3 |7 6 U -|9 3 L -|7 0 D -|
+Complete:1 |9 5 U -|
+Complete:1 |11 6 U -|
+Complete:1 |0 6 R -|
+Incomplete:2 |8 2 D +|8 4 L -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:26ms C/I7/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(138)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/142=100% Lists C/U:7/7 Numbers R / T:0 / 37 BC/U/T:37/37/37 100% 
+Complete:13 |11 4 L -|7 1 D -|7 5 L -|11 5 L -|1 5 R -|4 1 L -|3 1 D -|3 5 R -|10 5 L -|6 5 L -|4 5 U +|4 4 R -|7 4 R -|
+Complete:7 |8 2 D +|8 4 L -|3 4 D -|3 6 R -|4 6 U -|1 0 R -|4 0 D -|
+Complete:4 |6 4 L -|7 2 L -|0 2 D -|0 3 D -|
+Complete:3 |7 6 U -|9 3 L -|7 0 D -|
+Complete:1 |9 5 U -|
+Complete:1 |11 6 U -|
+Complete:1 |0 6 R -|
+wvmfeeasgghhbwvbobcwbspfpffdxvdo
+9 5 U -
+8 2 D +
+8 4 L -
+3 4 D -
+3 6 R -
+4 6 U -
+1 0 R -
+4 0 D -
+7 6 U -
+9 3 L -
+7 0 D -
+11 6 U -
+6 4 L -
+7 2 L -
+0 2 D -
+0 3 D -
+11 4 L -
+7 1 D -
+7 5 L -
+11 5 L -
+1 5 R -
+4 1 L -
+3 1 D -
+3 5 R -
+10 5 L -
+6 5 L -
+4 5 U +
+4 4 R -
+7 4 R -
+0 6 R -

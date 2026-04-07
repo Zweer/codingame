@@ -1,0 +1,106 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:56 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:59ms C/I11/2
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(58)PROB:10,15,15,10,30,30
+ Best:48630,0,1900,377940,0 Points:24/480=95% Lists C/U:11/13 Numbers R / T:2 / 73 BC/U/T:31/73/73 42.4658%  GRID IS:
+16 9
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  . 10  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  . 14  .  .  .  .  .  .  . 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+Complete:5 |3 5 R -|7 2 L -|2 2 D +|2 5 R -|15 0 D -|
+Complete:4 |0 8 R -|2 8 R -|9 8 R -|15 8 L -|
+Complete:2 |5 4 R -|8 4 R -|
+Complete:2 |3 4 D -|3 7 R -|
+Complete:1 |7 7 U -|
+Complete:1 |0 1 R -|
+Complete:1 |8 2 R -|
+Complete:1 |7 4 R -|
+Complete:1 |0 4 R -|
+Complete:1 |14 6 L -|
+Complete:1 |4 6 R -|
+Incomplete:29 |12 1 R -|4 4 U -|11 6 U -|9 6 U -|9 2 R -|11 2 U +|11 4 U -|11 1 R +|6 5 U -|6 1 R -|13 1 L +|4 1 R +|3 1 R -|7 1 R -|15 1 L -|3 3 L -|7 3 L -|0 3 R -|12 3 L -|15 3 L -|2 3 R -|14 7 D -|13 8 R -|14 8 U -|0 2 R -|1 2 R -|12 2 R -|14 2 D -|14 3 U -|
+Incomplete:11 |8 8 U -|14 5 L -|8 5 D -|11 3 L +|6 3 R -|8 3 U -|12 0 L -|1 0 R -|11 0 L -|0 0 R -|8 0 D +|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:59ms C/I13/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(58)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/480=100% Lists C/U:13/13 Numbers R / T:0 / 73 BC/U/T:73/73/73 100% 
+Complete:29 |4 4 U -|11 6 U -|9 6 U -|9 2 R -|11 2 U +|11 4 U -|11 1 R +|6 5 U -|6 1 R -|13 1 L +|4 1 R -|12 1 R -|3 3 L -|7 3 L -|0 3 R -|12 3 L -|15 3 L -|2 3 R -|14 7 D -|13 8 R -|14 8 U -|0 2 R -|1 2 R -|12 2 R -|14 2 D -|14 3 U -|3 1 R -|7 1 R -|15 1 L -|
+Complete:11 |11 3 L +|6 3 R -|8 3 U -|12 0 L -|1 0 R -|11 0 L -|0 0 R -|8 0 D -|8 8 U -|14 5 L -|8 5 D -|
+Complete:5 |3 5 R -|7 2 L -|2 2 D +|2 5 R -|15 0 D -|
+Complete:4 |0 8 R -|2 8 R -|9 8 R -|15 8 L -|
+Complete:2 |5 4 R -|8 4 R -|
+Complete:2 |3 4 D -|3 7 R -|
+Complete:1 |7 7 U -|
+Complete:1 |0 1 R -|
+Complete:1 |8 2 R -|
+Complete:1 |7 4 R -|
+Complete:1 |0 4 R -|
+Complete:1 |14 6 L -|
+Complete:1 |4 6 R -|
+kxgerxuomtwooadminuxdjkvpsbkeltm
+7 7 U -
+0 1 R -
+4 4 U -
+11 6 U -
+9 6 U -
+9 2 R -
+11 2 U +
+11 4 U -
+11 1 R +
+6 5 U -
+6 1 R -
+13 1 L +
+4 1 R -
+12 1 R -
+3 3 L -
+7 3 L -
+0 3 R -
+12 3 L -
+15 3 L -
+2 3 R -
+14 7 D -
+13 8 R -
+14 8 U -
+0 2 R -
+1 2 R -
+12 2 R -
+14 2 D -
+14 3 U -
+3 1 R -
+7 1 R -
+15 1 L -
+8 2 R -
+7 4 R -
+5 4 R -
+8 4 R -
+0 4 R -
+3 5 R -
+7 2 L -
+2 2 D +
+2 5 R -
+15 0 D -
+14 6 L -
+4 6 R -
+3 4 D -
+3 7 R -
+11 3 L +
+6 3 R -
+8 3 U -
+12 0 L -
+1 0 R -
+11 0 L -
+0 0 R -
+8 0 D -
+8 8 U -
+14 5 L -
+8 5 D -
+0 8 R -
+2 8 R -
+9 8 R -
+15 8 L -

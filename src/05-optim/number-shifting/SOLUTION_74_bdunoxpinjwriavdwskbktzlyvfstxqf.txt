@@ -1,0 +1,66 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:92 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:94ms C/I4/3
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(331)PROB:10,15,15,10,30,30
+ Best:46341,0,1957,3982710,86 Points:4/190=97.8947% Lists C/U:4/7 Numbers R / T:3 / 41 BC/U/T:20/41/41 48.7805%  GRID IS:
+12 7
+. . . . . . . 1 . . . . 
+. . . . . . . . . 2 . . 
+. . . . . . . . . . . . 
+. . . . . 1 . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+Complete:11 |1 0 R -|3 0 D -|9 5 L -|0 5 R -|3 5 U -|3 3 R -|7 3 R -|8 1 D -|4 2 D +|4 3 L +|1 3 R -|
+Complete:3 |2 2 D -|9 6 L -|2 6 U -|
+Complete:1 |4 1 R -|
+Complete:1 |0 1 R -|
+Incomplete:11 |11 6 U -|5 5 R -|11 5 U -|11 3 L -|2 3 R -|10 0 D -|1 5 R -|8 5 L -|7 5 R -|10 5 U -|10 3 L -|
+Incomplete:6 |6 3 U -|6 5 D +|6 6 U +|6 4 U -|6 0 R -|9 0 L -|
+Incomplete:1 |9 4 U -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:94ms C/I2/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(331)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/190=100% Lists C/U:2/2 Numbers R / T:0 / 41 BC/U/T:41/41/41 100% 
+Complete:36 |1 0 R -|3 0 D -|9 5 L -|0 5 R -|3 5 U -|3 3 R -|8 1 D -|7 3 R -|4 2 U -|6 1 L -|6 3 U -|6 5 D +|6 6 U +|6 4 U -|6 0 R -|9 0 L -|7 0 D -|0 1 R -|9 4 U -|9 1 L +|7 1 L -|4 1 D +|4 3 R -|11 6 U -|5 5 R -|11 5 U -|11 3 L -|2 3 R -|10 0 D -|1 5 R -|8 5 L -|7 5 R -|10 5 U -|10 3 L -|1 3 R -|5 3 R -|
+Complete:3 |2 2 D -|9 6 L -|2 6 U -|
+bdunoxpinjwriavdwskbktzlyvfstxqf
+1 0 R -
+3 0 D -
+9 5 L -
+0 5 R -
+3 5 U -
+3 3 R -
+8 1 D -
+7 3 R -
+4 2 U -
+6 1 L -
+6 3 U -
+6 5 D +
+6 6 U +
+6 4 U -
+6 0 R -
+9 0 L -
+7 0 D -
+0 1 R -
+9 4 U -
+9 1 L +
+7 1 L -
+4 1 D +
+4 3 R -
+11 6 U -
+5 5 R -
+11 5 U -
+11 3 L -
+2 3 R -
+10 0 D -
+1 5 R -
+8 5 L -
+7 5 R -
+10 5 U -
+10 3 L -
+1 3 R -
+5 3 R -
+2 2 D -
+9 6 L -
+2 6 U -

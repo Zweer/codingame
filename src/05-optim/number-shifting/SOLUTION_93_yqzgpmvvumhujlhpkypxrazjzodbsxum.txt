@@ -1,0 +1,80 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:53 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:55ms C/I7/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(68)PROB:10,15,15,10,30,30
+ Best:49056,0,1984,399147,63 Points:2/256=99.2188% Lists C/U:7/8 Numbers R / T:1 / 53 BC/U/T:39/53/53 73.5849%  GRID IS:
+14 8
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 
+. . . . 2 . . . . . . . . . 
+. . . . . . . . . . . . . . 
+Complete:12 |9 2 D -|2 3 U -|5 0 L -|11 7 L -|2 7 U -|2 0 R -|8 0 R +|9 3 U -|9 0 D -|9 6 R -|12 6 L -|8 6 D -|
+Complete:8 |13 4 L -|5 4 R -|8 4 U -|3 3 U -|3 2 R -|5 2 R -|6 2 D -|6 3 R -|
+Complete:4 |1 1 R -|10 1 R -|11 5 U -|11 1 R -|
+Complete:4 |3 5 D +|5 7 L -|7 7 L -|10 7 L -|
+Complete:2 |10 4 L -|1 4 R -|
+Complete:1 |4 1 R -|
+Complete:1 |12 2 R -|
+Incomplete:13 |0 2 U +|0 1 D -|3 6 L +|0 6 R +|1 6 R -|5 6 R -|11 6 L -|13 6 L -|4 4 D -|3 0 L -|1 0 R -|4 0 D -|4 5 D -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:55ms C/I8/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(68)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/256=100% Lists C/U:8/8 Numbers R / T:0 / 53 BC/U/T:53/53/53 100% 
+Complete:13 |5 6 R -|11 6 L -|13 6 L -|4 4 D -|3 0 L -|1 0 R -|4 0 D -|4 5 D -|0 2 U +|0 1 D -|3 6 L +|0 6 R -|1 6 R -|
+Complete:12 |9 2 D -|2 3 U -|5 0 L -|11 7 L -|2 7 U -|2 0 R -|8 0 R +|9 3 U -|9 0 D -|9 6 R -|12 6 L -|8 6 D -|
+Complete:8 |13 4 L -|5 4 R -|8 4 U -|3 3 U -|3 2 R -|5 2 R -|6 2 D -|6 3 R -|
+Complete:4 |1 1 R -|10 1 R -|11 5 U -|11 1 R -|
+Complete:4 |3 5 D +|5 7 L -|7 7 L -|10 7 L -|
+Complete:2 |10 4 L -|1 4 R -|
+Complete:1 |4 1 R -|
+Complete:1 |12 2 R -|
+yqzgpmvvumhujlhpkypxrazjzodbsxum
+1 1 R -
+10 1 R -
+11 5 U -
+11 1 R -
+4 1 R -
+12 2 R -
+13 4 L -
+5 4 R -
+8 4 U -
+3 3 U -
+3 2 R -
+5 2 R -
+6 2 D -
+6 3 R -
+10 4 L -
+1 4 R -
+5 6 R -
+11 6 L -
+13 6 L -
+4 4 D -
+3 0 L -
+1 0 R -
+4 0 D -
+4 5 D -
+0 2 U +
+0 1 D -
+3 6 L +
+0 6 R -
+1 6 R -
+3 5 D +
+5 7 L -
+7 7 L -
+10 7 L -
+9 2 D -
+2 3 U -
+5 0 L -
+11 7 L -
+2 7 U -
+2 0 R -
+8 0 R +
+9 3 U -
+9 0 D -
+9 6 R -
+12 6 L -
+8 6 D -

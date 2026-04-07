@@ -1,0 +1,76 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:0 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:1ms C/I4/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(9)PROB:10,15,15,10,30,30
+ Best:47058,0,1916,3910141,674 Points:2/48=95.8333% Lists C/U:4/5 Numbers R / T:1 / 17 BC/U/T:12/17/17 70.5882%  GRID IS:
+8 5
+. . . . . . . . 
+. 2 . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+Complete:4 |7 2 U -|7 1 L -|5 1 R -|4 1 R -|
+Complete:2 |4 3 L -|1 3 D -|
+Complete:1 |6 2 L -|
+Complete:1 |3 0 D -|
+Incomplete:4 |3 1 L -|2 2 U +|2 4 U -|2 1 L -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:1ms C/I4/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(10)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/48=100% Lists C/U:4/4 Numbers R / T:0 / 17 BC/U/T:17/17/17 100% 
+Complete:7 |4 3 L -|3 1 L -|2 2 U +|2 4 U -|2 1 L -|1 1 D -|1 3 D -|
+Complete:4 |7 2 U -|7 1 L -|5 1 R -|4 1 R -|
+Complete:1 |6 2 L -|
+Complete:1 |3 0 D -|
+pzpnqrtctcpuezfugcjyydkgvyidirfh
+7 2 U -
+7 1 L -
+5 1 R -
+4 1 R -
+6 2 L -
+4 3 L -
+3 1 L -
+2 2 U +
+2 4 U -
+2 1 L -
+1 1 D -
+1 3 D -
+3 0 D -
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:0 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:2ms C/I3/2
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(11)PROB:10,15,15,10,30,30
+ Best:41176,0,1750,36853124,2471 Points:6/48=87.5% Lists C/U:3/5 Numbers R / T:3 / 17 BC/U/T:10/16/17 58.8235%  GRID IS:
+8 5
+. . . . . . . . 
+. . . 1 . . . 2 
+. . . . . . . . 
+. . . . . . . . 
+. . 3 . . . . . 
+Complete:5 |4 3 L -|2 2 U -|2 1 L -|1 1 D -|1 3 D -|
+Complete:1 |3 4 U -|
+Complete:1 |0 2 R -|
+Incomplete:3 |6 1 L -|5 1 L -|4 1 L -|
+Incomplete:1 |7 2 U -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:2ms C/I4/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(11)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/48=100% Lists C/U:4/4 Numbers R / T:0 / 17 BC/U/T:17/17/17 100% 
+Complete:9 |7 2 U -|2 2 U -|2 4 U -|6 1 L -|3 1 L -|1 1 R -|4 1 L +|2 1 R -|5 1 R -|
+Complete:2 |4 3 L -|1 3 D -|
+Complete:1 |3 4 U -|
+Complete:1 |0 2 R -|
+pzpnqrtctcpuezfugcjyydkgvyidirfh
+3 4 U -
+7 2 U -
+2 2 U -
+2 4 U -
+6 1 L -
+3 1 L -
+1 1 R -
+4 1 L +
+2 1 R -
+5 1 R -
+0 2 R -
+4 3 L -
+1 3 D -

@@ -1,0 +1,43 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:62 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:63ms C/I3/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(46)PROB:10,15,15,10,30,30
+ Best:47727,0,1963,3977218,170 Points:2/110=98.1818% Lists C/U:3/4 Numbers R / T:1 / 22 BC/U/T:20/22/22 90.9091%  GRID IS:
+10 6
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . 2 . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+Complete:13 |0 1 R -|9 1 L -|1 5 R -|8 4 L -|0 4 R +|1 4 R -|6 4 D -|6 0 D -|6 5 U -|6 1 L -|5 1 L -|2 1 L -|1 1 D -|
+Complete:3 |8 3 L -|3 3 R -|4 3 R -|
+Complete:1 |0 2 R -|
+Incomplete:1 |0 3 R -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:63ms C/I3/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(46)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/110=100% Lists C/U:3/3 Numbers R / T:0 / 22 BC/U/T:22/22/22 100% 
+Complete:13 |0 1 R -|9 1 L -|1 5 R -|8 4 L -|0 4 R +|1 4 R -|6 4 D -|6 0 D -|6 5 U -|6 1 L -|5 1 L -|2 1 L -|1 1 D -|
+Complete:5 |8 3 L -|3 3 R -|0 3 R -|6 3 L -|4 3 R -|
+Complete:1 |0 2 R -|
+ioywscacggfxvgawwjratxzdjyoecqmk
+0 2 R -
+0 1 R -
+9 1 L -
+1 5 R -
+8 4 L -
+0 4 R +
+1 4 R -
+6 4 D -
+6 0 D -
+6 5 U -
+6 1 L -
+5 1 L -
+2 1 L -
+1 1 D -
+8 3 L -
+3 3 R -
+0 3 R -
+6 3 L -
+4 3 R -

@@ -1,0 +1,50 @@
+LAHC Stats: Lfa:3200 Time From Reset:10 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:11ms C/I4/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(49)PROB:10,15,15,10,30,30
+ Best:48214,0,1958,3971420,214 Points:2/96=97.9167% Lists C/U:4/5 Numbers R / T:1 / 28 BC/U/T:17/28/28 60.7143%  GRID IS:
+10 6
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . 2 . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+Complete:6 |6 3 D -|0 0 D -|0 5 R -|3 0 R -|6 0 D -|5 5 R -|
+Complete:4 |4 4 R -|7 4 R -|5 4 R -|8 4 R -|
+Complete:2 |2 3 R -|3 3 D -|
+Complete:1 |1 4 D -|
+Incomplete:10 |8 0 D +|4 2 L -|0 4 R +|2 4 U -|2 0 D -|0 1 R -|2 1 D -|2 2 L -|0 2 R +|1 2 R -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:11ms C/I4/0
+ Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(49)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/96=100% Lists C/U:4/4 Numbers R / T:0 / 28 BC/U/T:28/28/28 100% 
+Complete:15 |4 4 R -|7 4 R -|5 4 R -|8 0 D +|4 2 L -|0 4 R +|2 4 U -|2 0 D -|0 1 R -|2 1 D -|2 2 L -|0 2 R +|1 2 R -|8 2 D -|8 4 R -|
+Complete:6 |6 3 D -|0 0 D -|0 5 R -|3 0 R -|6 0 D -|5 5 R -|
+Complete:2 |2 3 R -|3 5 U -|
+Complete:1 |1 4 D -|
+yusfcjkvksgjtjvegxrrbljykhgksfrl
+2 3 R -
+3 5 U -
+4 4 R -
+7 4 R -
+5 4 R -
+8 0 D +
+4 2 L -
+0 4 R +
+2 4 U -
+2 0 D -
+0 1 R -
+2 1 D -
+2 2 L -
+0 2 R +
+1 2 R -
+8 2 D -
+8 4 R -
+1 4 D -
+6 3 D -
+0 0 D -
+0 5 R -
+3 0 R -
+6 0 D -
+5 5 R -

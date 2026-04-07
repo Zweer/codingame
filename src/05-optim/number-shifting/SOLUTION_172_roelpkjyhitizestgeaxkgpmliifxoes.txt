@@ -1,0 +1,130 @@
+LAHC Stats: Lfa:3200 Time From Reset:233 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:236ms C/I7/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(195)PROB:10,15,15,10,30,30
+ Best:49500,0,1983,3983913,156 Points:6/736=99.1848% Lists C/U:7/8 Numbers R / T:1 / 100 BC/U/T:75/100/100 75%  GRID IS:
+19 11
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . 6 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+Complete:49 |7 5 R -|0 2 R -|16 2 L -|1 1 D -|1 2 R -|10 7 U +|0 0 D -|5 6 L -|0 7 U -|0 6 R -|17 6 L -|15 8 U -|15 6 L -|12 6 U -|12 2 L +|5 2 R -|15 2 L -|10 2 R -|17 2 D -|6 5 R -|11 5 R -|13 5 L -|9 5 L -|1 5 R -|2 5 R -|4 5 R -|18 5 L -|7 7 D -|7 9 R -|8 9 R -|4 6 D +|4 3 D -|0 10 R -|1 10 R -|4 10 U -|4 9 R -|9 9 R -|18 10 U -|18 9 L -|12 9 U -|12 10 U -|15 0 L -|12 0 D -|0 8 R -|11 8 R -|16 8 L -|13 8 L +|12 8 U +|12 5 R -|
+Complete:14 |6 9 L -|5 9 L -|1 0 D -|1 9 R -|18 2 L -|13 3 D -|13 4 D -|13 6 D -|8 6 D -|8 2 D -|8 10 R -|13 10 U -|4 2 R -|13 2 D -|
+Complete:1 |11 7 U -|
+Complete:1 |14 8 U -|
+Complete:1 |8 7 U -|
+Complete:1 |2 3 R -|
+Complete:1 |6 6 R -|
+Incomplete:24 |11 3 D -|8 4 L -|0 4 R -|11 4 R -|3 9 U +|4 1 L -|6 1 R -|7 1 R -|8 1 L -|3 1 D -|3 4 R -|14 6 U -|14 2 D -|14 4 L -|1 4 R -|17 4 L -|5 0 D -|5 4 R -|10 4 D -|0 5 R -|5 5 R -|10 5 D +|9 8 R -|10 8 R -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:236ms C/I7/0
+ Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(195)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/736=100% Lists C/U:7/7 Numbers R / T:0 / 100 BC/U/T:100/100/100 100% 
+Complete:74 |7 5 R -|0 2 R -|16 2 L -|1 1 D -|1 2 R -|10 7 U +|0 0 D -|5 6 L -|0 7 U -|0 6 R -|17 6 L -|15 8 U -|15 6 L -|12 6 U -|12 2 L +|5 2 R -|15 2 L -|10 2 R -|17 2 D -|6 5 R -|11 5 R -|13 5 L -|9 5 L -|1 5 R -|2 5 R -|4 5 R -|18 5 L -|7 7 D -|7 9 R -|8 9 R -|4 6 D +|4 3 D -|0 10 R -|1 10 R -|4 10 U -|4 9 R -|9 9 R -|18 10 U -|18 9 L -|12 9 U -|12 10 U -|15 0 L -|12 0 D -|0 8 R -|11 8 R -|16 8 L -|13 8 L +|11 3 D -|8 4 L -|0 4 R -|11 4 R -|3 9 U +|4 1 L -|6 1 R -|7 1 R -|8 1 L -|3 1 D -|3 4 R -|14 6 U -|14 2 D -|14 4 L -|1 4 R -|17 4 L -|5 0 D -|5 4 R -|10 4 D -|0 5 R -|5 5 R -|10 5 D +|9 8 R -|10 8 R -|18 8 L -|12 8 U +|12 5 R -|
+Complete:14 |6 9 L -|5 9 L -|1 0 D -|1 9 R -|18 2 L -|13 3 D -|13 4 D -|13 6 D -|8 6 D -|8 2 D -|8 10 R -|13 10 U -|4 2 R -|13 2 D -|
+Complete:1 |11 7 U -|
+Complete:1 |14 8 U -|
+Complete:1 |8 7 U -|
+Complete:1 |2 3 R -|
+Complete:1 |6 6 R -|
+roelpkjyhitizestgeaxkgpmliifxoes
+11 7 U -
+14 8 U -
+8 7 U -
+2 3 R -
+7 5 R -
+0 2 R -
+16 2 L -
+1 1 D -
+1 2 R -
+10 7 U +
+0 0 D -
+5 6 L -
+0 7 U -
+0 6 R -
+17 6 L -
+15 8 U -
+15 6 L -
+12 6 U -
+12 2 L +
+5 2 R -
+15 2 L -
+10 2 R -
+17 2 D -
+6 5 R -
+11 5 R -
+13 5 L -
+9 5 L -
+1 5 R -
+2 5 R -
+4 5 R -
+18 5 L -
+7 7 D -
+7 9 R -
+8 9 R -
+4 6 D +
+4 3 D -
+0 10 R -
+1 10 R -
+4 10 U -
+4 9 R -
+9 9 R -
+18 10 U -
+18 9 L -
+12 9 U -
+12 10 U -
+15 0 L -
+12 0 D -
+0 8 R -
+11 8 R -
+16 8 L -
+13 8 L +
+11 3 D -
+8 4 L -
+0 4 R -
+11 4 R -
+3 9 U +
+4 1 L -
+6 1 R -
+7 1 R -
+8 1 L -
+3 1 D -
+3 4 R -
+14 6 U -
+14 2 D -
+14 4 L -
+1 4 R -
+17 4 L -
+5 0 D -
+5 4 R -
+10 4 D -
+0 5 R -
+5 5 R -
+10 5 D +
+9 8 R -
+10 8 R -
+18 8 L -
+12 8 U +
+12 5 R -
+6 6 R -
+6 9 L -
+5 9 L -
+1 0 D -
+1 9 R -
+18 2 L -
+13 3 D -
+13 4 D -
+13 6 D -
+8 6 D -
+8 2 D -
+8 10 R -
+13 10 U -
+4 2 R -
+13 2 D -

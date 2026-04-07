@@ -1,0 +1,134 @@
+RECOMBINATOR Stats: Lfa:3200 Time From Reset:358 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:361ms C/I7/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(608)PROB:10,15,15,10,30,30
+ Best:49519,0,1984,3985612,139 Points:6/780=99.2308% Lists C/U:7/8 Numbers R / T:1 / 104 BC/U/T:67/104/104 64.4231%  GRID IS:
+19 11
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 6 . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+Complete:30 |9 0 D -|1 2 R -|12 2 L -|3 2 R -|8 2 R -|11 2 L +|7 2 D -|13 8 L -|6 10 U -|6 4 R -|9 4 L -|3 4 R -|15 4 L -|17 9 L -|10 9 U -|17 1 D -|17 3 D -|17 4 L -|10 4 L -|7 4 D -|7 6 D -|7 9 U -|12 7 L -|6 7 L -|17 7 L -|18 7 L -|5 7 R -|7 7 D -|7 8 R -|9 8 U -|
+Complete:10 |0 0 D -|3 1 R -|6 1 R -|8 1 L +|5 1 L -|7 10 L -|0 10 U -|0 6 U -|0 8 U -|0 5 U -|
+Complete:8 |11 9 R -|15 9 L -|6 9 R -|5 9 R -|9 9 R -|14 9 R -|2 9 R -|4 9 R -|
+Complete:4 |16 4 R -|12 4 L -|5 4 L -|0 4 R -|
+Complete:3 |13 3 D -|9 5 R -|13 5 L -|
+Complete:3 |16 7 L -|2 7 R -|3 7 R -|
+Complete:2 |16 0 L -|6 0 R -|
+Incomplete:36 |15 10 U -|7 3 L -|0 3 R -|10 3 L -|2 3 D -|2 5 R -|8 5 R -|17 5 L -|4 5 R -|15 5 U +|5 2 R -|3 0 R -|4 0 R -|15 0 D -|17 2 L -|0 7 U -|0 2 R -|15 2 D -|2 6 R -|8 6 R -|18 6 L -|12 6 R -|10 7 R +|11 1 D -|11 7 R -|15 7 U +|15 6 U -|18 1 D -|14 0 D -|14 10 U -|2 8 R -|6 8 L -|5 8 R -|14 8 R -|18 8 U -|18 3 L -|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:361ms C/I7/0
+RECOMBINATED!! Flash:0 / 0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 maxTimeImprovement:0s  Performance:0s/found(608)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/780=100% Lists C/U:7/7 Numbers R / T:0 / 104 BC/U/T:104/104/104 100% 
+Complete:67 |9 0 D -|1 2 R -|12 2 L -|3 2 R -|8 2 R -|11 2 L +|7 2 D -|13 8 L -|6 10 U -|6 4 R -|9 4 L -|3 4 R -|15 4 L -|17 9 L -|10 9 U -|17 1 D -|15 10 U -|7 3 L -|0 3 R -|10 3 L -|2 3 D -|2 5 R -|8 5 R -|17 5 L -|4 5 R -|15 5 U -|18 1 D -|14 0 D -|14 10 U -|2 8 R -|6 8 L -|5 8 R -|14 8 R -|18 8 U -|18 3 L -|5 2 R -|3 0 R -|4 0 R -|15 0 D -|17 2 L -|0 7 U -|0 2 R -|15 2 D -|2 6 R -|8 6 R -|18 6 L -|12 6 R -|10 7 R +|11 1 D -|11 7 R -|15 7 U +|15 6 U -|15 3 R -|17 3 D -|17 4 L -|10 4 L -|7 4 D -|7 6 D -|7 9 U -|12 7 L -|6 7 L -|17 7 L -|18 7 L -|5 7 R -|7 7 D -|7 8 R -|9 8 U -|
+Complete:10 |0 0 D -|3 1 R -|6 1 R -|8 1 L +|5 1 L -|7 10 L -|0 10 U -|0 6 U -|0 8 U -|0 5 U -|
+Complete:8 |11 9 R -|15 9 L -|6 9 R -|5 9 R -|9 9 R -|14 9 R -|2 9 R -|4 9 R -|
+Complete:4 |16 4 R -|12 4 L -|5 4 L -|0 4 R -|
+Complete:3 |13 3 D -|9 5 R -|13 5 L -|
+Complete:3 |16 7 L -|2 7 R -|3 7 R -|
+Complete:2 |16 0 L -|6 0 R -|
+babkrpgzgvxuskcfqbotwaeojxdydxkr
+16 0 L -
+6 0 R -
+0 0 D -
+3 1 R -
+6 1 R -
+8 1 L +
+5 1 L -
+7 10 L -
+0 10 U -
+0 6 U -
+0 8 U -
+0 5 U -
+16 4 R -
+12 4 L -
+5 4 L -
+0 4 R -
+13 3 D -
+9 5 R -
+13 5 L -
+9 0 D -
+1 2 R -
+12 2 L -
+3 2 R -
+8 2 R -
+11 2 L +
+7 2 D -
+13 8 L -
+6 10 U -
+6 4 R -
+9 4 L -
+3 4 R -
+15 4 L -
+17 9 L -
+10 9 U -
+17 1 D -
+15 10 U -
+7 3 L -
+0 3 R -
+10 3 L -
+2 3 D -
+2 5 R -
+8 5 R -
+17 5 L -
+4 5 R -
+15 5 U -
+18 1 D -
+14 0 D -
+14 10 U -
+2 8 R -
+6 8 L -
+5 8 R -
+14 8 R -
+18 8 U -
+18 3 L -
+5 2 R -
+3 0 R -
+4 0 R -
+15 0 D -
+17 2 L -
+0 7 U -
+0 2 R -
+15 2 D -
+2 6 R -
+8 6 R -
+18 6 L -
+12 6 R -
+10 7 R +
+11 1 D -
+11 7 R -
+15 7 U +
+15 6 U -
+15 3 R -
+17 3 D -
+17 4 L -
+10 4 L -
+7 4 D -
+7 6 D -
+7 9 U -
+12 7 L -
+6 7 L -
+17 7 L -
+18 7 L -
+5 7 R -
+7 7 D -
+7 8 R -
+9 8 U -
+16 7 L -
+2 7 R -
+3 7 R -
+11 9 R -
+15 9 L -
+6 9 R -
+5 9 R -
+9 9 R -
+14 9 R -
+2 9 R -
+4 9 R -

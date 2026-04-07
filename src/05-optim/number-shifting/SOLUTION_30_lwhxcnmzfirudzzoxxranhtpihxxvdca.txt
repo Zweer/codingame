@@ -1,0 +1,43 @@
+LAHC Stats: Lfa:3200 Time From Reset:1 maxTimeImprovement:0s Last Improvement:0s
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:2ms C/I4/1
+ Last Accepted -  Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(13)PROB:10,15,15,10,30,30
+ Best:45454,0,1828,36829114,2926 Points:6/70=91.4286% Lists C/U:4/5 Numbers R / T:2 / 22 BC/U/T:16/21/22 72.7273%  GRID IS:
+8 5
+. . . . . . . . 
+. 1 . . . . . . 
+. . . . . . 5 . 
+. . . . . . . . 
+. . . . . . . . 
+Complete:5 |5 4 R -|6 4 L -|1 4 R -|2 1 D -|2 3 D -|
+Complete:3 |0 0 R -|5 0 L -|4 0 R -|
+Complete:3 |0 3 R -|5 1 D -|5 3 R -|
+Complete:1 |3 4 U -|
+Incomplete:4 |4 2 R -|5 2 L -|1 2 R -|6 3 U +|
+********** Binary:./lahc_solver_bin HOST:Gardevoir Ellapsed Time:2ms C/I4/0
+ Flash:0/0
+ CurrLfa/SIZE_LFA:3200/3200 K_ABCD:50000,0,2000,40000 LIMIT_TIME_IMPROVEMENT:30000 Performance:0s/found(13)PROB:10,15,15,10,30,30
+ Best:50000,0,2000,400000,0 Points:0/70=100% Lists C/U:4/4 Numbers R / T:0 / 22 BC/U/T:22/22/22 100% 
+Complete:10 |3 4 R -|5 4 R -|6 4 L -|2 1 D -|2 3 D -|5 2 L -|1 1 D -|3 2 L -|1 2 D -|1 4 R -|
+Complete:3 |0 0 R -|5 0 L -|4 0 R -|
+Complete:3 |0 3 R -|5 1 D -|5 3 R -|
+Complete:2 |4 2 R -|6 2 D -|
+lwhxcnmzfirudzzoxxranhtpihxxvdca
+0 0 R -
+5 0 L -
+4 0 R -
+4 2 R -
+6 2 D -
+0 3 R -
+5 1 D -
+5 3 R -
+3 4 R -
+5 4 R -
+6 4 L -
+2 1 D -
+2 3 D -
+5 2 L -
+1 1 D -
+3 2 L -
+1 2 D -
+1 4 R -
