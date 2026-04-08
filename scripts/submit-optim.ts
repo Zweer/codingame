@@ -5,13 +5,17 @@
  *   npm run script:submit-optim -- <puzzle-pretty-id> <solver-command>
  *
  * Example:
- *   npm run script:submit-optim -- number-shifting ./src/05-optim/number-shifting/solver_bin
+ *   npm run script:submit-optim -- number-shifting ./lahc_solver_bin
  *
  * The solver can work in two modes (auto-detected):
  *
- * 1. File-based (LAHC solver): if the puzzle dir contains level.txt,
+ * 1. File-based (LAHC solver): if the solver command contains "lahc_solver",
  *    the script writes the grid to level.txt, level_password.txt, number_level.txt,
  *    runs the solver, and reads solution.txt.
+ *    Default LAHC parameters are appended automatically if the command has no extra args:
+ *      <threads> <improvement_timeout_s> <SIZE_LFA> <K_A> <K_B> <K_C> <K_D>
+ *      <CAN_INCREASE_TIME> <CAN_INCREASE_LFA> <ALLOW_GLOBAL_BEST>
+ *    Defaults: (nproc-2) threads, 120s improvement timeout, tuned scoring params.
  *
  * 2. Stdin/stdout: the solver reads the grid from stdin and writes moves to stdout.
  *
@@ -22,11 +26,27 @@
  */
 
 import { execSync } from 'node:child_process';
-import { existsSync, readFileSync, writeFileSync, unlinkSync } from 'node:fs';
+import { existsSync, readFileSync, statSync, writeFileSync, unlinkSync } from 'node:fs';
+import { availableParallelism } from 'node:os';
 import { join } from 'node:path';
 import process from 'node:process';
 
 import { CodinGame } from './libs/codingame.js';
+
+const LAHC_DEFAULTS = {
+  threads: Math.max(1, availableParallelism() - 2),
+  improvementTimeout: 120,
+  sizeLfa: 3200,
+  kA: 50000,
+  kB: 0,
+  kC: 2000,
+  kD: 40000,
+  canIncreaseTime: 100,
+  canIncreaseLfa: 40,
+  allowGlobalBest: 3,
+};
+
+const LAHC_PROCESS_TIMEOUT = 600_000; // 10 minutes
 
 interface LevelState {
   password: string;
@@ -58,6 +78,43 @@ function saveState(stateFile: string, state: LevelState): void {
 }
 
 /**
+ * Compile the LAHC solver if the binary doesn't exist or is older than the source.
+ */
+function ensureLahcBinary(puzzleDir: string): void {
+  const src = join(puzzleDir, 'lahc_solver.cpp');
+  const bin = join(puzzleDir, 'lahc_solver_bin');
+
+  if (!existsSync(src)) return;
+
+  let needsBuild = !existsSync(bin);
+  if (!needsBuild) {
+    const srcMtime = statSync(src).mtimeMs;
+    const binMtime = statSync(bin).mtimeMs;
+    needsBuild = srcMtime > binMtime;
+  }
+  if (!needsBuild) {
+    try {
+      execSync(`./lahc_solver_bin --version`, { cwd: puzzleDir, stdio: 'pipe', timeout: 5000 });
+    } catch (e: unknown) {
+      const msg = String((e as { stderr?: Buffer })?.stderr ?? e);
+      if (msg.includes('GLIBC') || msg.includes('GLIBCXX') || msg.includes('not found')) {
+        console.log('Binary incompatible with this system, recompiling...');
+        needsBuild = true;
+      }
+    }
+  }
+
+  if (needsBuild) {
+    console.log('Compiling lahc_solver.cpp...');
+    execSync(`g++ -O2 -march=native -pthread -o lahc_solver_bin lahc_solver.cpp`, {
+      cwd: puzzleDir,
+      stdio: 'inherit',
+    });
+    console.log('Compilation done.');
+  }
+}
+
+/**
  * Run solver via files: write level.txt + level_password.txt, execute, read solution.txt.
  * This is how the LAHC solver works.
  */
@@ -75,7 +132,7 @@ function runFileSolver(solverCmd: string, puzzleDir: string, state: LevelState):
   try {
     execSync(solverCmd, {
       cwd: puzzleDir,
-      timeout: 1_200_000,
+      timeout: LAHC_PROCESS_TIMEOUT,
       stdio: ['pipe', 'pipe', 'pipe'],
     });
   } catch (e: unknown) {
@@ -159,19 +216,33 @@ async function main(): Promise<void> {
     console.log('Usage: npm run script:submit-optim -- <puzzle-id> <solver-cmd>');
     console.log('');
     console.log('Examples:');
+    console.log('  npm run script:submit-optim -- number-shifting ./lahc_solver_bin');
+    console.log('    → auto-appends LAHC defaults: 10 threads, 120s timeout, tuned params');
     console.log('  npm run script:submit-optim -- number-shifting "./lahc_solver_bin 4 30 3200 50000 0 2000 40000 100 40 3"');
+    console.log('    → uses explicit params as-is');
     console.log('  npm run script:submit-optim -- number-shifting ./solver_bin');
+    console.log('    → stdin/stdout mode (no LAHC defaults)');
     process.exit(1);
   }
 
   const [puzzleId, ...solverParts] = args;
-  const solverCmd = solverParts.join(' ');
+  let solverCmd = solverParts.join(' ');
   const puzzleDir = join('src/05-optim', puzzleId);
   const stateFile = join(puzzleDir, 'solver-state.json');
   const logFile = join(puzzleDir, 'solve-log.txt');
 
   // Detect solver mode: if solver writes to solution.txt, use file mode
   const useFileMode = solverCmd.includes('lahc_solver');
+
+  // Auto-compile if needed
+  if (useFileMode) ensureLahcBinary(puzzleDir);
+
+  // Append default LAHC parameters if the command is just the binary (no extra args)
+  if (useFileMode && solverParts.length === 1) {
+    const d = LAHC_DEFAULTS;
+    solverCmd = `${solverCmd} ${d.threads} ${d.improvementTimeout} ${d.sizeLfa} ${d.kA} ${d.kB} ${d.kC} ${d.kD} ${d.canIncreaseTime} ${d.canIncreaseLfa} ${d.allowGlobalBest}`;
+    console.log(`Using LAHC defaults: ${d.threads} threads, ${d.improvementTimeout}s timeout, LFA=${d.sizeLfa}`);
+  }
 
   const cg = getClient();
   const handle = await cg.createTestSession(puzzleId);
