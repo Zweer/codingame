@@ -1,8 +1,10 @@
 let () =
-  let l = Scanf.scanf " %d" Fun.id in
-  let h = Scanf.scanf " %d " Fun.id in
+  let l = int_of_string (String.trim (input_line stdin)) in
+  let h = int_of_string (String.trim (input_line stdin)) in
   let t = String.uppercase_ascii (input_line stdin) in
-  let rows = Array.init h (fun _ -> input_line stdin) in
+  let need = 27 * l in
+  let pad s = if String.length s >= need then s else s ^ String.make (need - String.length s) ' ' in
+  let rows = Array.init h (fun _ -> pad (input_line stdin)) in
   for i = 0 to h - 1 do
     String.iter (fun c ->
       let idx = Char.code c - 65 in

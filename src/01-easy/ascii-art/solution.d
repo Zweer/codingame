@@ -1,8 +1,9 @@
-import std.stdio, std.string, std.conv, std.uni;
+import std.stdio, std.string, std.conv, std.uni, std.array;
 void main(){
     int L=readln.strip.to!int, H=readln.strip.to!int;
     string T=readln.strip.toUpper;
-    string[] rows;foreach(_; 0..H)rows~=readln.stripRight;
+    int need=27*L;
+    string[] rows;foreach(_; 0..H){auto r=readln.stripRight;while(r.length<need)r~=' ';rows~=r;}
     foreach(i; 0..H){
         string line;
         foreach(c; T){
