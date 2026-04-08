@@ -1,20 +1,15 @@
 /**
  * submit-puzzle.ts — Submit a solution to any CG puzzle.
  *
- * Reads the source file and submits it to CG for validation.
- * This is the equivalent of pasting code in the IDE and clicking "Submit".
+ * Submits code for full validation (all validators), equivalent to clicking "Submit" in the IDE.
+ * Use --test-only to just run a single test case without submitting.
  *
  * Usage:
- *   npx tsx scripts/submit-puzzle.ts <puzzle-pretty-id> <source-file> [language]
+ *   npx tsx scripts/submit-puzzle.ts <puzzle-pretty-id> <source-file> [language] [--test-only]
  *
  * Examples:
- *   npx tsx scripts/submit-puzzle.ts temperatures src/01-easy/temperatures/index.ts TypeScript
- *   npx tsx scripts/submit-puzzle.ts the-descent src/01-easy/the-descent/main.rs Rust
- *
- * Language is auto-detected from file extension if not specified.
- *
- * Environment:
- *   REMEMBER_ME — CG rememberMe cookie (from .env)
+ *   npx tsx scripts/submit-puzzle.ts temperatures src/01-easy/temperatures/solution.py
+ *   npx tsx scripts/submit-puzzle.ts the-descent src/01-easy/the-descent/solution.rs --test-only
  */
 
 import { readFileSync } from 'node:fs';
@@ -74,10 +69,18 @@ function getClient(): CodinGame {
   return cg;
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
 async function main(): Promise<void> {
-  const args = process.argv.slice(2);
+  const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  const testOnly = process.argv.includes('--test-only');
+
   if (args.length < 2) {
-    console.log('Usage: npx tsx scripts/submit-puzzle.ts <puzzle-id> <source-file> [language]');
+    console.log(
+      'Usage: npx tsx scripts/submit-puzzle.ts <puzzle-id> <source-file> [language] [--test-only]',
+    );
     process.exit(1);
   }
 
@@ -89,31 +92,58 @@ async function main(): Promise<void> {
   console.log(`File:     ${sourceFile}`);
   console.log(`Language: ${language}`);
   console.log(`Code:     ${code.length} chars`);
+  console.log(`Mode:     ${testOnly ? 'TEST ONLY' : 'SUBMIT'}`);
 
   const cg = getClient();
   const handle = await cg.createTestSession(puzzleId);
-  console.log(`Session:  ${handle}`);
+  console.log(`Session:  ${handle}\n`);
 
-  // Submit to all test cases
-  console.log('\nRunning tests...');
-  const result = await cg.play(handle, code, language);
-
-  console.log(`Game ID:  ${result.gameId}`);
-  console.log(`Replay:   https://www.codingame.com/replay/${result.gameId}`);
-
-  // Check result
-  if (result.metadata?.score !== undefined) {
-    console.log(`Score:    ${result.metadata.score}`);
+  if (testOnly) {
+    console.log('Running test case 1...');
+    const result = await cg.play(handle, code, language);
+    console.log(`Game ID:  ${result.gameId}`);
+    for (const frame of result.frames) {
+      const f = frame as Record<string, string>;
+      if (f.stderr) console.log(`stderr: ${f.stderr.slice(0, 500)}`);
+      if (f.gameInformation?.includes('Error')) console.log(`Error: ${f.gameInformation}`);
+    }
+    console.log('\nDone (test only).');
+    return;
   }
 
-  // Print any errors from frames
-  for (const frame of result.frames) {
-    const f = frame as Record<string, string>;
-    if (f.stderr) console.log(`stderr: ${f.stderr.slice(0, 200)}`);
-    if (f.gameInformation?.includes('Error')) console.log(`Error: ${f.gameInformation}`);
+  // Real submit
+  console.log('Submitting for full validation...');
+  const submissionId = await cg.submit(handle, code, language);
+  console.log(`Submission ID: ${submissionId}`);
+
+  // Poll for report
+  console.log('Waiting for results...');
+  for (let attempt = 0; attempt < 30; attempt++) {
+    await sleep(2000);
+    try {
+      const report = await cg.findReportBySubmission(submissionId);
+      const total = report.validators?.length ?? 0;
+      const passed = report.validators?.filter((v) => v.success).length ?? 0;
+
+      console.log(`\nScore: ${report.score}% (${passed}/${total} validators)`);
+      if (report.validators) {
+        for (const v of report.validators) {
+          console.log(`  ${v.success ? '✅' : '❌'} ${v.name}`);
+        }
+      }
+
+      if (report.score === 100) {
+        console.log('\n🎉 100% — Puzzle solved!');
+      } else {
+        console.log(`\n⚠️  ${report.score}% — Some validators failed.`);
+      }
+      return;
+    } catch {
+      process.stdout.write('.');
+    }
   }
 
-  console.log('\nDone!');
+  console.log('\nTimeout waiting for report. Check on codingame.com.');
 }
 
 void main();
