@@ -2,7 +2,11 @@
  * submit-all-langs.ts — Submit a puzzle solution in all 27 languages.
  *
  * Usage:
- *   npm run script:submit-all-langs -- <puzzle-pretty-id> [--delay=120]
+ *   npm run script:submit-all-langs -- <puzzle-pretty-id> [--delay=120] [--target=15]
+ *   npm run script:submit-all-langs -- [--delay=120] [--target=15]
+ *
+ * When no puzzle is specified, auto-discovers all puzzles that have 27 local
+ * solution.* files and submits the missing languages for each.
  */
 
 import { readdirSync, readFileSync } from 'node:fs';
@@ -161,30 +165,8 @@ async function submitOne(
   return null;
 }
 
-async function main(): Promise<void> {
-  const flags = process.argv.slice(2);
-  const args = flags.filter((a) => !a.startsWith('--'));
-  const delayArg = flags.find((a) => a.startsWith('--delay='));
-  const delaySec = delayArg ? Number.parseInt(delayArg.split('=')[1], 10) : 120;
-  const targetArg = flags.find((a) => a.startsWith('--target='));
-  const target = targetArg ? Number.parseInt(targetArg.split('=')[1], 10) : 0;
-
-  if (args.length < 1) {
-    console.log(
-      'Usage: npm run script:submit-all-langs -- <puzzle-pretty-id> [--delay=120] [--target=15]',
-    );
-    process.exit(1);
-  }
-
-  const prettyId = args[0];
-  const dir = findPuzzleDir(prettyId);
-  const cg = getClient();
-
-  console.log(`\n🎯 Puzzle: ${prettyId}`);
-  console.log(`📁 Dir:    ${dir}`);
-  console.log(`⏱️  Delay:   ${delaySec}s between submissions\n`);
-
-  // Discover local solution files
+/** Find local solution files for a puzzle directory. */
+function getLocalSolutions(dir: string): Map<string, string> {
   const localFiles = new Map<string, string>();
   for (const [ext, lang] of Object.entries(EXT_TO_LANG)) {
     const file = join(dir, `solution${ext}`);
@@ -195,46 +177,80 @@ async function main(): Promise<void> {
       /* no file */
     }
   }
+  return localFiles;
+}
 
+/** Discover all puzzle dirs under src/ that have all 27 solution.* files. */
+function discoverReadyPuzzles(): Array<{ prettyId: string; dir: string }> {
+  const srcDir = join(__dirname, '..', 'src');
+  const results: Array<{ prettyId: string; dir: string }> = [];
+  for (const level of readdirSync(srcDir).sort()) {
+    const levelDir = join(srcDir, level);
+    try {
+      for (const puzzle of readdirSync(levelDir).sort()) {
+        const dir = join(levelDir, puzzle);
+        const solutions = getLocalSolutions(dir);
+        if (solutions.size === TOTAL_LANGS) {
+          results.push({ prettyId: puzzle, dir });
+        }
+      }
+    } catch {
+      /* not a directory */
+    }
+  }
+  return results;
+}
+
+/** Fetch skip languages set based on target. */
+async function fetchSkipLangs(cg: CodinGame, target: number): Promise<Set<string>> {
+  if (target <= 0) return new Set();
+  console.log(`\n🎯 Target: ${target} puzzles per language`);
+  try {
+    const langCounts = await cg.countSolvedPuzzlesByProgrammingLanguage();
+    const atTarget = langCounts.filter((l) => l.puzzleCount >= target);
+    const needMore = langCounts.filter((l) => l.puzzleCount < target);
+    if (atTarget.length > 0) {
+      console.log(
+        `   ✅ Already at ${target}+: ${atTarget.map((l) => `${l.programmingLanguageId}(${l.puzzleCount})`).join(', ')}`,
+      );
+    }
+    if (needMore.length > 0) {
+      console.log(
+        `   📤 Need more: ${needMore.map((l) => `${l.programmingLanguageId}(${l.puzzleCount})`).join(', ')}`,
+      );
+    }
+    return new Set(atTarget.map((l) => l.programmingLanguageId));
+  } catch (err) {
+    console.log(`   ⚠️  Could not fetch language stats: ${shortError(err)}`);
+    return new Set();
+  }
+}
+
+/** Submit all missing languages for a single puzzle. Returns number of failures. */
+async function submitPuzzle(
+  cg: CodinGame,
+  prettyId: string,
+  dir: string,
+  delaySec: number,
+  skipLangs: Set<string>,
+): Promise<number> {
+  console.log(`\n${'─'.repeat(50)}`);
+  console.log(`🎯 Puzzle: ${prettyId}`);
+  console.log(`📁 Dir:    ${dir}`);
+
+  const localFiles = getLocalSolutions(dir);
   console.log(`📦 Local solutions: ${localFiles.size}/${TOTAL_LANGS}`);
   if (localFiles.size === 0) {
     console.log('No solution.* files found!');
-    process.exit(1);
+    return 0;
   }
 
-  // Check already submitted on CG
   const done = await fetchExistingSubmissions(cg, prettyId);
-
   console.log(`✅ Already at 100%: ${done.size}/${TOTAL_LANGS}`);
   if (done.size > 0) {
     console.log(`   ${[...done].sort().join(', ')}`);
   }
 
-  // Check language achievement progress — skip languages already at target
-  let skipLangs = new Set<string>();
-  if (target > 0) {
-    console.log(`\n🎯 Target: ${target} puzzles per language`);
-    try {
-      const langCounts = await cg.countSolvedPuzzlesByProgrammingLanguage();
-      const atTarget = langCounts.filter((l) => l.puzzleCount >= target);
-      const needMore = langCounts.filter((l) => l.puzzleCount < target);
-      skipLangs = new Set(atTarget.map((l) => l.programmingLanguageId));
-      if (atTarget.length > 0) {
-        console.log(
-          `   ✅ Already at ${target}+: ${atTarget.map((l) => `${l.programmingLanguageId}(${l.puzzleCount})`).join(', ')}`,
-        );
-      }
-      if (needMore.length > 0) {
-        console.log(
-          `   📤 Need more: ${needMore.map((l) => `${l.programmingLanguageId}(${l.puzzleCount})`).join(', ')}`,
-        );
-      }
-    } catch (err) {
-      console.log(`   ⚠️  Could not fetch language stats: ${shortError(err)}`);
-    }
-  }
-
-  // Build queue
   const queue = [...localFiles.entries()]
     .filter(([lang]) => !done.has(lang) && !skipLangs.has(lang))
     .sort((a, b) => a[0].localeCompare(b[0]));
@@ -244,13 +260,13 @@ async function main(): Promise<void> {
   );
   if (skipped.length > 0) {
     console.log(
-      `\n⏭️  Skipping ${skipped.length} languages already at target: ${skipped.map(([l]) => l).join(', ')}`,
+      `⏭️  Skipping ${skipped.length} languages already at target: ${skipped.map(([l]) => l).join(', ')}`,
     );
   }
 
   if (queue.length === 0) {
-    console.log(`\n🎉 All ${localFiles.size} languages already submitted at 100%!`);
-    return;
+    console.log(`🎉 All done for ${prettyId}!`);
+    return 0;
   }
 
   const missing = [...Object.values(EXT_TO_LANG)].filter((lang) => !localFiles.has(lang)).sort();
@@ -259,7 +275,7 @@ async function main(): Promise<void> {
   }
 
   const eta = queue.length * delaySec;
-  console.log(`\n📤 Submitting ${queue.length} languages (ETA ~${formatTime(eta)})\n`);
+  console.log(`📤 Submitting ${queue.length} languages (ETA ~${formatTime(eta)})\n`);
 
   let submitted = done.size;
   let failures = 0;
@@ -307,20 +323,65 @@ async function main(): Promise<void> {
       failures++;
     }
 
-    // Countdown before next submit
     if (i < queue.length - 1) {
       const remaining = queue.length - i - 1;
       await countdown(delaySec, `${submitted}/${TOTAL_LANGS} done, ${remaining} remaining`);
     }
   }
 
-  // Final summary
-  console.log(`\n${'═'.repeat(50)}`);
   console.log(
     `🏁 ${prettyId} — ${progressBar(submitted, TOTAL_LANGS)} ${submitted}/${TOTAL_LANGS}`,
   );
   if (failures > 0) console.log(`   ⚠️  ${failures} failure(s)`);
   if (submitted === TOTAL_LANGS) console.log('   🎉 All 27 languages completed!');
+  return failures;
+}
+
+async function main(): Promise<void> {
+  const flags = process.argv.slice(2);
+  const args = flags.filter((a) => !a.startsWith('--'));
+  const delayArg = flags.find((a) => a.startsWith('--delay='));
+  const delaySec = delayArg ? Number.parseInt(delayArg.split('=')[1], 10) : 120;
+  const targetArg = flags.find((a) => a.startsWith('--target='));
+  const target = targetArg ? Number.parseInt(targetArg.split('=')[1], 10) : 0;
+
+  const cg = getClient();
+
+  // Determine which puzzles to process
+  let puzzles: Array<{ prettyId: string; dir: string }>;
+  if (args.length >= 1) {
+    const prettyId = args[0];
+    puzzles = [{ prettyId, dir: findPuzzleDir(prettyId) }];
+  } else {
+    console.log('🔍 No puzzle specified — auto-discovering puzzles with all 27 solutions...\n');
+    puzzles = discoverReadyPuzzles();
+    if (puzzles.length === 0) {
+      console.log('No puzzles found with all 27 solution.* files.');
+      process.exit(1);
+    }
+    console.log(`Found ${puzzles.length} puzzles ready:`);
+    for (const p of puzzles) {
+      console.log(`   • ${p.prettyId}`);
+    }
+  }
+
+  console.log(`⏱️  Delay: ${delaySec}s between submissions`);
+
+  // Fetch skip languages once
+  const skipLangs = await fetchSkipLangs(cg, target);
+
+  let totalFailures = 0;
+  for (const { prettyId, dir } of puzzles) {
+    totalFailures += await submitPuzzle(cg, prettyId, dir, delaySec, skipLangs);
+  }
+
+  // Grand summary
+  if (puzzles.length > 1) {
+    console.log(`\n${'═'.repeat(50)}`);
+    console.log(`🏁 Processed ${puzzles.length} puzzles`);
+    if (totalFailures > 0) console.log(`   ⚠️  ${totalFailures} total failure(s)`);
+    else console.log('   🎉 All submissions successful!');
+  }
 }
 
 main().catch((err) => {
