@@ -194,3 +194,29 @@ export interface TestSessionResult {
   metadata: Record<string, unknown>;
   scores?: number[];
 }
+
+// ---------------------------------------------------------------------------
+// Submissions & Reports
+// ---------------------------------------------------------------------------
+
+export interface SubmissionReport {
+  submissionId: number;
+  score: number;
+  bestScore: number;
+  validators: SubmissionValidator[];
+  achievements: unknown[];
+}
+
+export interface SubmissionValidator {
+  name: string;
+  methodName: string;
+  success: boolean;
+  difficulty: number;
+}
+
+export interface SubmissionEntry {
+  testSessionQuestionSubmissionId: number;
+  programmingLanguageId: string;
+  score: number;
+  timeElapsed: number;
+}

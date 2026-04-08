@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-import type { Achievement } from '../types-achievements.js';
 import type {
   Challenge,
   CodinGamerPublicInfo,
@@ -10,8 +9,11 @@ import type {
   MiniPuzzle,
   PointsStats,
   Puzzle,
+  SubmissionEntry,
+  SubmissionReport,
   TestSessionResult,
 } from '../types.js';
+import type { Achievement } from '../types-achievements.js';
 
 export class CodinGame {
   static BASE_URL = 'https://www.codingame.com';
@@ -115,9 +117,7 @@ export class CodinGame {
   }
 
   /** Count of puzzles solved per programming language for a user. */
-  async countSolvedPuzzlesByProgrammingLanguage(
-    userId?: number,
-  ): Promise<LanguageSolveCount[]> {
+  async countSolvedPuzzlesByProgrammingLanguage(userId?: number): Promise<LanguageSolveCount[]> {
     const { data } = await this.request.post<LanguageSolveCount[]>(
       '/services/Puzzle/countSolvedPuzzlesByProgrammingLanguage',
       [userId ?? this.userId],
@@ -226,10 +226,10 @@ export class CodinGame {
 
   /** Fetch full replay data for a game by its ID (from share-replay URL). */
   async findReplayByGameId(gameId: string): Promise<GameReplay> {
-    const { data } = await this.request.post<GameReplay>(
-      '/services/gameResult/findByGameId',
-      [gameId, null],
-    );
+    const { data } = await this.request.post<GameReplay>('/services/gameResult/findByGameId', [
+      gameId,
+      null,
+    ]);
     return data;
   }
 
@@ -259,9 +259,43 @@ export class CodinGame {
     language: string,
     testIndex = 1,
   ): Promise<TestSessionResult> {
-    const { data } = await this.request.post<TestSessionResult>(
-      '/services/TestSession/play',
-      [handle, { code, programmingLanguageId: language, multipleLanguages: { testIndex } }],
+    const { data } = await this.request.post<TestSessionResult>('/services/TestSession/play', [
+      handle,
+      { code, programmingLanguageId: language, multipleLanguages: { testIndex } },
+    ]);
+    return data;
+  }
+
+  /**
+   * Submit code for full validation (all validators). This is the real "Submit" button.
+   * @param handle - Session handle from createTestSession
+   * @param code - Source code to submit
+   * @param language - Programming language ID (e.g. 'PHP', 'Rust', 'Python3')
+   * @returns The submission ID
+   */
+  async submit(handle: string, code: string, language: string): Promise<number> {
+    const { data } = await this.request.post<number>('/services/TestSession/submit', [
+      handle,
+      { code, programmingLanguageId: language },
+      null,
+    ]);
+    return data;
+  }
+
+  /** Get the validation report for a submission. */
+  async findReportBySubmission(submissionId: number): Promise<SubmissionReport> {
+    const { data } = await this.request.post<SubmissionReport>(
+      '/services/Report/findReportBySubmission',
+      [submissionId],
+    );
+    return data;
+  }
+
+  /** List all submissions for a test session handle. */
+  async findAllSubmissions(handle: string): Promise<SubmissionEntry[]> {
+    const { data } = await this.request.post<SubmissionEntry[]>(
+      '/services/TestSessionQuestionSubmission/findAllSubmissions',
+      [handle],
     );
     return data;
   }
