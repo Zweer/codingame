@@ -1,0 +1,7 @@
+#import <stdio.h>
+int ds(long n){int s=0;while(n>0){s+=n%10;n/=10;}return s;}
+int main(){
+    long r1,r2;scanf("%ld%ld",&r1,&r2);
+    while(r1!=r2){if(r1<r2)r1+=ds(r1);else r2+=ds(r2);}
+    printf("%ld\n",r1);
+}
