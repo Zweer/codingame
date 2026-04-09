@@ -7,10 +7,16 @@ let is_happy x =
   let rec go seen x = if x = 1 then true else if S.mem x seen then false else go (S.add x seen) (dss x) in
   go S.empty x
 
+let dsq_string s =
+  let r = ref 0 in
+  for i = 0 to String.length s - 1 do
+    let d = Char.code s.[i] - 48 in r := !r + d*d
+  done; !r
+
 let () =
   let n = int_of_string (input_line stdin) in
   for _ = 1 to n do
     let s = String.trim (input_line stdin) in
-    let x = String.fold_left (fun a c -> a + (Char.code c - 48) * (Char.code c - 48)) 0 s in
+    let x = dsq_string s in
     Printf.printf "%s %s\n" s (if is_happy x then ":)" else ":(")
   done

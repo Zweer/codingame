@@ -1,7 +1,10 @@
 let () =
-  let n = Scanf.scanf " %d" Fun.id in
-  let l = Scanf.scanf " %d " Fun.id in
-  let g = Array.init n (fun _ -> String.split_on_char ' ' (input_line stdin) |> Array.of_list) in
+  let n = int_of_string (String.trim (input_line stdin)) in
+  let l = int_of_string (String.trim (input_line stdin)) in
+  let g = Array.init n (fun _ ->
+    let line = String.trim (input_line stdin) in
+    let parts = String.split_on_char ' ' line in
+    Array.of_list parts) in
   let d = ref 0 in
   for r = 0 to n-1 do for c = 0 to n-1 do
     let lit = ref false in

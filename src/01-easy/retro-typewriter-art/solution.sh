@@ -1,9 +1,14 @@
 #!/bin/bash
-read -r line
+set -f
+IFS=' ' read -r line
 out=""
 for tok in $line; do
     l=${#tok}
-    l2="${tok:l-2:2}"
+    if [ "$l" -ge 2 ]; then
+        l2="${tok:l-2:2}"
+    else
+        l2=""
+    fi
     case "$l2" in
         sp) ch=" "; num="${tok:0:l-2}" ;;
         bS) ch='\\'; num="${tok:0:l-2}" ;;

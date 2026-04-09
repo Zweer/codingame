@@ -5,9 +5,16 @@ Module Solution
         Dim w = CInt(p(0)), h = CInt(p(1))
         Dim g(h-1) As String
         Dim d(h-1, w-1) As Integer
-        For i = 0 To h-1 : g(i) = Console.ReadLine() : For j = 0 To w-1 : d(i,j) = -1 : Next : Next
+        For i = 0 To h-1
+            g(i) = Console.ReadLine()
+            For j = 0 To w-1 : d(i,j) = -1 : Next
+        Next
         Dim sr = 0, sc = 0
-        For r = 0 To h-1 : For c = 0 To w-1 : If g(r)(c) = "S"c Then sr = r : sc = c : Next : Next
+        For r = 0 To h-1
+            For c2 = 0 To w-1
+                If g(r)(c2) = "S"c Then sr = r : sc = c2
+            Next
+        Next
         d(sr, sc) = 0
         Dim q As New Queue(Of Tuple(Of Integer, Integer))
         q.Enqueue(Tuple.Create(sr, sc))
