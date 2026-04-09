@@ -34,6 +34,7 @@
     "script:submit-all-langs": "node --import tsx --env-file-if-exists .env scripts/submit-all-langs.ts",
     "script:submit-golf": "node --import tsx --env-file-if-exists .env scripts/submit-golf.ts",
     "script:submit-optim": "node --import tsx --env-file-if-exists .env scripts/submit-optim.ts",
+    "script:grind-plays": "node --import tsx --env-file-if-exists .env scripts/grind-plays.ts",
     "script:all-solutions": "node --import tsx scripts/generate-all-solutions.ts"
   },
   "dependencies": {
