@@ -1,0 +1,1 @@
+class A{static void Main(){var s=System.Console.ReadLine().Split(' ');int a=int.Parse(s[0]),b=int.Parse(s[1]),x=int.Parse(s[2]),y=int.Parse(s[3]);for(;;){System.Console.ReadLine();var d="";if(y>b){d+="N";y--;}else if(y<b){d+="S";y++;}if(x>a){d+="W";x--;}else if(x<a){d+="E";x++;}System.Console.WriteLine(d);}}}

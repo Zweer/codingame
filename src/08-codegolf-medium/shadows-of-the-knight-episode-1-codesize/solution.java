@@ -1,0 +1,1 @@
+import java.util.*;class A{public static void main(String[]z){var s=new Scanner(System.in);int w=s.nextInt(),h=s.nextInt(),n=s.nextInt(),x=s.nextInt(),y=s.nextInt(),a=0,b=0,c=w-1,d=h-1;for(;;){var v=s.next();if(v.contains("U"))d=y-1;if(v.contains("D"))b=y+1;if(v.contains("L"))c=x-1;if(v.contains("R"))a=x+1;x=(a+c)/2;y=(b+d)/2;System.out.println(x+" "+y);}}}

@@ -1,0 +1,1 @@
+using System;using System.Collections.Generic;class A{static void Main(){int n=int.Parse(Console.ReadLine()),c=0;var t=new Dictionary<char,object>();for(;n-->0;){var p=t;foreach(var d in Console.ReadLine()){if(!p.ContainsKey(d)){p[d]=new Dictionary<char,object>();c++;}p=(Dictionary<char,object>)p[d];}}Console.Write(c);}}

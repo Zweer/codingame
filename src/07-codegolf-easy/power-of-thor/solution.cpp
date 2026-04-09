@@ -1,0 +1,2 @@
+#include<cstdio>
+char d[9];int main(){int a,b,x,y,e;scanf("%d%d%d%d",&a,&b,&x,&y);for(;;){scanf("%d",&e);int i=0;if(y>b){d[i++]='N';y--;}else if(y<b){d[i++]='S';y++;}if(x>a){d[i++]='W';x--;}else if(x<a){d[i++]='E';x++;}d[i]=0;puts(d);}}

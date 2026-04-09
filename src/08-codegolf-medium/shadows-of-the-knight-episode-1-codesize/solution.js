@@ -1,0 +1,1 @@
+[w,h]=readline().split` `.map(Number);readline();[x,y]=readline().split` `.map(Number);a=b=0;c=w-1;d=h-1;for(;;){s=readline();if(s.match`U`)d=y-1;if(s.match`D`)b=y+1;if(s.match`L`)c=x-1;if(s.match`R`)a=x+1;x=a+c>>1;y=b+d>>1;print(x+' '+y)}

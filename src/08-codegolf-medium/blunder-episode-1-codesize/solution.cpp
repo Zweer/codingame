@@ -1,0 +1,5 @@
+#include<iostream>
+#include<vector>
+#include<set>
+#include<string>
+using namespace std;int dr[]={1,0,-1,0},dc[]={0,1,0,-1};string nm[]={"SOUTH","EAST","NORTH","WEST"};char ds[]="SENW";int main(){int L,C;cin>>L>>C;cin.ignore();vector<string>G(L);int r,c;vector<pair<int,int>>T;for(int i=0;i<L;i++){getline(cin,G[i]);for(int j=0;j<C;j++){if(G[i][j]=='@'){r=i;c=j;}if(G[i][j]=='T')T.push_back({i,j});}}int d=0,b=0,v=0;vector<string>P;set<string>V;for(;;){string k=to_string(r)+","+to_string(c)+","+to_string(d)+","+to_string(b)+","+to_string(v);for(auto&s:G)k+=s;if(V.count(k)){cout<<"LOOP";return 0;}V.insert(k);char h=G[r][c];for(int i=0;i<4;i++)if(h==ds[i])d=i;if(h=='B')b^=1;if(h=='I')v^=1;if(h=='T')for(auto&[a,z]:T)if(a!=r||z!=c){r=a;c=z;break;}int p[]={0,1,2,3};if(v){p[0]=3;p[1]=2;p[2]=1;p[3]=0;}int nr=r+dr[d],nc=c+dc[d];char e=G[nr][nc];if(e=='#'||(e=='X'&&!b))for(int i=0;i<4;i++){int q=p[i];nr=r+dr[q];nc=c+dc[q];e=G[nr][nc];if(e!='#'&&(e!='X'||b)){d=q;break;}}r=nr;c=nc;P.push_back(nm[d]);if(G[r][c]=='X'&&b)G[r][c]=' ';if(G[r][c]=='$'){for(auto&s:P)cout<<s<<"\n";return 0;}}}

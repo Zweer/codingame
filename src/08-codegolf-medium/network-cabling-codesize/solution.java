@@ -1,0 +1,1 @@
+import java.util.*;class A{public static void main(String[]a){var s=new Scanner(System.in);int n=s.nextInt();long[]Y=new long[n];long mx=Long.MIN_VALUE,mn=Long.MAX_VALUE;for(int i=0;i<n;i++){long x=s.nextLong();Y[i]=s.nextLong();mx=Math.max(mx,x);mn=Math.min(mn,x);}Arrays.sort(Y);long r=mx-mn,m=Y[n/2];for(var y:Y)r+=Math.abs(y-m);System.out.println(r);}}

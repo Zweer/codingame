@@ -1,0 +1,1 @@
+class A{static void Main(){for(;;){int m=-1,x=0;for(int i=0;i<8;i++){int h=int.Parse(System.Console.ReadLine());if(h>m){m=h;x=i;}}System.Console.WriteLine(x);}}}

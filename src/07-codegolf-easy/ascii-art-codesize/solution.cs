@@ -1,0 +1,1 @@
+using System;class A{static void Main(){int l=int.Parse(Console.ReadLine()),h=int.Parse(Console.ReadLine());var t=Console.ReadLine().ToUpper();var r=new string[h];for(int i=0;i<h;i++)r[i]=Console.ReadLine();foreach(var x in r){var o="";foreach(var c in t){int p=(c>='A'&&c<='Z'?c-'A':26)*l;o+=x.Substring(p,l);}Console.WriteLine(o);}}}

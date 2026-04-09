@@ -1,0 +1,1 @@
+X=[];Y=[];for(i=readline();i--;){[x,y]=readline().split` `.map(Number);X.push(x);Y.push(y)}Y.sort((a,b)=>a-b);m=Y[Y.length>>1];print(Math.max(...X)-Math.min(...X)+Y.reduce((s,y)=>s+Math.abs(y-m),0))

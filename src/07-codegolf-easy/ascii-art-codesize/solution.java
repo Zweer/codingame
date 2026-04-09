@@ -1,0 +1,1 @@
+import java.util.*;class A{public static void main(String[]a){var s=new Scanner(System.in);int l=s.nextInt(),h=s.nextInt();s.nextLine();var t=s.nextLine().toUpperCase();var r=new String[h];for(int i=0;i<h;i++)r[i]=s.nextLine();for(var x:r){var o="";for(var c:t.toCharArray()){int p=(c>='A'&&c<='Z'?c-'A':26)*l;o+=x.substring(p,p+l);}System.out.println(o);}}}

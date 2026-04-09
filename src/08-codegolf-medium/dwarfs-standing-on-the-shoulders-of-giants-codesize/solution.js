@@ -1,0 +1,1 @@
+g={};m={};P=new Set;for(i=readline();i--;){[a,b]=readline().split` `;(g[a]=g[a]||[]).push(b);P.add(a);P.add(b)}f=u=>m[u]||(m[u]=1+Math.max(0,...(g[u]||[]).map(f)));print(Math.max(...[...P].map(f)))

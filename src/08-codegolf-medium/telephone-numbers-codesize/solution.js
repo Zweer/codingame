@@ -1,0 +1,1 @@
+t={};c=0;for(i=readline();i--;){n=t;for(d of readline())n=n[d]||(c++,n[d]={})}print(c)

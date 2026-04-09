@@ -1,0 +1,1 @@
+using System;using System.Linq;class A{static void Main(){Console.ReadLine();var l=Console.ReadLine().Split(' ').Where(x=>x!="").Select(int.Parse).ToArray();Console.Write(l.Length<1?0:l.OrderBy(x=>x*x*2-x).First());}}

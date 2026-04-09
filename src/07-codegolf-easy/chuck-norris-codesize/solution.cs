@@ -1,0 +1,1 @@
+using System;using System.Text.RegularExpressions;class A{static void Main(){var b="";foreach(var c in Console.ReadLine())b+=Convert.ToString(c,2).PadLeft(7,'0');var r="";foreach(Match m in Regex.Matches(b,"1+|0+"))r+=(r.Length>0?" ":"")+(m.Value[0]=='1'?"0":"00")+" "+new string('0',m.Length);Console.Write(r);}}

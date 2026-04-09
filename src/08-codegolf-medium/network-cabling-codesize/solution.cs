@@ -1,0 +1,1 @@
+using System;using System.Linq;class A{static void Main(){int n=int.Parse(Console.ReadLine());long[]X=new long[n],Y=new long[n];for(int i=0;i<n;i++){var p=Console.ReadLine().Split(' ');X[i]=long.Parse(p[0]);Y[i]=long.Parse(p[1]);}Array.Sort(Y);long m=Y[n/2];Console.Write(X.Max()-X.Min()+Y.Sum(y=>Math.Abs(y-m)));}}
