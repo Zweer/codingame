@@ -44,14 +44,23 @@ async function main(): Promise<void> {
   let handle = await cg.createTestSession(PUZZLE);
   let done = 0;
   let errors = 0;
+  const startTime = Date.now();
+  const spinner = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
   for (let i = 0; i < remaining; i++) {
     try {
       await cg.play(handle, CODE, LANG);
       done++;
-      if (done % 10 === 0 || done === remaining) {
-        process.stdout.write(`\r  ✅ ${current + done}/${target} (${done}/${remaining} this session)`);
-      }
+      const elapsed = (Date.now() - startTime) / 1000;
+      const rate = done / elapsed;
+      const etaSec = Math.round((remaining - done) / rate);
+      const etaMin = Math.floor(etaSec / 60);
+      const etaS = etaSec % 60;
+      const pct = ((current + done) / target * 100).toFixed(1);
+      const spin = spinner[done % spinner.length];
+      process.stdout.write(
+        `\r  ${spin} ${current + done}/${target} (${pct}%) | ${done}/${remaining} this session | ${rate.toFixed(1)}/s | ETA ${etaMin}m${String(etaS).padStart(2, '0')}s   `
+      );
     } catch (err: unknown) {
       const msg = String(err);
       errors++;
