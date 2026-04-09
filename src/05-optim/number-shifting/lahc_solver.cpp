@@ -120,7 +120,7 @@ struct LAHC_Node; //Lists of Strategies + current Grid+remainingNumbers bitset+s
 				  //I adjust these constants on each level to  W,H and COUNT_NUMBERS+1, and I recompile aftewards. This improves speed on low levels
 const int MAX_W = 46;
 const int MAX_H = 26;
-const int MAX_NUMBERS = 666;
+const int MAX_NUMBERS = 1200;
 
 
 //I had two pseudo-random number generators, that switch from one to another
