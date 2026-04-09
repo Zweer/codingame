@@ -32,6 +32,7 @@ import { join } from 'node:path';
 import process from 'node:process';
 
 import { CodinGame } from './libs/codingame.js';
+import type { TestSessionResult } from './types.js';
 
 const LAHC_DEFAULTS = {
   threads: Math.max(1, availableParallelism() - 2),
@@ -245,7 +246,7 @@ async function main(): Promise<void> {
   }
 
   const cg = getClient();
-  const handle = await cg.createTestSession(puzzleId);
+  let handle = await cg.createTestSession(puzzleId);
   console.log(`Session: ${handle}`);
   console.log(`Solver: ${solverCmd} (${useFileMode ? 'file' : 'stdio'} mode)`);
 
@@ -310,8 +311,26 @@ fn main(){
     const { code: submitCode, lang: submitLang } = generateSubmitCode(state.password, solution, h);
     console.log('Submitting...');
 
+    let result: TestSessionResult | null = null;
+    for (let submitAttempt = 0; submitAttempt < 3; submitAttempt++) {
+      try {
+        result = await cg.play(handle, submitCode, submitLang);
+        break;
+      } catch (playErr: unknown) {
+        const msg = String(playErr);
+        console.error(`Play error (attempt ${submitAttempt + 1}/3): ${msg.slice(0, 120)}`);
+        if (msg.includes('EPIPE') || msg.includes('ECONNRESET') || msg.includes('socket')) {
+          console.log('Recreating session...');
+          handle = await cg.createTestSession(puzzleId);
+          await new Promise((r) => setTimeout(r, 3000));
+        } else {
+          throw playErr;
+        }
+      }
+    }
+    if (!result) { console.log('Submit failed after retries.'); continue; }
+
     try {
-      const result = await cg.play(handle, submitCode, submitLang);
       console.log(`Replay: https://www.codingame.com/replay/${result.gameId}`);
 
       const next = extractNextLevel(result);
