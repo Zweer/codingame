@@ -11,7 +11,7 @@ for tok in $line; do
     fi
     case "$l2" in
         sp) ch=" "; num="${tok:0:l-2}" ;;
-        bS) ch='\\'; num="${tok:0:l-2}" ;;
+        bS) ch=$'\\'; num="${tok:0:l-2}" ;;
         sQ) ch="'"; num="${tok:0:l-2}" ;;
         nl) ch=$'\n'; num="${tok:0:l-2}" ;;
         *) ch="${tok:l-1:1}"; num="${tok:0:l-1}" ;;
