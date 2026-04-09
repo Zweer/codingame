@@ -1,0 +1,4 @@
+#include<cstdio>
+#include<cmath>
+#include<cfloat>
+using namespace std;int N;double A[1001],T[1001];typedef double(*fn)(double);double f0(double n){return 1;}double f1(double n){return log(n);}double f2(double n){return n;}double f3(double n){return n*log(n);}double f4(double n){return n*n;}double f5(double n){return n*n*log(n);}double f6(double n){return n*n*n;}double f7(double n){return pow(2,n);}int main(){scanf("%d",&N);for(int i=0;i<N;i++)scanf("%lf%lf",&A[i],&T[i]);const char*nm[]={"O(1)","O(log n)","O(n)","O(n log n)","O(n^2)","O(n^2 log n)","O(n^3)","O(2^n)"};fn fs[]={f0,f1,f2,f3,f4,f5,f6,f7};double be=DBL_MAX;int bi=0;for(int k=0;k<8;k++){double xy=0,x2=0;int ok=1;for(int i=0;i<N;i++){double v=fs[k](A[i]);if(!isfinite(v)){ok=0;break;}xy+=T[i]*v;x2+=v*v;}if(!ok||x2==0)continue;double c=xy/x2,e=0;for(int i=0;i<N;i++){double v=fs[k](A[i]),d=T[i]-c*v;e+=d*d;}if(e<be){be=e;bi=k;}}puts(nm[bi]);}

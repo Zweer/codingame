@@ -1,0 +1,4 @@
+#include<cstdio>
+#include<queue>
+#include<cstring>
+using namespace std;char G[1001][1001];int I[1001][1001],S[1000001],W,H,n;int dx[]={1,-1,0,0},dy[]={0,0,1,-1};void f(int r,int c){n++;queue<pair<int,int>>q;q.push({r,c});I[r][c]=n;int a=0;while(!q.empty()){auto[y,x]=q.front();q.pop();a++;for(int i=0;i<4;i++){int ny=y+dy[i],nx=x+dx[i];if(ny>=0&&ny<H&&nx>=0&&nx<W&&I[ny][nx]<0&&G[ny][nx]=='O'){I[ny][nx]=n;q.push({ny,nx});}}}S[n]=a;}int main(){scanf("%d%d",&W,&H);for(int i=0;i<H;i++)scanf("%s",G[i]);memset(I,-1,sizeof I);int q;scanf("%d",&q);while(q--){int x,y;scanf("%d%d",&x,&y);if(G[y][x]!='O')puts("0");else{if(I[y][x]<0)f(y,x);printf("%d\n",S[I[y][x]]);}}}

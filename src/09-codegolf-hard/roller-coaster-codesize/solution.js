@@ -1,0 +1,1 @@
+[L,C,N]=readline().split` `.map(Number);g=[];for(i=0;i<N;i++)g.push(+readline());t=r=h=0;m={};while(r<C){if(h in m){[pr,pt]=m[h];cl=r-pr;ce=t-pt;q=(C-r)/cl|0;t+=q*ce;r+=q*cl;break}m[h]=[r,t];c=L;e=0;j=h;for(i=0;i<N&&g[j]<=c;i++)c-=g[j],e+=g[j],j=(j+1)%N;t+=e;r++;h=j}while(r<C){c=L;e=0;j=h;for(i=0;i<N&&g[j]<=c;i++)c-=g[j],e+=g[j],j=(j+1)%N;t+=e;r++;h=j}print(t)

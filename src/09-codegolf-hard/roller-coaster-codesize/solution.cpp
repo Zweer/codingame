@@ -1,0 +1,3 @@
+#include<cstdio>
+#include<map>
+using namespace std;int g[1001];int main(){int L,C,N;scanf("%d%d%d",&L,&C,&N);for(int i=0;i<N;i++)scanf("%d",&g[i]);long long t=0;int r=0,h=0;map<int,pair<int,long long>>m;while(r<C){if(m.count(h)){auto[pr,pt]=m[h];int cl=r-pr;long long ce=t-pt;long long q=(C-r)/cl;t+=q*ce;r+=q*cl;break;}m[h]={r,t};int c=L,j=h;long long e=0;for(int i=0;i<N&&g[j]<=c;i++){c-=g[j];e+=g[j];j=(j+1)%N;}t+=e;r++;h=j;}while(r<C){int c=L,j=h;long long e=0;for(int i=0;i<N&&g[j]<=c;i++){c-=g[j];e+=g[j];j=(j+1)%N;}t+=e;r++;h=j;}printf("%lld",t);}

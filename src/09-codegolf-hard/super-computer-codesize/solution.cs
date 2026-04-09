@@ -1,0 +1,1 @@
+using System;using System.Linq;class A{static void Main(){int n=int.Parse(Console.ReadLine());var t=new int[n][];for(int i=0;i<n;i++){var p=Console.ReadLine().Split(' ');int j=int.Parse(p[0]),d=int.Parse(p[1]);t[i]=new[]{j+d-1,j};}Array.Sort(t,(a,b)=>a[0]-b[0]);int c=0,e=-1;foreach(var v in t)if(v[1]>e){c++;e=v[0];}Console.Write(c);}}

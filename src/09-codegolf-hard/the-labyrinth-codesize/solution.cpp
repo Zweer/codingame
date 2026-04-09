@@ -1,0 +1,5 @@
+#include<cstdio>
+#include<queue>
+#include<map>
+#include<string>
+using namespace std;int R,C,A,px,py,wb,ex;char G[99][99];pair<int,int>st={-1,-1};int dx[]={1,-1,0,0},dy[]={0,0,1,-1};const char*dn[]={"RIGHT","LEFT","DOWN","UP"};map<int,int>bfs(char goal,string avoid,int&tx,int&ty){queue<pair<int,int>>q;map<int,int>cf,vis;q.push({px,py});vis[py*C+px]=1;while(!q.empty()){auto[x,y]=q.front();q.pop();for(int i=0;i<4;i++){int nx=x+dx[i],ny=y+dy[i];int k=ny*C+nx;if(nx>=0&&nx<C&&ny>=0&&ny<R&&!vis[k]&&avoid.find(G[ny][nx])==string::npos){vis[k]=1;cf[k]=y*C+x;q.push({nx,ny});if(G[ny][nx]==goal){tx=nx;ty=ny;return cf;}}}}tx=ty=-1;return{};}int main(){scanf("%d%d%d",&R,&C,&A);for(;;){scanf("%d%d",&py,&px);if(st.first<0)st={px,py};for(int y=0;y<R;y++){scanf("%s",G[y]);for(int x=0;x<C;x++){if(G[y][x]=='C'&&x==px&&y==py)wb=1;}}int tx,ty;auto cf=map<int,int>();if(!ex){cf=bfs('?',"#C",tx,ty);if(tx<0)ex=1;}if(ex){if(!wb)cf=bfs('C',"#",tx,ty);else cf=bfs('T',"#",tx,ty);}int cx=tx,cy=ty;while(cf.count(cy*C+cx)){int p=cf[cy*C+cx];int nx2=p%C,ny2=p/C;if(nx2==px&&ny2==py)break;cx=nx2;cy=ny2;}for(int i=0;i<4;i++)if(px+dx[i]==cx&&py+dy[i]==cy){puts(dn[i]);break;}}}

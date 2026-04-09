@@ -1,0 +1,1 @@
+t=[];for(i=readline();i--;){[j,d]=readline().split` `.map(Number);t.push([j+d-1,j])}t.sort((a,b)=>a[0]-b[0]);c=0;e=-1;for([a,b]of t)if(b>e)c++,e=a;print(c)
