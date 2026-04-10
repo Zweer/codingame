@@ -8,7 +8,7 @@ def R():
  s=int(input());L=[input()for _ in[0]*s];v=0
  for i in range(s//h):v=v*20+M["\n".join(L[i*h:i*h+h])]
  return v
-a=R();b=R();o=input();r=eval(f"{a}{o}{b}")
+a=R();b=R();o=input().replace('/','//');r=eval(f"{a}{o}{b}")
 if r==0:print("\n".join(G[0]))
 else:
  d=[]

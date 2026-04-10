@@ -1,1 +1,1 @@
-import java.util.*;class A{public static void main(String[]a){var s=new Scanner(System.in);for(;;){int m=-1,x=0;for(int i=0;i<8;i++){int h=s.nextInt();if(h>m){m=h;x=i;}}System.out.println(x);}}}
+import java.util.*;class Player{public static void main(String[]a){var s=new Scanner(System.in);for(;;){int m=-1,x=0;for(int i=0;i<8;i++){int h=s.nextInt();if(h>m){m=h;x=i;}}System.out.println(x);}}}
