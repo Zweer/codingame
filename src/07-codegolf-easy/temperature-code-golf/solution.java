@@ -1,1 +1,1 @@
-import java.util.*;class Player{public static void main(String[]a){var s=new Scanner(System.in);int n=s.nextInt(),r=0;for(int i=0;i<n;i++){int t=s.nextInt();if(i<1||t*t*2-t<r*r*2-r)r=t;}System.out.println(r);}}
+import java.util.*;class Solution{public static void main(String[]a){var s=new Scanner(System.in);int n=s.nextInt(),r=0;for(int i=0;i<n;i++){int t=s.nextInt();if(i<1||t*t*2-t<r*r*2-r)r=t;}System.out.println(r);}}
