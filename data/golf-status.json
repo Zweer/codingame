@@ -1,0 +1,163 @@
+{
+  "puzzles": {
+    "ascii-art-codesize": [
+      "Java",
+      "C++",
+      "C#",
+      "Javascript",
+      "Python3",
+      "Perl"
+    ],
+    "chuck-norris-codesize": [
+      "Java",
+      "C++",
+      "C#",
+      "Javascript",
+      "Python3",
+      "Perl"
+    ],
+    "don't-panic": [
+      "C++",
+      "C#",
+      "Java",
+      "Javascript",
+      "Python3",
+      "TypeScript"
+    ],
+    "power-of-thor": [
+      "C++",
+      "C#",
+      "Java",
+      "Javascript",
+      "Python3",
+      "Perl",
+      "TypeScript"
+    ],
+    "temperature-code-golf": [
+      "Java",
+      "C++",
+      "C#",
+      "Javascript",
+      "Python3",
+      "Perl"
+    ],
+    "the-descent-codesize": [
+      "C++",
+      "C#",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "blunder-episode-1-codesize": [
+      "C++",
+      "Javascript",
+      "Python3",
+      "C#",
+      "Java"
+    ],
+    "dwarfs-standing-on-the-shoulders-of-giants-codesize": [
+      "Java",
+      "Python3",
+      "Javascript",
+      "C++",
+      "C#",
+      "Perl"
+    ],
+    "mayan-calculation-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "network-cabling-codesize": [
+      "Java",
+      "Python3",
+      "Javascript",
+      "C++",
+      "C#",
+      "Perl"
+    ],
+    "shadows-of-the-knight-episode-1-codesize": [
+      "Java",
+      "Python3",
+      "Javascript",
+      "C++",
+      "C#",
+      "Perl"
+    ],
+    "telephone-numbers-codesize": [
+      "Java",
+      "Python3",
+      "Javascript",
+      "C++",
+      "C#",
+      "Perl"
+    ],
+    "blunder-episode-3-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "genome-sequencing-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Python3",
+      "Javascript"
+    ],
+    "roller-coaster-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "super-computer-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "surface-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "the-bridge-episode-2-codesize": [
+      "C++",
+      "Javascript",
+      "C#"
+    ],
+    "the-labyrinth-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript"
+    ],
+    "shadows-of-the-knight-episode-2-codesize": [
+      "C#",
+      "C++",
+      "Javascript",
+      "Python3"
+    ],
+    "the-resistance-codesize": [
+      "C#",
+      "C++",
+      "Java",
+      "Javascript",
+      "Python3"
+    ],
+    "music-scores-codesize": [
+      "C++",
+      "Javascript",
+      "Python3",
+      "C#"
+    ]
+  }
+}
