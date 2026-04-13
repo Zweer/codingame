@@ -2,16 +2,13 @@ import sys
 from collections import deque
 input=sys.stdin.readline
 R,C,A=map(int,input().split())
-wb=0;exp=0;st=None
+wb=0;exp=0
 while 1:
  py,px=map(int,input().split())
- if not st:st=(px,py)
  G=[]
- cp=None
  for y in range(R):
   row=input().strip();G.append(row)
   for x in range(len(row)):
-   if row[x]=='C':cp=(x,y)
    if row[x]=='C'and x==px and y==py:wb=1
  def bfs(goal,avoid):
   q=deque([(px,py)]);vis={(px,py)};cf={}
@@ -25,13 +22,14 @@ while 1:
   return None,None
  cf=t=None
  if not exp:
-  cf,t=bfs('?','#C')
+  cf,t=bfs('?','#')
   if not cf:exp=1
  if exp:
   if not wb:cf,t=bfs('C','#')
   else:cf,t=bfs('T','#')
  p=[]
- while t in cf:p.append(t);t=cf[t]
+ if cf:
+  while t in cf:p.append(t);t=cf[t]
  nx,ny=p[-1]if p else(px,py)
  if nx>px:print("RIGHT")
  elif nx<px:print("LEFT")
