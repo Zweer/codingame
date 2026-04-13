@@ -1,1 +1,26 @@
-RM={0:{},1:{TOP:'BOTTOM',LEFT:'BOTTOM',RIGHT:'BOTTOM'},2:{TOP:'RIGHT',RIGHT:'BOTTOM'},3:{TOP:'LEFT',LEFT:'BOTTOM'},4:{TOP:'LEFT',LEFT:'BOTTOM'},5:{TOP:'RIGHT',RIGHT:'BOTTOM'},6:{TOP:'RIGHT',LEFT:'BOTTOM'},7:{TOP:'LEFT',RIGHT:'BOTTOM'},8:{LEFT:'BOTTOM',RIGHT:'TOP'},9:{RIGHT:'BOTTOM',LEFT:'TOP'},10:{LEFT:'RIGHT',RIGHT:'LEFT'},11:{TOP:'BOTTOM',BOTTOM:'TOP'},12:{TOP:'RIGHT',RIGHT:'TOP',LEFT:'BOTTOM',BOTTOM:'LEFT'},13:{TOP:'LEFT',LEFT:'TOP',RIGHT:'BOTTOM',BOTTOM:'RIGHT'}};DX={TOP:0,BOTTOM:0,LEFT:-1,RIGHT:1};DY={TOP:-1,BOTTOM:1,LEFT:0,RIGHT:0};OPP={TOP:'BOTTOM',BOTTOM:'TOP',LEFT:'RIGHT',RIGHT:'LEFT'};CW={TOP:'RIGHT',RIGHT:'BOTTOM',BOTTOM:'LEFT',LEFT:'TOP'};function rotR(rm){var r={};for(var e in rm)r[CW[e]]=CW[rm[e]];return r}[W,H]=readline().split` `.map(Number);T=[];LK=[];rooms=[];for(y=0;y<H;y++){r=readline().split` `.map(Number);T.push(r.map(v=>Math.abs(v)));LK.push(r.map(v=>v<0));rooms.push(r.map(v=>{var t=Math.abs(v);return Object.assign({},RM[t]||{})}))}EX=+readline();rots={};function gt(x,y){return rots[x+','+y]||rooms[y][x]}function getRots(o){var r=[Object.assign({},o)];for(i=0;i<3;i++)r.push(rotR(r[r.length-1]));return r}function eq(a,b){var ka=Object.keys(a).sort(),kb=Object.keys(b).sort();if(ka.length!=kb.length)return 0;for(var i=0;i<ka.length;i++)if(ka[i]!=kb[i]||a[ka[i]]!=b[kb[i]])return 0;return 1}function dfs(x,y,e){if(y>=H)return[];if(x<0||x>=W||y<0)return null;var cs=LK[y][x]?[gt(x,y)]:getRots(rooms[y][x]);for(var c of cs){var ex=c[e];if(!ex)continue;var nx=x+DX[ex],ny=y+DY[ex],ne=OPP[ex],k=x+','+y,p=rots[k];rots[k]=c;var sub=dfs(nx,ny,ne);if(sub!=null){if(!eq(c,rooms[y][x]))sub.push([x,y,c]);return sub}if(p!=undefined)rots[k]=p;else delete rots[k]}return null}Q=[];for(;;){p=readline().split` `;xi=+p[0];yi=+p[1];ent=p[2];R=+readline();for(i=0;i<R;i++)readline();if(!Q.length){rots={};plan=dfs(xi,yi,ent);if(plan)for([x,y,tgt]of plan){o=rooms[y][x];r=0;t=Object.assign({},o);for(i=0;i<4;i++){if(eq(t,tgt)){r=i;break}t=rotR(t)}if(!r)continue;d=r<=2?'RIGHT':'LEFT';cnt=r<=2?r:4-r;for(i=0;i<cnt;i++)Q.push(x+' '+y+' '+d);rooms[y][x]=tgt}}print(Q.length?Q.shift():'WAIT')}
+RM={1:{0:2,1:2,3:2},2:{1:3,3:1},3:{0:2},4:{0:3,1:2},5:{0:1,3:2},6:{1:3,3:1},7:{0:2,1:2},8:{3:2,1:2},9:{0:2,3:2},10:{0:3},11:{0:1},12:{1:2},13:{3:2}}
+RG={0:[0],1:[1],2:[2,3],3:[3,2],4:[4,5],5:[5,4],6:[6,7,8,9],7:[7,8,9,6],8:[8,9,6,7],9:[9,6,7,8],10:[10,11,12,13],11:[11,12,13,10],12:[12,13,10,11],13:[13,10,11,12]}
+DX=[0,1,0,-1];DY=[-1,0,1,0];OP=[2,3,0,1]
+;[W,H]=readline().split` `.map(Number);T=[];LK=[]
+for(y=0;y<H;y++){r=readline().split` `.map(Number);T.push(r.map(v=>Math.abs(v)));LK.push(r.map(v=>v<0))}
+EX=+readline()
+function dfs(x,y,e,rot){
+if(y>=H)return x==EX?[]:null
+if(x<0||x>=W||y<0)return null
+o=T[y][x];k=y*W+x;cs=LK[y][x]?[rot[k]??o]:RG[o]
+for(c of cs){ex=(RM[c]||{})[e];if(ex==undefined)continue
+nx=x+DX[ex];ny=y+DY[ex];ne=OP[ex]
+p=rot[k];rot[k]=c
+sub=dfs(nx,ny,ne,rot)
+if(sub!=null){if(c!=o)sub.push({x,y,t:c});return sub}
+if(p!=undefined)rot[k]=p;else delete rot[k]}
+return null}
+Q=[];EM={TOP:0,RIGHT:1,LEFT:3}
+for(;;){p=readline().split` `;xi=+p[0];yi=+p[1];ent=EM[p[2]]
+R=+readline();for(i=0;i<R;i++)readline()
+if(!Q.length){rot={};plan=dfs(xi,yi,ent,rot)
+if(plan)for({x,y,t}of plan){o=T[y][x];g=RG[o];r=g.indexOf(t)
+if(r<=0)continue;if(r<=2)for(i=0;i<r;i++)Q.push(x+' '+y+' RIGHT')
+else Q.push(x+' '+y+' LEFT')
+T[y][x]=t}}
+print(Q.length?Q.shift():'WAIT')}
