@@ -2,21 +2,51 @@
  * submit-golf.ts — Submit code golf solutions in the top 5 languages.
  *
  * Usage:
- *   npm run script:submit-golf -- <puzzle-pretty-id> [--delay=120]
- *   npm run script:submit-golf -- [--delay=120]
+ *   npm run script:submit-golf -- <puzzle-pretty-id> [--delay=120] [--force]
+ *   npm run script:submit-golf -- [--delay=120] [--force]
  *
  * When no puzzle is specified, auto-discovers all code golf puzzles that have
  * at least one solution file and submits the missing languages for each.
+ *
+ * Submission results are cached in data/golf-status.json to avoid redundant
+ * API calls. Puzzles with all 5 languages at 100% are skipped entirely.
+ * Use --force to ignore the cache and re-check via API.
  *
  * Target languages (top 5 by participation):
  *   Python3, Javascript, C++, Java, C#
  */
 
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import process from 'node:process';
 
 import { CodinGame } from './libs/codingame.js';
+
+// --- Local cache to avoid redundant API calls ---
+const GOLF_STATUS_PATH = 'data/golf-status.json';
+
+interface GolfStatus {
+  /** Map of prettyId → list of languages with 100% score */
+  puzzles: Record<string, string[]>;
+}
+
+function loadGolfStatus(): GolfStatus {
+  try {
+    if (existsSync(GOLF_STATUS_PATH)) {
+      return JSON.parse(readFileSync(GOLF_STATUS_PATH, 'utf8'));
+    }
+  } catch { /* corrupted file, start fresh */ }
+  return { puzzles: {} };
+}
+
+function saveGolfStatus(status: GolfStatus): void {
+  writeFileSync(GOLF_STATUS_PATH, JSON.stringify(status, null, 2) + '\n');
+}
+
+function isFullyDone(status: GolfStatus, prettyId: string): boolean {
+  const done = status.puzzles[prettyId] ?? [];
+  return Object.values(GOLF_LANGS).every((lang) => done.includes(lang));
+}
 
 /** Top 5 code golf languages by submission count. */
 const GOLF_LANGS: Record<string, string> = {
@@ -69,9 +99,10 @@ function progressBar(done: number, total: number, width = 20): string {
 }
 
 function shortError(err: unknown): string {
-  const e = err as { response?: { status?: number; data?: { message?: string } } };
+  const e = err as { response?: { status?: number; data?: unknown } };
   if (e.response?.status) {
-    const msg = e.response.data?.message ?? '';
+    const data = e.response.data;
+    const msg = typeof data === 'string' ? data : typeof data === 'object' && data !== null ? JSON.stringify(data) : '';
     return `HTTP ${e.response.status}${msg ? `: ${msg}` : ''}`;
   }
   return err instanceof Error ? err.message.split('\n')[0] : String(err);
@@ -79,6 +110,15 @@ function shortError(err: unknown): string {
 
 function is422(err: unknown): boolean {
   return (err as { response?: { status?: number } }).response?.status === 422;
+}
+
+function isNetworkError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  return msg.includes('EAI_AGAIN') || msg.includes('ECONNRESET') || msg.includes('ETIMEDOUT') || msg.includes('ENOTFOUND') || msg.includes('socket hang up');
+}
+
+function isRetryable(err: unknown): boolean {
+  return is422(err) || isNetworkError(err);
 }
 
 function getClient(): CodinGame {
@@ -133,23 +173,29 @@ function discoverGolfPuzzles(): Array<{ prettyId: string; dir: string }> {
   return results;
 }
 
-async function fetchExistingSubmissions(cg: CodinGame, prettyId: string): Promise<Set<string>> {
-  for (let retry = 0; retry < 5; retry++) {
+async function fetchExistingSubmissions(cg: CodinGame, prettyId: string, status: GolfStatus): Promise<{ done: Set<string>; handle: string | null }> {
+  // Use cache only — findAllSubmissions requires a "started" session which we may not have.
+  // The cache is updated after each successful submit, so it stays accurate.
+  const cached = new Set(status.puzzles[prettyId] ?? []);
+
+  // Create a session handle for submitting
+  for (let retry = 0; retry < 8; retry++) {
     try {
       const handle = await cg.createTestSession(prettyId);
-      const existing = await cg.findAllSubmissions(handle);
-      return new Set(existing.filter((s) => s.score === 100).map((s) => s.programmingLanguageId));
+      return { done: cached, handle };
     } catch (err) {
-      if (is422(err)) {
-        console.log(`  ⏳ Rate limited, waiting ${(retry + 1) * 30}s...`);
-        await sleep((retry + 1) * 30_000);
+      if (isRetryable(err)) {
+        const waitSec = isNetworkError(err) ? (retry + 1) * 30 : 60 + retry * 60;
+        console.log(`  ⏳ ${isNetworkError(err) ? 'Network error' : 'Rate limited'}, waiting ${waitSec}s...`);
+        console.log(`     Detail: ${err instanceof Error ? err.message : JSON.stringify(err)}${(err as any)?.response?.data ? ' | Body: ' + JSON.stringify((err as any).response.data) : ''}`);
+        await sleep(waitSec * 1000);
       } else {
-        console.log(`  ⚠️  Could not fetch submissions: ${shortError(err)}`);
-        return new Set();
+        console.log(`  ⚠️  Could not create session: ${shortError(err)}`);
+        return { done: cached, handle: null };
       }
     }
   }
-  return new Set();
+  return { done: cached, handle: null };
 }
 
 async function submitOne(
@@ -157,8 +203,9 @@ async function submitOne(
   prettyId: string,
   code: string,
   lang: string,
+  existingHandle?: string | null,
 ): Promise<{ score: number } | null> {
-  const handle = await cg.createTestSession(prettyId);
+  const handle = existingHandle || await cg.createTestSession(prettyId);
   const subId = await cg.submit(handle, code, lang);
   process.stdout.write(` id=${subId}, waiting`);
 
@@ -171,6 +218,9 @@ async function submitOne(
       if (is422(err)) {
         process.stdout.write('!');
         await sleep(10_000);
+      } else if (isNetworkError(err)) {
+        process.stdout.write('~');
+        await sleep(15_000);
       } else {
         process.stdout.write('.');
       }
@@ -184,6 +234,8 @@ async function submitPuzzle(
   prettyId: string,
   dir: string,
   delaySec: number,
+  status: GolfStatus,
+  force: boolean,
 ): Promise<number> {
   console.log(`\n${'─'.repeat(50)}`);
   console.log(`🎯 ${prettyId}`);
@@ -192,7 +244,16 @@ async function submitPuzzle(
   console.log(`📦 Local: ${[...localFiles.keys()].join(', ')} (${localFiles.size}/${TOTAL_LANGS})`);
   if (localFiles.size === 0) return 0;
 
-  const done = await fetchExistingSubmissions(cg, prettyId);
+  // Check cache first — skip API calls if fully done
+  if (!force && isFullyDone(status, prettyId)) {
+    const cached = status.puzzles[prettyId] ?? [];
+    const cachedGolf = cached.filter((l) => Object.values(GOLF_LANGS).includes(l));
+    console.log(`✅ Already 100%: ${cachedGolf.join(', ')} (cached)`);
+    console.log('🎉 All done!');
+    return 0;
+  }
+
+  const { done, handle: sessionHandle } = await fetchExistingSubmissions(cg, prettyId, status);
   const doneGolf = [...done].filter((l) => Object.values(GOLF_LANGS).includes(l));
   if (doneGolf.length > 0) console.log(`✅ Already 100%: ${doneGolf.join(', ')}`);
 
@@ -220,7 +281,7 @@ async function submitPuzzle(
         process.stdout.write(
           `${progressBar(submitted, TOTAL_LANGS)} ${submitted}/${TOTAL_LANGS} | ${lang.padEnd(14)}`,
         );
-        const result = await submitOne(cg, prettyId, code, lang);
+        const result = await submitOne(cg, prettyId, code, lang, sessionHandle);
 
         if (result === null) {
           console.log(' ⏰ timeout');
@@ -228,6 +289,9 @@ async function submitPuzzle(
         } else if (result.score === 100) {
           submitted++;
           console.log(` ✅ 100% (${code.length} chars)`);
+          // Update cache
+          status.puzzles[prettyId] = [...new Set([...(status.puzzles[prettyId] ?? []), lang])];
+          saveGolfStatus(status);
         } else {
           console.log(` ❌ ${result.score}%`);
           failures++;
@@ -235,12 +299,14 @@ async function submitPuzzle(
         success = true;
         break;
       } catch (err: unknown) {
-        if (is422(err)) {
-          const waitSec = 90 * (retry + 1);
+        if (isRetryable(err)) {
+          const waitSec = isNetworkError(err) ? 30 * (retry + 1) : 90 * (retry + 1);
           process.stdout.write('\r\x1b[K');
-          await countdown(waitSec, `${lang} rate limited (retry ${retry + 1})`);
+          console.log(`  Detail: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
+          await countdown(waitSec, `${lang} ${isNetworkError(err) ? 'network error' : 'rate limited'} (retry ${retry + 1})`);
         } else {
           console.log(` ❌ ${shortError(err)}`);
+          console.log(`     Full error: ${err instanceof Error ? err.stack ?? err.message : JSON.stringify(err)}`);
           failures++;
           break;
         }
@@ -267,9 +333,11 @@ async function main(): Promise<void> {
   const args = flags.filter((a) => !a.startsWith('--'));
   const delayArg = flags.find((a) => a.startsWith('--delay='));
   const delaySec = delayArg ? Number.parseInt(delayArg.split('=')[1], 10) : 120;
+  const force = flags.includes('--force');
 
   console.log('🏌️ Code Golf — Top 5 languages: Python3, Javascript, C++, Java, C#\n');
 
+  const status = loadGolfStatus();
   const cg = getClient();
 
   let puzzles: Array<{ prettyId: string; dir: string }>;
@@ -285,15 +353,16 @@ async function main(): Promise<void> {
     console.log(`Found ${puzzles.length} puzzles:`);
     for (const p of puzzles) {
       const sols = getLocalSolutions(p.dir);
-      console.log(`   • ${p.prettyId} (${sols.size}/${TOTAL_LANGS})`);
+      const cached = isFullyDone(status, p.prettyId);
+      console.log(` • ${p.prettyId} (${sols.size}/${TOTAL_LANGS})${cached ? ' ✅' : ''}`);
     }
   }
 
-  console.log(`⏱️  Delay: ${delaySec}s between submissions`);
+  console.log(`⏱️  Delay: ${delaySec}s between submissions${force ? ' (--force: ignoring cache)' : ''}`);
 
   let totalFailures = 0;
   for (const { prettyId, dir } of puzzles) {
-    totalFailures += await submitPuzzle(cg, prettyId, dir, delaySec);
+    totalFailures += await submitPuzzle(cg, prettyId, dir, delaySec, status, force);
   }
 
   if (puzzles.length > 1) {
